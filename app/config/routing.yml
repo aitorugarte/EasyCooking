@@ -1,0 +1,7 @@
+blogger_blog:
+    resource: "@BloggerBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blogger_blog_contact:
+    path:  /contact
+    defaults: { _controller: BloggerBlogBundle:Blog:contact }
