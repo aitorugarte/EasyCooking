@@ -2,6 +2,7 @@
 <!-- php app/console cache:clear --env=prod  php app/console cache:clear --env=dev -->
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
         <title>{% block title %}symblog{% endblock %} - symblog</title>
@@ -18,24 +19,38 @@
     <body>
 
         <section id="wrapper">
-            <header id="header">
-                <div class="top">
+           
+			<header id="header">
+                <hgroup>
+                    <h2>{% block blog_title %}<a href="#">Cocina facil</a>{% endblock %}</h2>
+                    <h3>{% block blog_tagline %}<a href="#">"Cuanto mayor es la dificultad,
+					mayor es la gloria." Cicerón</a>{% endblock %}</h3>
+                </hgroup>
+            </header>
+       
+	   <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_float5 -->
                     {% block navigation %}
                         <nav>
-                            <ul class="navigation">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Sobre mi</a></li>
-                                <li><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
+                            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+                                <li style="float:left; display: inline-block;
+								 color: white;
+								 text-align: center;
+   							     padding: 14px 16px;
+    							 text-decoration: none;"><a href="#">Inicio</a></li>
+                                <li style="float:left; display: inline-block;
+   								 color: white;
+    							 text-align: center;
+    							 padding: 14px 16px;
+    							 text-decoration: none;"><a href="#">Sobre mi</a></li>
+                                <li style="float:left; display: inline-block;
+    							 color: white;
+    							 text-align: center;
+   								 padding: 14px 16px;
+    							 text-decoration: none;"><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
                             </ul>
                         </nav>
                     {% endblock %}
-                </div>
-
-                <hgroup>
-                    <h2>{% block blog_title %}<a href="#">symblog</a>{% endblock %}</h2>
-                    <h3>{% block blog_tagline %}<a href="#">creando un blog en Symfony2</a>{% endblock %}</h3>
-                </hgroup>
-            </header>
+             
 
             <section class="main-col">
                 {% block body %}{% endblock %}
