@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
  * Cooker\CookingBundle\Entity\Comment
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass=" Cooker\CookingBundle\Entity\CommentRepository")
+ * @ORM\Entity(repositoryClass="Cooker\CookingBundle\Entity\CommentRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Comment
@@ -198,7 +198,7 @@ class Comment
     /**
      * Set receta
      *
-     * @param  \Cooker\CookingBundle\Entity\Receta $receta
+     * @param \Cooker\CookingBundle\Entity\Receta $receta
      * @return Comment
      */
     public function setReceta(\Cooker\CookingBundle\Entity\Receta $receta = null)
