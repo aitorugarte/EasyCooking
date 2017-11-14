@@ -1,7 +1,7 @@
 <?php
 // src/Blogger/BlogBundle/Entity/Receta.php
 namespace Blogger\BlogBundle\Entity;
-
+/*php app/console doctrine:schema:update --force*/
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
