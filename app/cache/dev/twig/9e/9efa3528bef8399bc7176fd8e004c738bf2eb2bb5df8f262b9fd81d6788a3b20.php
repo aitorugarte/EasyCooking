@@ -22,64 +22,64 @@ class __TwigTemplate_daacf18e06ac18321353039c4addb6d2aa456f9d26e0f8c7c7f0967b027
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_45a9a24275e8fe5472e04d0b699e4aa8f5e07a853518d0e872ac4976fe81ed7c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_45a9a24275e8fe5472e04d0b699e4aa8f5e07a853518d0e872ac4976fe81ed7c->enter($__internal_45a9a24275e8fe5472e04d0b699e4aa8f5e07a853518d0e872ac4976fe81ed7c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@BloggerBlog/Blog/list.html.twig"));
+        $__internal_7fadfdf2eeb68160c311f2a010b75ce415d0fc99d784f67bfd322bec7a122852 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7fadfdf2eeb68160c311f2a010b75ce415d0fc99d784f67bfd322bec7a122852->enter($__internal_7fadfdf2eeb68160c311f2a010b75ce415d0fc99d784f67bfd322bec7a122852_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@BloggerBlog/Blog/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_45a9a24275e8fe5472e04d0b699e4aa8f5e07a853518d0e872ac4976fe81ed7c->leave($__internal_45a9a24275e8fe5472e04d0b699e4aa8f5e07a853518d0e872ac4976fe81ed7c_prof);
+        $__internal_7fadfdf2eeb68160c311f2a010b75ce415d0fc99d784f67bfd322bec7a122852->leave($__internal_7fadfdf2eeb68160c311f2a010b75ce415d0fc99d784f67bfd322bec7a122852_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_0652f0ae9e20861b1d0dc322307d4aaa0166d7b77b48cf4732576bf504fc817c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0652f0ae9e20861b1d0dc322307d4aaa0166d7b77b48cf4732576bf504fc817c->enter($__internal_0652f0ae9e20861b1d0dc322307d4aaa0166d7b77b48cf4732576bf504fc817c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_1932814cf004342139396216f6faf8e43fd07d3757bc4c3ba277437267cd8d37 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1932814cf004342139396216f6faf8e43fd07d3757bc4c3ba277437267cd8d37->enter($__internal_1932814cf004342139396216f6faf8e43fd07d3757bc4c3ba277437267cd8d37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "List of Posts";
+        echo "Lista de Recetas";
         
-        $__internal_0652f0ae9e20861b1d0dc322307d4aaa0166d7b77b48cf4732576bf504fc817c->leave($__internal_0652f0ae9e20861b1d0dc322307d4aaa0166d7b77b48cf4732576bf504fc817c_prof);
+        $__internal_1932814cf004342139396216f6faf8e43fd07d3757bc4c3ba277437267cd8d37->leave($__internal_1932814cf004342139396216f6faf8e43fd07d3757bc4c3ba277437267cd8d37_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_057905801281f9ad69b43134b0af3c9fb1ec24dd2e692c83549e15cb2bd1eac8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_057905801281f9ad69b43134b0af3c9fb1ec24dd2e692c83549e15cb2bd1eac8->enter($__internal_057905801281f9ad69b43134b0af3c9fb1ec24dd2e692c83549e15cb2bd1eac8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_aeb90b1670b937ae1bb9e9f13542203df6af989647fbbaad327dda899aa70edf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aeb90b1670b937ae1bb9e9f13542203df6af989647fbbaad327dda899aa70edf->enter($__internal_aeb90b1670b937ae1bb9e9f13542203df6af989647fbbaad327dda899aa70edf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["posts"] ?? $this->getContext($context, "posts")));
+        $context['_seq'] = twig_ensure_traversable(($context["recetas"] ?? $this->getContext($context, "recetas")));
         $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
+        foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 7
-            echo "        <article class=\"post\">
+            echo "        <article class=\"receta\">
             <div class=\"date\"><time datetime=\"";
             // line 8
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["post"], "date", array()), "c"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["post"], "date", array()), "l, F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l, F j, Y"), "html", null, true);
             echo "</time></div>
             <header>
                 <h2><a href=\"";
             // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["post"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "title", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
             echo "</a></h2>
             </header>
 
             <div class=\"snippet\">
                 <p>";
             // line 14
-            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "body", array(0 => 200), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
             echo "</p>
                 <p class=\"continue\"><a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["post"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
 
@@ -96,10 +96,10 @@ class __TwigTemplate_daacf18e06ac18321353039c4addb6d2aa456f9d26e0f8c7c7f0967b027
     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_057905801281f9ad69b43134b0af3c9fb1ec24dd2e692c83549e15cb2bd1eac8->leave($__internal_057905801281f9ad69b43134b0af3c9fb1ec24dd2e692c83549e15cb2bd1eac8_prof);
+        $__internal_aeb90b1670b937ae1bb9e9f13542203df6af989647fbbaad327dda899aa70edf->leave($__internal_aeb90b1670b937ae1bb9e9f13542203df6af989647fbbaad327dda899aa70edf_prof);
 
     }
 
@@ -130,19 +130,19 @@ class __TwigTemplate_daacf18e06ac18321353039c4addb6d2aa456f9d26e0f8c7c7f0967b027
     {
         return new Twig_Source("{# src/Blogger/BlogBundle/Resources/views/Blog/list.html.twig #}
 {% extends \"BloggerBlogBundle::layout.html.twig\" %}
-{% block title %}List of Posts{% endblock %}
+{% block title %}Lista de Recetas{% endblock %}
 
 {% block body %}
-    {% for post in posts %}
-        <article class=\"post\">
-            <div class=\"date\"><time datetime=\"{{ post.date|date('c') }}\">{{ post.date|date('l, F j, Y') }}</time></div>
+    {% for receta in recetas %}
+        <article class=\"receta\">
+            <div class=\"date\"><time datetime=\"{{ receta.date|date('c') }}\">{{ receta.date|date('l, F j, Y') }}</time></div>
             <header>
-                <h2><a href=\"{{ path('blogger_blog_show', { 'id': post.id }) }}\">{{ post.title }}</a></h2>
+                <h2><a href=\"{{ path('blogger_blog_show', { 'id': receta.id }) }}\">{{ receta.nombre }}</a></h2>
             </header>
 
             <div class=\"snippet\">
-                <p>{{ post.body(200) }}</p>
-                <p class=\"continue\"><a href=\"{{ path('blogger_blog_show', { 'id': post.id }) }}\">Seguir leyendo...</a></p>
+                <p>{{ receta.detalles(200) }}</p>
+                <p class=\"continue\"><a href=\"{{ path('blogger_blog_show', { 'id': receta.id }) }}\">Seguir leyendo...</a></p>
             </div>
 
             <footer class=\"meta\">

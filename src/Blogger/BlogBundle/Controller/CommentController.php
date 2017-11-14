@@ -12,23 +12,23 @@ use Blogger\BlogBundle\Form\CommentType;
  */
 class CommentController extends Controller
 {
-    public function newAction($post_id)
+    public function newAction($receta_id)
     {
-        $post = $this->getPost($post_id);
+        $receta = $this->getReceta($receta_id);
 
         $comment = new Comment();
-        $comment->setPost($post);
+        $comment->setReceta($receta);
         $form   = $this->createForm(new CommentType(), $comment);
 
         return $this->render('BloggerBlogBundle:Comment:form.html.twig', array('comment' => $comment,'form'   => $form->createView()));
     }
 
-    public function createAction($post_id)
+    public function createAction($receta_id)
     {
-        $post = $this->getPost($post_id);
+        $receta = $this->getReceta($receta_id);
 
         $comment  = new Comment();
-        $comment->setPost($post);
+        $comment->setReceta($receta);
         $request = $this->getRequest();
         $form = $this->createForm(new CommentType(), $comment);
         $form->bind($request);
@@ -38,23 +38,23 @@ class CommentController extends Controller
             $em->persist($comment);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('blogger_blog_show', array('id' => $comment->getPost()->getId())) . '#comment-' . $comment->getId());
+            return $this->redirect($this->generateUrl('blogger_blog_show', array('id' => $comment->getReceta()->getId())) . '#comment-' . $comment->getId());
         }
 
         return $this->render('BloggerBlogBundle:Comment:create.html.twig', array('comment' => $comment, 'form' => $form->createView()));
     }
 
-    protected function getPost($post_id)
+    protected function getReceta($receta_id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $post = $em->getRepository('BloggerBlogBundle:Post')->find($post_id);
+        $receta = $em->getRepository('BloggerBlogBundle:Receta')->find($receta_id);
 
-        if (!$post) {
-            throw $this->createNotFoundException('Unable to find Blog post.');
+        if (!$receta) {
+            throw $this->createNotFoundException('Unable to find Blog receta.');
         }
 
-        return $post;
+        return $receta;
     }
 }
 ?>

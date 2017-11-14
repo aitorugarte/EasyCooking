@@ -116,7 +116,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         if (0 === strpos($pathinfo, '/co')) {
             // blogger_comment_create
-            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<post_id>\\d+)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
                 if ($this->context->getMethod() != 'POST') {
                     $allow[] = 'POST';
                     goto not_blogger_comment_create;

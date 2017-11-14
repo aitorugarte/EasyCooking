@@ -28,7 +28,7 @@ class __TwigTemplate_352956d283aaff7994aa95ac8e7e079a8f12662c2ef9f648c648865e34a
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        echo "Contact";
+        echo "Contacto";
     }
 
     // line 6

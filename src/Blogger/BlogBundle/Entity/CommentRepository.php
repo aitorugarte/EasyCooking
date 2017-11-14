@@ -12,9 +12,9 @@ use Doctrine\ORM\EntityRepository;
  */
 class CommentRepository extends EntityRepository
 {
-	public function getCommentsForPost($postId, $approved = true)
+	public function getCommentsForReceta($recetaId, $approved = true)
 {
-	$qp = $this->createQueryBuilder('c')->select('c')->where('c.post = :post_id')->addOrderBy('c.created')->setParameter('post_id', $postId);
+	$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
 
 	if (false === is_null($approved))
 		$qp->andWhere('c.approved = :approved')->setParameter('approved', $approved);

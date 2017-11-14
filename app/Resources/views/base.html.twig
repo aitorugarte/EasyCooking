@@ -20,29 +20,26 @@
 
         <section id="wrapper">
            
+		   <!-- Cabecera -->
 			<header id="header">
                 <hgroup>
                     <h2>{% block blog_title %}<a href="#">Cocina facil</a>{% endblock %}</h2>
                     <h3>{% block blog_tagline %}<a href="#">"Cuanto mayor es la dificultad,
 					mayor es la gloria." Cicerón</a>{% endblock %}</h3>
 						   
-				<!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_float5 -->
+				<!-- Menú -->
                     {% block navigation %}
                         <nav>
                            <ul class="ul1">
                                 <li class="li2"><a href="#">Inicio</a></li>
-
-                                <li class="li2"><a href="#">Recetas</a>
-								
+                                <li class="li2"><a href="#">Recetas</a>		
 								<ul class="ul2">
 								<li><a href="#">Entrantes</a></li>
 								<li><a href="#">Primeros</a></li>
 								<li><a href="#">Segundos</a></li>
 								<li><a href="#">Postres</a></li>
-								</ul>
-								
+								</ul>		
 								</li>
-
                                 <li class="li2"><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
                             </ul>
                         </nav>
@@ -50,16 +47,18 @@
                 </hgroup>
             </header>
        
+			<!-- Contenido principal -->
             <section class="main-col">
                 {% block body %}{% endblock %}
             </section>
+			<!-- Contenido lateral derecho -->
             <aside class="sidebar">
                 {% block sidebar %}{% endblock %}
             </aside>
-
+			<!-- Pie de página -->
             <div id="footer">
                 {% block footer %}
-                    Blog en Symfony2 - creado por <a href="http://carloslaorden.com">Carlos Laorden</a>, con la ayuda de <a href="https://github.com/dsyph3r">dsyph3r</a>
+                    Cocina fácil - Creado como proyecto para Ingeniería Web
                 {% endblock %}
             </div>
         </section>

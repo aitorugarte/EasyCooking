@@ -5,6 +5,6 @@
 {% block title %}Añadir comentario{% endblock%}
 
 {% block body %}
-    <h1>Añadir un comentario al post "{{ comment.post.title }}"</h1>
+    <h1>Añadir un comentario a la receta "{{ comment.receta.nombre }}"</h1>
     {% include 'BloggerBlogBundle:Comment:form.html.twig' with { 'form': form } %}
 {% endblock %}

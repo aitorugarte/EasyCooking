@@ -28,7 +28,7 @@ class __TwigTemplate_c26d5799467e9db72a157e1719389cad454660ec6f3703c7f673b50b118
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "List of Posts";
+        echo "Lista de Recetas";
     }
 
     // line 5
@@ -37,34 +37,34 @@ class __TwigTemplate_c26d5799467e9db72a157e1719389cad454660ec6f3703c7f673b50b118
         // line 6
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["posts"] ?? null));
+        $context['_seq'] = twig_ensure_traversable(($context["recetas"] ?? null));
         $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
+        foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 7
-            echo "        <article class=\"post\">
+            echo "        <article class=\"receta\">
             <div class=\"date\"><time datetime=\"";
             // line 8
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["post"], "date", array()), "c"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["post"], "date", array()), "l, F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l, F j, Y"), "html", null, true);
             echo "</time></div>
             <header>
                 <h2><a href=\"";
             // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["post"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "title", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
             echo "</a></h2>
             </header>
 
             <div class=\"snippet\">
                 <p>";
             // line 14
-            echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "body", array(0 => 200), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
             echo "</p>
                 <p class=\"continue\"><a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["post"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
 
@@ -81,7 +81,7 @@ class __TwigTemplate_c26d5799467e9db72a157e1719389cad454660ec6f3703c7f673b50b118
     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 

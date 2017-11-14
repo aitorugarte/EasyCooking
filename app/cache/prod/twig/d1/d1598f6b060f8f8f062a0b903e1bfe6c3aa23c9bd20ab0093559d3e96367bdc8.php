@@ -29,7 +29,7 @@ class __TwigTemplate_5bc7949fff26c6c3fc486d88f8d6ecd907556646173a1cbc1aabd129fad
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Post details";
+        echo "Detalles de la receta";
     }
 
     // line 5
@@ -37,25 +37,25 @@ class __TwigTemplate_5bc7949fff26c6c3fc486d88f8d6ecd907556646173a1cbc1aabd129fad
     {
         // line 6
         echo "\t<h1>";
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["post"] ?? null), "title", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["receta"] ?? null), "nombre", array()), "html", null, true);
         echo "</h1>
 \t<div class=\"date\">
 \t\t";
         // line 8
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["post"] ?? null), "date", array()), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["receta"] ?? null), "date", array()), "d-m-Y"), "html", null, true);
         echo "
 \t</div>
 \t<div class=\"body\">
 \t\t";
         // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["post"] ?? null), "body", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["receta"] ?? null), "detalles", array()), "html", null, true);
         echo "
 \t</div>\t\t
 \t<section class=\"comments\" id=\"comments\">
 \t<h3>Añadir comentario</h3>
 \t\t";
         // line 15
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("BloggerBlogBundle:Comment:new", array("post_id" => $this->getAttribute(($context["post"] ?? null), "id", array()))));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("BloggerBlogBundle:Comment:new", array("receta_id" => $this->getAttribute(($context["receta"] ?? null), "id", array()))));
         echo "
 \t</section>
 \t<section class=\"previous-comments\">

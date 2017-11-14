@@ -28,7 +28,7 @@ class __TwigTemplate_cdb14d101d42dd38a746dcdc7035d167d661dc6b93edbd4eec24b944a9c
     public function block_sidebar($context, array $blocks = array())
     {
         // line 5
-        echo "    Contenido de sidebar
+        echo "    ¿Qué ponemos aquí?
 ";
     }
 

@@ -39,10 +39,10 @@ class Comment
     private $approved;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Post", inversedBy="comments")
-     * @ORM\JoinColumn(name="post_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Receta", inversedBy="comments")
+     * @ORM\JoinColumn(name="receta_id", referencedColumnName="id")
      */
-    private $post;
+    private $receta;
 
     /**
      * @ORM\Column(type="datetime")
@@ -196,26 +196,26 @@ class Comment
     }
 
     /**
-     * Set post
+     * Set receta
      *
-     * @param \Blogger\BlogBundle\Entity\Post $post
+     * @param \Blogger\BlogBundle\Entity\Receta $receta
      * @return Comment
      */
-    public function setPost(\Blogger\BlogBundle\Entity\Post $post = null)
+    public function setReceta(\Blogger\BlogBundle\Entity\Receta $receta = null)
     {
-        $this->post = $post;
+        $this->receta = $receta;
 
         return $this;
     }
 
     /**
-     * Get post
+     * Get receta
      *
-     * @return \Blogger\BlogBundle\Entity\Post 
+     * @return \Blogger\BlogBundle\Entity\Receta 
      */
-    public function getPost()
+    public function getReceta()
     {
-        return $this->post;
+        return $this->receta;
     }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)

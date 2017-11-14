@@ -22,42 +22,42 @@ class __TwigTemplate_4b3474dd0e1ed0fe9127ce6364234ad746b24c842bebc3d1ff11b06565f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9dcb7cd5a3ec6af61d243a7c7bb3fb885a4a707274a28cf53d2b0bbdf54254b4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9dcb7cd5a3ec6af61d243a7c7bb3fb885a4a707274a28cf53d2b0bbdf54254b4->enter($__internal_9dcb7cd5a3ec6af61d243a7c7bb3fb885a4a707274a28cf53d2b0bbdf54254b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Comment:create.html.twig"));
+        $__internal_15433ea9bfc7914e335b9b30e54a0fd6bde677cfa16930abfbb2bdfe991ec639 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_15433ea9bfc7914e335b9b30e54a0fd6bde677cfa16930abfbb2bdfe991ec639->enter($__internal_15433ea9bfc7914e335b9b30e54a0fd6bde677cfa16930abfbb2bdfe991ec639_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Comment:create.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9dcb7cd5a3ec6af61d243a7c7bb3fb885a4a707274a28cf53d2b0bbdf54254b4->leave($__internal_9dcb7cd5a3ec6af61d243a7c7bb3fb885a4a707274a28cf53d2b0bbdf54254b4_prof);
+        $__internal_15433ea9bfc7914e335b9b30e54a0fd6bde677cfa16930abfbb2bdfe991ec639->leave($__internal_15433ea9bfc7914e335b9b30e54a0fd6bde677cfa16930abfbb2bdfe991ec639_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_d6f3e41598b7e6452ac55525af4a23c1f8203a16d5a2d49c063b993040d0b098 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d6f3e41598b7e6452ac55525af4a23c1f8203a16d5a2d49c063b993040d0b098->enter($__internal_d6f3e41598b7e6452ac55525af4a23c1f8203a16d5a2d49c063b993040d0b098_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_db34f2f9363aabc2e9c1055cfb160c89b2b37fdfa47ec71c713f25a54be41e6f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_db34f2f9363aabc2e9c1055cfb160c89b2b37fdfa47ec71c713f25a54be41e6f->enter($__internal_db34f2f9363aabc2e9c1055cfb160c89b2b37fdfa47ec71c713f25a54be41e6f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Añadir comentario";
         
-        $__internal_d6f3e41598b7e6452ac55525af4a23c1f8203a16d5a2d49c063b993040d0b098->leave($__internal_d6f3e41598b7e6452ac55525af4a23c1f8203a16d5a2d49c063b993040d0b098_prof);
+        $__internal_db34f2f9363aabc2e9c1055cfb160c89b2b37fdfa47ec71c713f25a54be41e6f->leave($__internal_db34f2f9363aabc2e9c1055cfb160c89b2b37fdfa47ec71c713f25a54be41e6f_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cbc597e9b527eca516558abe4197b3913ec7007a5163810b3a2393585d165f78 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cbc597e9b527eca516558abe4197b3913ec7007a5163810b3a2393585d165f78->enter($__internal_cbc597e9b527eca516558abe4197b3913ec7007a5163810b3a2393585d165f78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_08d808648aa7294d38f99e87dc84c0c71bcb8545dca3a758e1911b6b4208d7f2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_08d808648aa7294d38f99e87dc84c0c71bcb8545dca3a758e1911b6b4208d7f2->enter($__internal_08d808648aa7294d38f99e87dc84c0c71bcb8545dca3a758e1911b6b4208d7f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        echo "    <h1>Añadir un comentario al post \"";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comment"] ?? $this->getContext($context, "comment")), "post", array()), "title", array()), "html", null, true);
+        echo "    <h1>Añadir un comentario a la receta \"";
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comment"] ?? $this->getContext($context, "comment")), "receta", array()), "nombre", array()), "html", null, true);
         echo "\"</h1>
     ";
         // line 9
         $this->loadTemplate("BloggerBlogBundle:Comment:form.html.twig", "BloggerBlogBundle:Comment:create.html.twig", 9)->display(array_merge($context, array("form" => ($context["form"] ?? $this->getContext($context, "form")))));
         
-        $__internal_cbc597e9b527eca516558abe4197b3913ec7007a5163810b3a2393585d165f78->leave($__internal_cbc597e9b527eca516558abe4197b3913ec7007a5163810b3a2393585d165f78_prof);
+        $__internal_08d808648aa7294d38f99e87dc84c0c71bcb8545dca3a758e1911b6b4208d7f2->leave($__internal_08d808648aa7294d38f99e87dc84c0c71bcb8545dca3a758e1911b6b4208d7f2_prof);
 
     }
 
@@ -93,7 +93,7 @@ class __TwigTemplate_4b3474dd0e1ed0fe9127ce6364234ad746b24c842bebc3d1ff11b06565f
 {% block title %}Añadir comentario{% endblock%}
 
 {% block body %}
-    <h1>Añadir un comentario al post \"{{ comment.post.title }}\"</h1>
+    <h1>Añadir un comentario a la receta \"{{ comment.receta.nombre }}\"</h1>
     {% include 'BloggerBlogBundle:Comment:form.html.twig' with { 'form': form } %}
 {% endblock %}
 ", "BloggerBlogBundle:Comment:create.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Blogger\\BlogBundle/Resources/views/Comment/create.html.twig");

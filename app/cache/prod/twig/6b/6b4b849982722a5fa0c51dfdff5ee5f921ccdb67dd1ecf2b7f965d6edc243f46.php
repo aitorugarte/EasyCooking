@@ -35,8 +35,8 @@ class __TwigTemplate_51f4cfb4f8e36f12557974f9081cb63c2c652653e6069f50a32db73c6bc
     public function block_body($context, array $blocks = array())
     {
         // line 8
-        echo "    <h1>Añadir un comentario al post \"";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "post", array()), "title", array()), "html", null, true);
+        echo "    <h1>Añadir un comentario a la receta \"";
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "receta", array()), "nombre", array()), "html", null, true);
         echo "\"</h1>
     ";
         // line 9

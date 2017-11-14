@@ -1,18 +1,18 @@
 {# src/Blogger/BlogBundle/Resources/views/Blog/show.html.twig #}
 {% extends "BloggerBlogBundle::layout.html.twig" %}
-{% block title %}Post details{% endblock %}
+{% block title %}Detalles de la receta{% endblock %}
 
 {% block body %}
-	<h1>{{ post.title }}</h1>
+	<h1>{{ receta.nombre }}</h1>
 	<div class="date">
-		{{ post.date|date('d-m-Y') }}
+		{{ receta.date|date('d-m-Y') }}
 	</div>
 	<div class="body">
-		{{ post.body }}
+		{{ receta.detalles }}
 	</div>		
 	<section class="comments" id="comments">
 	<h3>Añadir comentario</h3>
-		{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'post_id': post.id } )) }}
+		{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'receta_id': receta.id } )) }}
 	</section>
 	<section class="previous-comments">
 		<h3>Comentarios</h3>

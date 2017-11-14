@@ -15,8 +15,8 @@ class __TwigTemplate_7dc52dba70338082678b8bfd2aeb19317531499a16dd5dc887fc9183bf6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cb46f18262880884c44bb7ae933b55d478ed8379a8160e2f4da61112853ea325 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cb46f18262880884c44bb7ae933b55d478ed8379a8160e2f4da61112853ea325->enter($__internal_cb46f18262880884c44bb7ae933b55d478ed8379a8160e2f4da61112853ea325_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Comment:list.html.twig"));
+        $__internal_73c71cbe452fe16c700ebb28a859280dd0fbbfe33646b53efb387d398a5e05c3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_73c71cbe452fe16c700ebb28a859280dd0fbbfe33646b53efb387d398a5e05c3->enter($__internal_73c71cbe452fe16c700ebb28a859280dd0fbbfe33646b53efb387d398a5e05c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -80,7 +80,7 @@ class __TwigTemplate_7dc52dba70338082678b8bfd2aeb19317531499a16dd5dc887fc9183bf6
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_cb46f18262880884c44bb7ae933b55d478ed8379a8160e2f4da61112853ea325->leave($__internal_cb46f18262880884c44bb7ae933b55d478ed8379a8160e2f4da61112853ea325_prof);
+        $__internal_73c71cbe452fe16c700ebb28a859280dd0fbbfe33646b53efb387d398a5e05c3->leave($__internal_73c71cbe452fe16c700ebb28a859280dd0fbbfe33646b53efb387d398a5e05c3_prof);
 
     }
 

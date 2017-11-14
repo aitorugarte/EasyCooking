@@ -92,6 +92,7 @@ body {
      background-color: #333;
 }
 
+/*TODO mostrarlo*/
 #header .ul2 {
      display: none; /*Ocultamos el submenú*/
 }
@@ -101,7 +102,7 @@ body {
 
 }
 
-    /*Cada elemento de la lista*/
+/*Cada elemento de la lista*/
 #header .li2 a {
      display: inline-block;
      color: orange;

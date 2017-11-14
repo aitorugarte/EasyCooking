@@ -19,7 +19,7 @@ class __TwigTemplate_980bafbde4d922ed3e40b36069122d7e461e57e9eff5ef0b48f8e6f00d5
         echo "
 <form action=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_comment_create", array("post_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "post", array()), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_comment_create", array("receta_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "receta", array()), "id", array()))), "html", null, true);
         echo "\" method=\"post\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? null), 'enctype');
         echo " class=\"blogger\">

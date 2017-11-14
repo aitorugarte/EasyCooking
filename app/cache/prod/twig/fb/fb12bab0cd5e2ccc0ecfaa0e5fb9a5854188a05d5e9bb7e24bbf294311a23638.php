@@ -51,52 +51,54 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
 
         <section id=\"wrapper\">
            
+\t\t   <!-- Cabecera -->
 \t\t\t<header id=\"header\">
                 <hgroup>
                     <h2>";
-        // line 25
+        // line 26
         $this->displayBlock('blog_title', $context, $blocks);
         echo "</h2>
                     <h3>";
-        // line 26
-        $this->displayBlock('blog_tagline', $context, $blocks);
         // line 27
+        $this->displayBlock('blog_tagline', $context, $blocks);
+        // line 28
         echo "</h3>
-                </hgroup>
+\t\t\t\t\t\t   
+\t\t\t\t<!-- Menú -->
+                    ";
+        // line 31
+        $this->displayBlock('navigation', $context, $blocks);
+        // line 47
+        echo "                </hgroup>
             </header>
        
-\t   <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_float5 -->
-                    ";
-        // line 32
-        $this->displayBlock('navigation', $context, $blocks);
-        // line 44
-        echo "             
-
+\t\t\t<!-- Contenido principal -->
             <section class=\"main-col\">
                 ";
-        // line 47
+        // line 52
         $this->displayBlock('body', $context, $blocks);
-        // line 48
+        // line 53
         echo "            </section>
+\t\t\t<!-- Contenido lateral derecho -->
             <aside class=\"sidebar\">
                 ";
-        // line 50
+        // line 56
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 51
+        // line 57
         echo "            </aside>
-
+\t\t\t<!-- Pie de página -->
             <div id=\"footer\">
                 ";
-        // line 54
+        // line 60
         $this->displayBlock('footer', $context, $blocks);
-        // line 57
+        // line 63
         echo "            </div>
         </section>
 
         ";
-        // line 60
+        // line 66
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 61
+        // line 67
         echo "    </body>
 </html>
 ";
@@ -121,32 +123,36 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         ";
     }
 
-    // line 25
+    // line 26
     public function block_blog_title($context, array $blocks = array())
     {
         echo "<a href=\"#\">Cocina facil</a>";
     }
 
-    // line 26
+    // line 27
     public function block_blog_tagline($context, array $blocks = array())
     {
         echo "<a href=\"#\">\"Cuanto mayor es la dificultad,
 \t\t\t\t\tmayor es la gloria.\" Cicerón</a>";
     }
 
-    // line 32
+    // line 31
     public function block_navigation($context, array $blocks = array())
     {
-        // line 33
+        // line 32
         echo "                        <nav>
-                            <ul class=\"ul1\">
-                                <li class=\"li1\"><a href=\"#\">Inicio</a></li>
-\t\t\t\t\t\t\t\t<li class=\"li2\"><a href=\"#\">Entrantes</a></li>
-\t\t\t\t\t\t\t\t<li class=\"li3\"><a href=\"#\">Primeros</a></li>
-\t\t\t\t\t\t\t\t<li class=\"li4\"><a href=\"#\">Segundos</a></li>
-\t\t\t\t\t\t\t\t<li class=\"li5\"><a href=\"#\">Postres</a></li>
-                                <li class=\"li6\"><a href=\"";
-        // line 40
+                           <ul class=\"ul1\">
+                                <li class=\"li2\"><a href=\"#\">Inicio</a></li>
+                                <li class=\"li2\"><a href=\"#\">Recetas</a>\t\t
+\t\t\t\t\t\t\t\t<ul class=\"ul2\">
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Entrantes</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Primeros</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Segundos</a></li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Postres</a></li>
+\t\t\t\t\t\t\t\t</ul>\t\t
+\t\t\t\t\t\t\t\t</li>
+                                <li class=\"li2\"><a href=\"";
+        // line 43
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_contact");
         echo "\">Contacto</a></li>
                             </ul>
@@ -154,25 +160,25 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
                     ";
     }
 
-    // line 47
+    // line 52
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 50
+    // line 56
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 54
+    // line 60
     public function block_footer($context, array $blocks = array())
     {
-        // line 55
-        echo "                    Blog en Symfony2 - creado por <a href=\"http://carloslaorden.com\">Carlos Laorden</a>, con la ayuda de <a href=\"https://github.com/dsyph3r\">dsyph3r</a>
+        // line 61
+        echo "                    Cocina fácil - Creado como proyecto para Ingeniería Web
                 ";
     }
 
-    // line 60
+    // line 66
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -189,7 +195,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
 
     public function getDebugInfo()
     {
-        return array (  176 => 60,  171 => 55,  168 => 54,  163 => 50,  158 => 47,  150 => 40,  141 => 33,  138 => 32,  131 => 26,  125 => 25,  119 => 15,  115 => 13,  112 => 12,  106 => 8,  100 => 61,  98 => 60,  93 => 57,  91 => 54,  86 => 51,  84 => 50,  80 => 48,  78 => 47,  73 => 44,  71 => 32,  64 => 27,  62 => 26,  58 => 25,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
+        return array (  182 => 66,  177 => 61,  174 => 60,  169 => 56,  164 => 52,  156 => 43,  143 => 32,  140 => 31,  133 => 27,  127 => 26,  121 => 15,  117 => 13,  114 => 12,  108 => 8,  102 => 67,  100 => 66,  95 => 63,  93 => 60,  88 => 57,  86 => 56,  81 => 53,  79 => 52,  72 => 47,  70 => 31,  65 => 28,  63 => 27,  59 => 26,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

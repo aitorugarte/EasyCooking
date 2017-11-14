@@ -23,54 +23,54 @@ class __TwigTemplate_850cacab9b4f0a739a83f7cbe40da15a227aed5339a8c7d221fbe981847
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_64618df4eef18e89b346b4029ca01439a4c7b2f154d21fb12acf7bc165bef881 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_64618df4eef18e89b346b4029ca01439a4c7b2f154d21fb12acf7bc165bef881->enter($__internal_64618df4eef18e89b346b4029ca01439a4c7b2f154d21fb12acf7bc165bef881_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Blog:show.html.twig"));
+        $__internal_b62ead1605e68d4827b82b68bdef3ced9211d4f5cb8bbec54d7a19ea7be01fa1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b62ead1605e68d4827b82b68bdef3ced9211d4f5cb8bbec54d7a19ea7be01fa1->enter($__internal_b62ead1605e68d4827b82b68bdef3ced9211d4f5cb8bbec54d7a19ea7be01fa1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle:Blog:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_64618df4eef18e89b346b4029ca01439a4c7b2f154d21fb12acf7bc165bef881->leave($__internal_64618df4eef18e89b346b4029ca01439a4c7b2f154d21fb12acf7bc165bef881_prof);
+        $__internal_b62ead1605e68d4827b82b68bdef3ced9211d4f5cb8bbec54d7a19ea7be01fa1->leave($__internal_b62ead1605e68d4827b82b68bdef3ced9211d4f5cb8bbec54d7a19ea7be01fa1_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2de47a26d970886b5717710274411b5307c85a1bb0b657fb87b5251ef7df2781 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2de47a26d970886b5717710274411b5307c85a1bb0b657fb87b5251ef7df2781->enter($__internal_2de47a26d970886b5717710274411b5307c85a1bb0b657fb87b5251ef7df2781_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_57c664c4d00d1f0a45907acbc6b5d08969415a82b472fb8fa480fc7f4aa8b87e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_57c664c4d00d1f0a45907acbc6b5d08969415a82b472fb8fa480fc7f4aa8b87e->enter($__internal_57c664c4d00d1f0a45907acbc6b5d08969415a82b472fb8fa480fc7f4aa8b87e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Post details";
+        echo "Detalles de la receta";
         
-        $__internal_2de47a26d970886b5717710274411b5307c85a1bb0b657fb87b5251ef7df2781->leave($__internal_2de47a26d970886b5717710274411b5307c85a1bb0b657fb87b5251ef7df2781_prof);
+        $__internal_57c664c4d00d1f0a45907acbc6b5d08969415a82b472fb8fa480fc7f4aa8b87e->leave($__internal_57c664c4d00d1f0a45907acbc6b5d08969415a82b472fb8fa480fc7f4aa8b87e_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f9bb943ab03d5a6e9de8000cb9569c036dcab0bac35448bf492a79ec3d487ec5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f9bb943ab03d5a6e9de8000cb9569c036dcab0bac35448bf492a79ec3d487ec5->enter($__internal_f9bb943ab03d5a6e9de8000cb9569c036dcab0bac35448bf492a79ec3d487ec5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a2bf693725d8504d2f4b8aea1e7730e3ffa353427893258c6f4953f036c3e235 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a2bf693725d8504d2f4b8aea1e7730e3ffa353427893258c6f4953f036c3e235->enter($__internal_a2bf693725d8504d2f4b8aea1e7730e3ffa353427893258c6f4953f036c3e235_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t<h1>";
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["post"] ?? $this->getContext($context, "post")), "title", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["receta"] ?? $this->getContext($context, "receta")), "nombre", array()), "html", null, true);
         echo "</h1>
 \t<div class=\"date\">
 \t\t";
         // line 8
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["post"] ?? $this->getContext($context, "post")), "date", array()), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["receta"] ?? $this->getContext($context, "receta")), "date", array()), "d-m-Y"), "html", null, true);
         echo "
 \t</div>
 \t<div class=\"body\">
 \t\t";
         // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["post"] ?? $this->getContext($context, "post")), "body", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["receta"] ?? $this->getContext($context, "receta")), "detalles", array()), "html", null, true);
         echo "
 \t</div>\t\t
 \t<section class=\"comments\" id=\"comments\">
 \t<h3>Añadir comentario</h3>
 \t\t";
         // line 15
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("BloggerBlogBundle:Comment:new", array("post_id" => $this->getAttribute(($context["post"] ?? $this->getContext($context, "post")), "id", array()))));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("BloggerBlogBundle:Comment:new", array("receta_id" => $this->getAttribute(($context["receta"] ?? $this->getContext($context, "receta")), "id", array()))));
         echo "
 \t</section>
 \t<section class=\"previous-comments\">
@@ -88,15 +88,15 @@ class __TwigTemplate_850cacab9b4f0a739a83f7cbe40da15a227aed5339a8c7d221fbe981847
         echo "
 ";
         
-        $__internal_f9bb943ab03d5a6e9de8000cb9569c036dcab0bac35448bf492a79ec3d487ec5->leave($__internal_f9bb943ab03d5a6e9de8000cb9569c036dcab0bac35448bf492a79ec3d487ec5_prof);
+        $__internal_a2bf693725d8504d2f4b8aea1e7730e3ffa353427893258c6f4953f036c3e235->leave($__internal_a2bf693725d8504d2f4b8aea1e7730e3ffa353427893258c6f4953f036c3e235_prof);
 
     }
 
     // line 22
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_2f17c089e6b290c2da059c4a48a6f0ead31062801a43b2b574d81e8a7da6c4b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2f17c089e6b290c2da059c4a48a6f0ead31062801a43b2b574d81e8a7da6c4b6->enter($__internal_2f17c089e6b290c2da059c4a48a6f0ead31062801a43b2b574d81e8a7da6c4b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_66ba2f9deb869f4c922d846038d6d5217d706ee1797a192ada15a620d38e21c9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_66ba2f9deb869f4c922d846038d6d5217d706ee1797a192ada15a620d38e21c9->enter($__internal_66ba2f9deb869f4c922d846038d6d5217d706ee1797a192ada15a620d38e21c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 23
         echo "\t";
@@ -108,7 +108,7 @@ class __TwigTemplate_850cacab9b4f0a739a83f7cbe40da15a227aed5339a8c7d221fbe981847
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 \t";
         
-        $__internal_2f17c089e6b290c2da059c4a48a6f0ead31062801a43b2b574d81e8a7da6c4b6->leave($__internal_2f17c089e6b290c2da059c4a48a6f0ead31062801a43b2b574d81e8a7da6c4b6_prof);
+        $__internal_66ba2f9deb869f4c922d846038d6d5217d706ee1797a192ada15a620d38e21c9->leave($__internal_66ba2f9deb869f4c922d846038d6d5217d706ee1797a192ada15a620d38e21c9_prof);
 
     }
 
@@ -139,19 +139,19 @@ class __TwigTemplate_850cacab9b4f0a739a83f7cbe40da15a227aed5339a8c7d221fbe981847
     {
         return new Twig_Source("{# src/Blogger/BlogBundle/Resources/views/Blog/show.html.twig #}
 {% extends \"BloggerBlogBundle::layout.html.twig\" %}
-{% block title %}Post details{% endblock %}
+{% block title %}Detalles de la receta{% endblock %}
 
 {% block body %}
-\t<h1>{{ post.title }}</h1>
+\t<h1>{{ receta.nombre }}</h1>
 \t<div class=\"date\">
-\t\t{{ post.date|date('d-m-Y') }}
+\t\t{{ receta.date|date('d-m-Y') }}
 \t</div>
 \t<div class=\"body\">
-\t\t{{ post.body }}
+\t\t{{ receta.detalles }}
 \t</div>\t\t
 \t<section class=\"comments\" id=\"comments\">
 \t<h3>Añadir comentario</h3>
-\t\t{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'post_id': post.id } )) }}
+\t\t{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'receta_id': receta.id } )) }}
 \t</section>
 \t<section class=\"previous-comments\">
 \t\t<h3>Comentarios</h3>
