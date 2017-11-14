@@ -9,15 +9,21 @@
 	</div>
 	<div class="body">
 		{{ receta.detalles }}
-	</div>		
-	<section class="comments" id="comments">
-	<h3>Añadir comentario</h3>
-		{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'receta_id': receta.id } )) }}
-	</section>
+	</div>
+	
+	<br><br><br>
+
 	<section class="previous-comments">
 		<h3>Comentarios</h3>
 		{% include 'BloggerBlogBundle:Comment:list.html.twig' with { 'comments': comments } %}
 	</section>
+
+	<section class="comments" id="comments">
+	
+	<h3>Añadir comentario</h3>
+		{{ render(controller( 'BloggerBlogBundle:Comment:new', { 'receta_id': receta.id } )) }}
+	</section>
+	
 	</section>
 	{% block stylesheets %}
 	{{ parent() }}

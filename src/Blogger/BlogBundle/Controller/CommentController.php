@@ -51,7 +51,7 @@ class CommentController extends Controller
         $receta = $em->getRepository('BloggerBlogBundle:Receta')->find($receta_id);
 
         if (!$receta) {
-            throw $this->createNotFoundException('Unable to find Blog receta.');
+            throw $this->createNotFoundException('Imposible de encontrar receta.');
         }
 
         return $receta;

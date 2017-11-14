@@ -22,7 +22,7 @@ class BlogController extends Controller
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
-		$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForRecetas($receta->getId());
+		$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForReceta($receta->getId());
 
 		return $this->render('BloggerBlogBundle:Blog:show.html.twig', array('receta' => $receta, 'comments' => $comments));
 	}
