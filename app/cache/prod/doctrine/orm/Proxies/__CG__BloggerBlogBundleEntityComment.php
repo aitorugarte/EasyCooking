@@ -64,10 +64,10 @@ class Comment extends \Blogger\BlogBundle\Entity\Comment implements \Doctrine\OR
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'id', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'user', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'comment', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'approved', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'post', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'created', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'updated');
+            return array('__isInitialized__', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'id', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'user', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'comment', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'approved', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'receta', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'created', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'updated');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'id', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'user', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'comment', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'approved', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'post', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'created', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'updated');
+        return array('__isInitialized__', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'id', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'user', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'comment', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'approved', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'receta', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'created', '' . "\0" . 'Blogger\\BlogBundle\\Entity\\Comment' . "\0" . 'updated');
     }
 
     /**
@@ -312,23 +312,23 @@ class Comment extends \Blogger\BlogBundle\Entity\Comment implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function setPost(\Blogger\BlogBundle\Entity\Post $post = NULL)
+    public function setReceta(\Blogger\BlogBundle\Entity\Receta $receta = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPost', array($post));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setReceta', array($receta));
 
-        return parent::setPost($post);
+        return parent::setReceta($receta);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPost()
+    public function getReceta()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPost', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getReceta', array());
 
-        return parent::getPost();
+        return parent::getReceta();
     }
 
 }

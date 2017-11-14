@@ -11,7 +11,7 @@ blogger_blog_contact:
     defaults: { _controller: BloggerBlogBundle:Blog:contact }
 
 blogger_comment_create:
-    path:  /comment/{post_id}
+    path:  /comment/{receta_id}
     defaults: { _controller: BloggerBlogBundle:Comment:create }
     requirements:
         _method: POST

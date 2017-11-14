@@ -9,22 +9,22 @@ class BlogController extends Controller
 
 	public function listAction()
 	{
-		$posts = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Post')->getLatestPosts();
+		$recetas = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Receta')->getLatestRecetas();
 
-		return $this->render('BloggerBlogBundle:Blog:list.html.twig', array('posts' => $posts));
+		return $this->render('BloggerBlogBundle:Blog:list.html.twig', array('recetas' => $recetas));
 	}
 
 	public function showAction($id)
 	{
-		$post = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Post')->find($id);
+		$receta = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Receta')->find($id);
 	
-		if (!$post) {
-			throw $this->createNotFoundException('No se ha encontrado el post.');
+		if (!$receta) {
+			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
-		$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForPost($post->getId());
+		$comments = $this->get('doctrine')->getManager()->getRepository('BloggerBlogBundle:Comment')->getCommentsForRecetas($receta->getId());
 
-		return $this->render('BloggerBlogBundle:Blog:show.html.twig', array('post' => $post, 'comments' => $comments));
+		return $this->render('BloggerBlogBundle:Blog:show.html.twig', array('receta' => $receta, 'comments' => $comments));
 	}
 
 
