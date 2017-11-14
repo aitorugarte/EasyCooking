@@ -12,8 +12,8 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'blog_title' => array($this, 'block_blog_title'),
-            'blog_tagline' => array($this, 'block_blog_tagline'),
+            'cook_title' => array($this, 'block_cook_title'),
+            'cook_tagline' => array($this, 'block_cook_tagline'),
             'navigation' => array($this, 'block_navigation'),
             'body' => array($this, 'block_body'),
             'sidebar' => array($this, 'block_sidebar'),
@@ -56,11 +56,11 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
                 <hgroup>
                     <h2>";
         // line 26
-        $this->displayBlock('blog_title', $context, $blocks);
+        $this->displayBlock('cook_title', $context, $blocks);
         echo "</h2>
                     <h3>";
         // line 27
-        $this->displayBlock('blog_tagline', $context, $blocks);
+        $this->displayBlock('cook_tagline', $context, $blocks);
         // line 28
         echo "</h3>
 \t\t\t\t\t\t   
@@ -124,13 +124,13 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
     }
 
     // line 26
-    public function block_blog_title($context, array $blocks = array())
+    public function block_cook_title($context, array $blocks = array())
     {
         echo "<a href=\"#\">Cocina facil</a>";
     }
 
     // line 27
-    public function block_blog_tagline($context, array $blocks = array())
+    public function block_cook_tagline($context, array $blocks = array())
     {
         echo "<a href=\"#\">\"Cuanto mayor es la dificultad,
 \t\t\t\t\tmayor es la gloria.\" Cicerón</a>";
@@ -153,7 +153,7 @@ class __TwigTemplate_39a6efd6e25bb53df39597944f9a47c96e97d51af734ed1e12f1523cde9
 \t\t\t\t\t\t\t\t</li>
                                 <li class=\"li2\"><a href=\"";
         // line 43
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_blog_contact");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_contact");
         echo "\">Contacto</a></li>
                             </ul>
                         </nav>
