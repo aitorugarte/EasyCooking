@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app"
   ],
-  "SelectedNode": "\\app",
+  "SelectedNode": "\\app\\bootstrap.php.cache",
   "PreviewInSolutionExplorer": false
 }

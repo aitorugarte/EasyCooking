@@ -12,12 +12,19 @@ use Doctrine\ORM\EntityRepository;
  */
 class IngredienteRepository extends EntityRepository
 {
-	public function getIngredientes($limit = null)
+	public function getAllIngredientes($limit = null)
 	{
 	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.nombre', 'DESC');
 
 	if (false === is_null($limit))
 		$qp->setMaxResults($limit);
+
+	return $qp->getQuery()->getResult();
+	}
+
+	public function getIngredientesBy($recetaId)
+	{
+	$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
 
 	return $qp->getQuery()->getResult();
 	}

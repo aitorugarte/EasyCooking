@@ -1,7 +1,8 @@
 <?php
 // src/Cooker/CookingBundle/Entity/Ingrediente.php
 namespace Cooker\CookingBundle\Entity;
-/*php app/console doctrine:schema:update --force*/
+/*php app/console doctrine:schema:update --force
+php app/console doctrine:schema:validate*/
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
@@ -19,12 +20,18 @@ class Ingrediente
 	* @ORM\Column(type="integer")
 	* @ORM\GeneratedValue(strategy="AUTO")
 	*/
-	protected $id;
+	private $id;
 
 	/**
 	* @ORM\Column(type="text")
 	*/
-	protected $nombre;
+	private $nombre;
+
+	 /**
+     * @ORM\ManyToOne(targetEntity="Receta", inversedBy="ingredientes")
+     * @ORM\JoinColumn(name="receta_id", referencedColumnName="id")
+     */
+    private $receta;
 
     /**
      * Get id
@@ -58,5 +65,29 @@ class Ingrediente
     {
         return $this->nombre;
     }
+
+	/**
+     * Set receta
+     *
+     * @param  \Cooker\CookingBundle\Entity\Receta $receta
+     * @return Ingrediente
+     */
+    public function setReceta(\Cooker\CookingBundle\Entity\Receta $receta = null)
+    {
+        $this->receta = $receta;
+
+        return $this;
+    }
+
+    /**
+     * Get receta
+     *
+     * @return \Cooker\CookingBundle\Entity\Receta 
+     */
+    public function getReceta()
+    {
+        return $this->receta;
+    }
+
 
 }

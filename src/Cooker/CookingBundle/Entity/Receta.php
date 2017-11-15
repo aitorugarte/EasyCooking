@@ -15,9 +15,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Receta
 {
     /**
-    * @ORM\OneToMany(targetEntity="Comment", mappedBy="receta")
+    * @ORM\OneToMany(targetEntity="Comment", mappedBy="receta"))
     */
     private $comments;
+	/**
+	* @ORM\OneToMany(targetEntity="Ingrediente", mappedBy="receta"))
+	*/
+	private $ingredientes;
+
 	/**
 	* @ORM\Id
 	* @ORM\Column(type="integer")
@@ -153,6 +158,7 @@ class Receta
     public function __construct()
     {
     $this->comments = new ArrayCollection();
+	$this->ingredientes = new ArrayCollection();
 
     $this->setDate(new \DateTime());
     }
@@ -170,6 +176,19 @@ class Receta
 
         return $this;
     }
+	
+    /**
+     * Add Ingredientes
+     *
+     * @param \Cooker\CookingBundle\Entity\Ingrediente $ingredientes
+     * @return Receta
+     */
+    public function addIngrediente(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
+    {
+        $this->ingredientes[] = $ingredientes;
+
+        return $this;
+    }
 
     /**
      * Remove comments
@@ -181,6 +200,15 @@ class Receta
         $this->comments->removeElement($comments);
     }
 
+	 /**
+     * Remove ingredientes
+     *
+     * @param \Cooker\CookingBundle\Entity\Ingrediente $ingredientes
+     */
+    public function removeIngredientes(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
+    {
+        $this->ingredientes->removeElement($ingredientes);
+    }
     /**
      * Get comments
      *
@@ -189,6 +217,16 @@ class Receta
     public function getComments()
     {
         return $this->comments;
+    }
+
+	/**
+     * Get Ingredientes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIngredientes()
+    {
+        return $this->ingredientes;
     }
     public function __toString()
     {
