@@ -30,7 +30,7 @@ class Ingrediente
 	private $nombre;
 
 	 /**
-     * @ORM\ManyToOne(targetEntity="Receta", inversedBy="ingredientes")
+     * @ORM\ManyToMany(targetEntity="Receta", inversedBy="ingredientes")
      * @ORM\JoinColumn(name="receta_id", referencedColumnName="id")
      */
     private $receta;

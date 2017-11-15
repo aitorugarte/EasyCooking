@@ -20,8 +20,8 @@ class Receta
     * @ORM\OneToMany(targetEntity="Comment", mappedBy="receta"))
     */
     private $comments;
-	/**
-	* @ORM\OneToMany(targetEntity="Ingrediente", mappedBy="receta"))
+	/**TODO
+	* @ORM\ManyToMany(targetEntity="Ingrediente", mappedBy="receta"))
 	*/
 	private $ingredientes;
 
