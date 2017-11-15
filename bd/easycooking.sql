@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2017 a las 17:04:21
+-- Tiempo de generación: 15-11-2017 a las 13:15:55
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -59,7 +59,8 @@ CREATE TABLE `receta` (
   `id` int(11) NOT NULL,
   `nombre` longtext COLLATE utf8_unicode_ci NOT NULL,
   `detalles` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  `tipo_plato` longtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --

@@ -34,6 +34,11 @@ class Receta
 	* @ORM\Column(type="text")
 	*/
 	protected $detalles;
+
+	/**
+	* @ORM\Column(type="text")
+	*/
+	protected $tipo_plato;
 	
 	/**
 	* @ORM\Column(type="date")
@@ -99,6 +104,28 @@ class Receta
             return $this->detalles;
     }
 
+	  /**
+     * Set tipo_plato
+     *
+     * @param string $tipo_plato
+     * @return Receta
+     */
+    public function setTipo($tipo_plato)
+    {
+        $this->tipo_plato = $tipo_plato;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getTipo()
+    {
+        return $this->tipo_plato;
+    }
 
     /**
      * Set date
