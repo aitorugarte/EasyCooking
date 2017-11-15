@@ -4,6 +4,8 @@ namespace Cooker\CookingBundle\Entity;
 /*php app/console doctrine:schema:update --force*/
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+
+
 /**
 * @ORM\Entity
 * @ORM\Table(name="receta")

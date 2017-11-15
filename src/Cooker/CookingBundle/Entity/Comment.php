@@ -1,5 +1,5 @@
 <?php
-
+// src/Cooker/CookingBundle/Entity/Comment.php
 namespace Cooker\CookingBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
  * Cooker\CookingBundle\Entity\Comment
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass=" Cooker\CookingBundle\Entity\CommentRepository")
+ * @ORM\Entity(repositoryClass="Cooker\CookingBundle\Entity\CommentRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Comment

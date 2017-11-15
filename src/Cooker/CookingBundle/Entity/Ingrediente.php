@@ -5,9 +5,11 @@ namespace Cooker\CookingBundle\Entity;
 php app/console doctrine:schema:validate*/
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+
+
 /**
-* @ORM\Entity
-* @ORM\Table(name="Ingrediente")
+* Cooker\CookingBundle\Entity\Ingrediente 
+*
 * @ORM\Table()
 * @ORM\Entity(repositoryClass="Cooker\CookingBundle\Entity\IngredienteRepository")
 * @ORM\HasLifecycleCallbacks()
