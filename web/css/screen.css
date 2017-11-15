@@ -15,17 +15,13 @@ body {
     line-height: 1
 }
 
-ol, ul {
-    list-style: none
-}
-
 blockquote, q {
     quotes: none
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: none
-}
+        content: none
+    }
 
 table {
     border-collapse: collapse;
@@ -57,7 +53,7 @@ body {
 }
 
 #wrapper span.highlight {
-        color: #F48A00;
+    color: #F48A00;
 }
 
 #header {
@@ -66,55 +62,58 @@ body {
 }
 
 #header h2 {
-    font-family: 'Irish Grover', cursive;
-    font-size: 92px;
-    text-align: center;
-    line-height: 110px;
-}
+     font-family: 'Irish Grover', cursive;
+     font-size: 92px;
+     text-align: center;
+     line-height: 110px;
+    }
 
 #header h2 a {
-    color: #000;
+     color: #000;
 }
 
 #header h3 {
-    text-align: center;
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: normal;
+     text-align: center;
+     font-family: 'La Belle Aurore', cursive;
+     font-size: 24px;
+     margin-bottom: 20px;
+     font-weight: normal;
     }
 
-.ul1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+#header ul {
+     list-style: none;
 }
 
-.ul2 {
-    display: none; /*Ocultamos el submenú*/
+#header .ul1 {
+        
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
 }
 
-.li1, .li2, .li3 {
-    float: left;
+/*TODO mostrarlo*/
+#header .ul2 {
+     display: none; /*Ocultamos el submenú*/
 }
 
-.li1, .li2, .li3 a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+#header .li2 {
+     float: left;
 }
 
-.li2 a:hover {
-    background-color: #ccc;
+/*Cada elemento de la lista*/
+#header .li2 a {
+     display: inline-block;
+     color: orange;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
 }
-
-.li1, .li3 a:hover {
+/*Al pasar el ratón por encima de algún elemento*/
+#header .li2 a:hover {
     background-color: #111;
 }
+
 
 .main-col {
     width: 700px;

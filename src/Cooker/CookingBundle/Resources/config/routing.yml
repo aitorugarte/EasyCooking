@@ -1,0 +1,18 @@
+cooker_cook_list:
+    path: /
+    defaults: { _controller: CookerCookingBundle:Cook:list }
+
+cooker_cook_show:
+    path: /show/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:show }
+    
+cooker_cook_contact:
+    path:  /contact
+    defaults: { _controller: CookerCookingBundle:Cook:contact }
+
+cooker_comment_create:
+    path:  /comment/{receta_id}
+    defaults: { _controller: CookerCookingBundle:Comment:create }
+    requirements:
+        _method: POST
+        post_id: \d+

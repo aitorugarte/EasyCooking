@@ -100,35 +100,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // blogger_blog_list
+        // cooker_cook_list
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'blogger_blog_list');
+                return $this->redirect($pathinfo.'/', 'cooker_cook_list');
             }
 
-            return array (  '_controller' => 'Blogger\\BlogBundle\\Controller\\BlogController::listAction',  '_route' => 'blogger_blog_list',);
+            return array (  '_controller' => 'CookerCookingBundle:Cook:list',  '_route' => 'cooker_cook_list',);
         }
 
-        // blogger_blog_show
+        // cooker_cook_show
         if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_blog_show')), array (  '_controller' => 'Blogger\\BlogBundle\\Controller\\BlogController::showAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'CookerCookingBundle:Cook:show',));
         }
 
         if (0 === strpos($pathinfo, '/co')) {
-            // blogger_comment_create
-            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<post_id>\\d+)$#s', $pathinfo, $matches)) {
+            // cooker_comment_create
+            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
                 if ($this->context->getMethod() != 'POST') {
                     $allow[] = 'POST';
-                    goto not_blogger_comment_create;
+                    goto not_cooker_comment_create;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'blogger_comment_create')), array (  '_controller' => 'Blogger\\BlogBundle\\Controller\\CommentController::createAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comment_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CommentController::createAction',));
             }
-            not_blogger_comment_create:
+            not_cooker_comment_create:
 
-            // blogger_blog_contact
+            // cooker_cook_contact
             if ('/contact' === $pathinfo) {
-                return array (  '_controller' => 'Blogger\\BlogBundle\\Controller\\BlogController::contactAction',  '_route' => 'blogger_blog_contact',);
+                return array (  '_controller' => 'CookerCookingBundle:Cook:contact',  '_route' => 'cooker_cook_contact',);
             }
 
         }
