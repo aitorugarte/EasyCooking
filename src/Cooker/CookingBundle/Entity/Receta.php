@@ -1,5 +1,5 @@
 <?php
-// src/Cooker/CookingBundle/Entity/Receta.php
+// src/Cooker\CookingBundle/Entity/Receta.php
 namespace Cooker\CookingBundle\Entity;
 /*php app/console doctrine:schema:update --force*/
 use Doctrine\ORM\Mapping as ORM;

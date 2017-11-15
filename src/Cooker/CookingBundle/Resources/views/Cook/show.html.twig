@@ -1,4 +1,4 @@
-{# src/Cooker/CookingBundle/Resources/views/Cook/show.html.twig #}
+{# src/Cooker/CookBundle/Resources/views/Blog/show.html.twig #}
 {% extends "CookerCookingBundle::layout.html.twig" %}
 {% block title %}Detalles de la receta{% endblock %}
 
@@ -15,13 +15,13 @@
 
 	<section class="previous-comments">
 		<h3>Comentarios</h3>
-		{% include 'CookerCookingBundle:Comment:list.html.twig' with { 'comments': comments } %}
+		{% include 'Cooker:CookingBundle:Comment:list.html.twig' with { 'comments': comments } %}
 	</section>
 
 	<section class="comments" id="comments">
 	
 	<h3>Añadir comentario</h3>
-		{{ render(controller( 'CookerCookingBundle:Comment:new', { 'receta_id': receta.id } )) }}
+		{{ render(controller( 'Cooker:CookingBundle:Comment:new', { 'receta_id': receta.id } )) }}
 	</section>
 	
 	</section>
