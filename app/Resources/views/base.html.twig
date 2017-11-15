@@ -32,17 +32,19 @@
                     {% block navigation %}
                         <nav>
                             <ul class="ul1">
-                                <li class="li2"><a href="#">Inicio</a></li>
+                                <li class="li1"><a href="#">Inicio</a></li>
+
                                 <li class="li2"><a href="#">Recetas</a>
+
 								<ul class="ul2">
 								<li><a href="#">Entrantes</a></li>
 								<li><a href="#">Primeros</a></li>
 								<li><a href="#">Segundos</a></li>
 								<li><a href="#">Postres</a></li>
 								</ul>
-								
 								</li>
-                                <li class="li2"><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
+
+                                <li class="li3"><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
                             </ul>
                         </nav>
                     {% endblock %}
