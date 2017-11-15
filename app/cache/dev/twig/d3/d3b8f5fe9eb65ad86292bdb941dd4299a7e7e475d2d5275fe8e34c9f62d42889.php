@@ -15,8 +15,8 @@ class __TwigTemplate_05ebf8810a9e0945498cc5fb48220d6b67c188417a2c4f187f6cb85db17
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a2d8ee0b954178ce3b8859830d05b9c281c66fefbac5bc0fa05691a8bf559f23 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a2d8ee0b954178ce3b8859830d05b9c281c66fefbac5bc0fa05691a8bf559f23->enter($__internal_a2d8ee0b954178ce3b8859830d05b9c281c66fefbac5bc0fa05691a8bf559f23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/checkbox_widget.html.php"));
+        $__internal_2d7c8addb1b5f2b4e5752d1b40b3db5abb755a9ece1f3cc10248b8b46d2edabb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2d7c8addb1b5f2b4e5752d1b40b3db5abb755a9ece1f3cc10248b8b46d2edabb->enter($__internal_2d7c8addb1b5f2b4e5752d1b40b3db5abb755a9ece1f3cc10248b8b46d2edabb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/checkbox_widget.html.php"));
 
         // line 1
         echo "<input type=\"checkbox\"
@@ -26,7 +26,7 @@ class __TwigTemplate_05ebf8810a9e0945498cc5fb48220d6b67c188417a2c4f187f6cb85db17
 />
 ";
         
-        $__internal_a2d8ee0b954178ce3b8859830d05b9c281c66fefbac5bc0fa05691a8bf559f23->leave($__internal_a2d8ee0b954178ce3b8859830d05b9c281c66fefbac5bc0fa05691a8bf559f23_prof);
+        $__internal_2d7c8addb1b5f2b4e5752d1b40b3db5abb755a9ece1f3cc10248b8b46d2edabb->leave($__internal_2d7c8addb1b5f2b4e5752d1b40b3db5abb755a9ece1f3cc10248b8b46d2edabb_prof);
 
     }
 

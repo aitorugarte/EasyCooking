@@ -58,7 +58,7 @@ class __TwigTemplate_21ff6b9f4bb388c29216892d96a2478d9e827cbc55d8f4ad9cc9c844d88
 \t\t<h3>Comentarios</h3>
 \t\t";
         // line 18
-        $this->loadTemplate("CookerCookingBundle:Comment:list.html.twig", "@CookerCooking/Cook/show.html.twig", 18)->display(array_merge($context, array("comments" => ($context["comments"] ?? null))));
+        $this->loadTemplate("Cooker:CookingBundle:Comment:list.html.twig", "@CookerCooking/Cook/show.html.twig", 18)->display(array_merge($context, array("comments" => ($context["comments"] ?? null))));
         // line 19
         echo "\t</section>
 
@@ -67,7 +67,7 @@ class __TwigTemplate_21ff6b9f4bb388c29216892d96a2478d9e827cbc55d8f4ad9cc9c844d88
 \t<h3>Añadir comentario</h3>
 \t\t";
         // line 24
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("CookerCookingBundle:Comment:new", array("receta_id" => $this->getAttribute(($context["receta"] ?? null), "id", array()))));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->renderFragment($this->env->getExtension('Symfony\Bridge\Twig\Extension\HttpKernelExtension')->controller("Cooker:CookingBundle:Comment:new", array("receta_id" => $this->getAttribute(($context["receta"] ?? null), "id", array()))));
         echo "
 \t</section>
 \t
