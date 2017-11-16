@@ -142,8 +142,14 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
         // line 32
         echo "                        <nav>
                            <ul class=\"ul1\">
-                                <li class=\"li2\"><a href=\"#\">Inicio</a></li>
-                                <li class=\"li2\"><a href=\"#\">Recetas</a>\t\t
+                                <li class=\"li2\"><a href=\"";
+        // line 34
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
+        echo "\">Inicio</a></li>
+                                <li class=\"li2\"><a href=\"";
+        // line 35
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_recetas");
+        echo "\">Recetas</a>\t\t
 \t\t\t\t\t\t\t\t<ul class=\"ul2\">
 \t\t\t\t\t\t\t\t<li><a href=\"#\">Entrantes</a></li>
 \t\t\t\t\t\t\t\t<li><a href=\"#\">Primeros</a></li>
@@ -195,7 +201,7 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 
     public function getDebugInfo()
     {
-        return array (  182 => 66,  177 => 61,  174 => 60,  169 => 56,  164 => 52,  156 => 43,  143 => 32,  140 => 31,  133 => 27,  127 => 26,  121 => 15,  117 => 13,  114 => 12,  108 => 8,  102 => 67,  100 => 66,  95 => 63,  93 => 60,  88 => 57,  86 => 56,  81 => 53,  79 => 52,  72 => 47,  70 => 31,  65 => 28,  63 => 27,  59 => 26,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
+        return array (  188 => 66,  183 => 61,  180 => 60,  175 => 56,  170 => 52,  162 => 43,  151 => 35,  147 => 34,  143 => 32,  140 => 31,  133 => 27,  127 => 26,  121 => 15,  117 => 13,  114 => 12,  108 => 8,  102 => 67,  100 => 66,  95 => 63,  93 => 60,  88 => 57,  86 => 56,  81 => 53,  79 => 52,  72 => 47,  70 => 31,  65 => 28,  63 => 27,  59 => 26,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

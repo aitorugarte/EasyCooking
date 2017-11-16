@@ -64,10 +64,10 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', 'id', 'nombre', 'detalles', 'date');
+            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', 'id', 'nombre', 'detalles', 'date');
+        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
     }
 
     /**
@@ -235,6 +235,28 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
+    public function setTipo($tipo_plato)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTipo', array($tipo_plato));
+
+        return parent::setTipo($tipo_plato);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTipo()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTipo', array());
+
+        return parent::getTipo();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setDate($date)
     {
 
@@ -268,6 +290,17 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
+    public function addIngredientes(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addIngredientes', array($ingredientes));
+
+        return parent::addIngredientes($ingredientes);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function removeComment(\Cooker\CookingBundle\Entity\Comment $comments)
     {
 
@@ -279,12 +312,34 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
+    public function removeIngredientes(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeIngredientes', array($ingredientes));
+
+        return parent::removeIngredientes($ingredientes);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getComments()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', array());
 
         return parent::getComments();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIngredientes()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIngredientes', array());
+
+        return parent::getIngredientes();
     }
 
     /**

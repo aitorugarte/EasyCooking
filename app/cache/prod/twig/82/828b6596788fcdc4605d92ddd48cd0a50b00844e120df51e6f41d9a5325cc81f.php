@@ -42,12 +42,12 @@ class __TwigTemplate_9ef5bc043e362a80d780b115d9811f0eaccddccecc6e3a96176c7d1446d
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 7
             echo "        <article class=\"receta\">
-            <div class=\"date\"><time datetime=\"";
+           <!-- <div class=\"date\"><time datetime=\"";
             // line 8
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l, F j, Y"), "html", null, true);
-            echo "</time></div>
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l j F Y"), "html", null, true);
+            echo "</time></div> -->
             <header>
                 <h2><a href=\"";
             // line 10

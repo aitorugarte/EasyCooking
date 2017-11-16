@@ -2,6 +2,18 @@ cooker_cook:
     resource: "@CookerCookingBundle/Resources/config/routing.yml"
     prefix:   /
 
+cooker_cook_principal:
+    path:  /
+    defaults: { _controller: CookerCookingBundle:Cook:principal }
+
+cooker_cook_recetas:
+    path:  /recetas
+    defaults: { _controller: CookerCookingBundle:Cook:recetas }
+
+cooker_cook_ingredientes:
+    path:  /ingredientes
+    defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
+
 cooker_cook_contact:
     path:  /contact
     defaults: { _controller: CookerCookingBundle:Cook:contact }

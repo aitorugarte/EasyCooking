@@ -1,10 +1,18 @@
-cooker_cook_list:
+cooker_cook_principal:
     path: /
-    defaults: { _controller: CookerCookingBundle:Cook:list }
+    defaults: { _controller: CookerCookingBundle:Cook:principal }
+
+cooker_cook_recetas:
+    path: /recetas
+    defaults: { _controller: CookerCookingBundle:Cook:recetas }
 
 cooker_cook_show:
     path: /show/{id}
     defaults: { _controller: CookerCookingBundle:Cook:show }
+
+cooker_cook_ingredientes:
+    path: /ingredientes
+    defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
     
 cooker_cook_contact:
     path:  /contact

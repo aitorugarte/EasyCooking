@@ -15,8 +15,8 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fa71e31da0fba68e6042d7a07a0dc103425d47e248652f73e2526e86ec0b5459 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fa71e31da0fba68e6042d7a07a0dc103425d47e248652f73e2526e86ec0b5459->enter($__internal_fa71e31da0fba68e6042d7a07a0dc103425d47e248652f73e2526e86ec0b5459_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
+        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f->enter($__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -80,7 +80,7 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_fa71e31da0fba68e6042d7a07a0dc103425d47e248652f73e2526e86ec0b5459->leave($__internal_fa71e31da0fba68e6042d7a07a0dc103425d47e248652f73e2526e86ec0b5459_prof);
+        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f->leave($__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f_prof);
 
     }
 

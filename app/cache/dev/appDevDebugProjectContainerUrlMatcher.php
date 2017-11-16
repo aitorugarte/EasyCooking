@@ -100,37 +100,44 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // cooker_cook_list
-        if ('' === rtrim($pathinfo, '/')) {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'cooker_cook_list');
-            }
-
-            return array (  '_controller' => 'CookerCookingBundle:Cook:list',  '_route' => 'cooker_cook_list',);
-        }
-
         // cooker_cook_show
         if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'CookerCookingBundle:Cook:show',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showAction',));
         }
 
-        if (0 === strpos($pathinfo, '/co')) {
-            // cooker_comment_create
-            if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_cooker_comment_create;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comment_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CommentController::createAction',));
-            }
-            not_cooker_comment_create:
-
-            // cooker_cook_contact
-            if ('/contact' === $pathinfo) {
-                return array (  '_controller' => 'CookerCookingBundle:Cook:contact',  '_route' => 'cooker_cook_contact',);
+        // cooker_comment_create
+        if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_cooker_comment_create;
             }
 
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comment_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CommentController::createAction',));
+        }
+        not_cooker_comment_create:
+
+        // cooker_cook_principal
+        if ('' === rtrim($pathinfo, '/')) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'cooker_cook_principal');
+            }
+
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::principalAction',  '_route' => 'cooker_cook_principal',);
+        }
+
+        // cooker_cook_recetas
+        if ('/recetas' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::recetasAction',  '_route' => 'cooker_cook_recetas',);
+        }
+
+        // cooker_cook_ingredientes
+        if ('/ingredientes' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::ingredientesAction',  '_route' => 'cooker_cook_ingredientes',);
+        }
+
+        // cooker_cook_contact
+        if ('/contact' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::contactAction',  '_route' => 'cooker_cook_contact',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

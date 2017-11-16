@@ -64,10 +64,10 @@ class Ingrediente extends \Cooker\CookingBundle\Entity\Ingrediente implements \D
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'nombre');
+            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'id', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'nombre', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'recetas');
         }
 
-        return array('__isInitialized__', 'id', 'nombre');
+        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'id', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'nombre', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Ingrediente' . "\0" . 'recetas');
     }
 
     /**
@@ -208,6 +208,28 @@ class Ingrediente extends \Cooker\CookingBundle\Entity\Ingrediente implements \D
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNombre', array());
 
         return parent::getNombre();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setRecetas(\Cooker\CookingBundle\Entity\Receta $recetas = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRecetas', array($recetas));
+
+        return parent::setRecetas($recetas);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRecetas()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRecetas', array());
+
+        return parent::getRecetas();
     }
 
 }

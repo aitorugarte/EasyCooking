@@ -84,6 +84,7 @@
   'CookerCookingBundle:Comment:list.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Comment/list.html.twig',
   'CookerCookingBundle:Cook:contact.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/contact.html.twig',
   'CookerCookingBundle:Cook:list.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/list.html.twig',
+  'CookerCookingBundle:Cook:principal.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/principal.html.twig',
   'CookerCookingBundle:Cook:show.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/show.html.twig',
   'CookerCookingBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Default/index.html.twig',
   'CookerCookingBundle::layout.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/layout.html.twig',
