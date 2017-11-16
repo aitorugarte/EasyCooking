@@ -9,14 +9,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CookController extends Controller
 {
-
+	
+	/*
+	 * Cargamos las 3 últimas recetas añadidas
+	 */
 	public function principalAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
-
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas(3);
+		
 		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas));
 	}
 
+	/*
+	 * Cargamos todas las recetas almacenadas
+	 */
 	public function recetasAction()
 	{
 		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
@@ -26,9 +32,9 @@ class CookController extends Controller
 
 	public function ingredientesAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
+		$ingredientes = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->getAllIngredientes();
 
-		return $this->render('CookerCookingBundle:Cook:ingredientes.html.twig', array('recetas' => $recetas));
+		return $this->render('CookerCookingBundle:Cook:ingredientes.html.twig', array('ingredientes' => $ingredientes));
 	}
 
 	public function showAction($id)
