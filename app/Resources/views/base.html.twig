@@ -1,11 +1,8 @@
-<!-- app/Resources/views/base.html.twig -->
-<!-- php app/console cache:clear --env=prod  php app/console cache:clear --env=dev -->
 <!DOCTYPE html>
-<html>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
     <head>
-        <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
         <title>{% block title %}symblog{% endblock %} - symblog</title>
+		<meta charset="UTF-8">
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -22,7 +19,6 @@
            
 		   <!-- Cabecera -->
 			<header id="header">
-                <hgroup>
                     <h2>{% block cook_title %}<a href="#">Cocina facil</a>{% endblock %}</h2>
                     <h3>{% block cook_tagline %}<a href="#">"Cuanto mayor es la dificultad,
 					mayor es la gloria." Cicerón</a>{% endblock %}</h3>
@@ -45,7 +41,6 @@
                             </ul>
                         </nav>
                     {% endblock %}
-                </hgroup>
             </header>
        
 			<!-- Contenido principal -->

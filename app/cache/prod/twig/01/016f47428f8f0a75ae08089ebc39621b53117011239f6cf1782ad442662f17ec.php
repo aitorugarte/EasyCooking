@@ -29,7 +29,7 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 <!-- php app/console cache:clear --env=prod  php app/console cache:clear --env=dev -->
 <!DOCTYPE html>
 <html>
-
+<?php header('Content-Type: text/html; charset=ISO-8859-1'); ?>
     <head>
         <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=\"utf-8\" />
         <title>";

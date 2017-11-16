@@ -1,16 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bd",
-    "\\src",
-    "\\src\\Cooker",
-    "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Controller",
-    "\\src\\Cooker\\CookingBundle\\Entity",
-    "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Comment"
+    "\\app",
+    "\\app\\Resources",
+    "\\app\\Resources\\views"
   ],
-  "SelectedNode": "\\bd\\easycooking.sql",
   "PreviewInSolutionExplorer": false
 }
