@@ -20,8 +20,9 @@ class Receta
     * @ORM\OneToMany(targetEntity="Comment", mappedBy="receta"))
     */
     private $comments;
-	/**TODO
-	* @ORM\ManyToMany(targetEntity="Ingrediente", mappedBy="receta"))
+
+	/**
+	* @ORM\ManyToMany(targetEntity="Ingrediente", mappedBy="recetas"))
 	*/
 	private $ingredientes;
 
@@ -185,7 +186,7 @@ class Receta
      * @param \Cooker\CookingBundle\Entity\Ingrediente $ingredientes
      * @return Receta
      */
-    public function addIngrediente(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
+    public function addIngredientes(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
     {
         $this->ingredientes[] = $ingredientes;
 
@@ -230,6 +231,7 @@ class Receta
     {
         return $this->ingredientes;
     }
+
     public function __toString()
     {
         return $this->getNombre();

@@ -1,8 +1,12 @@
 <?php
 // src/Cooker/CookingBundle/Entity/Ingrediente.php
 namespace Cooker\CookingBundle\Entity;
-/*php app/console doctrine:schema:update --force
+/*
+php app/console doctrine:schema:update --force
 php app/console doctrine:schema:validate*/
+/*
+http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html
+*/
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -33,7 +37,7 @@ class Ingrediente
      * @ORM\ManyToMany(targetEntity="Receta", inversedBy="ingredientes")
      * @ORM\JoinColumn(name="receta_id", referencedColumnName="id")
      */
-    private $receta;
+    private $recetas;
 
     /**
      * Get id
@@ -71,24 +75,24 @@ class Ingrediente
 	/**
      * Set receta
      *
-     * @param  \Cooker\CookingBundle\Entity\Receta $receta
+     * @param  \Cooker\CookingBundle\Entity\Receta $recetas
      * @return Ingrediente
      */
-    public function setReceta(\Cooker\CookingBundle\Entity\Receta $receta = null)
+    public function setRecetas(\Cooker\CookingBundle\Entity\Receta $recetas = null)
     {
-        $this->receta = $receta;
+        $this->recetas = $recetas;
 
         return $this;
     }
 
     /**
-     * Get receta
+     * Get recetas
      *
      * @return \Cooker\CookingBundle\Entity\Receta 
      */
-    public function getReceta()
+    public function getRecetas()
     {
-        return $this->receta;
+        return $this->recetas;
     }
 
 
