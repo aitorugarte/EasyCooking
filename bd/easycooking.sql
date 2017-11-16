@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2017 a las 09:08:11
+-- Tiempo de generación: 16-11-2017 a las 18:54:10
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -25,14 +25,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comment`
+-- Estructura de tabla para la tabla `comentario`
 --
 
-CREATE TABLE `comment` (
+CREATE TABLE `comentario` (
   `id` int(11) NOT NULL,
   `receta_id` int(11) DEFAULT NULL,
-  `user` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `comment` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `usuario` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `comentario` longtext COLLATE utf8_unicode_ci NOT NULL,
   `approved` tinyint(1) NOT NULL,
   `created` datetime NOT NULL,
   `updated` datetime NOT NULL
@@ -49,15 +49,6 @@ CREATE TABLE `ingrediente` (
   `nombre` longtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `ingrediente`
---
-
-INSERT INTO `ingrediente` (`id`, `nombre`) VALUES
-(1, 'Macarrones'),
-(2, 'Tomate'),
-(3, 'Espaguetis');
-
 -- --------------------------------------------------------
 
 --
@@ -68,16 +59,6 @@ CREATE TABLE `ingrediente_receta` (
   `ingrediente_id` int(11) NOT NULL,
   `receta_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `ingrediente_receta`
---
-
-INSERT INTO `ingrediente_receta` (`ingrediente_id`, `receta_id`) VALUES
-(1, 1),
-(2, 1),
-(2, 2),
-(3, 2);
 
 -- --------------------------------------------------------
 
@@ -94,23 +75,15 @@ CREATE TABLE `receta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `receta`
---
-
-INSERT INTO `receta` (`id`, `nombre`, `detalles`, `tipo_plato`, `date`) VALUES
-(1, 'Macarrones con tomate', 'Pues..Macarrones con tomate!!', 'Primero', '2017-11-08'),
-(2, 'Espaguetis con tomate', 'Puess...espaguetis con tomate!!', 'Primero', '2017-11-10');
-
---
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `comment`
+-- Indices de la tabla `comentario`
 --
-ALTER TABLE `comment`
+ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `IDX_9474526C54F853F8` (`receta_id`);
+  ADD KEY `IDX_4B91E70254F853F8` (`receta_id`);
 
 --
 -- Indices de la tabla `ingrediente`
@@ -137,32 +110,32 @@ ALTER TABLE `receta`
 --
 
 --
--- AUTO_INCREMENT de la tabla `comment`
+-- AUTO_INCREMENT de la tabla `comentario`
 --
-ALTER TABLE `comment`
+ALTER TABLE `comentario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ingrediente`
 --
 ALTER TABLE `ingrediente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `receta`
 --
 ALTER TABLE `receta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `comment`
+-- Filtros para la tabla `comentario`
 --
-ALTER TABLE `comment`
-  ADD CONSTRAINT `FK_9474526C54F853F8` FOREIGN KEY (`receta_id`) REFERENCES `receta` (`id`);
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `FK_4B91E70254F853F8` FOREIGN KEY (`receta_id`) REFERENCES `receta` (`id`);
 
 --
 -- Filtros para la tabla `ingrediente_receta`
