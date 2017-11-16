@@ -15,15 +15,15 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f->enter($__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
+        $__internal_fd761e6cf51347daab5016524b0a44911035579d8eab7ba08b9011523e0d60ba = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fd761e6cf51347daab5016524b0a44911035579d8eab7ba08b9011523e0d60ba->enter($__internal_fd761e6cf51347daab5016524b0a44911035579d8eab7ba08b9011523e0d60ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
 ";
         // line 3
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["comments"] ?? $this->getContext($context, "comments")));
+        $context['_seq'] = twig_ensure_traversable(($context["comentarios"] ?? $this->getContext($context, "comentarios")));
         $context['_iterated'] = false;
         $context['loop'] = array(
           'parent' => $context['_parent'],
@@ -38,26 +38,26 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
             $context['loop']['length'] = $length;
             $context['loop']['last'] = 1 === $length;
         }
-        foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
+        foreach ($context['_seq'] as $context["_key"] => $context["comentario"]) {
             // line 4
-            echo "    <article class=\"comment ";
+            echo "    <article class=\"comentario ";
             echo twig_escape_filter($this->env, twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array())), "html", null, true);
-            echo "\" id=\"comment-";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "id", array()), "html", null, true);
+            echo "\" id=\"comentario-";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "id", array()), "html", null, true);
             echo "\">
         <header>
             <p><span class=\"highlight\">";
             // line 6
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "user", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "user", array()), "html", null, true);
             echo "</span> comentó el <time datetime=\"";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comment"], "created", array()), "c"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "c"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comment"], "created", array()), "l, F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "l, F j, Y"), "html", null, true);
             echo "</time></p>
         </header>
         <p>";
             // line 8
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "comment", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "comentario", array()), "html", null, true);
             echo "</p>
     </article>
 ";
@@ -77,10 +77,10 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f->leave($__internal_7edd38e465fc8ce09ce7ff5dd8249331484495bdbc1b09ed4ddff9771b1e9a7f_prof);
+        $__internal_fd761e6cf51347daab5016524b0a44911035579d8eab7ba08b9011523e0d60ba->leave($__internal_fd761e6cf51347daab5016524b0a44911035579d8eab7ba08b9011523e0d60ba_prof);
 
     }
 
@@ -109,14 +109,14 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 
     public function getSourceContext()
     {
-        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comment/list.html.twig #}
+        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comentario/list.html.twig #}
 
-{% for comment in comments %}
-    <article class=\"comment {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comment-{{ comment.id }}\">
+{% for comentario in comentarios %}
+    <article class=\"comentario {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comentario-{{ comentario.id }}\">
         <header>
-            <p><span class=\"highlight\">{{ comment.user }}</span> comentó el <time datetime=\"{{ comment.created|date('c') }}\">{{ comment.created|date('l, F j, Y') }}</time></p>
+            <p><span class=\"highlight\">{{ comentario.user }}</span> comentó el <time datetime=\"{{ comentario.created|date('c') }}\">{{ comentario.created|date('l, F j, Y') }}</time></p>
         </header>
-        <p>{{ comment.comment }}</p>
+        <p>{{ comentario.comentario }}</p>
     </article>
 {% else %}
     <p>No hay comentarios para este post.</p>

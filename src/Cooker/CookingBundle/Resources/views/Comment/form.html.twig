@@ -1,6 +1,6 @@
-{# src/Cooker/CookingBundle/Resources/views/Comment/form.html.twig #}
+{# src/Cooker/CookingBundle/Resources/views/Comentario/form.html.twig #}
 
-<form action="{{ path('cooker_comment_create', { 'receta_id' : comment.receta.id } ) }}" method="post" {{ form_enctype(form) }} class="cooker">
+<form action="{{ path('cooker_comentario_create', { 'receta_id' : comentario.receta.id } ) }}" method="post" {{ form_enctype(form) }} class="cooker">
     {{ form_widget(form) }}
     <p>
         <input type="submit" value="Enviar">

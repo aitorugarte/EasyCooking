@@ -20,7 +20,7 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
 ";
         // line 3
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["comments"] ?? null));
+        $context['_seq'] = twig_ensure_traversable(($context["comentarios"] ?? null));
         $context['_iterated'] = false;
         $context['loop'] = array(
           'parent' => $context['_parent'],
@@ -35,26 +35,26 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
             $context['loop']['length'] = $length;
             $context['loop']['last'] = 1 === $length;
         }
-        foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
+        foreach ($context['_seq'] as $context["_key"] => $context["comentario"]) {
             // line 4
-            echo "    <article class=\"comment ";
+            echo "    <article class=\"comentario ";
             echo twig_escape_filter($this->env, twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array())), "html", null, true);
-            echo "\" id=\"comment-";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "id", array()), "html", null, true);
+            echo "\" id=\"comentario-";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "id", array()), "html", null, true);
             echo "\">
         <header>
             <p><span class=\"highlight\">";
             // line 6
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "user", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "user", array()), "html", null, true);
             echo "</span> comentó el <time datetime=\"";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comment"], "created", array()), "c"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "c"), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comment"], "created", array()), "l, F j, Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "l, F j, Y"), "html", null, true);
             echo "</time></p>
         </header>
         <p>";
             // line 8
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comment"], "comment", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "comentario", array()), "html", null, true);
             echo "</p>
     </article>
 ";
@@ -74,7 +74,7 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
 ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
     }
 

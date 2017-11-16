@@ -64,10 +64,10 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
+            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comments', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
+        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
     }
 
     /**
@@ -279,12 +279,12 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function addComment(\Cooker\CookingBundle\Entity\Comment $comments)
+    public function addComentario(\Cooker\CookingBundle\Entity\Comentario $comentarios)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComment', array($comments));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComentario', array($comentarios));
 
-        return parent::addComment($comments);
+        return parent::addComentario($comentarios);
     }
 
     /**
@@ -301,12 +301,12 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function removeComment(\Cooker\CookingBundle\Entity\Comment $comments)
+    public function removeComentario(\Cooker\CookingBundle\Entity\Comentario $comentarios)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComment', array($comments));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComentario', array($comentarios));
 
-        return parent::removeComment($comments);
+        return parent::removeComentario($comentarios);
     }
 
     /**
@@ -323,12 +323,12 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function getComments()
+    public function getComentarios()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComentarios', array());
 
-        return parent::getComments();
+        return parent::getComentarios();
     }
 
     /**

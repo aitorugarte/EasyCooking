@@ -22,35 +22,39 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
-        // cooker_cook_list
-        if ('/recetas' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::listAction',  '_route' => 'cooker_cook_list',);
-        }
-
         // cooker_cook_show
         if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showAction',));
         }
 
-        // cooker_comment_create
-        if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
+        // cooker_comentario_create
+        if (0 === strpos($pathinfo, '/comentario') && preg_match('#^/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
             if ($this->context->getMethod() != 'POST') {
                 $allow[] = 'POST';
-                goto not_cooker_comment_create;
+                goto not_cooker_comentario_create;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comment_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CommentController::createAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comentario_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\ComentarioController::createAction',));
         }
-        not_cooker_comment_create:
+        not_cooker_comentario_create:
 
         // cooker_cook_principal
-        if ('/principal' === $pathinfo) {
+        if ('' === rtrim($pathinfo, '/')) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'cooker_cook_principal');
+            }
+
             return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::principalAction',  '_route' => 'cooker_cook_principal',);
         }
 
         // cooker_cook_recetas
         if ('/recetas' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::listAction',  '_route' => 'cooker_cook_recetas',);
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::recetasAction',  '_route' => 'cooker_cook_recetas',);
+        }
+
+        // cooker_cook_ingredientes
+        if ('/ingredientes' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::ingredientesAction',  '_route' => 'cooker_cook_ingredientes',);
         }
 
         // cooker_cook_contact

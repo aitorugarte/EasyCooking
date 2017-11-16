@@ -17,9 +17,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Receta
 {
     /**
-    * @ORM\OneToMany(targetEntity="Comment", mappedBy="receta"))
+    * @ORM\OneToMany(targetEntity="Comentario", mappedBy="receta"))
     */
-    private $comments;
+    private $comentarios;
 
 	/**
 	* @ORM\ManyToMany(targetEntity="Ingrediente", mappedBy="recetas"))
@@ -160,7 +160,7 @@ class Receta
     
     public function __construct()
     {
-    $this->comments = new ArrayCollection();
+    $this->comentarios = new ArrayCollection();
 	$this->ingredientes = new ArrayCollection();
 
     $this->setDate(new \DateTime());
@@ -168,14 +168,14 @@ class Receta
 
 
     /**
-     * Add comments
+     * Add cmmentarios
      *
-     * @param \Cooker\CookingBundle\Entity\Comment $comments
+     * @param \Cooker\CookingBundle\Entity\Comentario $comentarios
      * @return Receta
      */
-    public function addComment(\Cooker\CookingBundle\Entity\Comment $comments)
+    public function addComentario(\Cooker\CookingBundle\Entity\Comentario $comentarios)
     {
-        $this->comments[] = $comments;
+        $this->comentarios[] = $comentarios;
 
         return $this;
     }
@@ -194,13 +194,13 @@ class Receta
     }
 
     /**
-     * Remove comments
+     * Remove comentarios
      *
-     * @param \Cooker\CookingBundle\Entity\Comment $comments
+     * @param \Cooker\CookingBundle\Entity\Comentario $comentarios
      */
-    public function removeComment(\Cooker\CookingBundle\Entity\Comment $comments)
+    public function removeComentario(\Cooker\CookingBundle\Entity\Comentario $comentarios)
     {
-        $this->comments->removeElement($comments);
+        $this->comentarios->removeElement($comentarios);
     }
 
 	 /**
@@ -213,13 +213,13 @@ class Receta
         $this->ingredientes->removeElement($ingredientes);
     }
     /**
-     * Get comments
+     * Get comentario
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getComments()
+    public function getComentarios()
     {
-        return $this->comments;
+        return $this->comentarios;
     }
 
 	/**

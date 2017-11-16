@@ -45,9 +45,9 @@ class CookController extends Controller
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
-		$comments = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comment')->getCommentsForReceta($receta->getId());
+		$comentarios = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comentario')->getComentariosForReceta($receta->getId());
 
-		return $this->render('CookerCookingBundle:Cook:show.html.twig', array('receta' => $receta, 'comments' => $comments));
+		return $this->render('CookerCookingBundle:Cook:show.html.twig', array('receta' => $receta, 'comentarios' => $comentarios));
 	}
 
 	public function contactAction()

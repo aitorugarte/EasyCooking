@@ -105,16 +105,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showAction',));
         }
 
-        // cooker_comment_create
-        if (0 === strpos($pathinfo, '/comment') && preg_match('#^/comment/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
+        // cooker_comentario_create
+        if (0 === strpos($pathinfo, '/comentario') && preg_match('#^/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
             if ($this->context->getMethod() != 'POST') {
                 $allow[] = 'POST';
-                goto not_cooker_comment_create;
+                goto not_cooker_comentario_create;
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comment_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CommentController::createAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comentario_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\ComentarioController::createAction',));
         }
-        not_cooker_comment_create:
+        not_cooker_comentario_create:
 
         // cooker_cook_principal
         if ('' === rtrim($pathinfo, '/')) {

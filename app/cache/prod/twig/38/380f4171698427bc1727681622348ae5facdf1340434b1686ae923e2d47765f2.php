@@ -36,11 +36,11 @@ class __TwigTemplate_56c0b7e86eb98a9dd062f22a158a4ff29c9cbfd77e6777ef583f7fe2fda
     {
         // line 8
         echo "    <h1>Añadir un comentario a la receta \"";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comment"] ?? null), "receta", array()), "nombre", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["comentario"] ?? null), "receta", array()), "nombre", array()), "html", null, true);
         echo "\"</h1>
     ";
         // line 9
-        $this->loadTemplate("CookerCookingBundle:Comment:form.html.twig", "@CookerCooking/Comment/create.html.twig", 9)->display(array_merge($context, array("form" => ($context["form"] ?? null))));
+        $this->loadTemplate("CookerCookingBundle:Comentario:form.html.twig", "@CookerCooking/Comment/create.html.twig", 9)->display(array_merge($context, array("form" => ($context["form"] ?? null))));
     }
 
     public function getTemplateName()

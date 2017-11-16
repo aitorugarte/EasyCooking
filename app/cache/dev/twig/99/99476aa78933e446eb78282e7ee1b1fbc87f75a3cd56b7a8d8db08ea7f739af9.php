@@ -15,14 +15,14 @@ class __TwigTemplate_01e16578802e8a3522f27a54659ccef3183f6fd460784bc4e8c931412a3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_12fb6cea26bc73785a821dff51880e1510535929796f3bd316b3b845e2b2f22f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_12fb6cea26bc73785a821dff51880e1510535929796f3bd316b3b845e2b2f22f->enter($__internal_12fb6cea26bc73785a821dff51880e1510535929796f3bd316b3b845e2b2f22f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:form.html.twig"));
+        $__internal_28ec99c1adc54ab6a0d6795f05f29d61cdb1d8adb06846a5e69b313e6587311a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_28ec99c1adc54ab6a0d6795f05f29d61cdb1d8adb06846a5e69b313e6587311a->enter($__internal_28ec99c1adc54ab6a0d6795f05f29d61cdb1d8adb06846a5e69b313e6587311a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:form.html.twig"));
 
         // line 2
         echo "
 <form action=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_comment_create", array("receta_id" => $this->getAttribute($this->getAttribute(($context["comment"] ?? $this->getContext($context, "comment")), "receta", array()), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_comentario_create", array("receta_id" => $this->getAttribute($this->getAttribute(($context["comentario"] ?? $this->getContext($context, "comentario")), "receta", array()), "id", array()))), "html", null, true);
         echo "\" method=\"post\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'enctype');
         echo " class=\"cooker\">
@@ -36,7 +36,7 @@ class __TwigTemplate_01e16578802e8a3522f27a54659ccef3183f6fd460784bc4e8c931412a3
 </form>
 ";
         
-        $__internal_12fb6cea26bc73785a821dff51880e1510535929796f3bd316b3b845e2b2f22f->leave($__internal_12fb6cea26bc73785a821dff51880e1510535929796f3bd316b3b845e2b2f22f_prof);
+        $__internal_28ec99c1adc54ab6a0d6795f05f29d61cdb1d8adb06846a5e69b313e6587311a->leave($__internal_28ec99c1adc54ab6a0d6795f05f29d61cdb1d8adb06846a5e69b313e6587311a_prof);
 
     }
 
@@ -65,9 +65,9 @@ class __TwigTemplate_01e16578802e8a3522f27a54659ccef3183f6fd460784bc4e8c931412a3
 
     public function getSourceContext()
     {
-        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comment/form.html.twig #}
+        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comentario/form.html.twig #}
 
-<form action=\"{{ path('cooker_comment_create', { 'receta_id' : comment.receta.id } ) }}\" method=\"post\" {{ form_enctype(form) }} class=\"cooker\">
+<form action=\"{{ path('cooker_comentario_create', { 'receta_id' : comentario.receta.id } ) }}\" method=\"post\" {{ form_enctype(form) }} class=\"cooker\">
     {{ form_widget(form) }}
     <p>
         <input type=\"submit\" value=\"Enviar\">

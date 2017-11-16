@@ -68,37 +68,37 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
                     ";
         // line 31
         $this->displayBlock('navigation', $context, $blocks);
-        // line 47
+        // line 48
         echo "                </hgroup>
             </header>
        
 \t\t\t<!-- Contenido principal -->
             <section class=\"main-col\">
                 ";
-        // line 52
-        $this->displayBlock('body', $context, $blocks);
         // line 53
+        $this->displayBlock('body', $context, $blocks);
+        // line 54
         echo "            </section>
 \t\t\t<!-- Contenido lateral derecho -->
             <aside class=\"sidebar\">
                 ";
-        // line 56
-        $this->displayBlock('sidebar', $context, $blocks);
         // line 57
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 58
         echo "            </aside>
 \t\t\t<!-- Pie de página -->
             <div id=\"footer\">
                 ";
-        // line 60
+        // line 61
         $this->displayBlock('footer', $context, $blocks);
-        // line 63
+        // line 64
         echo "            </div>
         </section>
 
         ";
-        // line 66
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 67
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 68
         echo "    </body>
 </html>
 ";
@@ -157,8 +157,12 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 \t\t\t\t\t\t\t\t<li><a href=\"#\">Postres</a></li>
 \t\t\t\t\t\t\t\t</ul>\t\t
 \t\t\t\t\t\t\t\t</li>
-                                <li class=\"li2\"><a href=\"";
+\t\t\t\t\t\t\t\t<li class=\"li2\"><a href=\"";
         // line 43
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_ingredientes");
+        echo "\">Ingredientes</a>\t\t
+                                <li class=\"li2\"><a href=\"";
+        // line 44
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_contact");
         echo "\">Contacto</a></li>
                             </ul>
@@ -166,25 +170,25 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
                     ";
     }
 
-    // line 52
+    // line 53
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 56
+    // line 57
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 60
+    // line 61
     public function block_footer($context, array $blocks = array())
     {
-        // line 61
+        // line 62
         echo "                    Cocina fácil - Creado como proyecto para Ingeniería Web
                 ";
     }
 
-    // line 66
+    // line 67
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -201,7 +205,7 @@ class __TwigTemplate_f0f78e59153860e81dca92180d1d1cb7d1d2c3bfcb3eb958967b819ea82
 
     public function getDebugInfo()
     {
-        return array (  188 => 66,  183 => 61,  180 => 60,  175 => 56,  170 => 52,  162 => 43,  151 => 35,  147 => 34,  143 => 32,  140 => 31,  133 => 27,  127 => 26,  121 => 15,  117 => 13,  114 => 12,  108 => 8,  102 => 67,  100 => 66,  95 => 63,  93 => 60,  88 => 57,  86 => 56,  81 => 53,  79 => 52,  72 => 47,  70 => 31,  65 => 28,  63 => 27,  59 => 26,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
+        return array (  192 => 67,  187 => 62,  184 => 61,  179 => 57,  174 => 53,  166 => 44,  162 => 43,  151 => 35,  147 => 34,  143 => 32,  140 => 31,  133 => 27,  127 => 26,  121 => 15,  117 => 13,  114 => 12,  108 => 8,  102 => 68,  100 => 67,  95 => 64,  93 => 61,  88 => 58,  86 => 57,  81 => 54,  79 => 53,  72 => 48,  70 => 31,  65 => 28,  63 => 27,  59 => 26,  46 => 17,  44 => 12,  37 => 8,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

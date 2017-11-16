@@ -18,9 +18,9 @@ cooker_cook_contact:
     path:  /contact
     defaults: { _controller: CookerCookingBundle:Cook:contact }
 
-cooker_comment_create:
-    path:  /comment/{receta_id}
-    defaults: { _controller: CookerCookingBundle:Comment:create }
+cooker_comentario_create:
+    path:  /comentario/{receta_id}
+    defaults: { _controller: CookerCookingBundle:Comentario:create }
     requirements:
         _method: POST
         post_id: \d+
