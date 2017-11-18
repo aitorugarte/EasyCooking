@@ -3,13 +3,14 @@
 {% block title %}Lista de Recetas{% endblock %}
 
 {% block body %}
-<ul>
+
+<ul id="lista">
     {% for receta in recetas %}
-        <article class="receta">
+	<li id="elemento">
             <header>
                 <h2><a href="{{ path('cooker_cook_show', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h2>
             </header>
-
+			<img class="imgPeq" src="/images/fondo.jpg" alt="d" />
             <div class="snippet">
                 <p>{{ receta.detalles(200) }}</p>
                 <p class="continue"><a href="{{ path('cooker_cook_show', { 'id': receta.id }) }}">Seguir leyendo...</a></p>
@@ -18,7 +19,7 @@
             <footer class="meta">
                 <p>Comentarios: -</p>
             </footer>
-        </article>
+	</li>
     {% else %}
         <p>No hay entradas en este blog</p>
     {% endfor %}

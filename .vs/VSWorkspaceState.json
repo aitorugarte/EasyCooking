@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\Resources",
-    "\\app\\Resources\\views"
+    "\\src",
+    "\\src\\Cooker",
+    "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Resources",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook"
   ],
+  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\recetas.html.twig",
   "PreviewInSolutionExplorer": false
 }
