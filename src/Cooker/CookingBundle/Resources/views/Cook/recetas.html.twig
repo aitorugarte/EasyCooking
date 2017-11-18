@@ -4,9 +4,9 @@
 
 {% block body %}
 
-<ul id="lista">
+<ul class="lista">
     {% for receta in recetas %}
-	<li id="elemento">
+	<li class="elemento">
             <header>
                 <h2><a href="{{ path('cooker_cook_show', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h2>
             </header>
