@@ -297,3 +297,10 @@ ul#menu {
     margin: 10px auto;
     display: block;
 }
+
+/* Show receta con ingredientes */
+
+.ingredientes {
+    padding-left: 0px;
+    list-style: none;
+}

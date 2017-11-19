@@ -24,9 +24,8 @@ class IngredienteRepository extends EntityRepository
 
 	public function getIngredientesBy($recetaId)
 	{
-	$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
-
-	return $qp->getQuery()->getResult();
+	  $qp = $this->createQueryBuilder('i')->innerJoin('i.recetas ', 'r', 'WITH', 'r.id = :recetaid')->setParameter('recetaid', $recetaId);
+	  
+	  return $qp->getQuery()->getResult();
 	}
-
 }

@@ -2,16 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Resources",
     "\\src",
     "\\src\\Cooker",
     "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Controller",
+    "\\src\\Cooker\\CookingBundle\\Entity",
     "\\src\\Cooker\\CookingBundle\\Resources",
+    "\\src\\Cooker\\CookingBundle\\Resources\\config",
     "\\src\\Cooker\\CookingBundle\\Resources\\views",
     "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
-    "\\web",
-    "\\web\\images"
+    "\\web"
   ],
-  "SelectedNode": "\\web\\images",
+  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\showRecetas.html.twig",
   "PreviewInSolutionExplorer": false
 }

@@ -46,7 +46,7 @@ class Receta
 	/**
 	* @ORM\Column(type="text")
 	*/
-	protected $tipo_plato;
+	public $tipo_plato;
 	
 	/**
 	* @ORM\Column(type="date")

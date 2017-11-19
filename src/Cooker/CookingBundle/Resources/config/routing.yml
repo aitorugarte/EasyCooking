@@ -9,11 +9,15 @@ cooker_cook_recetas:
 cooker_cook_show:
     path: /show/{id}
     defaults: { _controller: CookerCookingBundle:Cook:show }
+ 
+cooker_cook_show2:
+    path: /show2/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:show2 }
 
 cooker_cook_ingredientes:
     path: /ingredientes
     defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
-    
+
 cooker_cook_contact:
     path:  /contact
     defaults: { _controller: CookerCookingBundle:Cook:contact }

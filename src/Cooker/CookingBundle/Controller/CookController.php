@@ -10,9 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class CookController extends Controller
 {
 	
-	/*
-	 * Cargamos las 3 últimas recetas añadidas
-	 */
 	public function principalAction()
 	{
 		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getSomeRecetas(2);
@@ -20,9 +17,6 @@ class CookController extends Controller
 		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas));
 	}
 
-	/*
-	 * Cargamos todas las recetas almacenadas
-	 */
 	public function recetasAction()
 	{
 		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
@@ -40,14 +34,16 @@ class CookController extends Controller
 	public function showAction($id)
 	{
 		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->find($id);
-	
+		
 		if (!$receta) {
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
+		$ingredientes = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->getIngredientesBy($id);
+
 		$comentarios = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comentario')->getComentariosForReceta($receta->getId());
 
-		return $this->render('CookerCookingBundle:Cook:show.html.twig', array('receta' => $receta, 'comentarios' => $comentarios));
+		return $this->render('CookerCookingBundle:Cook:show.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes));
 	}
 
 	public function contactAction()
@@ -55,5 +51,17 @@ class CookController extends Controller
 	return $this->render('CookerCookingBundle:Cook:contact.html.twig');
 	}
 
+	public function show2Action($id)
+	{
+		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasBy($id);
+	    $ingrediente = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->find($id);
+
+		if (!$receta) {
+			throw $this->createNotFoundException('No se ha encontrado la receta.');
+		}
+
+		return $this->render('CookerCookingBundle:Cook:show2.html.twig', array('recetas' => $receta, 'ingrediente' => $ingrediente));
+	
+	}
 }
 ?>

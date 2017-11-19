@@ -32,4 +32,14 @@ class RecetaRepository extends EntityRepository
 	return $qp->getQuery()->getResult();
 	}
 
+	public function getRecetasBy($ingredienteId)
+	{
+	/*$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
+	return $qp->getQuery()->getResult();*/
+
+	  $qp = $this->createQueryBuilder('r')->innerJoin('r.ingredientes ', 'i', 'WITH', 'i.id = :ingredienteid')->setParameter('ingredienteid', $ingredienteId);
+	  return $qp->getQuery()->getResult();
+
+	}
+
 }

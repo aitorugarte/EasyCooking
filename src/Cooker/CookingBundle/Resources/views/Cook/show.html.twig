@@ -1,14 +1,22 @@
-{# src/Cooker/CookingBundle/Resources/views/Cook/show.html.twig #}
+{# src/Cooker/CookingBundle/Resources/views/Cook/showRecetas.html.twig #}
 {% extends 'CookerCookingBundle::layout.html.twig' %}
 {% block title %}Detalles de la receta{% endblock %}
 
 {% block body %}
+	<h3 style="float:right">{{ receta.tipo_plato }}</h3>
 	<h1>{{ receta.nombre }}</h1>
+	
+
 	<div class="date">
 		{{ receta.date|date('d-m-Y') }}
 	</div>
-	<img class="imgGran" src="/css/images/{{receta.id}}.jpg" alt="d" />
+	<img class="imgGran" src="/css/images/{{receta.id}}.jpg" alt="receta" />
+
 	<h2>Ingredientes</h2>
+	<ul class="ingredientes">
+	{% for ingrediente in ingredientes %}
+	<li><a href="{{ path('cooker_cook_show2', { 'id': ingrediente.id }) }}">{{ ingrediente.nombre }}</a></li>
+	 {% endfor %}
 
 	<h2>Preparación</h2>
 	<div class="body">

@@ -1,0 +1,14 @@
+{# src/Cooker/CookingBundle/Resources/views/Cook/showIngr.html.twig #}
+{% extends 'CookerCookingBundle::layout.html.twig' %}
+{% block title %}{{ ingrediente.nombre }}{% endblock %}
+
+{% block body %}
+	<h1>Recetas para el ingrediente: {{ ingrediente.nombre }}</h1>
+	
+	<ul>
+	{% for receta in recetas %}
+	<li>{{ receta.nombre }}</li>
+	{% endfor %}
+
+
+{% endblock %}

@@ -6,7 +6,7 @@
 <ul class="lista2">
     {% for ingrediente in ingredientes %}
       <li class="elemento2">  
-                <h4>{{ ingrediente.nombre }}</h4>
+                <h4><a href="{{ path('cooker_cook_show2', { 'id': ingrediente.id }) }}">{{ ingrediente.nombre }}</a></h4>
 	 </li>  
     {% endfor %}
 {% endblock %}
