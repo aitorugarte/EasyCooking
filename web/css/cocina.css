@@ -140,7 +140,13 @@ body {
     font-weight: normal;
     color: #F48A00;
 }
-
+.main-col h3 {
+    line-height: 1.2em;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #F48A00;
+}
 .main-col p {
     line-height: 1.5em;
     margin-bottom: 20px;
@@ -152,6 +158,19 @@ body {
     text-align: center;
     padding: 10px;
     color: #aaa;
+}
+/* Ingredientes */
+
+.lista2 {
+    margin: 0;
+    padding: 0;
+    float: left;
+
+}
+
+.elemento2 {
+    float: left;
+    width: 45%;
 }
 
 /* Recetas */

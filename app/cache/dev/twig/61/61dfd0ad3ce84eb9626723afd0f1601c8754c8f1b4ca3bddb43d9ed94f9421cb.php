@@ -15,8 +15,8 @@ class __TwigTemplate_753e084eaf0a3d5f75e5ef68a65e1b554a3050d6cbdce36990879a9f261
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2254c16977e8d3fe923b26df85f894093b3480b1e7c5c31a50b05dd7a5af2790 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2254c16977e8d3fe923b26df85f894093b3480b1e7c5c31a50b05dd7a5af2790->enter($__internal_2254c16977e8d3fe923b26df85f894093b3480b1e7c5c31a50b05dd7a5af2790_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
+        $__internal_56f97ad75f426735adb3b98b7fbfe4bd4d1678bdb0f6f3972c4accb315499355 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_56f97ad75f426735adb3b98b7fbfe4bd4d1678bdb0f6f3972c4accb315499355->enter($__internal_56f97ad75f426735adb3b98b7fbfe4bd4d1678bdb0f6f3972c4accb315499355_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -80,7 +80,7 @@ class __TwigTemplate_753e084eaf0a3d5f75e5ef68a65e1b554a3050d6cbdce36990879a9f261
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_2254c16977e8d3fe923b26df85f894093b3480b1e7c5c31a50b05dd7a5af2790->leave($__internal_2254c16977e8d3fe923b26df85f894093b3480b1e7c5c31a50b05dd7a5af2790_prof);
+        $__internal_56f97ad75f426735adb3b98b7fbfe4bd4d1678bdb0f6f3972c4accb315499355->leave($__internal_56f97ad75f426735adb3b98b7fbfe4bd4d1678bdb0f6f3972c4accb315499355_prof);
 
     }
 
@@ -109,7 +109,7 @@ class __TwigTemplate_753e084eaf0a3d5f75e5ef68a65e1b554a3050d6cbdce36990879a9f261
 
     public function getSourceContext()
     {
-        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comentario/list.html.twig #}
+        return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comment/list.html.twig #}
 
 {% for comentario in comentarios %}
     <article class=\"comentario {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comentario-{{ comentario.id }}\">

@@ -20,7 +20,7 @@ class ComentarioController extends Controller
         $comentario->setReceta($receta);
         $form   = $this->createForm(new TipoComentario(), $comentario);
 
-        return $this->render('CookerCookingBundle:Comentario:form.html.twig', array('comentario' => $comentario,'form'   => $form->createView()));
+        return $this->render('CookerCookingBundle:Comment:form.html.twig', array('comentario' => $comentario,'form'   => $form->createView()));
     }
 
     public function createAction($receta_id)

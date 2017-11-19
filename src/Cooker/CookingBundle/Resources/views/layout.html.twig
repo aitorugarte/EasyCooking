@@ -2,11 +2,17 @@
 {% extends '::base.html.twig' %}
 
 {% block sidebar %}
-    Búsqueda avanzada:
+    B&uacutesqueda avanzada:
 	<form class="search">
 
 	<input type="search" name="Search" id="search" placeholder="Introduzca texto">
 	<input type="button" value="Buscar">
 
 	</form>
+	<!-- TODO poner fotos -->
+	<ul style="margin-left: 20px;margin-top: 30px; list-style: none;">
+		<li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+		<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+		<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+	</ul>
 {% endblock %}

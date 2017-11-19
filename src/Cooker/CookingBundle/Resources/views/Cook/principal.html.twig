@@ -1,11 +1,11 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/principal.html.twig #}
 {% extends 'CookerCookingBundle::layout.html.twig' %}
-{% block title %}Página de bienvenida{% endblock %}
+{% block title %}P&aacutegina de bienvenida{% endblock %}
 
 {% block body %}
     {% for receta in recetas %}
         <article class="receta">
-            <div class="date"><time datetime="{{ receta.date|date('c') }}">{{ receta.date|date('l j F Y') }}</time></div>
+            <div class="date" style="text-align:right"><time datetime="{{ receta.date|date('c') }}">{{ receta.date|date('l j F Y') }}</time></div>
             <header>
                 <h2><a href="{{ path('cooker_cook_show', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h2>
             </header>

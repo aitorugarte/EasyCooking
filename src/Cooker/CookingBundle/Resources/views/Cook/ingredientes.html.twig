@@ -3,10 +3,10 @@
 {% block title %}Lista de Ingredientes{% endblock %}
 
 {% block body %}
+<ul class="lista2">
     {% for ingrediente in ingredientes %}
-        <article class="receta">
-            <header>
-                <h2>{{ ingrediente.nombre }}</h2>
-            </header>
+      <li class="elemento2">  
+                <h4>{{ ingrediente.nombre }}</h4>
+	 </li>  
     {% endfor %}
 {% endblock %}

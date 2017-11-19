@@ -22,46 +22,58 @@ class __TwigTemplate_b6e9d0bc5b0e824443f80f92d94d6adc7272b044d81f7d6b48cbc198092
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ae97f6bd9dbb22a5cbef3abce773cfd9ffd5e0b366a53ec186ed1f067d518c56 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ae97f6bd9dbb22a5cbef3abce773cfd9ffd5e0b366a53ec186ed1f067d518c56->enter($__internal_ae97f6bd9dbb22a5cbef3abce773cfd9ffd5e0b366a53ec186ed1f067d518c56_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:contact.html.twig"));
+        $__internal_33719243e5130a3af6fbcf76b559be58612dde65e569701c7fabe626afdc13de = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_33719243e5130a3af6fbcf76b559be58612dde65e569701c7fabe626afdc13de->enter($__internal_33719243e5130a3af6fbcf76b559be58612dde65e569701c7fabe626afdc13de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:contact.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ae97f6bd9dbb22a5cbef3abce773cfd9ffd5e0b366a53ec186ed1f067d518c56->leave($__internal_ae97f6bd9dbb22a5cbef3abce773cfd9ffd5e0b366a53ec186ed1f067d518c56_prof);
+        $__internal_33719243e5130a3af6fbcf76b559be58612dde65e569701c7fabe626afdc13de->leave($__internal_33719243e5130a3af6fbcf76b559be58612dde65e569701c7fabe626afdc13de_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_815ac9f24a27b5fbc2b4adc19e3f58a263207970241ce741db5210bec07309ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_815ac9f24a27b5fbc2b4adc19e3f58a263207970241ce741db5210bec07309ad->enter($__internal_815ac9f24a27b5fbc2b4adc19e3f58a263207970241ce741db5210bec07309ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_07755ae2febe7f9e7de4d36ff98170280344a5c5177f5ebd5858d9257ab41a37 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_07755ae2febe7f9e7de4d36ff98170280344a5c5177f5ebd5858d9257ab41a37->enter($__internal_07755ae2febe7f9e7de4d36ff98170280344a5c5177f5ebd5858d9257ab41a37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Contacto";
         
-        $__internal_815ac9f24a27b5fbc2b4adc19e3f58a263207970241ce741db5210bec07309ad->leave($__internal_815ac9f24a27b5fbc2b4adc19e3f58a263207970241ce741db5210bec07309ad_prof);
+        $__internal_07755ae2febe7f9e7de4d36ff98170280344a5c5177f5ebd5858d9257ab41a37->leave($__internal_07755ae2febe7f9e7de4d36ff98170280344a5c5177f5ebd5858d9257ab41a37_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_354071c682416d0a7319419051c1659c382f610d8d49c2b86c9b7ba7185d0d96 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_354071c682416d0a7319419051c1659c382f610d8d49c2b86c9b7ba7185d0d96->enter($__internal_354071c682416d0a7319419051c1659c382f610d8d49c2b86c9b7ba7185d0d96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7fbe4be12f034b959bccb7e0069ae6512fa3eb476528c1fd5d1938644bb176d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7fbe4be12f034b959bccb7e0069ae6512fa3eb476528c1fd5d1938644bb176d4->enter($__internal_7fbe4be12f034b959bccb7e0069ae6512fa3eb476528c1fd5d1938644bb176d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <header>
         <h1>Contacta conmigo</h1>
     </header>
 
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
-\t<ul>
-\t\t<li><a href=\"https://twitter.com/claorden\" target=\"_blank\">Twitter</a></li>
-\t\t<li><a href=\"https://www.linkedin.com/in/claorden\" target=\"_blank\">LinkedIn</a></li>
-\t</ul>
+<form action=\"maneja_formulario.php\" method=\"post\">
+  <fieldset>
+    <h4>Nombre</h4>
+    <input type=\"text\" name=\"nombre\">
+    
+   <h4>Correo</h4>
+    <input type=\"text\" name=\"correo\" size=\"10\" maxlength=\"9\">
+  
+    <h4>Mensaje</h4>
+    <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
+  </fieldset>
+
+     <div class=\"button\">
+        <button type=\"submit\">Enviar</button>
+    </div>
+   
+</form>
 ";
         
-        $__internal_354071c682416d0a7319419051c1659c382f610d8d49c2b86c9b7ba7185d0d96->leave($__internal_354071c682416d0a7319419051c1659c382f610d8d49c2b86c9b7ba7185d0d96_prof);
+        $__internal_7fbe4be12f034b959bccb7e0069ae6512fa3eb476528c1fd5d1938644bb176d4->leave($__internal_7fbe4be12f034b959bccb7e0069ae6512fa3eb476528c1fd5d1938644bb176d4_prof);
 
     }
 
@@ -100,11 +112,23 @@ class __TwigTemplate_b6e9d0bc5b0e824443f80f92d94d6adc7272b044d81f7d6b48cbc198092
         <h1>Contacta conmigo</h1>
     </header>
 
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
-\t<ul>
-\t\t<li><a href=\"https://twitter.com/claorden\" target=\"_blank\">Twitter</a></li>
-\t\t<li><a href=\"https://www.linkedin.com/in/claorden\" target=\"_blank\">LinkedIn</a></li>
-\t</ul>
+<form action=\"maneja_formulario.php\" method=\"post\">
+  <fieldset>
+    <h4>Nombre</h4>
+    <input type=\"text\" name=\"nombre\">
+    
+   <h4>Correo</h4>
+    <input type=\"text\" name=\"correo\" size=\"10\" maxlength=\"9\">
+  
+    <h4>Mensaje</h4>
+    <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
+  </fieldset>
+
+     <div class=\"button\">
+        <button type=\"submit\">Enviar</button>
+    </div>
+   
+</form>
 {% endblock %}
 ", "CookerCookingBundle:Cook:contact.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/contact.html.twig");
     }

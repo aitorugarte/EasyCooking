@@ -22,4 +22,14 @@ class RecetaRepository extends EntityRepository
 	return $qp->getQuery()->getResult();
 	}
 
+	public function getSomeRecetas($limit = null)
+	{
+	$qp = $this->createQueryBuilder('p')->select('p')->where('p.tipo_plato = :tipo_plato')->addOrderBy('p.date', 'DESC')->setParameter('tipo_plato', 'Primero');
+
+	if (false === is_null($limit))
+		$qp->setMaxResults($limit);
+
+	return $qp->getQuery()->getResult();
+	}
+
 }

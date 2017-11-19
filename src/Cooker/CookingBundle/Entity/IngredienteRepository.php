@@ -14,7 +14,7 @@ class IngredienteRepository extends EntityRepository
 {
 	public function getAllIngredientes($limit = null)
 	{
-	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.nombre', 'DESC');
+	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.nombre', 'ASC');
 
 	if (false === is_null($limit))
 		$qp->setMaxResults($limit);

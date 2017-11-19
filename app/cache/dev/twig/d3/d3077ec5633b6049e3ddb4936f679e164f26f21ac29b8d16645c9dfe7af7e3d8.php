@@ -22,32 +22,32 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2afcdeb6e609aa6c916cb7fa60bdaca02eb5edc22dfa2c25619c028423a61b7a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2afcdeb6e609aa6c916cb7fa60bdaca02eb5edc22dfa2c25619c028423a61b7a->enter($__internal_2afcdeb6e609aa6c916cb7fa60bdaca02eb5edc22dfa2c25619c028423a61b7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
+        $__internal_b6428e5bcfd1fcf06cb519c731dc62f745ad601b45ef5091ad6ecb39cd03d1d6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b6428e5bcfd1fcf06cb519c731dc62f745ad601b45ef5091ad6ecb39cd03d1d6->enter($__internal_b6428e5bcfd1fcf06cb519c731dc62f745ad601b45ef5091ad6ecb39cd03d1d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2afcdeb6e609aa6c916cb7fa60bdaca02eb5edc22dfa2c25619c028423a61b7a->leave($__internal_2afcdeb6e609aa6c916cb7fa60bdaca02eb5edc22dfa2c25619c028423a61b7a_prof);
+        $__internal_b6428e5bcfd1fcf06cb519c731dc62f745ad601b45ef5091ad6ecb39cd03d1d6->leave($__internal_b6428e5bcfd1fcf06cb519c731dc62f745ad601b45ef5091ad6ecb39cd03d1d6_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_15dee813e029d6e1583047ac002365f2bc4763567734206ca39ecc9ed37fcbcd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_15dee813e029d6e1583047ac002365f2bc4763567734206ca39ecc9ed37fcbcd->enter($__internal_15dee813e029d6e1583047ac002365f2bc4763567734206ca39ecc9ed37fcbcd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_7e93e1f913ec32c13569c66686fd33b090aeb0baace9a7785acee829b28b7e3d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7e93e1f913ec32c13569c66686fd33b090aeb0baace9a7785acee829b28b7e3d->enter($__internal_7e93e1f913ec32c13569c66686fd33b090aeb0baace9a7785acee829b28b7e3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de Recetas";
         
-        $__internal_15dee813e029d6e1583047ac002365f2bc4763567734206ca39ecc9ed37fcbcd->leave($__internal_15dee813e029d6e1583047ac002365f2bc4763567734206ca39ecc9ed37fcbcd_prof);
+        $__internal_7e93e1f913ec32c13569c66686fd33b090aeb0baace9a7785acee829b28b7e3d->leave($__internal_7e93e1f913ec32c13569c66686fd33b090aeb0baace9a7785acee829b28b7e3d_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b5b9b40574c5a8269c072e734e763ccfcc4449c198106f9141424c884720f686 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b5b9b40574c5a8269c072e734e763ccfcc4449c198106f9141424c884720f686->enter($__internal_b5b9b40574c5a8269c072e734e763ccfcc4449c198106f9141424c884720f686_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_32072492f80172555d841f393bedec4e14a7ef8d28d4890263538f58c0b85d8d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_32072492f80172555d841f393bedec4e14a7ef8d28d4890263538f58c0b85d8d->enter($__internal_32072492f80172555d841f393bedec4e14a7ef8d28d4890263538f58c0b85d8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -61,26 +61,25 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
             // line 9
             echo "\t<li class=\"elemento\">
             <header>
-                <h2><a href=\"";
+                <h3><a href=\"";
             // line 11
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
-            echo "</a></h2>
+            echo "</a></h3>
             </header>
 \t\t\t<img class=\"imgPeq\" src=\"/images/fondo.jpg\" alt=\"d\" />
             <div class=\"snippet\">
-                <p>";
+                <p style=\"margin-left: 5px;margin-right: 5px;\">";
             // line 15
-            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 50), "method"), "html", null, true);
             echo "</p>
-                <p class=\"continue\"><a href=\"";
+                <p><a href=\"";
             // line 16
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
-
-            <footer class=\"meta\">
+\t\t\t  <footer class=\"meta\">
                 <p>Comentarios: -</p>
             </footer>
 \t</li>
@@ -88,7 +87,7 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 24
+            // line 23
             echo "        <p>No hay entradas en este blog</p>
     ";
         }
@@ -96,7 +95,7 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_b5b9b40574c5a8269c072e734e763ccfcc4449c198106f9141424c884720f686->leave($__internal_b5b9b40574c5a8269c072e734e763ccfcc4449c198106f9141424c884720f686_prof);
+        $__internal_32072492f80172555d841f393bedec4e14a7ef8d28d4890263538f58c0b85d8d->leave($__internal_32072492f80172555d841f393bedec4e14a7ef8d28d4890263538f58c0b85d8d_prof);
 
     }
 
@@ -112,7 +111,7 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
 
     public function getDebugInfo()
     {
-        return array (  92 => 24,  79 => 16,  75 => 15,  66 => 11,  62 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
+        return array (  91 => 23,  79 => 16,  75 => 15,  66 => 11,  62 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -135,15 +134,14 @@ class __TwigTemplate_d5b0768a46e788e8713115e34c55801b019d9b9c0ea58e7547b4d1b47f2
     {% for receta in recetas %}
 \t<li class=\"elemento\">
             <header>
-                <h2><a href=\"{{ path('cooker_cook_show', { 'id': receta.id }) }}\">{{ receta.nombre }}</a></h2>
+                <h3><a href=\"{{ path('cooker_cook_show', { 'id': receta.id }) }}\">{{ receta.nombre }}</a></h3>
             </header>
 \t\t\t<img class=\"imgPeq\" src=\"/images/fondo.jpg\" alt=\"d\" />
             <div class=\"snippet\">
-                <p>{{ receta.detalles(200) }}</p>
-                <p class=\"continue\"><a href=\"{{ path('cooker_cook_show', { 'id': receta.id }) }}\">Seguir leyendo...</a></p>
+                <p style=\"margin-left: 5px;margin-right: 5px;\">{{ receta.detalles(50) }}</p>
+                <p><a href=\"{{ path('cooker_cook_show', { 'id': receta.id }) }}\">Seguir leyendo...</a></p>
             </div>
-
-            <footer class=\"meta\">
+\t\t\t  <footer class=\"meta\">
                 <p>Comentarios: -</p>
             </footer>
 \t</li>

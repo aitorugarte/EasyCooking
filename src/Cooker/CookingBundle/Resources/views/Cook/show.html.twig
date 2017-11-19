@@ -7,6 +7,10 @@
 	<div class="date">
 		{{ receta.date|date('d-m-Y') }}
 	</div>
+	<img class="imgPeq" src="/images/fondo.jpg" alt="d" />
+	<h2>Ingredientes</h2>
+
+	<h2>Preparación</h2>
 	<div class="body">
 		{{ receta.detalles }}
 	</div>
@@ -15,13 +19,13 @@
 
 	<section class="previous-comments">
 		<h3>Comentarios</h3>
-		{% include 'CookerCookingBundle:Comment:list.html.twig' with { 'comments': comments } %}
+		{% include 'CookerCookingBundle:Comment:list.html.twig' with { 'comentarios': comentarios } %}
 	</section>
 
-	<section class="comments" id="comments">
+	<section class="coments" id="coments">
 	
 	<h3 style="margin-top: 40px">Añadir comentario</h3>
-		{{ render(controller( 'CookerCookingBundle:Comment:new', { 'receta_id': receta.id } )) }}
+		{{ render(controller( 'CookerCookingBundle:Comentario:new', { 'receta_id': receta.id } )) }}
 	</section>
 	
 	</section>

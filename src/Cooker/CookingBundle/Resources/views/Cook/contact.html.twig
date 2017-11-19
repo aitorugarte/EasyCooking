@@ -8,9 +8,21 @@
         <h1>Contacta conmigo</h1>
     </header>
 
-    <p>Puedes encontrarme en las siguientes redes sociales:</p>
-	<ul>
-		<li><a href="https://twitter.com/claorden" target="_blank">Twitter</a></li>
-		<li><a href="https://www.linkedin.com/in/claorden" target="_blank">LinkedIn</a></li>
-	</ul>
+<form action="maneja_formulario.php" method="post">
+  <fieldset>
+    <h4>Nombre</h4>
+    <input type="text" name="nombre">
+    
+   <h4>Correo</h4>
+    <input type="text" name="correo" size="10" maxlength="9">
+  
+    <h4>Mensaje</h4>
+    <input type="text" name="mensaje" size="50" style="height:50px">
+  </fieldset>
+
+     <div class="button">
+        <button type="submit">Enviar</button>
+    </div>
+   
+</form>
 {% endblock %}
