@@ -48,7 +48,7 @@ class __TwigTemplate_11b7b31c970f59a9d6f9d8457aae3f6c02a31595d746b4b0eaeb75de446
             <header>
                 <h3><a href=\"";
             // line 11
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showRecetas", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
             echo "</a></h3>
@@ -64,7 +64,7 @@ class __TwigTemplate_11b7b31c970f59a9d6f9d8457aae3f6c02a31595d746b4b0eaeb75de446
             echo "</p>
                 <p><a href=\"";
             // line 16
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showRecetas", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">Seguir leyendo...</a></p>
             </div>
 \t\t\t  <footer class=\"meta\">

@@ -14,7 +14,11 @@ class ComentarioRepository extends EntityRepository
 {
 	public function getComentariosForReceta($recetaId, $approved = true)
 {
-	$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
+	$qp = $this->createQueryBuilder('c')
+	->select('c')
+	->where('c.receta = :receta_id')
+	->addOrderBy('c.created')
+	->setParameter('receta_id', $recetaId);
 
 	if (false === is_null($approved))
 		$qp->andWhere('c.approved = :approved')->setParameter('approved', $approved);

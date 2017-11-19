@@ -7,7 +7,7 @@
 	
 	<ul>
 	{% for receta in recetas %}
-	<li>{{ receta.nombre }}</li>
+	<li><a href="{{ path('cooker_cook_show', { 'id': receta.id }) }}">{{ receta.nombre }}</a></li>
 	{% endfor %}
 
 

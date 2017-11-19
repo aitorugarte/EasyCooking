@@ -35,54 +35,79 @@ class __TwigTemplate_8bef73b2b451fc0167157c8efa44943294ce5f1f36522dc1f7e0504efc2
     public function block_body($context, array $blocks = array())
     {
         // line 6
+        echo "
+\t";
+        // line 7
+        $context["cont"] = 0;
+        // line 8
         echo "    ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["recetas"] ?? null));
-        $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-            // line 7
-            echo "        <article class=\"receta\">
-            <div class=\"date\" style=\"text-align:right\"><time datetime=\"";
-            // line 8
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l j F Y"), "html", null, true);
-            echo "</time></div>
-            <header>
-                <h2><a href=\"";
-            // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showRecetas", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
-            echo "</a></h2>
-            </header>
+            // line 9
+            echo "\t";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["recetas"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
+                if ((($context["cont"] ?? null) < 2)) {
+                    // line 10
+                    echo "\t";
+                    if (($this->getAttribute($context["receta"], "tipo_plato", array()) == "Primero")) {
+                        // line 11
+                        echo "<article class=\"receta\">
+\t<div class=\"date\" style=\"text-align:right\"><time datetime=\"";
+                        // line 12
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
+                        echo "\">";
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l j F Y"), "html", null, true);
+                        echo "</time></div>
+\t<header>
+\t\t<h2><a href=\"";
+                        // line 14
+                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
+                        echo "\">";
+                        echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
+                        echo "</a></h2>
+\t</header>
 
-            <div class=\"snippet\">
-                <p>";
-            // line 14
-            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
-            echo "</p>
-                <p class=\"continue\"><a href=\"";
-            // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showRecetas", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
-            echo "\">Seguir leyendo...</a></p>
-            </div>
+\t<div class=\"snippet\">
+\t\t<p>";
+                        // line 18
+                        echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
+                        echo "</p>
+\t\t<p class=\"continue\"><a href=\"";
+                        // line 19
+                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
+                        echo "\">Seguir leyendo...</a></p>
+\t</div>
 
-            <footer class=\"meta\">
-                <p>Comentarios: -</p>
-            </footer>
-        </article>
-    ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 23
-            echo "        <p>No hay entradas en este blog</p>
-    ";
+\t<footer class=\"meta\">
+\t\t<p>Comentarios: -</p>
+\t</footer>
+</article>
+\t\t";
+                        // line 26
+                        $context["cont"] = (($context["cont"] ?? null) + 1);
+                        // line 27
+                        echo "\t";
+                    }
+                    // line 28
+                    echo "      ";
+                }
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 29
+            echo "
+";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 31
+        echo "
+";
     }
 
     public function getTemplateName()
@@ -97,7 +122,7 @@ class __TwigTemplate_8bef73b2b451fc0167157c8efa44943294ce5f1f36522dc1f7e0504efc2
 
     public function getDebugInfo()
     {
-        return array (  80 => 23,  67 => 15,  63 => 14,  54 => 10,  47 => 8,  44 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  109 => 31,  102 => 29,  95 => 28,  92 => 27,  90 => 26,  80 => 19,  76 => 18,  67 => 14,  60 => 12,  57 => 11,  54 => 10,  48 => 9,  43 => 8,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

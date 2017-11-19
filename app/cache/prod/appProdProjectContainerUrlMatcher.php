@@ -22,14 +22,17 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
-        // cooker_cook_showRecetas
-        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showRecetas')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showRecetasAction',));
-        }
+        if (0 === strpos($pathinfo, '/show')) {
+            // cooker_cook_show
+            if (preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showAction',));
+            }
 
-        // cooker_cook_showIngr
-        if (0 === strpos($pathinfo, '/ingrediente') && preg_match('#^/ingrediente/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showIngr')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showIngrAction',));
+            // cooker_cook_show2
+            if (0 === strpos($pathinfo, '/show2') && preg_match('#^/show2/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show2')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::show2Action',));
+            }
+
         }
 
         // cooker_comentario_create

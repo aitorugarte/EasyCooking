@@ -12,7 +12,7 @@ class CookController extends Controller
 	
 	public function principalAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getSomeRecetas(2);
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetas();
 		
 		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas));
 	}

@@ -14,7 +14,9 @@ class RecetaRepository extends EntityRepository
 {
 	public function getLatestRecetas($limit = null)
 	{
-	$qp = $this->createQueryBuilder('p')->select('p')->addOrderBy('p.date', 'DESC');
+	$qp = $this->createQueryBuilder('p')
+	->select('p')
+	->addOrderBy('p.date', 'DESC');
 
 	if (false === is_null($limit))
 		$qp->setMaxResults($limit);
@@ -22,9 +24,12 @@ class RecetaRepository extends EntityRepository
 	return $qp->getQuery()->getResult();
 	}
 
-	public function getSomeRecetas($limit = null)
+	public function getRecetas($limit = null)
 	{
-	$qp = $this->createQueryBuilder('p')->select('p')->where('p.tipo_plato = :tipo_plato')->addOrderBy('p.date', 'DESC')->setParameter('tipo_plato', 'Primero');
+	$qp = $this->createQueryBuilder('p')->select('p')
+	->where('p.tipo_plato = :tipo_plato')
+	->addOrderBy('p.date', 'DESC')
+	->setParameter('tipo_plato', 'Primero');
 
 	if (false === is_null($limit))
 		$qp->setMaxResults($limit);
@@ -34,10 +39,10 @@ class RecetaRepository extends EntityRepository
 
 	public function getRecetasBy($ingredienteId)
 	{
-	/*$qp = $this->createQueryBuilder('c')->select('c')->where('c.receta = :receta_id')->addOrderBy('c.created')->setParameter('receta_id', $recetaId);
-	return $qp->getQuery()->getResult();*/
+		$qp = $this->createQueryBuilder('r')
+		->innerJoin('r.ingredientes ', 'i', 'WITH', 'i.id = :ingredienteid')
+		->setParameter('ingredienteid', $ingredienteId);
 
-	  $qp = $this->createQueryBuilder('r')->innerJoin('r.ingredientes ', 'i', 'WITH', 'i.id = :ingredienteid')->setParameter('ingredienteid', $ingredienteId);
 	  return $qp->getQuery()->getResult();
 
 	}

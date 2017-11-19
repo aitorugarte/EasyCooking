@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2017 a las 20:19:31
+-- Tiempo de generación: 19-11-2017 a las 23:47:11
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -231,21 +231,21 @@ CREATE TABLE `receta` (
 --
 
 INSERT INTO `receta` (`id`, `nombre`, `detalles`, `tipo_plato`, `date`) VALUES
-(1, 'Macarrones con tomate', 'Macarrones con tomate al horno', 'Primero', '2017-11-08'),
+(1, 'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', 'Primero', '2017-11-08'),
 (2, 'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', 'Primero', '2017-11-10'),
-(3, 'Tortilla de Patata', 'Tortila de patata casera', 'Segundo', '2017-11-11'),
-(4, 'Lentejas', 'Un buen plato de lentejas para un dia de frio', 'Primero', '2017-10-23'),
-(5, 'Filete con patatas', 'Filete de ternera con una racion de patatas', 'Segundo', '2017-10-28'),
+(3, 'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', 'Segundo', '2017-11-11'),
+(4, 'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', 'Primero', '2017-10-23'),
+(5, 'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', 'Segundo', '2017-10-28'),
 (6, 'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', 'Segundo', '2017-11-03'),
-(7, 'Lasaña', 'Una porcion de lasaña rellena de carne picada', 'Segundo', '2017-10-26'),
-(8, 'Croquetas', 'Croquetas rellenas de jamon', 'Segundo', '2017-10-19'),
-(9, 'Empanadillas', 'Empanadillas rellenas con tomate y atun', 'Segundo', '2017-11-23'),
-(10, 'Pizza de jamon y queso', 'Pizza de jamon y queso tipica para toda la familia', 'Segundo', '2017-11-02'),
-(11, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes', 'Primero', '2017-09-23'),
+(7, 'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', 'Segundo', '2017-10-26'),
+(8, 'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', 'Segundo', '2017-10-19'),
+(9, 'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', 'Segundo', '2017-11-23'),
+(10, 'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', 'Segundo', '2017-11-02'),
+(11, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', 'Primero', '2017-09-23'),
 (12, 'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', 'Primero', '2017-10-30'),
-(13, 'Tarta de queso', 'Tarta de queso con mermelada', 'Postre', '2017-05-01'),
-(14, 'Flan de huevo', 'Flan de huevo con caramelo', 'Postre', '2017-11-30'),
-(15, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo, azúcar', 'Postre', '2017-10-07');
+(13, 'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', 'Postre', '2017-05-01'),
+(14, 'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', 'Postre', '2017-11-30'),
+(15, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', 'Postre', '2017-10-07');
 
 --
 -- Índices para tablas volcadas
