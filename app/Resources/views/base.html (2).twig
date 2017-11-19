@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>{% block title %}symblog{% endblock %} - symblog</title>
+		<meta charset="UTF-8">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% block stylesheets %}
+            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+            <link href="{{ asset('css/cocina.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+        <section id="wrapper">
+           
+		   <!-- Cabecera -->
+			<header id="header">
+                    <h1 id="titulo1">{% block cook_title %}<a href="{{ path('cooker_cook_principal')}}">Cocina f&aacutecil</a>{% endblock %}</h1>
+                    <h3 id="titulo2">{% block cook_tagline %}"El amor puede esperar, el hambre no" Monkey D. Luffy{% endblock %}</h3>
+						   
+				<!-- Menú -->
+                    {% block navigation %}
+                        <nav>
+                           <ul class="ul1">
+                                <li class="li2"><a href="{{ path('cooker_cook_principal')}}">Inicio</a></li>
+                                <li class="li2"><a href="{{ path('cooker_cook_recetas')}}">Recetas</a>		
+								<ul class="ul2">
+								<li><a href="#">Entrantes</a></li>
+								<li><a href="#">Primeros</a></li>
+								<li><a href="#">Segundos</a></li>
+								<li><a href="#">Postres</a></li>
+								</ul>		
+								</li>
+								<li class="li2"><a href="{{ path('cooker_cook_ingredientes')}}">Ingredientes</a>		
+                                <li class="li2"><a href="{{ path('cooker_cook_contact')}}">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    {% endblock %}
+            </header>
+       
+			<!-- Contenido principal -->
+            <section class="main-col">
+                {% block body %}{% endblock %}
+            </section>
+			<!-- Contenido lateral derecho -->
+            <aside class="sidebar">
+                {% block sidebar %}{% endblock %}
+            </aside>
+			<!-- Pie de página -->
+            <div id="footer">
+                {% block footer %}
+                    Cocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web
+                {% endblock %}
+            </div>
+        </section>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

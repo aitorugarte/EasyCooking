@@ -1,56 +1,62 @@
-<!-- app/Resources/views/base.html.twig -->
-<!-- php app/console cache:clear --env=prod  php app/console cache:clear --env=dev -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-        <title>{% block title %}symblog{% endblock %} - symblog</title>
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        {% block stylesheets %}
-            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
-            <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
-        {% endblock %}
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
 
-        <section id="wrapper">
-            <header id="header">
-                <div class="top">
-                    {% block navigation %}
-                        <nav>
-                            <ul class="navigation">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Sobre mi</a></li>
-                                <li><a href="{{ path('blogger_blog_contact')}}">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    {% endblock %}
-                </div>
+<head>
+	<title>{% block title %}symblog{% endblock %}</title>
+	<meta name="description" content="website description" />
+	<meta name="keywords" content="website keywords, website keywords" />
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+	<link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+</head>
 
-                <hgroup>
-                    <h2>{% block blog_title %}<a href="#">symblog</a>{% endblock %}</h2>
-                    <h3>{% block blog_tagline %}<a href="#">creando un blog en Symfony2</a>{% endblock %}</h3>
-                </hgroup>
-            </header>
+<body>
+	<div id="main">
+		<div id="header">
 
-            <section class="main-col">
-                {% block body %}{% endblock %}
-            </section>
-            <aside class="sidebar">
-                {% block sidebar %}{% endblock %}
-            </aside>
+			<div id="logo">
 
-            <div id="footer">
-                {% block footer %}
-                    Blog en Symfony2 - creado por <a href="http://carloslaorden.com">Carlos Laorden</a>, con la ayuda de <a href="https://github.com/dsyph3r">dsyph3r</a>
-                {% endblock %}
-            </div>
-        </section>
+				<div id="logo_text">
+					<h1><a href="{{ path('cooker_cook_principal')}}">Easy<span class="logo_colour">_cooking</span></a></h1>
+					<h2>"El amor puede esperar, el hambre no" Monkey D. Luffy</h2>
+				</div>
 
-        {% block javascripts %}{% endblock %}
-    </body>
+			</div>
+
+			<!-- Menú -->
+			{% block navigation %}
+			<div id="menubar">
+				<ul id="menu">
+					<li class="selected"><a href="{{ path('cooker_cook_principal')}}">Inicio</a></li>
+					<li class="li2"><a href="{{ path('cooker_cook_recetas')}}">Recetas</a></li>
+					<li class="li2"><a href="{{ path('cooker_cook_ingredientes')}}">Ingredientes</a>
+					<li class="li2"><a href="{{ path('cooker_cook_contact')}}">Contacto</a></li>
+				</ul>
+			</div>
+			{% endblock %}
+		</div>
+
+		<div id="site_content">
+			<div class="sidebar">
+				<!-- Contenido lateral derecho -->
+					{% block sidebar %}{% endblock %}
+			</div>
+
+			<div id="content">
+				<!-- Contenido principal -->
+				<section class="main-col">
+					{% block body %}{% endblock %}
+				</section>
+			</div>
+		</div>
+
+		<!-- Pie de página -->
+		<div id="footer">
+			{% block footer %}
+			Cocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web
+			{% endblock %}
+		</div>
+
+	</div>
+	{% block javascripts %}{% endblock %}
+</body>
 </html>

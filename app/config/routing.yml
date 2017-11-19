@@ -1,7 +1,19 @@
-blogger_blog:
-    resource: "@BloggerBlogBundle/Resources/config/routing.yml"
+cooker_cook:
+    resource: "@CookerCookingBundle/Resources/config/routing.yml"
     prefix:   /
 
-blogger_blog_contact:
+cooker_cook_principal:
+    path:  /
+    defaults: { _controller: CookerCookingBundle:Cook:principal }
+
+cooker_cook_recetas:
+    path:  /recetas
+    defaults: { _controller: CookerCookingBundle:Cook:recetas }
+
+cooker_cook_ingredientes:
+    path:  /ingredientes
+    defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
+
+cooker_cook_contact:
     path:  /contact
-    defaults: { _controller: BloggerBlogBundle:Blog:contact }
+    defaults: { _controller: CookerCookingBundle:Cook:contact }

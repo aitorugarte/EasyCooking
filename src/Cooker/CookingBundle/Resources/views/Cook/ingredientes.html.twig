@@ -1,0 +1,12 @@
+{# src/Cooker/CookingBundle/Resources/views/Cook/ingredientes.html.twig #}
+{% extends 'CookerCookingBundle::layout.html.twig' %}
+{% block title %}Lista de Ingredientes{% endblock %}
+
+{% block body %}
+<ul class="lista2">
+    {% for ingrediente in ingredientes %}
+      <li class="elemento2">  
+                <h4>{{ ingrediente.nombre }}</h4>
+	 </li>  
+    {% endfor %}
+{% endblock %}

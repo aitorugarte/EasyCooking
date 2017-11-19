@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Resources",
+    "\\src",
+    "\\src\\Cooker",
+    "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Resources",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
+    "\\web",
+    "\\web\\images"
+  ],
+  "SelectedNode": "\\web\\images",
+  "PreviewInSolutionExplorer": false
+}

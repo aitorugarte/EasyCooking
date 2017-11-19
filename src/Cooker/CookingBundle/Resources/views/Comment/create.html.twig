@@ -1,0 +1,10 @@
+{# src/Cooker/CookingBundle/Resources/views/Comentario/create.html.twig #}
+
+{% extends 'CookerCookingBundle::layout.html.twig' %}
+
+{% block title %}Añadir comentario{% endblock%}
+
+{% block body %}
+    <h1>Añadir un comentario a la receta "{{ comentario.receta.nombre }}"</h1>
+    {% include 'CookerCookingBundle:Comment:form.html.twig' with { 'form': form } %}
+{% endblock %}

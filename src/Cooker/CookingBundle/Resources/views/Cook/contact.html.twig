@@ -1,0 +1,28 @@
+{# src/Cooker/CookingBundle/Resources/views/Blog/contact.html.twig #}
+{% extends 'CookerCookingBundle::layout.html.twig' %}
+
+{% block title %}Contacto{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Contacta conmigo</h1>
+    </header>
+
+<form action="" method="post">
+  <fieldset>
+    <h4>Nombre</h4>
+    <input type="text" name="nombre">
+    
+   <h4>Correo</h4>
+    <input type="text" name="correo" size="10" maxlength="9">
+  
+    <h4>Mensaje</h4>
+    <input type="text" name="mensaje" size="50" style="height:50px">
+  </fieldset>
+
+     <div class="button">
+        <button type="submit">Enviar</button>
+    </div>
+   
+</form>
+{% endblock %}
