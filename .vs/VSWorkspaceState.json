@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
     "\\app\\Resources",
     "\\app\\Resources\\views",
+    "\\app\\Resources\\views\\default",
     "\\src",
     "\\src\\Cooker",
     "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Entity",
     "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views",
-    "\\web\\images"
+    "\\web\\css"
   ],
-  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Resources\\views\\layout.html.twig",
+  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Entity\\Receta.php",
   "PreviewInSolutionExplorer": false
 }
