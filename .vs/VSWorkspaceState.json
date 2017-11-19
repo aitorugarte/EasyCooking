@@ -1,16 +1,17 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
     "\\app\\Resources",
-    "\\app\\Resources\\views",
-    "\\app\\Resources\\views\\default",
     "\\src",
     "\\src\\Cooker",
     "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Entity",
     "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\web\\css"
+    "\\src\\Cooker\\CookingBundle\\Resources\\views",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
+    "\\web",
+    "\\web\\images"
   ],
-  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Entity\\Receta.php",
+  "SelectedNode": "\\web\\images",
   "PreviewInSolutionExplorer": false
 }
