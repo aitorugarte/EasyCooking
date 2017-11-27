@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2017 a las 23:47:11
+-- Tiempo de generación: 27-11-2017 a las 22:42:53
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -215,37 +215,58 @@ INSERT INTO `ingrediente_receta` (`ingrediente_id`, `receta_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `plato`
+--
+
+CREATE TABLE `plato` (
+  `id` int(11) NOT NULL,
+  `nombre` longtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `plato`
+--
+
+INSERT INTO `plato` (`id`, `nombre`) VALUES
+(1, 'Primero'),
+(2, 'Segundo'),
+(3, 'Postre');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `receta`
 --
 
 CREATE TABLE `receta` (
   `id` int(11) NOT NULL,
+  `tipo_plato` int(11) DEFAULT NULL,
   `nombre` longtext COLLATE utf8_unicode_ci NOT NULL,
   `detalles` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_plato` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  `imagen` longtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `receta`
 --
 
-INSERT INTO `receta` (`id`, `tipo_plato_id`, `nombre`, `detalles`, `date`) VALUES
-(1, 1,'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', '2017-11-08'),
-(2, 1,'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', '2017-11-10'),
-(3, 1,'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', '2017-11-11'),
-(4, 1,'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', '2017-10-23'),
-(5, 2,'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', '2017-10-28'),
-(6, 2,'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', '2017-11-03'),
-(7, 2,'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', '2017-10-26'),
-(8, 2,'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', '2017-10-19'),
-(9, 2,'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', '2017-11-23'),
-(10, 1,'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', '2017-11-02'),
-(11, 1,'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', '2017-09-23'),
-(12, 1,'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', '2017-10-30'),
-(13, 3,'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', '2017-05-01'),
-(14, 3,'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', '2017-11-30'),
-(15, 3,'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', '2017-10-07');
+INSERT INTO `receta` (`id`, `tipo_plato`, `nombre`, `detalles`, `date`, `imagen`) VALUES
+(1, 1, 'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', '2017-11-08', ''),
+(2, 1, 'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', '2017-11-10', ''),
+(3, 1, 'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', '2017-11-11', ''),
+(4, 1, 'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', '2017-10-23', ''),
+(5, 2, 'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', '2017-10-28', ''),
+(6, 2, 'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', '2017-11-03', ''),
+(7, 2, 'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', '2017-10-26', ''),
+(8, 2, 'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', '2017-10-19', ''),
+(9, 2, 'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', '2017-11-23', ''),
+(10, 1, 'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', '2017-11-02', ''),
+(11, 1, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', '2017-09-23', ''),
+(12, 1, 'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', '2017-10-30', ''),
+(13, 3, 'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', '2017-05-01', ''),
+(14, 3, 'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', '2017-11-30', ''),
+(15, 3, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', '2017-10-07', '');
 
 --
 -- Índices para tablas volcadas
@@ -273,10 +294,17 @@ ALTER TABLE `ingrediente_receta`
   ADD KEY `IDX_5C9AEABE54F853F8` (`receta_id`);
 
 --
+-- Indices de la tabla `plato`
+--
+ALTER TABLE `plato`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `receta`
 --
 ALTER TABLE `receta`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_B093494E97F7A48D` (`tipo_plato`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -293,6 +321,12 @@ ALTER TABLE `comentario`
 --
 ALTER TABLE `ingrediente`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT de la tabla `plato`
+--
+ALTER TABLE `plato`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `receta`
@@ -316,6 +350,12 @@ ALTER TABLE `comentario`
 ALTER TABLE `ingrediente_receta`
   ADD CONSTRAINT `FK_5C9AEABE54F853F8` FOREIGN KEY (`receta_id`) REFERENCES `receta` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_5C9AEABE769E458D` FOREIGN KEY (`ingrediente_id`) REFERENCES `ingrediente` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `receta`
+--
+ALTER TABLE `receta`
+  ADD CONSTRAINT `FK_B093494E97F7A48D` FOREIGN KEY (`tipo_plato`) REFERENCES `plato` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

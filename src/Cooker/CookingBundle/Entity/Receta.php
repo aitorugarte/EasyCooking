@@ -28,7 +28,7 @@ class Receta
 
     /**
     * @ORM\ManyToOne(targetEntity="Plato", inversedBy="recetas")
-    * @ORM\JoinColumn(name="tipo_plato_id", referencedColumnName="id")
+    * @ORM\JoinColumn(name="tipo_plato", referencedColumnName="id")
     */
 	private $tipo_plato;
 	
@@ -53,6 +53,12 @@ class Receta
 	* @ORM\Column(type="date")
 	*/
 	protected $date;
+    
+    /**
+	* @ORM\Column(type="text")
+	*/
+	protected $imagen;
+
 
     /**
      * Get id
@@ -119,7 +125,7 @@ class Receta
      * @param string $tipo_plato
      * @return Receta
      */
-    public function setTipo($tipo_plato)
+    public function setTipo_plato($tipo_plato)
     {
         $this->tipo_plato = $tipo_plato;
 
@@ -127,14 +133,15 @@ class Receta
     }
 
     /**
-     * Get nombre
+     * Get tipo_plato
      *
      * @return string 
      */
-    public function getTipo()
+    public function getTipo_plato()
     {
         return $this->tipo_plato;
     }
+
 
     /**
      * Set date
@@ -159,6 +166,29 @@ class Receta
         return $this->date;
     }
     
+    /**
+     * Set imagen
+     *
+     * @param string $imagen
+     * @return Receta
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get imagen
+     *
+     * @return string 
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+
     public function __construct()
     {
     $this->comentarios = new ArrayCollection();
@@ -167,9 +197,8 @@ class Receta
     $this->setDate(new \DateTime());
     }
 
-
     /**
-     * Add cmmentarios
+     * Add comentarios
      *
      * @param \Cooker\CookingBundle\Entity\Comentario $comentarios
      * @return Receta

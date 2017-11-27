@@ -12,14 +12,15 @@ class CookController extends Controller
 	
 	public function principalAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetas();
-		
-		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas));
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
+		$platos = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->getPlatos();
+
+		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas, 'platos' => $platos));
 	}
 
 	public function recetasAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetas();
 
 		return $this->render('CookerCookingBundle:Cook:recetas.html.twig', array('recetas' => $recetas));
 	}
