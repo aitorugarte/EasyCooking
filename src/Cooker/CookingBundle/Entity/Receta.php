@@ -26,6 +26,12 @@ class Receta
 	*/
 	private $ingredientes;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="Plato", inversedBy="recetas")
+    * @ORM\JoinColumn(name="tipo_plato_id", referencedColumnName="id")
+    */
+	private $tipo_plato;
+	
 	/**
 	* @ORM\Id
 	* @ORM\Column(type="integer")
@@ -43,11 +49,6 @@ class Receta
 	*/
 	protected $detalles;
 
-	/**
-	* @ORM\Column(type="text")
-	*/
-	public $tipo_plato;
-	
 	/**
 	* @ORM\Column(type="date")
 	*/

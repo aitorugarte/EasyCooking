@@ -230,22 +230,22 @@ CREATE TABLE `receta` (
 -- Volcado de datos para la tabla `receta`
 --
 
-INSERT INTO `receta` (`id`, `nombre`, `detalles`, `tipo_plato`, `date`) VALUES
-(1, 'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', 'Primero', '2017-11-08'),
-(2, 'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', 'Primero', '2017-11-10'),
-(3, 'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', 'Segundo', '2017-11-11'),
-(4, 'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', 'Primero', '2017-10-23'),
-(5, 'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', 'Segundo', '2017-10-28'),
-(6, 'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', 'Segundo', '2017-11-03'),
-(7, 'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', 'Segundo', '2017-10-26'),
-(8, 'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', 'Segundo', '2017-10-19'),
-(9, 'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', 'Segundo', '2017-11-23'),
-(10, 'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', 'Segundo', '2017-11-02'),
-(11, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', 'Primero', '2017-09-23'),
-(12, 'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', 'Primero', '2017-10-30'),
-(13, 'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', 'Postre', '2017-05-01'),
-(14, 'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', 'Postre', '2017-11-30'),
-(15, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', 'Postre', '2017-10-07');
+INSERT INTO `receta` (`id`, `tipo_plato_id`, `nombre`, `detalles`, `date`) VALUES
+(1, 1,'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', '2017-11-08'),
+(2, 1,'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', '2017-11-10'),
+(3, 1,'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', '2017-11-11'),
+(4, 1,'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', '2017-10-23'),
+(5, 2,'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', '2017-10-28'),
+(6, 2,'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', '2017-11-03'),
+(7, 2,'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', '2017-10-26'),
+(8, 2,'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', '2017-10-19'),
+(9, 2,'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', '2017-11-23'),
+(10, 1,'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', '2017-11-02'),
+(11, 1,'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', '2017-09-23'),
+(12, 1,'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', '2017-10-30'),
+(13, 3,'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', '2017-05-01'),
+(14, 3,'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', '2017-11-30'),
+(15, 3,'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', '2017-10-07');
 
 --
 -- Índices para tablas volcadas
