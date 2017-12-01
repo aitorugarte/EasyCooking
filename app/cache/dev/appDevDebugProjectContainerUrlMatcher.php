@@ -100,17 +100,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        if (0 === strpos($pathinfo, '/show')) {
-            // cooker_cook_showReceta
-            if (preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showReceta')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showRecetaAction',));
-            }
+        // cooker_cook_showReceta
+        if (0 === strpos($pathinfo, '/receta') && preg_match('#^/receta/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showReceta')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showRecetaAction',));
+        }
 
-            // cooker_cook_showIngr
-            if (0 === strpos($pathinfo, '/show2') && preg_match('#^/show2/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showIngr')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showIngrAction',));
-            }
-
+        // cooker_cook_showIngr
+        if (0 === strpos($pathinfo, '/ingrediente') && preg_match('#^/ingrediente/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showIngr')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showIngrAction',));
         }
 
         // cooker_comentario_create
@@ -136,6 +133,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // cooker_cook_recetas
         if ('/recetas' === $pathinfo) {
             return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::recetasAction',  '_route' => 'cooker_cook_recetas',);
+        }
+
+        // cooker_cook_platos
+        if ('/platos' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::platosAction',  '_route' => 'cooker_cook_platos',);
         }
 
         // cooker_cook_ingredientes
