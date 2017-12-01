@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class PlatoRepository extends EntityRepository
 {
-	public function getPlatos($limit = null)
+	public function getPlatos()
 	{
 	$qp = $this->createQueryBuilder('p')
 	->select('p');

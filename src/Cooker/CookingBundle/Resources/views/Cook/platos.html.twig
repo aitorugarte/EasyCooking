@@ -1,14 +1,18 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/platos.html.twig #}
 {% extends 'CookerCookingBundle::layout.html.twig' %}
-{% block title %}{{ ingrediente.nombre }}{% endblock %}
+{% block title %}Tipos{% endblock %}
 
 {% block body %}
-	<h1>Recetas para el tipo: {{ receta.tipo_plato.nombre }}</h1>
 	
 	<ul>
-	{% for receta in recetas %}
-	<li><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></li>
-	{% endfor %}
+	{% for plato in platos %}
+	<h1>Recetas para el tipo: {{ plato.nombre }}</h1>
+   	{% for receta in recetas %}
 
+	<li><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></li>
+	
+	{% endfor %}
+	{% endfor %}
+	</ul>
 
 {% endblock %}
