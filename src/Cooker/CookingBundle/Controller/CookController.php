@@ -32,7 +32,7 @@ class CookController extends Controller
 		return $this->render('CookerCookingBundle:Cook:ingredientes.html.twig', array('ingredientes' => $ingredientes));
 	}
 
-	public function showAction($id)
+	public function showRecetaAction($id)
 	{
 		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->find($id);
 		
@@ -44,7 +44,7 @@ class CookController extends Controller
 
 		$comentarios = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comentario')->getComentariosForReceta($receta->getId());
 
-		return $this->render('CookerCookingBundle:Cook:show.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes));
+		return $this->render('CookerCookingBundle:Cook:showReceta.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes));
 	}
 
 	public function contactAction()
@@ -52,7 +52,7 @@ class CookController extends Controller
 	return $this->render('CookerCookingBundle:Cook:contact.html.twig');
 	}
 
-	public function show2Action($id)
+	public function showIngrAction($id)
 	{
 		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasBy($id);
 	    $ingrediente = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->find($id);
@@ -61,7 +61,7 @@ class CookController extends Controller
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
-		return $this->render('CookerCookingBundle:Cook:show2.html.twig', array('recetas' => $receta, 'ingrediente' => $ingrediente));
+		return $this->render('CookerCookingBundle:Cook:showIngr.html.twig', array('recetas' => $receta, 'ingrediente' => $ingrediente));
 	
 	}
 }

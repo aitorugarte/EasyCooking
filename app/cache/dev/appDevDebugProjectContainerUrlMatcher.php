@@ -101,14 +101,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/show')) {
-            // cooker_cook_show
+            // cooker_cook_showReceta
             if (preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showReceta')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showRecetaAction',));
             }
 
-            // cooker_cook_show2
+            // cooker_cook_showIngr
             if (0 === strpos($pathinfo, '/show2') && preg_match('#^/show2/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_show2')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::show2Action',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showIngr')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showIngrAction',));
             }
 
         }

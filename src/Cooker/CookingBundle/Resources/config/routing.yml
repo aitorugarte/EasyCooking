@@ -6,13 +6,13 @@ cooker_cook_recetas:
     path: /recetas
     defaults: { _controller: CookerCookingBundle:Cook:recetas }
 
-cooker_cook_show:
+cooker_cook_showReceta:
     path: /show/{id}
-    defaults: { _controller: CookerCookingBundle:Cook:show }
+    defaults: { _controller: CookerCookingBundle:Cook:showReceta }
  
-cooker_cook_show2:
+cooker_cook_showIngr:
     path: /show2/{id}
-    defaults: { _controller: CookerCookingBundle:Cook:show2 }
+    defaults: { _controller: CookerCookingBundle:Cook:showIngr }
 
 cooker_cook_ingredientes:
     path: /ingredientes
