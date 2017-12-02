@@ -43,7 +43,18 @@ class RecetaRepository extends EntityRepository
 		->setParameter('ingredienteid', $ingredienteId);
 
 	  return $qp->getQuery()->getResult();
+	}
 
+	public function getRecetasOrdenadas($limit = null)
+	{
+	$qp = $this->createQueryBuilder('p')
+	->select('p')
+	->addOrderBy('p.tipo_plato', 'ASC');
+
+	if (false === is_null($limit))
+		$qp->setMaxResults($limit);
+
+	return $qp->getQuery()->getResult();
 	}
 
 }

@@ -21,20 +21,20 @@ class __TwigTemplate_42d1e9877eff77ca1ba47430962403d84569116d83475a8ac69e4695fe2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1640146a539112004bb4861f78007cf56e6440595abcf2c021910afd66cb8780 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1640146a539112004bb4861f78007cf56e6440595abcf2c021910afd66cb8780->enter($__internal_1640146a539112004bb4861f78007cf56e6440595abcf2c021910afd66cb8780_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle::layout.html.twig"));
+        $__internal_a0820c3570966042c7c7673713e422f21293997f2497520652bad049c9cb50af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a0820c3570966042c7c7673713e422f21293997f2497520652bad049c9cb50af->enter($__internal_a0820c3570966042c7c7673713e422f21293997f2497520652bad049c9cb50af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle::layout.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1640146a539112004bb4861f78007cf56e6440595abcf2c021910afd66cb8780->leave($__internal_1640146a539112004bb4861f78007cf56e6440595abcf2c021910afd66cb8780_prof);
+        $__internal_a0820c3570966042c7c7673713e422f21293997f2497520652bad049c9cb50af->leave($__internal_a0820c3570966042c7c7673713e422f21293997f2497520652bad049c9cb50af_prof);
 
     }
 
     // line 4
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_79745132b830af9a047a3dd6aa7eb03d77a3825b2c31ddbeff4131624f1ad701 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_79745132b830af9a047a3dd6aa7eb03d77a3825b2c31ddbeff4131624f1ad701->enter($__internal_79745132b830af9a047a3dd6aa7eb03d77a3825b2c31ddbeff4131624f1ad701_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_02c55c29f54b9c327b07676eb3a255b6f112be6a341abf6cb6aa3a67c48c68df = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_02c55c29f54b9c327b07676eb3a255b6f112be6a341abf6cb6aa3a67c48c68df->enter($__internal_02c55c29f54b9c327b07676eb3a255b6f112be6a341abf6cb6aa3a67c48c68df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 5
         echo "    B&uacutesqueda avanzada:
@@ -50,9 +50,10 @@ class __TwigTemplate_42d1e9877eff77ca1ba47430962403d84569116d83475a8ac69e4695fe2
 \t\t<li><a href=\"https://www.instagram.com/\" target=\"_blank\">Instagram</a></li>
 \t\t<li><a href=\"https://www.facebook.com/\" target=\"_blank\">Facebook</a></li>
 \t</ul>
+
 ";
         
-        $__internal_79745132b830af9a047a3dd6aa7eb03d77a3825b2c31ddbeff4131624f1ad701->leave($__internal_79745132b830af9a047a3dd6aa7eb03d77a3825b2c31ddbeff4131624f1ad701_prof);
+        $__internal_02c55c29f54b9c327b07676eb3a255b6f112be6a341abf6cb6aa3a67c48c68df->leave($__internal_02c55c29f54b9c327b07676eb3a255b6f112be6a341abf6cb6aa3a67c48c68df_prof);
 
     }
 
@@ -98,6 +99,7 @@ class __TwigTemplate_42d1e9877eff77ca1ba47430962403d84569116d83475a8ac69e4695fe2
 \t\t<li><a href=\"https://www.instagram.com/\" target=\"_blank\">Instagram</a></li>
 \t\t<li><a href=\"https://www.facebook.com/\" target=\"_blank\">Facebook</a></li>
 \t</ul>
+
 {% endblock %}
 ", "CookerCookingBundle::layout.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle\\Resources\\views\\layout.html.twig");
     }

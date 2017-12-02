@@ -14,11 +14,15 @@ cooker_cook_showIngr:
     path: /ingrediente/{id}
     defaults: { _controller: CookerCookingBundle:Cook:showIngr }
 
+cooker_cook_showPlato:
+    path: /plato/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:showPlato }
+
 cooker_cook_ingredientes:
     path: /ingredientes
     defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
 
-cooker_cook_ingredientes:
+cooker_cook_platos:
     path: /platos
     defaults: { _controller: CookerCookingBundle:Cook:platos }
 

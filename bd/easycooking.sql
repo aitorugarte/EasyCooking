@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2017 a las 22:42:53
+-- Tiempo de generación: 01-12-2017 a las 22:43:35
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -252,21 +252,21 @@ CREATE TABLE `receta` (
 --
 
 INSERT INTO `receta` (`id`, `tipo_plato`, `nombre`, `detalles`, `date`, `imagen`) VALUES
-(1, 1, 'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', '2017-11-08', ''),
-(2, 1, 'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', '2017-11-10', ''),
-(3, 1, 'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', '2017-11-11', ''),
-(4, 1, 'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', '2017-10-23', ''),
-(5, 2, 'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', '2017-10-28', ''),
-(6, 2, 'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', '2017-11-03', ''),
-(7, 2, 'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', '2017-10-26', ''),
-(8, 2, 'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', '2017-10-19', ''),
-(9, 2, 'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', '2017-11-23', ''),
-(10, 1, 'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', '2017-11-02', ''),
-(11, 1, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', '2017-09-23', ''),
-(12, 1, 'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', '2017-10-30', ''),
-(13, 3, 'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', '2017-05-01', ''),
-(14, 3, 'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', '2017-11-30', ''),
-(15, 3, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', '2017-10-07', '');
+(1, 1, 'Macarrones con tomate', 'Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno Macarrones con tomate al horno', '2017-11-08', 'http://4.bp.blogspot.com/-HVL7OhmOglI/UlVpxR6TdcI/AAAAAAAA3TU/GcE4ylSv0YI/s1600/IMG_7519.JPG'),
+(2, 1, 'Espaguetis al ajillo ', 'Espaguetis al ajillo al mas puro estilo tradicional Italiano', '2017-11-10', 'https://i.ytimg.com/vi/Zc8ixhrhGEM/maxresdefault.jpg'),
+(3, 1, 'Tortilla de Patata', 'Tortila de patata española casera con cebolla al punto de sal', '2017-11-11', 'http://cdn1.cocina-familiar.com/recetas/tortilla-de-patata-con-cebolla.jpg'),
+(4, 1, 'Lentejas', 'Un buen plato de lentejas acompañado con chorizo o lo que guste para un dia de frio', '2017-10-23', 'https://www.hogarmania.com/archivos/201702/receta-lentejas-chorizo-848x477x80xX.jpg'),
+(5, 2, 'Filete con patatas', 'Filete de ternera con una racion de patatas para acompañar al gusto', '2017-10-28', 'http://sevilla.abc.es/gurme//wp-content/uploads/2010/04/1411_filetespiernaternerapatataspaja_1272360957.jpg'),
+(6, 2, 'Merluza en salsa', 'Una porcion de merluza acompañada de una salsa verde', '2017-11-03', 'https://i.ytimg.com/vi/AaMIKHvlh8g/maxresdefault.jpg'),
+(7, 2, 'Lasaña', 'Una porcion de lasaña rellena de carne picada para saltarse de vez en cuando esas comidas ligeras', '2017-10-26', 'https://www.gallinablanca.es/files/thumbs/6fa65995f2dbca95536d431c7f8527c2f5a20694_r900_480_2.jpg'),
+(8, 2, 'Croquetas', 'Croquetas rellenas de jamon como apertitivo para empezar una excelente comida', '2017-10-19', 'https://www.hogarmania.com/archivos/201401/croquetas-jamon-668x400x80xX.jpg'),
+(9, 2, 'Empanadillas', 'Empanadillas rellenas con tomate y atun como acompañante de cualquier comida', '2017-11-23', 'https://i.ytimg.com/vi/LnTyuGZLejA/maxresdefault.jpg'),
+(10, 1, 'Pizza de jamon y queso', 'Pizza de jamon y queso de toda la vida y para toda la familia', '2017-11-02', 'http://decasa.es/sites/default/files/pizza-jamon-york.jpg'),
+(11, 1, 'Ensalada mixta', 'Ensalada mixta con variedad de ingredientes al más ppuro estiolo campestre', '2017-09-23', 'https://i.ytimg.com/vi/B5ZMtBbaEtc/maxresdefault.jpg'),
+(12, 1, 'Ensaladilla rusa', 'Ensalada tipica en muchos paises originaria de Rusia', '2017-10-30', 'https://i.ytimg.com/vi/ENP0oJ8DiDg/maxresdefault.jpg'),
+(13, 3, 'Tarta de queso', 'Tarta de queso con mermelada para aportar un toque dulce a la comida', '2017-05-01', 'http://recetasdecocina.elmundo.es/wp-content/uploads/2017/02/tarta-de-queso-fr%C3%ADa-casera.jpg'),
+(14, 3, 'Flan de huevo', 'Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa', '2017-11-30', 'http://cocinillas.elespanol.com/wp-content/uploads/2011/11/flan2.jpg'),
+(15, 3, 'Natillas', 'Se trata de una crema elaborada con leche, yemas de huevo y azúcar', '2017-10-07', 'https://www.recetin.com/wp-content/uploads/2012/02/natillas.jpg');
 
 --
 -- Índices para tablas volcadas

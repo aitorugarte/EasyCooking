@@ -35,7 +35,7 @@ class CookController extends Controller
 	public function platosAction(){
 	
 		$platos = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->getPlatos();
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetas();
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasOrdenadas();
 
 		return $this->render('CookerCookingBundle:Cook:platos.html.twig', array('platos' => $platos, 'recetas' => $recetas));
 	}
@@ -55,11 +55,6 @@ class CookController extends Controller
 		return $this->render('CookerCookingBundle:Cook:showReceta.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes));
 	}
 
-	public function contactAction()
-	{
-	return $this->render('CookerCookingBundle:Cook:contact.html.twig');
-	}
-
 	public function showIngrAction($id)
 	{
 		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasBy($id);
@@ -71,6 +66,11 @@ class CookController extends Controller
 
 		return $this->render('CookerCookingBundle:Cook:showIngr.html.twig', array('recetas' => $receta, 'ingrediente' => $ingrediente));
 	
+	}
+
+	public function contactAction()
+	{
+	return $this->render('CookerCookingBundle:Cook:contact.html.twig');
 	}
 }
 ?>

@@ -4,15 +4,19 @@
 
 {% block body %}
 	
-	<ul>
+	
 	{% for plato in platos %}
+	{% set tipo = plato.nombre %}
+
 	<h1>Recetas para el tipo: {{ plato.nombre }}</h1>
-   	{% for receta in recetas %}
+	<ul>
+	{% for receta in recetas if tipo == receta.tipo_plato.nombre %}
 
 	<li><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></li>
 	
 	{% endfor %}
-	{% endfor %}
 	</ul>
+	{% endfor %}
+	
 
 {% endblock %}
