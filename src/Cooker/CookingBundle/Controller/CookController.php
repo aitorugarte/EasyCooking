@@ -65,7 +65,18 @@ class CookController extends Controller
 		}
 
 		return $this->render('CookerCookingBundle:Cook:showIngr.html.twig', array('recetas' => $receta, 'ingrediente' => $ingrediente));
-	
+	}
+
+	public function showPlatoAction($id)
+	{
+		$plato = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->find($id);
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasPlato($id);
+
+		if (!$plato) {
+			throw $this->createNotFoundException('No se ha encontrado el plato.');
+		}
+
+		return $this->render('CookerCookingBundle:Cook:showPlato.html.twig', array('plato' => $plato, 'recetas' => $recetas));
 	}
 
 	public function contactAction()

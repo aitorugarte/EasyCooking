@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\Cooker",
-    "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook"
+    ""
   ],
-  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\showPlato.html.twig",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
