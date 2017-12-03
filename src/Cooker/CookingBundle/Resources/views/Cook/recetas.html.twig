@@ -5,21 +5,22 @@
 {% block body %}
 
 <ul class="lista">
-    {% for receta in recetas %}
+	{% for receta in recetas %}
 	<li class="elemento">
-            <header>
-                <h3><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h3>
-            </header>
-			<img class="imgPeq" src="{{receta.imagen}}" alt="{{receta.nombre}}" />
-            <div class="snippet">
-                <p style="margin-left: 5px;margin-right: 5px;">{{ receta.detalles(50) }}</p>
-                <p><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">Seguir leyendo...</a></p>
-            </div>
-			  <footer class="meta">
-                <p>Comentarios: -</p>
-            </footer>
+		<header>
+			<h3><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h3>
+		</header>
+		<img class="imgPeq" src="{{receta.imagen}}" alt="{{receta.nombre}}" />
+		<div class="snippet">
+			<p style="margin-left: 5px;margin-right: 5px;">{{ receta.detalles(50) }}</p>
+			<p><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">Seguir leyendo...</a></p>
+		</div>
+		<footer class="meta">
+			<p>Comentarios: -</p>
+		</footer>
 	</li>
-    {% else %}
-        <p>No hay entradas en este blog</p>
-    {% endfor %}
+	{% else %}
+	<p>No hay entradas en este blog</p>
+	{% endfor %}
+</ul>
 {% endblock %}

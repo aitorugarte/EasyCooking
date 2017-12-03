@@ -1,15 +1,27 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/showPlato.html.twig #}
 {% extends 'CookerCookingBundle::layout.html.twig' %}
-{% block title %}Error{% endblock %}
+{% block title %}{{plato.nombre}}{% endblock %}
 
 {% block body %}
 
 <h1>Recetas para el plato: {{ plato.nombre }}</h1>
-	
-	<ul>
+
+<ul class="lista">
 	{% for receta in recetas %}
-	<li><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></li>
+	<li class="elemento">
+		<header>
+			<h3><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h3>
+		</header>
+		<img class="imgPeq" src="{{receta.imagen}}" alt="{{receta.nombre}}" />
+		<div class="snippet">
+			<p style="margin-left: 5px;margin-right: 5px;">{{ receta.detalles(50) }}</p>
+			<p><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">Seguir leyendo...</a></p>
+		</div>
+		<footer class="meta">
+			<p>Comentarios: -</p>
+		</footer>
+	</li>
 	{% endfor %}
-	</ul>
+</ul>
 
 {% endblock %}

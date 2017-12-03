@@ -22,32 +22,32 @@ class __TwigTemplate_d5f6e7c6bc339a82b5aabe8eeb6ec514ac63cf37a7f558c2a9453798b99
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_47c1f62a18613ee503b40991e408a874c1cdbea69b190ced4483a2f4def9f7b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_47c1f62a18613ee503b40991e408a874c1cdbea69b190ced4483a2f4def9f7b2->enter($__internal_47c1f62a18613ee503b40991e408a874c1cdbea69b190ced4483a2f4def9f7b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
+        $__internal_237e2fb8f71e942a5b12dbf4c628a410e34f5d7c414c6513819b2b05b00259b3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_237e2fb8f71e942a5b12dbf4c628a410e34f5d7c414c6513819b2b05b00259b3->enter($__internal_237e2fb8f71e942a5b12dbf4c628a410e34f5d7c414c6513819b2b05b00259b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_47c1f62a18613ee503b40991e408a874c1cdbea69b190ced4483a2f4def9f7b2->leave($__internal_47c1f62a18613ee503b40991e408a874c1cdbea69b190ced4483a2f4def9f7b2_prof);
+        $__internal_237e2fb8f71e942a5b12dbf4c628a410e34f5d7c414c6513819b2b05b00259b3->leave($__internal_237e2fb8f71e942a5b12dbf4c628a410e34f5d7c414c6513819b2b05b00259b3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4e84233c63160b8d6900e5cd4416bccb3fbfea9bff233789ee11dc453abcb115 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4e84233c63160b8d6900e5cd4416bccb3fbfea9bff233789ee11dc453abcb115->enter($__internal_4e84233c63160b8d6900e5cd4416bccb3fbfea9bff233789ee11dc453abcb115_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_44fb85ac7f2f7a02f6e56ccfcf295e6f31a9ecb6eed1037bfa1f6d19e8e693e9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_44fb85ac7f2f7a02f6e56ccfcf295e6f31a9ecb6eed1037bfa1f6d19e8e693e9->enter($__internal_44fb85ac7f2f7a02f6e56ccfcf295e6f31a9ecb6eed1037bfa1f6d19e8e693e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de Recetas";
         
-        $__internal_4e84233c63160b8d6900e5cd4416bccb3fbfea9bff233789ee11dc453abcb115->leave($__internal_4e84233c63160b8d6900e5cd4416bccb3fbfea9bff233789ee11dc453abcb115_prof);
+        $__internal_44fb85ac7f2f7a02f6e56ccfcf295e6f31a9ecb6eed1037bfa1f6d19e8e693e9->leave($__internal_44fb85ac7f2f7a02f6e56ccfcf295e6f31a9ecb6eed1037bfa1f6d19e8e693e9_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9f61a13429600642c1274ecb642a514c764b3bdd7d77794ef840478baa04e89f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9f61a13429600642c1274ecb642a514c764b3bdd7d77794ef840478baa04e89f->enter($__internal_9f61a13429600642c1274ecb642a514c764b3bdd7d77794ef840478baa04e89f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4cb3636a68e870d03839015ffe333e3250ca827fe3b95b0b047b4f0b0465c9b7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4cb3636a68e870d03839015ffe333e3250ca827fe3b95b0b047b4f0b0465c9b7->enter($__internal_4cb3636a68e870d03839015ffe333e3250ca827fe3b95b0b047b4f0b0465c9b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -99,8 +99,11 @@ class __TwigTemplate_d5f6e7c6bc339a82b5aabe8eeb6ec514ac63cf37a7f558c2a9453798b99
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 25
+        echo "  </ul>
+";
         
-        $__internal_9f61a13429600642c1274ecb642a514c764b3bdd7d77794ef840478baa04e89f->leave($__internal_9f61a13429600642c1274ecb642a514c764b3bdd7d77794ef840478baa04e89f_prof);
+        $__internal_4cb3636a68e870d03839015ffe333e3250ca827fe3b95b0b047b4f0b0465c9b7->leave($__internal_4cb3636a68e870d03839015ffe333e3250ca827fe3b95b0b047b4f0b0465c9b7_prof);
 
     }
 
@@ -116,7 +119,7 @@ class __TwigTemplate_d5f6e7c6bc339a82b5aabe8eeb6ec514ac63cf37a7f558c2a9453798b99
 
     public function getDebugInfo()
     {
-        return array (  96 => 23,  84 => 16,  80 => 15,  73 => 13,  66 => 11,  62 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
+        return array (  103 => 25,  96 => 23,  84 => 16,  80 => 15,  73 => 13,  66 => 11,  62 => 9,  57 => 8,  53 => 6,  47 => 5,  35 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -153,6 +156,7 @@ class __TwigTemplate_d5f6e7c6bc339a82b5aabe8eeb6ec514ac63cf37a7f558c2a9453798b99
     {% else %}
         <p>No hay entradas en este blog</p>
     {% endfor %}
+  </ul>
 {% endblock %}
 ", "CookerCookingBundle:Cook:recetas.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\recetas.html.twig");
     }

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\tests\\BloggerBlogBundle\\Controller"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\Cooker",
   "PreviewInSolutionExplorer": false
 }
