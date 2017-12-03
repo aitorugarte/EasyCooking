@@ -3,7 +3,7 @@
 {% for comentario in comentarios %}
     <article class="comentario {{ cycle(['odd', 'even'], loop.index0) }}" id="comentario-{{ comentario.id }}">
         <header>
-            <p><span class="highlight">{{ comentario.user }}</span> comentó el <time datetime="{{ comentario.created|date('c') }}">{{ comentario.created|date('l, F j, Y') }}</time></p>
+            <p><span class="highlight">{{ comentario.usuario }}</span> comentó el <time datetime="{{ comentario.created|date('c') }}">{{ comentario.created|date('l, F j, Y') }}</time></p>
         </header>
         <p>{{ comentario.comentario }}</p>
     </article>

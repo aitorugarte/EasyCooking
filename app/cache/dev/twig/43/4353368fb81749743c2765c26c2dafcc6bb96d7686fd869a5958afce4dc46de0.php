@@ -15,8 +15,8 @@ class __TwigTemplate_6fc14278d929c3e5d3347f35d333ea67f7597112bc8a9c59adc659f96fe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5f038c7c50d759c08c473adb58a972f3d19600718128ead11d9d3d41e6820ca1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5f038c7c50d759c08c473adb58a972f3d19600718128ead11d9d3d41e6820ca1->enter($__internal_5f038c7c50d759c08c473adb58a972f3d19600718128ead11d9d3d41e6820ca1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
+        $__internal_8d02041f57848da104f7f4903806b831e8460a9b0b6f0314176af58156b35d48 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8d02041f57848da104f7f4903806b831e8460a9b0b6f0314176af58156b35d48->enter($__internal_8d02041f57848da104f7f4903806b831e8460a9b0b6f0314176af58156b35d48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -48,7 +48,7 @@ class __TwigTemplate_6fc14278d929c3e5d3347f35d333ea67f7597112bc8a9c59adc659f96fe
         <header>
             <p><span class=\"highlight\">";
             // line 6
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "user", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "usuario", array()), "html", null, true);
             echo "</span> comentó el <time datetime=\"";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "c"), "html", null, true);
             echo "\">";
@@ -80,7 +80,7 @@ class __TwigTemplate_6fc14278d929c3e5d3347f35d333ea67f7597112bc8a9c59adc659f96fe
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_5f038c7c50d759c08c473adb58a972f3d19600718128ead11d9d3d41e6820ca1->leave($__internal_5f038c7c50d759c08c473adb58a972f3d19600718128ead11d9d3d41e6820ca1_prof);
+        $__internal_8d02041f57848da104f7f4903806b831e8460a9b0b6f0314176af58156b35d48->leave($__internal_8d02041f57848da104f7f4903806b831e8460a9b0b6f0314176af58156b35d48_prof);
 
     }
 
@@ -114,7 +114,7 @@ class __TwigTemplate_6fc14278d929c3e5d3347f35d333ea67f7597112bc8a9c59adc659f96fe
 {% for comentario in comentarios %}
     <article class=\"comentario {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comentario-{{ comentario.id }}\">
         <header>
-            <p><span class=\"highlight\">{{ comentario.user }}</span> comentó el <time datetime=\"{{ comentario.created|date('c') }}\">{{ comentario.created|date('l, F j, Y') }}</time></p>
+            <p><span class=\"highlight\">{{ comentario.usuario }}</span> comentó el <time datetime=\"{{ comentario.created|date('c') }}\">{{ comentario.created|date('l, F j, Y') }}</time></p>
         </header>
         <p>{{ comentario.comentario }}</p>
     </article>

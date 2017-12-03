@@ -38,7 +38,7 @@ class ComentarioController extends Controller
             $em->persist($comentario);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('cooker_cook_show', array('id' => $comentario->getReceta()->getId())) . '#comentario-' . $comentario->getId());
+            return $this->redirect($this->generateUrl('cooker_cook_showReceta', array('id' => $comentario->getReceta()->getId())) . '#comentario-' . $comentario->getId());
         }
 
         return $this->render('CookerCookingBundle:Comentario:create.html.twig', array('comentario' => $comentario, 'form' => $form->createView()));
