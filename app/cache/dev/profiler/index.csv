@@ -1009,3 +1009,15 @@ fd3162,127.0.0.1,GET,http://localhost/easycooking/app_dev.php/_fragment?_path=_f
 5296b4,::1,GET,http://localhost/easycooking/app_dev.php/receta/7,1512376446,,200
 723ccc,127.0.0.1,GET,http://localhost/easycooking/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCookerCookingBundle%253AComentario%253Anew,1512376451,a84bdb,200
 a84bdb,::1,GET,http://localhost/easycooking/app_dev.php/receta/5,1512376451,,200
+3070b4,127.0.0.1,GET,http://localhost/easycooking/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCookerCookingBundle%253AComentario%253Anew,1512376509,c1195a,200
+c1195a,::1,GET,http://localhost/easycooking/app_dev.php/receta/3,1512376509,,200
+73fc3c,::1,GET,http://localhost/easycooking/app_dev.php/,1512376549,,200
+4528cf,::1,GET,http://localhost/easycooking/app_dev.php/recetas,1512376646,,200
+d9d5ca,127.0.0.1,GET,http://localhost/easycooking/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCookerCookingBundle%253AComentario%253Anew,1512376648,7934e8,200
+7934e8,::1,GET,http://localhost/easycooking/app_dev.php/receta/14,1512376648,,200
+d9f4b0,::1,GET,http://localhost/easycooking/app_dev.php/contact,1512376671,,200
+982004,::1,GET,http://localhost/easycooking/app_dev.php/contact,1512376860,,200
+ee8622,::1,GET,http://localhost/easycooking/app_dev.php/contact,1512376874,,200
+bdc0a2,::1,GET,http://localhost/easycooking/app_dev.php/contact,1512376889,,200
+56f1eb,::1,GET,http://localhost/easycooking/app_dev.php/contact,1512376974,,200
+e09a18,::1,GET,http://localhost/easycooking/app_dev.php/,1512377131,,200
