@@ -14,8 +14,8 @@ class TipoComentario extends AbstractType
   public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('usuario', null, array('label' => 'Usuario'))
-        ->add('comentario', null, array('label' => 'Comentario'))
+        ->add('usuario', null, array('label' => 'Usuario '))
+        ->add('comentario', null, array('label' => 'Comentario '))
         ;
     }
     
