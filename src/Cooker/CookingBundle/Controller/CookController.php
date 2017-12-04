@@ -52,7 +52,9 @@ class CookController extends Controller
 
 		$comentarios = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comentario')->getComentariosForReceta($receta->getId());
 
-		return $this->render('CookerCookingBundle:Cook:showReceta.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes));
+		$otrasrecetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->recetasRelacionadas($id);
+
+		return $this->render('CookerCookingBundle:Cook:showReceta.html.twig', array('receta' => $receta, 'comentarios' => $comentarios, 'ingredientes' => $ingredientes, 'otrasrecetas' => $otrasrecetas));
 	}
 
 	public function showIngrAction($id)

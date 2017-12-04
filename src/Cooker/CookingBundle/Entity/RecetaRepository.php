@@ -67,4 +67,15 @@ class RecetaRepository extends EntityRepository
 	return $qp->getQuery()->getResult();
 	}
 
+	public function recetasRelacionadas($id)
+	{
+	$qp = $this->createQueryBuilder('p')
+	->select('p')
+	->where('p.tipo_plato = :id_plato')
+	->setParameter('id_plato', $id)
+	->setMaxResults(3);
+
+	return $qp->getQuery()->getResult();
+	}
+
 }
