@@ -15,8 +15,8 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_62101130c64f125403348bf3e9049526ba963cc18090eb970f81ec9b66a1c63a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_62101130c64f125403348bf3e9049526ba963cc18090eb970f81ec9b66a1c63a->enter($__internal_62101130c64f125403348bf3e9049526ba963cc18090eb970f81ec9b66a1c63a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
+        $__internal_8aa7400a429b74e71003703fdec8acdd811e3d7e5ba55c5d0431adb5c9309a84 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8aa7400a429b74e71003703fdec8acdd811e3d7e5ba55c5d0431adb5c9309a84->enter($__internal_8aa7400a429b74e71003703fdec8acdd811e3d7e5ba55c5d0431adb5c9309a84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:list.html.twig"));
 
         // line 2
         echo "
@@ -44,19 +44,21 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
             echo twig_escape_filter($this->env, twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array())), "html", null, true);
             echo "\" id=\"comentario-";
             echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "id", array()), "html", null, true);
-            echo "\">
-        <header>
-            <p><span class=\"highlight\">";
+            echo "\" style=\"border-style: ridge; margin-bottom: 10px;\">
+\t\t<header style=\"margin-left:10px\">
+            <p><span style=\"color: #B60000; font-weight: 700;\">";
             // line 6
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "user", array()), "html", null, true);
-            echo "</span> comentó el <time datetime=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "usuario", array()), "html", null, true);
+            echo "</span>
+\t\t\t<time datetime=\"";
+            // line 7
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "c"), "html", null, true);
-            echo "\">";
+            echo "\" style=\"float:right\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "l, F j, Y"), "html", null, true);
             echo "</time></p>
         </header>
-        <p>";
-            // line 8
+        <p style=\"margin-left:10px\">";
+            // line 9
             echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "comentario", array()), "html", null, true);
             echo "</p>
     </article>
@@ -72,7 +74,7 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
             }
         }
         if (!$context['_iterated']) {
-            // line 11
+            // line 12
             echo "    <p>No hay comentarios para este post.</p>
 ";
         }
@@ -80,7 +82,7 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_62101130c64f125403348bf3e9049526ba963cc18090eb970f81ec9b66a1c63a->leave($__internal_62101130c64f125403348bf3e9049526ba963cc18090eb970f81ec9b66a1c63a_prof);
+        $__internal_8aa7400a429b74e71003703fdec8acdd811e3d7e5ba55c5d0431adb5c9309a84->leave($__internal_8aa7400a429b74e71003703fdec8acdd811e3d7e5ba55c5d0431adb5c9309a84_prof);
 
     }
 
@@ -96,7 +98,7 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
 
     public function getDebugInfo()
     {
-        return array (  76 => 11,  60 => 8,  51 => 6,  43 => 4,  25 => 3,  22 => 2,);
+        return array (  78 => 12,  62 => 9,  55 => 7,  51 => 6,  43 => 4,  25 => 3,  22 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -112,11 +114,12 @@ class __TwigTemplate_d4ed4e2f8320f6e1660f1382a43aa528e36033f90913c5f4f6b02890407
         return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Comment/list.html.twig #}
 
 {% for comentario in comentarios %}
-    <article class=\"comentario {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comentario-{{ comentario.id }}\">
-        <header>
-            <p><span class=\"highlight\">{{ comentario.user }}</span> comentó el <time datetime=\"{{ comentario.created|date('c') }}\">{{ comentario.created|date('l, F j, Y') }}</time></p>
+    <article class=\"comentario {{ cycle(['odd', 'even'], loop.index0) }}\" id=\"comentario-{{ comentario.id }}\" style=\"border-style: ridge; margin-bottom: 10px;\">
+\t\t<header style=\"margin-left:10px\">
+            <p><span style=\"color: #B60000; font-weight: 700;\">{{ comentario.usuario }}</span>
+\t\t\t<time datetime=\"{{ comentario.created|date('c') }}\" style=\"float:right\">{{ comentario.created|date('l, F j, Y') }}</time></p>
         </header>
-        <p>{{ comentario.comentario }}</p>
+        <p style=\"margin-left:10px\">{{ comentario.comentario }}</p>
     </article>
 {% else %}
     <p>No hay comentarios para este post.</p>

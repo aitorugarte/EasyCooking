@@ -44,7 +44,7 @@
 	{% endblock %}
 
 	<h3 style="color:red; margin-bottom: 0px">Recetas relacionadas</h3>
-
+	
 	<ul style="list-style-type: none; margin: 0; padding: 0;">
 	{% for otrareceta in otrasrecetas %}
 	<li style= "float: left; display: block; text-align: center; padding: 16px; ">
@@ -52,7 +52,6 @@
 		<h3><a href="{{ path('cooker_cook_showReceta', { 'id': otrareceta.id }) }}">{{ otrareceta.nombre }}</a></h3>
 	</header>
 		<img class="imgPeq" src="{{otrareceta.imagen}}" alt="{{otrareceta.nombre}}" />
-
 	</li>
 	{% endfor %}
 	</ul>

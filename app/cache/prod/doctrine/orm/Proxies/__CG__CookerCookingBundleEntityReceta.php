@@ -36,7 +36,7 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array('tipo_plato' => NULL);
+    public static $lazyPropertiesDefaults = array();
 
 
 
@@ -46,60 +46,16 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
      */
     public function __construct($initializer = null, $cloner = null)
     {
-        unset($this->tipo_plato);
 
         $this->__initializer__ = $initializer;
         $this->__cloner__      = $cloner;
     }
 
-    /**
-     * 
-     * @param string $name
-     */
-    public function __get($name)
-    {
-        if (array_key_exists($name, $this->__getLazyProperties())) {
-            $this->__initializer__ && $this->__initializer__->__invoke($this, '__get', array($name));
 
-            return $this->$name;
-        }
 
-        trigger_error(sprintf('Undefined property: %s::$%s', __CLASS__, $name), E_USER_NOTICE);
-    }
 
-    /**
-     * 
-     * @param string $name
-     * @param mixed  $value
-     */
-    public function __set($name, $value)
-    {
-        if (array_key_exists($name, $this->__getLazyProperties())) {
-            $this->__initializer__ && $this->__initializer__->__invoke($this, '__set', array($name, $value));
 
-            $this->$name = $value;
 
-            return;
-        }
-
-        $this->$name = $value;
-    }
-
-    /**
-     * 
-     * @param  string $name
-     * @return boolean
-     */
-    public function __isset($name)
-    {
-        if (array_key_exists($name, $this->__getLazyProperties())) {
-            $this->__initializer__ && $this->__initializer__->__invoke($this, '__isset', array($name));
-
-            return isset($this->$name);
-        }
-
-        return false;
-    }
 
     /**
      * 
@@ -108,10 +64,10 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'tipo_plato', 'date');
+            return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'tipo_plato', 'id', 'nombre', 'detalles', 'date', 'imagen');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', 'id', 'nombre', 'detalles', 'date');
+        return array('__isInitialized__', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'comentarios', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'ingredientes', '' . "\0" . 'Cooker\\CookingBundle\\Entity\\Receta' . "\0" . 'tipo_plato', 'id', 'nombre', 'detalles', 'date', 'imagen');
     }
 
     /**
@@ -133,7 +89,6 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
                 }
             };
 
-            unset($this->tipo_plato);
         }
     }
 
@@ -280,23 +235,23 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function setTipo($tipo_plato)
+    public function setTipo_plato($tipo_plato)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTipo', array($tipo_plato));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTipo_plato', array($tipo_plato));
 
-        return parent::setTipo($tipo_plato);
+        return parent::setTipo_plato($tipo_plato);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getTipo()
+    public function getTipo_plato()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTipo', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTipo_plato', array());
 
-        return parent::getTipo();
+        return parent::getTipo_plato();
     }
 
     /**
@@ -319,6 +274,28 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDate', array());
 
         return parent::getDate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImagen($imagen)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImagen', array($imagen));
+
+        return parent::setImagen($imagen);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImagen()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImagen', array());
+
+        return parent::getImagen();
     }
 
     /**

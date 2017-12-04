@@ -41,6 +41,7 @@ class __TwigTemplate_5932b266c54959c3dd16b38ac6dac854156158f95d62a87bbcc0165271e
 \t\t<li><a href=\"https://www.instagram.com/\" target=\"_blank\">Instagram</a></li>
 \t\t<li><a href=\"https://www.facebook.com/\" target=\"_blank\">Facebook</a></li>
 \t</ul>
+
 ";
     }
 

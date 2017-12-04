@@ -22,58 +22,58 @@ class __TwigTemplate_20c18613f10023f68ffa221d9ff30782ad8299460dced7466528c3dbf55
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_13052910f4a239e7051705c5b68c634051fa208fed3877065dcd8aa15f1f7da1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_13052910f4a239e7051705c5b68c634051fa208fed3877065dcd8aa15f1f7da1->enter($__internal_13052910f4a239e7051705c5b68c634051fa208fed3877065dcd8aa15f1f7da1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:contact.html.twig"));
+        $__internal_3e66e05ffded75e1f05aa567e953a37c5ea526a71b017569873f776b92af3a4d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3e66e05ffded75e1f05aa567e953a37c5ea526a71b017569873f776b92af3a4d->enter($__internal_3e66e05ffded75e1f05aa567e953a37c5ea526a71b017569873f776b92af3a4d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:contact.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_13052910f4a239e7051705c5b68c634051fa208fed3877065dcd8aa15f1f7da1->leave($__internal_13052910f4a239e7051705c5b68c634051fa208fed3877065dcd8aa15f1f7da1_prof);
+        $__internal_3e66e05ffded75e1f05aa567e953a37c5ea526a71b017569873f776b92af3a4d->leave($__internal_3e66e05ffded75e1f05aa567e953a37c5ea526a71b017569873f776b92af3a4d_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_86af40c86ad36eaa2eb5509f3705e04876eb2aa4e21a8bb9ee9062dc96dec2bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_86af40c86ad36eaa2eb5509f3705e04876eb2aa4e21a8bb9ee9062dc96dec2bd->enter($__internal_86af40c86ad36eaa2eb5509f3705e04876eb2aa4e21a8bb9ee9062dc96dec2bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_32ed5c6d464dcaa426e66ab04f27523c8510073de183b066b4e1fb1533b39d2f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_32ed5c6d464dcaa426e66ab04f27523c8510073de183b066b4e1fb1533b39d2f->enter($__internal_32ed5c6d464dcaa426e66ab04f27523c8510073de183b066b4e1fb1533b39d2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Contacto";
         
-        $__internal_86af40c86ad36eaa2eb5509f3705e04876eb2aa4e21a8bb9ee9062dc96dec2bd->leave($__internal_86af40c86ad36eaa2eb5509f3705e04876eb2aa4e21a8bb9ee9062dc96dec2bd_prof);
+        $__internal_32ed5c6d464dcaa426e66ab04f27523c8510073de183b066b4e1fb1533b39d2f->leave($__internal_32ed5c6d464dcaa426e66ab04f27523c8510073de183b066b4e1fb1533b39d2f_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c16ae011bbe1bc833d77a8c4d23ca57e4ff78ba67468a2028baf70226543c518 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c16ae011bbe1bc833d77a8c4d23ca57e4ff78ba67468a2028baf70226543c518->enter($__internal_c16ae011bbe1bc833d77a8c4d23ca57e4ff78ba67468a2028baf70226543c518_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f5a23a374008ceccc9e38cd72d3c36a65c0bcc1daf45aa8fba00c26f46d59b8f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f5a23a374008ceccc9e38cd72d3c36a65c0bcc1daf45aa8fba00c26f46d59b8f->enter($__internal_f5a23a374008ceccc9e38cd72d3c36a65c0bcc1daf45aa8fba00c26f46d59b8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <header>
         <h1>Contacta conmigo</h1>
     </header>
 
-<form action=\"\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
   <fieldset>
     <h4>Nombre</h4>
     <input type=\"text\" name=\"nombre\">
     
    <h4>Correo</h4>
-    <input type=\"text\" name=\"correo\" size=\"10\" maxlength=\"9\">
+    <input type=\"text\" name=\"correo\">
   
     <h4>Mensaje</h4>
     <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
   </fieldset>
 
      <div class=\"button\">
-        <button type=\"submit\">Enviar</button>
+        <button type=\"submit\" value=\"Send\">Enviar</button>
     </div>
    
 </form>
 ";
         
-        $__internal_c16ae011bbe1bc833d77a8c4d23ca57e4ff78ba67468a2028baf70226543c518->leave($__internal_c16ae011bbe1bc833d77a8c4d23ca57e4ff78ba67468a2028baf70226543c518_prof);
+        $__internal_f5a23a374008ceccc9e38cd72d3c36a65c0bcc1daf45aa8fba00c26f46d59b8f->leave($__internal_f5a23a374008ceccc9e38cd72d3c36a65c0bcc1daf45aa8fba00c26f46d59b8f_prof);
 
     }
 
@@ -112,20 +112,20 @@ class __TwigTemplate_20c18613f10023f68ffa221d9ff30782ad8299460dced7466528c3dbf55
         <h1>Contacta conmigo</h1>
     </header>
 
-<form action=\"\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
   <fieldset>
     <h4>Nombre</h4>
     <input type=\"text\" name=\"nombre\">
     
    <h4>Correo</h4>
-    <input type=\"text\" name=\"correo\" size=\"10\" maxlength=\"9\">
+    <input type=\"text\" name=\"correo\">
   
     <h4>Mensaje</h4>
     <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
   </fieldset>
 
      <div class=\"button\">
-        <button type=\"submit\">Enviar</button>
+        <button type=\"submit\" value=\"Send\">Enviar</button>
     </div>
    
 </form>

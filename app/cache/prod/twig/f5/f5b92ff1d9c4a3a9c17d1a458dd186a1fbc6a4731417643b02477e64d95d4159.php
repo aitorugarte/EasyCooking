@@ -39,20 +39,20 @@ class __TwigTemplate_8ccb026856161232f9fc9e465801cdf9e6c1af1afbaece63c13b536bc28
         <h1>Contacta conmigo</h1>
     </header>
 
-<form action=\"\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
   <fieldset>
     <h4>Nombre</h4>
     <input type=\"text\" name=\"nombre\">
     
    <h4>Correo</h4>
-    <input type=\"text\" name=\"correo\" size=\"10\" maxlength=\"9\">
+    <input type=\"text\" name=\"correo\">
   
     <h4>Mensaje</h4>
     <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
   </fieldset>
 
      <div class=\"button\">
-        <button type=\"submit\">Enviar</button>
+        <button type=\"submit\" value=\"Send\">Enviar</button>
     </div>
    
 </form>

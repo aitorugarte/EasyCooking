@@ -22,32 +22,32 @@ class __TwigTemplate_a1f8e1a1608df86e73bbf0e77e04648aa234d9f7459a6b3dddaf6986003
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_88d399ba87519911fad9f3d756fb50220e744772e8dad650233e6910e03e6e96 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_88d399ba87519911fad9f3d756fb50220e744772e8dad650233e6910e03e6e96->enter($__internal_88d399ba87519911fad9f3d756fb50220e744772e8dad650233e6910e03e6e96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/ingredientes.html.twig"));
+        $__internal_31ac7b2493fccded43f0edb4b17794971f81ead8166f7ececa60d3655fbc56f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_31ac7b2493fccded43f0edb4b17794971f81ead8166f7ececa60d3655fbc56f5->enter($__internal_31ac7b2493fccded43f0edb4b17794971f81ead8166f7ececa60d3655fbc56f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/ingredientes.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_88d399ba87519911fad9f3d756fb50220e744772e8dad650233e6910e03e6e96->leave($__internal_88d399ba87519911fad9f3d756fb50220e744772e8dad650233e6910e03e6e96_prof);
+        $__internal_31ac7b2493fccded43f0edb4b17794971f81ead8166f7ececa60d3655fbc56f5->leave($__internal_31ac7b2493fccded43f0edb4b17794971f81ead8166f7ececa60d3655fbc56f5_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8b0fb1e48ef409fe5eeb865af553e409b79226996a23f12b41e93e708004b419 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8b0fb1e48ef409fe5eeb865af553e409b79226996a23f12b41e93e708004b419->enter($__internal_8b0fb1e48ef409fe5eeb865af553e409b79226996a23f12b41e93e708004b419_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_848afa5d0f2ee51134d55fd033c6d785cbffc50f01b5a84adbe106991321632a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_848afa5d0f2ee51134d55fd033c6d785cbffc50f01b5a84adbe106991321632a->enter($__internal_848afa5d0f2ee51134d55fd033c6d785cbffc50f01b5a84adbe106991321632a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de Ingredientes";
         
-        $__internal_8b0fb1e48ef409fe5eeb865af553e409b79226996a23f12b41e93e708004b419->leave($__internal_8b0fb1e48ef409fe5eeb865af553e409b79226996a23f12b41e93e708004b419_prof);
+        $__internal_848afa5d0f2ee51134d55fd033c6d785cbffc50f01b5a84adbe106991321632a->leave($__internal_848afa5d0f2ee51134d55fd033c6d785cbffc50f01b5a84adbe106991321632a_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1a7ae8385cdef867f518662837f27ea2d6c09350ff6ad957413bf9351fbc180e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1a7ae8385cdef867f518662837f27ea2d6c09350ff6ad957413bf9351fbc180e->enter($__internal_1a7ae8385cdef867f518662837f27ea2d6c09350ff6ad957413bf9351fbc180e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f111ccc16408ab312edd4363da5bd7f484a9479397b5e1646b5da613584ef180 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f111ccc16408ab312edd4363da5bd7f484a9479397b5e1646b5da613584ef180->enter($__internal_f111ccc16408ab312edd4363da5bd7f484a9479397b5e1646b5da613584ef180_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "<ul class=\"lista2\">
@@ -60,7 +60,7 @@ class __TwigTemplate_a1f8e1a1608df86e73bbf0e77e04648aa234d9f7459a6b3dddaf6986003
             echo "      <li class=\"elemento2\">  
                 <h4><a href=\"";
             // line 9
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_show2", array("id" => $this->getAttribute($context["ingrediente"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showIngr", array("id" => $this->getAttribute($context["ingrediente"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "nombre", array()), "html", null, true);
             echo "</a></h4>
@@ -71,7 +71,7 @@ class __TwigTemplate_a1f8e1a1608df86e73bbf0e77e04648aa234d9f7459a6b3dddaf6986003
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ingrediente'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_1a7ae8385cdef867f518662837f27ea2d6c09350ff6ad957413bf9351fbc180e->leave($__internal_1a7ae8385cdef867f518662837f27ea2d6c09350ff6ad957413bf9351fbc180e_prof);
+        $__internal_f111ccc16408ab312edd4363da5bd7f484a9479397b5e1646b5da613584ef180->leave($__internal_f111ccc16408ab312edd4363da5bd7f484a9479397b5e1646b5da613584ef180_prof);
 
     }
 
@@ -108,7 +108,7 @@ class __TwigTemplate_a1f8e1a1608df86e73bbf0e77e04648aa234d9f7459a6b3dddaf6986003
 <ul class=\"lista2\">
     {% for ingrediente in ingredientes %}
       <li class=\"elemento2\">  
-                <h4><a href=\"{{ path('cooker_cook_show2', { 'id': ingrediente.id }) }}\">{{ ingrediente.nombre }}</a></h4>
+                <h4><a href=\"{{ path('cooker_cook_showIngr', { 'id': ingrediente.id }) }}\">{{ ingrediente.nombre }}</a></h4>
 \t </li>  
     {% endfor %}
 {% endblock %}

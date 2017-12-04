@@ -41,19 +41,21 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
             echo twig_escape_filter($this->env, twig_cycle(array(0 => "odd", 1 => "even"), $this->getAttribute($context["loop"], "index0", array())), "html", null, true);
             echo "\" id=\"comentario-";
             echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "id", array()), "html", null, true);
-            echo "\">
-        <header>
-            <p><span class=\"highlight\">";
+            echo "\" style=\"border-style: ridge; margin-bottom: 10px;\">
+\t\t<header style=\"margin-left:10px\">
+            <p><span style=\"color: #B60000; font-weight: 700;\">";
             // line 6
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "user", array()), "html", null, true);
-            echo "</span> comentó el <time datetime=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "usuario", array()), "html", null, true);
+            echo "</span>
+\t\t\t<time datetime=\"";
+            // line 7
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "c"), "html", null, true);
-            echo "\">";
+            echo "\" style=\"float:right\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comentario"], "created", array()), "l, F j, Y"), "html", null, true);
             echo "</time></p>
         </header>
-        <p>";
-            // line 8
+        <p style=\"margin-left:10px\">";
+            // line 9
             echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "comentario", array()), "html", null, true);
             echo "</p>
     </article>
@@ -69,7 +71,7 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
             }
         }
         if (!$context['_iterated']) {
-            // line 11
+            // line 12
             echo "    <p>No hay comentarios para este post.</p>
 ";
         }
@@ -90,7 +92,7 @@ class __TwigTemplate_08bf1dcec03e20664f76021d2ade6a6ddf050a4e7caad48a78d8c7d7509
 
     public function getDebugInfo()
     {
-        return array (  73 => 11,  57 => 8,  48 => 6,  40 => 4,  22 => 3,  19 => 2,);
+        return array (  75 => 12,  59 => 9,  52 => 7,  48 => 6,  40 => 4,  22 => 3,  19 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
