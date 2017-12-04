@@ -1,11 +1,12 @@
 {# src/Cooker/CookingBundle/Resources/views/Comment/list.html.twig #}
 
 {% for comentario in comentarios %}
-    <article class="comentario {{ cycle(['odd', 'even'], loop.index0) }}" id="comentario-{{ comentario.id }}">
-        <header>
-            <p><span class="highlight">{{ comentario.usuario }}</span> comentó el <time datetime="{{ comentario.created|date('c') }}">{{ comentario.created|date('l, F j, Y') }}</time></p>
+    <article class="comentario {{ cycle(['odd', 'even'], loop.index0) }}" id="comentario-{{ comentario.id }}" style="border-style: ridge; margin-bottom: 10px;">
+		<header style="margin-left:10px">
+            <p><span style="color: #B60000; font-weight: 700;">{{ comentario.usuario }}</span>
+			<time datetime="{{ comentario.created|date('c') }}" style="float:right">{{ comentario.created|date('l, F j, Y') }}</time></p>
         </header>
-        <p>{{ comentario.comentario }}</p>
+        <p style="margin-left:10px">{{ comentario.comentario }}</p>
     </article>
 {% else %}
     <p>No hay comentarios para este post.</p>
