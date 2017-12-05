@@ -18,7 +18,12 @@
 
 				<div id="logo_text">
 					<h1><a href="{{ path('cooker_cook_principal')}}">Easy<span class="logo_colour">_cooking</span></a></h1>
-					<h2>"El amor puede esperar, el hambre no" Monkey D. Luffy</h2>
+					<!-- <h2>"El amor puede esperar, el hambre no" Monkey D. Luffy</h2> -->
+					 <div id="letter-container" class="letter-container">
+					<h2>
+					<a href="#">"El amor puede esperar, el hambre no" Monkey D. Luffy</a>
+					</h2>
+					</div>
 				</div>
 
 			</div>
@@ -62,6 +67,14 @@
 	</div>
 
 	{% block javascripts %}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+			<script src="{{ asset('js/jquery.lettering.js') }}" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(function() {
+					$("#letter-container h2 a").lettering();
+				});
+			</script
+
 	 <script src="{{ asset('js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
 	 <script src="{{ asset('js/modernizr.custom.34978.js') }}" type="text/javascript"></script>
 	 <script type="text/javascript">

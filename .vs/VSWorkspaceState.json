@@ -9,8 +9,11 @@
     "\\src\\Cooker\\CookingBundle",
     "\\src\\Cooker\\CookingBundle\\Resources",
     "\\src\\Cooker\\CookingBundle\\Resources\\views",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook"
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
+    "\\web",
+    "\\web\\css",
+    "\\web\\js"
   ],
-  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\recetas.html.twig",
+  "SelectedNode": "\\web\\js\\jquery.lettering.js",
   "PreviewInSolutionExplorer": false
 }
