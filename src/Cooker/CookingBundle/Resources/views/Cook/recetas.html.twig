@@ -4,9 +4,12 @@
 
 {% block body %}
 
-<ul class="lista">
+ <ul class="lista">
+ 	<section class="ib-container" id="ib-container">
 	{% for receta in recetas %}
-	<li class="elemento">
+
+	<article style="margin-right:20px; margin-top:20px;">
+	 <li class="elemento">
 		<header>
 			<h3><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h3>
 		</header>
@@ -19,8 +22,12 @@
 			<p>Comentarios: -</p>
 		</footer>
 	</li>
+	</article>
+	
 	{% else %}
 	<p>No hay entradas en este blog</p>
 	{% endfor %}
-</ul>
+	</section>
+</ul>  
+	
 {% endblock %}
