@@ -4,3 +4,5 @@ php app/console cache:clear --env=dev
 
 php app/console doctrine:schema:update --force
 php app/console doctrine:schema:validate
+
+php app/console doctrine:fixtures:load --fixtures=src/Cooker/CookingBundle/DataFixtures/ORM/ --append

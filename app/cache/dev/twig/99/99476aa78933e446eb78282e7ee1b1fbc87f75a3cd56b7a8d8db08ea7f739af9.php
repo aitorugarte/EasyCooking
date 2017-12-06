@@ -15,8 +15,8 @@ class __TwigTemplate_01e16578802e8a3522f27a54659ccef3183f6fd460784bc4e8c931412a3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_915f478cb11ddb66536ea2cf75ccc2e0243e05fca25c2331cbccf3785bb3ad89 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_915f478cb11ddb66536ea2cf75ccc2e0243e05fca25c2331cbccf3785bb3ad89->enter($__internal_915f478cb11ddb66536ea2cf75ccc2e0243e05fca25c2331cbccf3785bb3ad89_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:form.html.twig"));
+        $__internal_bfeae3c1f1d7e8131b50b2f953495747ca98eb0278454cc7618fd4a86269ed2c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bfeae3c1f1d7e8131b50b2f953495747ca98eb0278454cc7618fd4a86269ed2c->enter($__internal_bfeae3c1f1d7e8131b50b2f953495747ca98eb0278454cc7618fd4a86269ed2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:form.html.twig"));
 
         // line 2
         echo "
@@ -36,7 +36,7 @@ class __TwigTemplate_01e16578802e8a3522f27a54659ccef3183f6fd460784bc4e8c931412a3
 </form>
 ";
         
-        $__internal_915f478cb11ddb66536ea2cf75ccc2e0243e05fca25c2331cbccf3785bb3ad89->leave($__internal_915f478cb11ddb66536ea2cf75ccc2e0243e05fca25c2331cbccf3785bb3ad89_prof);
+        $__internal_bfeae3c1f1d7e8131b50b2f953495747ca98eb0278454cc7618fd4a86269ed2c->leave($__internal_bfeae3c1f1d7e8131b50b2f953495747ca98eb0278454cc7618fd4a86269ed2c_prof);
 
     }
 

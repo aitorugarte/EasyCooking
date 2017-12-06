@@ -1,19 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\Resources",
-    "\\app\\Resources\\views",
     "\\src",
     "\\src\\Cooker",
     "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
-    "\\web",
-    "\\web\\css",
-    "\\web\\js"
+    "\\src\\Cooker\\CookingBundle\\Entity"
   ],
-  "SelectedNode": "\\web\\js\\jquery.lettering.js",
+  "SelectedNode": "\\app",
   "PreviewInSolutionExplorer": false
 }
