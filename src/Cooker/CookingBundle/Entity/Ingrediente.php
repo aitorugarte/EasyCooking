@@ -8,7 +8,6 @@ php app/console doctrine:schema:validate*/
 http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html
 */
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 
 /**
@@ -72,6 +71,11 @@ class Ingrediente
         return $this->nombre;
     }
 
+	/*public function __construct()
+    {
+		$this->recetas = new ArrayCollection();
+    }*/
+
 	/**
      * Set receta
      *
@@ -81,6 +85,19 @@ class Ingrediente
     public function setRecetas(\Cooker\CookingBundle\Entity\Receta $recetas = null)
     {
         $this->recetas = $recetas;
+
+        return $this;
+    }
+
+	/**
+     * Add receta
+     *
+     * @param  \Cooker\CookingBundle\Entity\Receta $recetas
+     * @return Ingrediente
+     */
+    public function addRecetas(\Cooker\CookingBundle\Entity\Receta $recetas)
+    {
+        $this->$recetas[] = $recetas;
 
         return $this;
     }

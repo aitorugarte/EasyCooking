@@ -99,7 +99,7 @@ class Receta
      * @param string $detalles
      * @return Receta
      */
-    public function setBody($detalles)
+    public function setDetalles($detalles)
     {
         $this->detalles = $detalles;
 
