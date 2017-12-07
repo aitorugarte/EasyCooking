@@ -8,7 +8,6 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Cooker\CookingBundle\Entity\Plato;
 use Cooker\CookingBundle\Entity\Receta;
 use Cooker\CookingBundle\Entity\Ingrediente;
-use Doctrine\Common\Collections\ArrayCollection;
 
 	/**
      * 
@@ -21,7 +20,7 @@ class LoadDatos implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-	   $this->createPlato($manager);
+	  // $this->createPlato($manager);
 	}
 
 	public function createPlato(ObjectManager $manager){
@@ -47,21 +46,21 @@ class LoadDatos implements FixtureInterface
 		$receta->setImagen('Imagen1');
 		$receta->setTipo_plato($plato);
 
-		$manager->persist($receta);
+		//$manager->persist($receta);
 
 		//Creamos el Ingrediente
 		$this->createIngrediente($manager, $receta);
 
 		$manager->persist($receta);
 
-		//$manager->flush();
+		$manager->flush();
 
 	}
 
 	public function createIngrediente(ObjectManager $manager, Receta $receta){
 
 		$ingrediente = new Ingrediente();
-		$ingrediente->setNombre('Ingrediente221');
+		$ingrediente->setNombre('Ingrediente1');
 
 		$ingrediente->addRecetas($receta);
 		

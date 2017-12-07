@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\Cooker",
+    "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Controller"
   ],
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
