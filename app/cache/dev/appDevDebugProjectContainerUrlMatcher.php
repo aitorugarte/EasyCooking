@@ -126,6 +126,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_cooker_comentario_create:
 
+        // cooker_admin
+        if ('/admin' === $pathinfo) {
+            return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin',);
+        }
+
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // cooker_admin_login
+                if ('/login' === $pathinfo) {
+                    return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
+                }
+
+                // cooker_admin_login_check
+                if ('/login_check' === $pathinfo) {
+                    return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login_check',);
+                }
+
+            }
+
+            // cooker_admin_logout
+            if ('/logout' === $pathinfo) {
+                return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_logout',);
+            }
+
+        }
+
         // cooker_cook_principal
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {

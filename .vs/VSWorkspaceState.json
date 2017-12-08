@@ -1,11 +1,18 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\config",
     "\\src",
-    "\\src\\Cooker",
-    "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Controller"
+    "\\src\\AppBundle",
+    "\\src\\AppBundle\\Controller",
+    "\\src\\Cooker\\AdminBundle",
+    "\\src\\Cooker\\AdminBundle\\Controller",
+    "\\src\\Cooker\\AdminBundle\\Resources",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security",
+    "\\web\\css"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\src\\AppBundle\\Controller\\DefaultController.php",
   "PreviewInSolutionExplorer": false
 }

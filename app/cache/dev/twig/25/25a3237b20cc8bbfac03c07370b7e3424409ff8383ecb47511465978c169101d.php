@@ -22,32 +22,32 @@ class __TwigTemplate_a8c21d0ffdbddaa4974ea3fed7bb234bea7da056d9746085c289e8fe972
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1445d807b142f7ffb120b6b4cc32a72f6e3009339186793babf00665e4dfff30 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1445d807b142f7ffb120b6b4cc32a72f6e3009339186793babf00665e4dfff30->enter($__internal_1445d807b142f7ffb120b6b4cc32a72f6e3009339186793babf00665e4dfff30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:create.html.twig"));
+        $__internal_34827f9bb0bf154ba62a77dcc9320c20bc7b2b118edd3549c234e686b54715dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_34827f9bb0bf154ba62a77dcc9320c20bc7b2b118edd3549c234e686b54715dd->enter($__internal_34827f9bb0bf154ba62a77dcc9320c20bc7b2b118edd3549c234e686b54715dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Comment:create.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1445d807b142f7ffb120b6b4cc32a72f6e3009339186793babf00665e4dfff30->leave($__internal_1445d807b142f7ffb120b6b4cc32a72f6e3009339186793babf00665e4dfff30_prof);
+        $__internal_34827f9bb0bf154ba62a77dcc9320c20bc7b2b118edd3549c234e686b54715dd->leave($__internal_34827f9bb0bf154ba62a77dcc9320c20bc7b2b118edd3549c234e686b54715dd_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_72c57705ad480a5333619b2036eab58bb22cf7e407a9d15c33747105db08874c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_72c57705ad480a5333619b2036eab58bb22cf7e407a9d15c33747105db08874c->enter($__internal_72c57705ad480a5333619b2036eab58bb22cf7e407a9d15c33747105db08874c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_d40239d3aec497ccb7b301d2ec252b610f656b728f7ea9ec6804ead46926a04d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d40239d3aec497ccb7b301d2ec252b610f656b728f7ea9ec6804ead46926a04d->enter($__internal_d40239d3aec497ccb7b301d2ec252b610f656b728f7ea9ec6804ead46926a04d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Añadir comentario";
         
-        $__internal_72c57705ad480a5333619b2036eab58bb22cf7e407a9d15c33747105db08874c->leave($__internal_72c57705ad480a5333619b2036eab58bb22cf7e407a9d15c33747105db08874c_prof);
+        $__internal_d40239d3aec497ccb7b301d2ec252b610f656b728f7ea9ec6804ead46926a04d->leave($__internal_d40239d3aec497ccb7b301d2ec252b610f656b728f7ea9ec6804ead46926a04d_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_a9466072d0a3f0eb69e5cbd1cd218eb5be19146cefea3c2f9a630e8fb20d3eee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a9466072d0a3f0eb69e5cbd1cd218eb5be19146cefea3c2f9a630e8fb20d3eee->enter($__internal_a9466072d0a3f0eb69e5cbd1cd218eb5be19146cefea3c2f9a630e8fb20d3eee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_eb59d95ab0c3e872755eb18a04710a595ad84fda823cb2c72784650e447c59b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_eb59d95ab0c3e872755eb18a04710a595ad84fda823cb2c72784650e447c59b2->enter($__internal_eb59d95ab0c3e872755eb18a04710a595ad84fda823cb2c72784650e447c59b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "    <h1>Añadir un comentario a la receta \"";
@@ -57,7 +57,7 @@ class __TwigTemplate_a8c21d0ffdbddaa4974ea3fed7bb234bea7da056d9746085c289e8fe972
         // line 9
         $this->loadTemplate("CookerCookingBundle:Comment:form.html.twig", "CookerCookingBundle:Comment:create.html.twig", 9)->display(array_merge($context, array("form" => ($context["form"] ?? $this->getContext($context, "form")))));
         
-        $__internal_a9466072d0a3f0eb69e5cbd1cd218eb5be19146cefea3c2f9a630e8fb20d3eee->leave($__internal_a9466072d0a3f0eb69e5cbd1cd218eb5be19146cefea3c2f9a630e8fb20d3eee_prof);
+        $__internal_eb59d95ab0c3e872755eb18a04710a595ad84fda823cb2c72784650e447c59b2->leave($__internal_eb59d95ab0c3e872755eb18a04710a595ad84fda823cb2c72784650e447c59b2_prof);
 
     }
 

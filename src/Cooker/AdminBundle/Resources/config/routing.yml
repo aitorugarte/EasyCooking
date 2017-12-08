@@ -1,0 +1,10 @@
+# src/Cooker/AdminBundle/resources/config/routing.yml
+cooker_admin_login:
+    pattern: /login
+    defaults: { _controller: CookerAdminBundle:Security:login }
+
+cooker_admin_login_check:
+    pattern: /login_check
+
+cooker_admin_logout:
+    pattern: /logout
