@@ -6,3 +6,7 @@ php app/console doctrine:schema:update --force
 php app/console doctrine:schema:validate
 
 php app/console doctrine:fixtures:load --fixtures=src/Cooker/CookingBundle/DataFixtures/ORM/ --append
+
+generate-mapping -o mapping.ttl -d com.mysql.jdbc.Driver -u chef -p chef jdbc:mysql://localhost/easycooking
+Para arrancar: d2r-server mapping.ttl en el cmd
+http://localhost:2020/

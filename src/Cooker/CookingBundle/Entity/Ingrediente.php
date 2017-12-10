@@ -112,5 +112,8 @@ class Ingrediente
         return $this->recetas;
     }
 
-
+	public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

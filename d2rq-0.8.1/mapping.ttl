@@ -1,0 +1,189 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://localhost/easycooking";
+	d2rq:username "chef";
+	d2rq:password "chef";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table comentario
+map:comentario a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "comentario/@@comentario.id@@";
+	d2rq:class vocab:comentario;
+	d2rq:classDefinitionLabel "comentario";
+	.
+map:comentario__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property rdfs:label;
+	d2rq:pattern "comentario #@@comentario.id@@";
+	.
+map:comentario_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_id;
+	d2rq:propertyDefinitionLabel "comentario id";
+	d2rq:column "comentario.id";
+	d2rq:datatype xsd:integer;
+	.
+map:comentario_usuario a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_usuario;
+	d2rq:propertyDefinitionLabel "comentario usuario";
+	d2rq:column "comentario.usuario";
+	.
+map:comentario_comentario a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_comentario;
+	d2rq:propertyDefinitionLabel "comentario comentario";
+	d2rq:column "comentario.comentario";
+	.
+map:comentario_approved a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_approved;
+	d2rq:propertyDefinitionLabel "comentario approved";
+	d2rq:column "comentario.approved";
+	d2rq:datatype xsd:boolean;
+	.
+map:comentario_created a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_created;
+	d2rq:propertyDefinitionLabel "comentario created";
+	d2rq:column "comentario.created";
+	d2rq:datatype xsd:dateTime;
+	.
+map:comentario_updated a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_updated;
+	d2rq:propertyDefinitionLabel "comentario updated";
+	d2rq:column "comentario.updated";
+	d2rq:datatype xsd:dateTime;
+	.
+map:comentario_receta_id__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comentario;
+	d2rq:property vocab:comentario_receta_id;
+	d2rq:refersToClassMap map:receta;
+	d2rq:join "comentario.receta_id => receta.id";
+	.
+
+# Table ingrediente
+map:ingrediente a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ingrediente/@@ingrediente.id@@";
+	d2rq:class vocab:ingrediente;
+	d2rq:classDefinitionLabel "ingrediente";
+	.
+map:ingrediente__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ingrediente;
+	d2rq:property rdfs:label;
+	d2rq:pattern "ingrediente #@@ingrediente.id@@";
+	.
+map:ingrediente_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ingrediente;
+	d2rq:property vocab:ingrediente_id;
+	d2rq:propertyDefinitionLabel "ingrediente id";
+	d2rq:column "ingrediente.id";
+	d2rq:datatype xsd:integer;
+	.
+map:ingrediente_nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ingrediente;
+	d2rq:property vocab:ingrediente_nombre;
+	d2rq:propertyDefinitionLabel "ingrediente nombre";
+	d2rq:column "ingrediente.nombre";
+	.
+
+# Table ingrediente_receta (n:m)
+map:ingrediente_receta__link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ingrediente;
+	d2rq:property vocab:ingrediente_receta;
+	d2rq:refersToClassMap map:receta;
+	d2rq:join "ingrediente_receta.ingrediente_id => ingrediente.id";
+	d2rq:join "ingrediente_receta.receta_id => receta.id";
+	.
+
+# Table plato
+map:plato a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "plato/@@plato.id@@";
+	d2rq:class vocab:plato;
+	d2rq:classDefinitionLabel "plato";
+	.
+map:plato__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:plato;
+	d2rq:property rdfs:label;
+	d2rq:pattern "plato #@@plato.id@@";
+	.
+map:plato_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:plato;
+	d2rq:property vocab:plato_id;
+	d2rq:propertyDefinitionLabel "plato id";
+	d2rq:column "plato.id";
+	d2rq:datatype xsd:integer;
+	.
+map:plato_nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:plato;
+	d2rq:property vocab:plato_nombre;
+	d2rq:propertyDefinitionLabel "plato nombre";
+	d2rq:column "plato.nombre";
+	.
+
+# Table receta
+map:receta a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "receta/@@receta.id@@";
+	d2rq:class vocab:receta;
+	d2rq:classDefinitionLabel "receta";
+	.
+map:receta__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property rdfs:label;
+	d2rq:pattern "receta #@@receta.id@@";
+	.
+map:receta_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_id;
+	d2rq:propertyDefinitionLabel "receta id";
+	d2rq:column "receta.id";
+	d2rq:datatype xsd:integer;
+	.
+map:receta_nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_nombre;
+	d2rq:propertyDefinitionLabel "receta nombre";
+	d2rq:column "receta.nombre";
+	.
+map:receta_detalles a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_detalles;
+	d2rq:propertyDefinitionLabel "receta detalles";
+	d2rq:column "receta.detalles";
+	.
+map:receta_date a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_date;
+	d2rq:propertyDefinitionLabel "receta date";
+	d2rq:column "receta.date";
+	d2rq:datatype xsd:date;
+	.
+map:receta_imagen a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_imagen;
+	d2rq:propertyDefinitionLabel "receta imagen";
+	d2rq:column "receta.imagen";
+	.
+map:receta_tipo_plato__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:receta;
+	d2rq:property vocab:receta_tipo_plato;
+	d2rq:refersToClassMap map:plato;
+	d2rq:join "receta.tipo_plato => plato.id";
+	.
+

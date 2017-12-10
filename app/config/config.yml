@@ -65,3 +65,57 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+easy_admin:
+    site_name: 'EasyCooking Administration Panel'
+    design:
+        brand_color: '1ABC9C'
+    entities:
+        Receta:
+            class: Cooker\CookingBundle\Entity\Receta
+            label: 'Recetas'
+            list:
+                title: 'Recetas'
+                sort: ['id', 'ASC']
+                fields: ['id', 'tipo_plato', 'nombre', 'detalles', { property: 'date', label: 'Fecha' }, { property: 'imagen', type: 'image' }]
+                actions: [{ name: 'show', icon: 'search', label: 'Mostrar' }, { name: 'edit', icon: 'pencil', label: 'Editar' }, { name: 'delete', label: 'Borrar' } ]
+            search:
+                 sort: ['id', 'ASC']
+            form:
+                title: 'Aniadir Receta'
+                form_options: { validation_groups: ['Default'] }
+                fields: ['id', 'tipo_plato', 'nombre', 'detalles', 'date', 'imagen']   
+            new:
+                form_options: { validation_groups: ['Default', 'Receta'] }
+            edit:
+                title:  'Editar Receta'
+        Ingrediente:
+            class: Cooker\CookingBundle\Entity\Ingrediente
+            label: 'Ingredientes'
+            list:
+                title: 'Ingredientes'
+                fields: ['id', 'nombre', 'recetas']
+            new:
+                title:  'New Ingrediente'
+            edit:
+                title:  'Edit Ingrediente'
+        Plato:
+            class: Cooker\CookingBundle\Entity\Plato
+            label: 'Platos'
+            list:
+                title: 'Platos'
+                fields: ['id', 'nombre', 'recetas']
+            new:
+                title:  'New Plato'
+            edit:
+                title:  'Edit Plato'
+        Comentario:
+            class: Cooker\CookingBundle\Entity\Comentario
+            label: 'Comentarios'
+            list:
+                title: 'Comentario'
+                fields: ['id', 'usuario', 'comentario', 'approved', 'receta', 'created', 'updated']
+            new:
+                title:  'New Comentario'
+            edit:
+                title:  'Edit Comentario'

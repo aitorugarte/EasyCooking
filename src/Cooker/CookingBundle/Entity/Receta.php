@@ -142,6 +142,15 @@ class Receta
         return $this->tipo_plato;
     }
 
+	 /**
+     * Get tipoplato para el adminbundle que lo requiere
+     *
+     * @return string 
+     */
+    public function getTipoPlato()
+    {
+        return $this->tipo_plato;
+    }
 
     /**
      * Set date

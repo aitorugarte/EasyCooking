@@ -48,6 +48,53 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
         not_cooker_comentario_create:
 
+        if (0 === strpos($pathinfo, '/admin')) {
+            // easyadmin
+            if ('/admin' === rtrim($pathinfo, '/')) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'easyadmin');
+                }
+
+                return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
+            }
+
+            // admin
+            if ('/admin' === rtrim($pathinfo, '/')) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'admin');
+                }
+
+                return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
+            }
+
+            // cooker_admin
+            if ('/admin' === $pathinfo) {
+                return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // cooker_admin_login
+                if ('/login' === $pathinfo) {
+                    return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
+                }
+
+                // cooker_admin_login_check
+                if ('/login_check' === $pathinfo) {
+                    return array('_route' => 'cooker_admin_login_check');
+                }
+
+            }
+
+            // cooker_admin_logout
+            if ('/logout' === $pathinfo) {
+                return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_logout',);
+            }
+
+        }
+
         // cooker_cook_principal
         if ('' === rtrim($pathinfo, '/')) {
             if (substr($pathinfo, -1) !== '/') {

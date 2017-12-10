@@ -213,12 +213,12 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function setBody($detalles)
+    public function setDetalles($detalles)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBody', array($detalles));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDetalles', array($detalles));
 
-        return parent::setBody($detalles);
+        return parent::setDetalles($detalles);
     }
 
     /**
@@ -252,6 +252,17 @@ class Receta extends \Cooker\CookingBundle\Entity\Receta implements \Doctrine\OR
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTipo_plato', array());
 
         return parent::getTipo_plato();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTipoPlato()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTipoPlato', array());
+
+        return parent::getTipoPlato();
     }
 
     /**

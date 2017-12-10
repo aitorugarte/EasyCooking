@@ -224,12 +224,34 @@ class Ingrediente extends \Cooker\CookingBundle\Entity\Ingrediente implements \D
     /**
      * {@inheritDoc}
      */
+    public function addRecetas(\Cooker\CookingBundle\Entity\Receta $recetas)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRecetas', array($recetas));
+
+        return parent::addRecetas($recetas);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getRecetas()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRecetas', array());
 
         return parent::getRecetas();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
     }
 
 }

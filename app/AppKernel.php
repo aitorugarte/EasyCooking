@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Cooker\CookingBundle\CookerCookingBundle(),
 			new Cooker\AdminBundle\CookerAdminBundle(),
 			new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+			new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(), 
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
