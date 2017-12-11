@@ -214,6 +214,7 @@ class Receta
      */
     public function addComentario(\Cooker\CookingBundle\Entity\Comentario $comentarios)
     {
+		$comentarios->setReceta($this);
         $this->comentarios[] = $comentarios;
 
         return $this;
@@ -227,7 +228,8 @@ class Receta
      */
     public function addIngredientes(\Cooker\CookingBundle\Entity\Ingrediente $ingredientes)
     {
-        $this->ingredientes[] = $ingredientes;
+        $ingredientes->addRecetas($this);
+		$this->ingredientes[] = $ingredientes;
 
         return $this;
     }

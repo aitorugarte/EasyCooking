@@ -1,12 +1,17 @@
+-Para limpiar caché
 php app/console cache:clear --env=prod 
-
 php app/console cache:clear --env=dev 
 
-php app/console doctrine:schema:update --force
+-Relacionadas con la BD
 php app/console doctrine:schema:validate
+php app/console doctrine:database:create
+php app/console doctrine:generate:entities Cooker
+php app/console doctrine:schema:update --force
 
+-Para cargar fixtures (quitar --append para sobreescribir)
 php app/console doctrine:fixtures:load --fixtures=src/Cooker/CookingBundle/DataFixtures/ORM/ --append
 
+-D2R
 generate-mapping -o mapping.ttl -d com.mysql.jdbc.Driver -u chef -p chef jdbc:mysql://localhost/easycooking
 Para arrancar: d2r-server mapping.ttl en el cmd
 http://localhost:2020/

@@ -1,5 +1,5 @@
-<?php 
-// src/Cooker/CookingBundle/DataFixtures/ORM/LoadPlato.php
+<?php
+// src/Cooker/CookingBundle/DataFixtures/ORM/LoadDatos.php
 
 namespace Cooker\CookingBundle\DataFixtures\ORM;
 
@@ -8,65 +8,84 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Cooker\CookingBundle\Entity\Plato;
 use Cooker\CookingBundle\Entity\Receta;
 use Cooker\CookingBundle\Entity\Ingrediente;
+use Cooker\CookingBundle\Entity\Comentario;
 
 	/**
-     * 
+     *
      * @param ObjectManager $manager
      */
 class LoadDatos implements FixtureInterface
 {
-    /**
-     * {@inheritDoc}
-     */
+	   /**
+	   * {@inheritDoc}
+       */
     public function load(ObjectManager $manager)
-    {
-	  // $this->createPlato($manager);
-	}
-
-	public function createPlato(ObjectManager $manager){
-	    $plato = new Plato();
-        $plato->setNombre('Tipo');
-
-        $manager->persist($plato);
-		//Creamos la receta
-		$this->createReceta($manager, $plato);
-
-        $manager->persist($plato);
-
-        $manager->flush();
+	{
+		/*
+		* Creamos 2 recetas
+		*/
+	    for($i = 1; $i <= 2; $i++) {
+            $this->createRecetas($manager, $i);
+        }
 
 	}
 
-	public function createReceta(ObjectManager $manager, Plato $plato){
-	
+    public function createRecetas(ObjectManager $manager, $num)
+	{
+
 		$receta = new Receta();
-		$receta->setNombre('Receta1');
-		$receta->setDetalles('Blabla');
+		$receta->setNombre('Receta' . $num);
+		$receta->setDetalles('Blabla' . $num);
 		$receta->setDate(new \DateTime());
-		$receta->setImagen('Imagen1');
-		$receta->setTipo_plato($plato);
-
-		//$manager->persist($receta);
-
-		//Creamos el Ingrediente
-		$this->createIngrediente($manager, $receta);
+		$receta->setImagen('Imagen' . $num);
+		//Añadimos el tipo de plato
+		$this->createPlatos($manager, $receta, $num);
+		//Añadimos 2 ingredientes
+		 for($i = 1; $i <= 2; $i++) {
+            $this->createIngredientes($manager, $receta, $num * 10 + $i);
+        }
+		//Añadimos 2 comentarios
+		for($i = 1; $i <= 2; $i++) {
+            $this->createComentarios($manager, $receta, $num * 10 + $i);
+        }
 
 		$manager->persist($receta);
-
 		$manager->flush();
+		
+	}
+
+	public function createIngredientes(ObjectManager $manager, Receta $receta, $num)
+	{
+
+		$ingrediente = new Ingrediente();
+		$ingrediente->setNombre('Ingrediente' . $num);
+		$manager->persist($ingrediente);
+
+		$receta->addIngredientes($ingrediente);
+	
+	}
+
+	public function createPlatos(ObjectManager $manager, Receta $receta, $num)
+	{
+		$plato = new Plato();
+		$plato->setNombre('Plato' . $num);
+		$manager->persist($plato);
+
+		$receta->setTipo_plato($plato);
 
 	}
 
-	public function createIngrediente(ObjectManager $manager, Receta $receta){
+	public function createComentarios(ObjectManager $manager, Receta $receta, $num)
+	{
+		$comentario = new comentario();
+		$comentario->setUpdatedValue();
+		$comentario->setUsuario('Usuario' . $num);
+		$comentario->setComentario('Comentario' . $num);
+		$comentario->setApproved(true);
+		$comentario->setCreated(new \DateTime());
+		$manager->persist($comentario);
 
-		$ingrediente = new Ingrediente();
-		$ingrediente->setNombre('Ingrediente1');
-
-		$ingrediente->addRecetas($receta);
-		
-		$manager->persist($ingrediente);
-		
-		//$manager->flush();
+		$receta->addComentario($comentario);
 
 	}
 
