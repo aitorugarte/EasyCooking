@@ -115,21 +115,42 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showPlato')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showPlatoAction',));
         }
 
-        if (0 === strpos($pathinfo, '/co')) {
-            // cooker_comentario_create
-            if (0 === strpos($pathinfo, '/comentario') && preg_match('#^/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_cooker_comentario_create;
+        // cooker_comentario_create
+        if (0 === strpos($pathinfo, '/comentario') && preg_match('#^/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_cooker_comentario_create;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comentario_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\ComentarioController::createAction',));
+        }
+        not_cooker_comentario_create:
+
+        if (0 === strpos($pathinfo, '/admin')) {
+            if (0 === strpos($pathinfo, '/admin/log')) {
+                if (0 === strpos($pathinfo, '/admin/login')) {
+                    // cooker_admin_login
+                    if ('/admin/login' === $pathinfo) {
+                        return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
+                    }
+
+                    // cooker_admin_login_check
+                    if ('/admin/login_check' === $pathinfo) {
+                        return array('_route' => 'cooker_admin_login_check');
+                    }
+
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_comentario_create')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\ComentarioController::createAction',));
-            }
-            not_cooker_comentario_create:
+                // cooker_admin_logout
+                if ('/admin/logout' === $pathinfo) {
+                    return array('_route' => 'cooker_admin_logout');
+                }
 
-            if (0 === strpos($pathinfo, '/controlpanel')) {
+            }
+
+            if (0 === strpos($pathinfo, '/admin/controlpanel')) {
                 // easyadmin
-                if ('/controlpanel' === rtrim($pathinfo, '/')) {
+                if ('/admin/controlpanel' === rtrim($pathinfo, '/')) {
                     if (substr($pathinfo, -1) !== '/') {
                         return $this->redirect($pathinfo.'/', 'easyadmin');
                     }
@@ -138,7 +159,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // admin
-                if ('/controlpanel' === rtrim($pathinfo, '/')) {
+                if ('/admin/controlpanel' === rtrim($pathinfo, '/')) {
                     if (substr($pathinfo, -1) !== '/') {
                         return $this->redirect($pathinfo.'/', 'admin');
                     }
@@ -146,27 +167,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
                 }
 
-            }
-
-        }
-
-        if (0 === strpos($pathinfo, '/admin/log')) {
-            if (0 === strpos($pathinfo, '/admin/login')) {
-                // cooker_admin_login
-                if ('/admin/login' === $pathinfo) {
-                    return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
-                }
-
-                // cooker_admin_login_check
-                if ('/admin/login_check' === $pathinfo) {
-                    return array('_route' => 'cooker_admin_login_check');
-                }
-
-            }
-
-            // cooker_admin_logout
-            if ('/admin/logout' === $pathinfo) {
-                return array('_route' => 'cooker_admin_logout');
             }
 
         }
