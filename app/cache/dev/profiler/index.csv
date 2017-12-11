@@ -103,3 +103,13 @@ ba5c35,::1,GET,http://localhost/easycooking/app_dev.php/admin/controlpanel,15130
 25b140,::1,GET,http://localhost/easycooking/app_dev.php/ingredientes,1513013236,,200
 1dfbb1,::1,GET,http://localhost/easycooking/app_dev.php/contact,1513013238,,200
 d7979e,::1,GET,http://localhost/easycooking/app_dev.php/,1513013241,,200
+303d1a,::1,GET,http://localhost/easycooking/app_dev.php/,1513013562,,200
+fee581,::1,GET,http://localhost/easycooking/app_dev.php/admin/login,1513013564,,200
+1da06a,::1,POST,http://localhost/easycooking/app_dev.php/admin/login_check,1513013572,,302
+01f2c1,::1,GET,http://localhost/easycooking/app_dev.php/,1513013573,,200
+89a791,::1,GET,http://localhost/easycooking/app_dev.php/recetas,1513013582,,200
+8a2fe1,::1,GET,http://localhost/easycooking/app_dev.php/,1513013584,,200
+b7dd70,::1,GET,http://localhost/easycooking/app_dev.php/admin/controlpanel,1513013605,,301
+96fc3b,::1,GET,http://localhost/easycooking/app_dev.php/admin/controlpanel/,1513013606,,302
+55dab3,::1,GET,http://localhost/easycooking/app_dev.php/admin/controlpanel/?action=list&entity=Receta&sortDirection=ASC&sortField=id,1513013607,,200
+55143a,::1,GET,http://localhost/easycooking/app_dev.php/,1513013620,,200
