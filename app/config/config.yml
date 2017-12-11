@@ -84,7 +84,7 @@ easy_admin:
             form:
                 title: 'Aniadir Receta'
                 form_options: { validation_groups: ['Default'] }
-                fields: ['id', 'tipo_plato', 'nombre', 'detalles', 'date', 'imagen']   
+                fields: ['id', 'tipo_plato', 'nombre', 'comentarios', 'ingredientes', 'detalles', 'date', 'imagen']   
             new:
                 form_options: { validation_groups: ['Default', 'Receta'] }
             edit:
@@ -94,28 +94,40 @@ easy_admin:
             label: 'Ingredientes'
             list:
                 title: 'Ingredientes'
+                sort: ['id', 'ASC']
                 fields: ['id', 'nombre', 'recetas']
+                actions: [{ name: 'show', icon: 'search', label: 'Mostrar' }, { name: 'edit', icon: 'pencil', label: 'Editar' }, { name: 'delete', label: 'Borrar' } ]
+            search:
+                sort: ['id', 'ASC']
             new:
-                title:  'New Ingrediente'
+                form_options: { validation_groups: ['Default', 'Ingrediente'] }
             edit:
-                title:  'Edit Ingrediente'
+                title:  'Editar Ingrediente'
         Plato:
             class: Cooker\CookingBundle\Entity\Plato
             label: 'Platos'
             list:
                 title: 'Platos'
+                sort: ['id', 'ASC']
                 fields: ['id', 'nombre', 'recetas']
+                actions: [{ name: 'show', icon: 'search', label: 'Mostrar' }, { name: 'edit', icon: 'pencil', label: 'Editar' }, { name: 'delete', label: 'Borrar' } ]
+            search:
+                 sort: ['id', 'ASC']
             new:
-                title:  'New Plato'
+                form_options: { validation_groups: ['Default', 'Plato'] }
             edit:
-                title:  'Edit Plato'
+                title:  'Editar Plato'
         Comentario:
             class: Cooker\CookingBundle\Entity\Comentario
             label: 'Comentarios'
             list:
                 title: 'Comentario'
+                sort: ['id', 'ASC']
                 fields: ['id', 'usuario', 'comentario', 'approved', 'receta', 'created', 'updated']
+                actions: [{ name: 'show', icon: 'search', label: 'Mostrar' }, { name: 'edit', icon: 'pencil', label: 'Editar' }, { name: 'delete', label: 'Borrar' } ]
+            search:
+                 sort: ['id', 'ASC']
             new:
-                title:  'New Comentario'
+                form_options: { validation_groups: ['Default', 'Comentario'] }
             edit:
-                title:  'Edit Comentario'
+                title:  'Editar Comentario'

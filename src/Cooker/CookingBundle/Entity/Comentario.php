@@ -223,4 +223,9 @@ class Comentario
         $metadata->addPropertyConstraint('usuario', new NotBlank(array('message' => 'Debes indicar tu nombre')));
         $metadata->addPropertyConstraint('comentario', new NotBlank(array('message' => 'Debes escribir tu comentario')));
     }
+
+	public function __toString()
+    {
+        return $this->getComentario();
+    }
 }

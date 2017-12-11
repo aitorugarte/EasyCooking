@@ -724,7 +724,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getEasyadmin_Config_ManagerService()
     {
-        $this->services['easyadmin.config.manager'] = $instance = new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager($this->get('easyadmin.cache.manager'), $this->get('property_accessor'), array('site_name' => 'EasyCooking Administration Panel', 'design' => array('brand_color' => '1ABC9C', 'theme' => 'default', 'color_scheme' => 'dark', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'menu' => array()), 'entities' => array('Receta' => array('class' => 'Cooker\\CookingBundle\\Entity\\Receta', 'label' => 'Recetas', 'list' => array('title' => 'Recetas', 'sort' => array(0 => 'id', 1 => 'ASC'), 'fields' => array(0 => 'id', 1 => 'tipo_plato', 2 => 'nombre', 3 => 'detalles', 4 => array('property' => 'date', 'label' => 'Fecha'), 5 => array('property' => 'imagen', 'type' => 'image')), 'actions' => array(0 => array('name' => 'show', 'icon' => 'search', 'label' => 'Mostrar'), 1 => array('name' => 'edit', 'icon' => 'pencil', 'label' => 'Editar'), 2 => array('name' => 'delete', 'label' => 'Borrar'))), 'search' => array('sort' => array(0 => 'id', 1 => 'ASC')), 'form' => array('title' => 'Aniadir Receta', 'form_options' => array('validation_groups' => array(0 => 'Default')), 'fields' => array(0 => 'id', 1 => 'tipo_plato', 2 => 'nombre', 3 => 'detalles', 4 => 'date', 5 => 'imagen')), 'new' => array('form_options' => array('validation_groups' => array(0 => 'Default', 1 => 'Receta'))), 'edit' => array('title' => 'Editar Receta'), 'name' => 'Receta'), 'Ingrediente' => array('class' => 'Cooker\\CookingBundle\\Entity\\Ingrediente', 'label' => 'Ingredientes', 'list' => array('title' => 'Ingredientes', 'fields' => array(0 => 'id', 1 => 'nombre', 2 => 'recetas')), 'new' => array('title' => 'New Ingrediente'), 'edit' => array('title' => 'Edit Ingrediente'), 'name' => 'Ingrediente'), 'Plato' => array('class' => 'Cooker\\CookingBundle\\Entity\\Plato', 'label' => 'Platos', 'list' => array('title' => 'Platos', 'fields' => array(0 => 'id', 1 => 'nombre', 2 => 'recetas')), 'new' => array('title' => 'New Plato'), 'edit' => array('title' => 'Edit Plato'), 'name' => 'Plato'), 'Comentario' => array('class' => 'Cooker\\CookingBundle\\Entity\\Comentario', 'label' => 'Comentarios', 'list' => array('title' => 'Comentario', 'fields' => array(0 => 'id', 1 => 'usuario', 2 => 'comentario', 3 => 'approved', 4 => 'receta', 5 => 'created', 6 => 'updated')), 'new' => array('title' => 'New Comentario'), 'edit' => array('title' => 'Edit Comentario'), 'name' => 'Comentario')), 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), true);
+        $this->services['easyadmin.config.manager'] = $instance = new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager($this->get('easyadmin.cache.manager'), $this->get('property_accessor'), array('site_name' => 'EasyCooking Administration Panel', 'design' => array('brand_color' => '1ABC9C', 'theme' => 'default', 'color_scheme' => 'dark', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'menu' => array()), 'entities' => array('Receta' => array('class' => 'Cooker\\CookingBundle\\Entity\\Receta', 'label' => 'Recetas', 'list' => array('title' => 'Recetas', 'sort' => array(0 => 'id', 1 => 'ASC'), 'fields' => array(0 => 'id', 1 => 'tipo_plato', 2 => 'nombre', 3 => 'detalles', 4 => array('property' => 'date', 'label' => 'Fecha'), 5 => array('property' => 'imagen', 'type' => 'image')), 'actions' => array(0 => array('name' => 'show', 'icon' => 'search', 'label' => 'Mostrar'), 1 => array('name' => 'edit', 'icon' => 'pencil', 'label' => 'Editar'), 2 => array('name' => 'delete', 'label' => 'Borrar'))), 'search' => array('sort' => array(0 => 'id', 1 => 'ASC')), 'form' => array('title' => 'Aniadir Receta', 'form_options' => array('validation_groups' => array(0 => 'Default')), 'fields' => array(0 => 'id', 1 => 'tipo_plato', 2 => 'nombre', 3 => 'comentarios', 4 => 'ingredientes', 5 => 'detalles', 6 => 'date', 7 => 'imagen')), 'new' => array('form_options' => array('validation_groups' => array(0 => 'Default', 1 => 'Receta'))), 'edit' => array('title' => 'Editar Receta'), 'name' => 'Receta'), 'Ingrediente' => array('class' => 'Cooker\\CookingBundle\\Entity\\Ingrediente', 'label' => 'Ingredientes', 'list' => array('title' => 'Ingredientes', 'sort' => array(0 => 'id', 1 => 'ASC'), 'fields' => array(0 => 'id', 1 => 'nombre', 2 => 'recetas'), 'actions' => array(0 => array('name' => 'show', 'icon' => 'search', 'label' => 'Mostrar'), 1 => array('name' => 'edit', 'icon' => 'pencil', 'label' => 'Editar'), 2 => array('name' => 'delete', 'label' => 'Borrar'))), 'search' => array('sort' => array(0 => 'id', 1 => 'ASC')), 'new' => array('form_options' => array('validation_groups' => array(0 => 'Default', 1 => 'Ingrediente'))), 'edit' => array('title' => 'Editar Ingrediente'), 'name' => 'Ingrediente'), 'Plato' => array('class' => 'Cooker\\CookingBundle\\Entity\\Plato', 'label' => 'Platos', 'list' => array('title' => 'Platos', 'sort' => array(0 => 'id', 1 => 'ASC'), 'fields' => array(0 => 'id', 1 => 'nombre', 2 => 'recetas'), 'actions' => array(0 => array('name' => 'show', 'icon' => 'search', 'label' => 'Mostrar'), 1 => array('name' => 'edit', 'icon' => 'pencil', 'label' => 'Editar'), 2 => array('name' => 'delete', 'label' => 'Borrar'))), 'search' => array('sort' => array(0 => 'id', 1 => 'ASC')), 'new' => array('form_options' => array('validation_groups' => array(0 => 'Default', 1 => 'Plato'))), 'edit' => array('title' => 'Editar Plato'), 'name' => 'Plato'), 'Comentario' => array('class' => 'Cooker\\CookingBundle\\Entity\\Comentario', 'label' => 'Comentarios', 'list' => array('title' => 'Comentario', 'sort' => array(0 => 'id', 1 => 'ASC'), 'fields' => array(0 => 'id', 1 => 'usuario', 2 => 'comentario', 3 => 'approved', 4 => 'receta', 5 => 'created', 6 => 'updated'), 'actions' => array(0 => array('name' => 'show', 'icon' => 'search', 'label' => 'Mostrar'), 1 => array('name' => 'edit', 'icon' => 'pencil', 'label' => 'Editar'), 2 => array('name' => 'delete', 'label' => 'Borrar'))), 'search' => array('sort' => array(0 => 'id', 1 => 'ASC')), 'new' => array('form_options' => array('validation_groups' => array(0 => 'Default', 1 => 'Comentario'))), 'edit' => array('title' => 'Editar Comentario'), 'name' => 'Comentario')), 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), true);
 
         $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\NormalizerConfigPass($this));
         $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\DesignConfigPass($this, true, 'en'));
@@ -1934,7 +1934,7 @@ class appDevDebugProjectContainer extends Container
         $l = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $i, array(), $a);
         $l->setOptions(array('login_path' => '/admin/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
 
-        return $this->services['security.firewall.map.context.secured_area'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($h, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'secured_area', $a, $c), 2 => $j, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $i, 'secured_area', $k, $l, array('check_path' => '/admin/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a2e79fdbb5ba2.24848610', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $h, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $i, 'secured_area', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $i, '/admin/login', false), NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.secured_area'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($h, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('security.user.provider.concrete.in_memory')), 'secured_area', $a, $c), 2 => $j, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $i, 'secured_area', $k, $l, array('check_path' => '/admin/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5a2ea7cbb3f629.43308508', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $h, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $i, 'secured_area', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $i, '/admin/login', false), NULL, NULL, $a, false));
     }
 
     /**
@@ -3131,7 +3131,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.in_memory'), $this->get('security.user_checker.secured_area'), 'secured_area', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a2e79fdbb5ba2.24848610')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.in_memory'), $this->get('security.user_checker.secured_area'), 'secured_area', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5a2ea7cbb3f629.43308508')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3947,9 +3947,11 @@ class appDevDebugProjectContainer extends Container
                                 0 => 'id',
                                 1 => 'tipo_plato',
                                 2 => 'nombre',
-                                3 => 'detalles',
-                                4 => 'date',
-                                5 => 'imagen',
+                                3 => 'comentarios',
+                                4 => 'ingredientes',
+                                5 => 'detalles',
+                                6 => 'date',
+                                7 => 'imagen',
                             ),
                         ),
                         'new' => array(
@@ -3970,17 +3972,48 @@ class appDevDebugProjectContainer extends Container
                         'label' => 'Ingredientes',
                         'list' => array(
                             'title' => 'Ingredientes',
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                             'fields' => array(
                                 0 => 'id',
                                 1 => 'nombre',
                                 2 => 'recetas',
                             ),
+                            'actions' => array(
+                                0 => array(
+                                    'name' => 'show',
+                                    'icon' => 'search',
+                                    'label' => 'Mostrar',
+                                ),
+                                1 => array(
+                                    'name' => 'edit',
+                                    'icon' => 'pencil',
+                                    'label' => 'Editar',
+                                ),
+                                2 => array(
+                                    'name' => 'delete',
+                                    'label' => 'Borrar',
+                                ),
+                            ),
+                        ),
+                        'search' => array(
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                         ),
                         'new' => array(
-                            'title' => 'New Ingrediente',
+                            'form_options' => array(
+                                'validation_groups' => array(
+                                    0 => 'Default',
+                                    1 => 'Ingrediente',
+                                ),
+                            ),
                         ),
                         'edit' => array(
-                            'title' => 'Edit Ingrediente',
+                            'title' => 'Editar Ingrediente',
                         ),
                         'name' => 'Ingrediente',
                     ),
@@ -3989,17 +4022,48 @@ class appDevDebugProjectContainer extends Container
                         'label' => 'Platos',
                         'list' => array(
                             'title' => 'Platos',
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                             'fields' => array(
                                 0 => 'id',
                                 1 => 'nombre',
                                 2 => 'recetas',
                             ),
+                            'actions' => array(
+                                0 => array(
+                                    'name' => 'show',
+                                    'icon' => 'search',
+                                    'label' => 'Mostrar',
+                                ),
+                                1 => array(
+                                    'name' => 'edit',
+                                    'icon' => 'pencil',
+                                    'label' => 'Editar',
+                                ),
+                                2 => array(
+                                    'name' => 'delete',
+                                    'label' => 'Borrar',
+                                ),
+                            ),
+                        ),
+                        'search' => array(
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                         ),
                         'new' => array(
-                            'title' => 'New Plato',
+                            'form_options' => array(
+                                'validation_groups' => array(
+                                    0 => 'Default',
+                                    1 => 'Plato',
+                                ),
+                            ),
                         ),
                         'edit' => array(
-                            'title' => 'Edit Plato',
+                            'title' => 'Editar Plato',
                         ),
                         'name' => 'Plato',
                     ),
@@ -4008,6 +4072,10 @@ class appDevDebugProjectContainer extends Container
                         'label' => 'Comentarios',
                         'list' => array(
                             'title' => 'Comentario',
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                             'fields' => array(
                                 0 => 'id',
                                 1 => 'usuario',
@@ -4017,12 +4085,39 @@ class appDevDebugProjectContainer extends Container
                                 5 => 'created',
                                 6 => 'updated',
                             ),
+                            'actions' => array(
+                                0 => array(
+                                    'name' => 'show',
+                                    'icon' => 'search',
+                                    'label' => 'Mostrar',
+                                ),
+                                1 => array(
+                                    'name' => 'edit',
+                                    'icon' => 'pencil',
+                                    'label' => 'Editar',
+                                ),
+                                2 => array(
+                                    'name' => 'delete',
+                                    'label' => 'Borrar',
+                                ),
+                            ),
+                        ),
+                        'search' => array(
+                            'sort' => array(
+                                0 => 'id',
+                                1 => 'ASC',
+                            ),
                         ),
                         'new' => array(
-                            'title' => 'New Comentario',
+                            'form_options' => array(
+                                'validation_groups' => array(
+                                    0 => 'Default',
+                                    1 => 'Comentario',
+                                ),
+                            ),
                         ),
                         'edit' => array(
-                            'title' => 'Edit Comentario',
+                            'title' => 'Editar Comentario',
                         ),
                         'name' => 'Comentario',
                     ),

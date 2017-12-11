@@ -51,7 +51,6 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
         // line 20
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
         echo "\">Easy<span class=\"logo_colour\">_cooking</span></a></h1>
-\t\t\t\t\t<!-- <h2>\"El amor puede esperar, el hambre no\" Monkey D. Luffy</h2> -->
 \t\t\t\t\t <div id=\"letter-container\" class=\"letter-container\">
 \t\t\t\t\t<h2>
 \t\t\t\t\t<a href=\"#\">\"El amor puede esperar, el hambre no\" Monkey D. Luffy</a>
@@ -63,27 +62,27 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
 
 \t\t\t<!-- Menú -->
 \t\t\t";
-        // line 32
+        // line 31
         $this->displayBlock('navigation', $context, $blocks);
-        // line 47
+        // line 46
         echo "\t\t</div>
 
 \t\t<div id=\"site_content\">
 \t\t\t<div class=\"sidebar\">
 \t\t\t\t<!-- Contenido lateral derecho -->
 \t\t\t\t";
-        // line 52
+        // line 51
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 53
+        // line 52
         echo "\t\t\t</div>
 
 \t\t\t<div id=\"content\">
 \t\t\t\t<!-- Contenido principal -->
 \t\t\t\t<section class=\"main-col\">
 \t\t\t\t\t";
-        // line 58
+        // line 57
         $this->displayBlock('body', $context, $blocks);
-        // line 59
+        // line 58
         echo "\t\t\t\t</section>
 \t\t\t</div>
 \t\t</div>
@@ -91,17 +90,17 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
 \t\t<!-- Pie de página -->
 \t\t<div id=\"footer\">
 \t\t\t";
-        // line 65
+        // line 64
         $this->displayBlock('footer', $context, $blocks);
-        // line 68
+        // line 67
         echo "\t\t</div>
 
 \t</div>
 
 \t";
-        // line 72
+        // line 71
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 116
+        // line 115
         echo "</body>
 </html>
 ";
@@ -113,39 +112,39 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
         echo "symblog";
     }
 
-    // line 32
+    // line 31
     public function block_navigation($context, array $blocks = array())
     {
-        // line 33
+        // line 32
         echo "\t\t\t";
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 34
+            // line 33
             echo "\t\t\t<li><a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_admin_logout");
             echo "\">Salir</a></li>
 \t\t\t";
         }
-        // line 36
+        // line 35
         echo "\t\t\t<div id=\"menubar\">
 \t\t\t\t<ul id=\"menu\">
 \t\t\t\t\t<li class=\"selected\"><div><a href=\"";
-        // line 38
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
         echo "\">Inicio</a><div></li>
 \t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 39
+        // line 38
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_recetas");
         echo "\">Recetas</a><div></li>
 \t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 40
+        // line 39
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_platos");
         echo "\">Platos</a><div></li>
 \t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 41
+        // line 40
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_ingredientes");
         echo "\">Ingredientes</a><div></li>
 \t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 42
+        // line 41
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_contact");
         echo "\">Contacto</a><div></li>
 \t\t\t\t</ul>
@@ -154,31 +153,31 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
 \t\t\t";
     }
 
-    // line 52
+    // line 51
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 58
+    // line 57
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 65
+    // line 64
     public function block_footer($context, array $blocks = array())
     {
-        // line 66
+        // line 65
         echo "\t\t\tCocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web
 \t\t\t";
     }
 
-    // line 72
+    // line 71
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 73
+        // line 72
         echo "\t<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 74
+        // line 73
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.lettering.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t\t\t<script type=\"text/javascript\">
@@ -188,11 +187,11 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
 \t\t\t</script
 
 \t <script src=\"";
-        // line 81
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t <script src=\"";
-        // line 82
+        // line 81
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/modernizr.custom.34978.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t <script type=\"text/javascript\">
@@ -242,7 +241,7 @@ class __TwigTemplate_d9094f7c88b1fde451f23c9e6d6c42e6cf62d520fb716d34f5a27607e68
 
     public function getDebugInfo()
     {
-        return array (  196 => 82,  192 => 81,  182 => 74,  179 => 73,  176 => 72,  171 => 66,  168 => 65,  163 => 58,  158 => 52,  149 => 42,  145 => 41,  141 => 40,  137 => 39,  133 => 38,  129 => 36,  123 => 34,  120 => 33,  117 => 32,  111 => 5,  105 => 116,  103 => 72,  97 => 68,  95 => 65,  87 => 59,  85 => 58,  78 => 53,  76 => 52,  69 => 47,  67 => 32,  52 => 20,  38 => 9,  31 => 5,  25 => 1,);
+        return array (  195 => 81,  191 => 80,  181 => 73,  178 => 72,  175 => 71,  170 => 65,  167 => 64,  162 => 57,  157 => 51,  148 => 41,  144 => 40,  140 => 39,  136 => 38,  132 => 37,  128 => 35,  122 => 33,  119 => 32,  116 => 31,  110 => 5,  104 => 115,  102 => 71,  96 => 67,  94 => 64,  86 => 58,  84 => 57,  77 => 52,  75 => 51,  68 => 46,  66 => 31,  52 => 20,  38 => 9,  31 => 5,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

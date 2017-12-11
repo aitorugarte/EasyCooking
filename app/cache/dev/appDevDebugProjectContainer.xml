@@ -5,7 +5,7 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">C:\xampp\htdocs\EasyCooking\app\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:/xampp/htdocs/EasyCooking/app/cache/dev</parameter>
     <parameter key="kernel.logs_dir">C:\xampp\htdocs\EasyCooking\app\logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -188,7 +188,7 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\xampp\htdocs\EasyCooking\app\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:/xampp/htdocs/EasyCooking/app/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="security.secure_random.class">Symfony\Component\Security\Core\Util\SecureRandom</parameter>
     <parameter key="form.resolved_type_factory.class">Symfony\Component\Form\ResolvedFormTypeFactory</parameter>
@@ -262,7 +262,7 @@
     <parameter key="data_collector.form.extractor.class">Symfony\Component\Form\Extension\DataCollector\FormDataExtractor</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\EasyCooking\app\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/xampp/htdocs/EasyCooking/app/cache/dev/profiler</parameter>
     <parameter key="profiler.storage.username"></parameter>
     <parameter key="profiler.storage.password"></parameter>
     <parameter key="profiler.storage.lifetime">86400</parameter>
@@ -297,7 +297,7 @@
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher</parameter>
-    <parameter key="debug.container.dump">C:\xampp\htdocs\EasyCooking\app\cache\dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/xampp/htdocs/EasyCooking/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Component\HttpKernel\Controller\TraceableControllerResolver</parameter>
     <parameter key="security.context.class">Symfony\Component\Security\Core\SecurityContext</parameter>
     <parameter key="security.user_checker.class">Symfony\Component\Security\Core\User\UserChecker</parameter>
@@ -447,7 +447,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">C:\xampp\htdocs\EasyCooking\app\cache\dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:/xampp/htdocs/EasyCooking/app/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -566,7 +566,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\EasyCooking\app\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:/xampp/htdocs/EasyCooking/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -655,6 +655,8 @@
               <parameter>id</parameter>
               <parameter>tipo_plato</parameter>
               <parameter>nombre</parameter>
+              <parameter>comentarios</parameter>
+              <parameter>ingredientes</parameter>
               <parameter>detalles</parameter>
               <parameter>date</parameter>
               <parameter>imagen</parameter>
@@ -678,17 +680,48 @@
           <parameter key="label">Ingredientes</parameter>
           <parameter key="list" type="collection">
             <parameter key="title">Ingredientes</parameter>
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
               <parameter>nombre</parameter>
               <parameter>recetas</parameter>
             </parameter>
+            <parameter key="actions" type="collection">
+              <parameter type="collection">
+                <parameter key="name">show</parameter>
+                <parameter key="icon">search</parameter>
+                <parameter key="label">Mostrar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">edit</parameter>
+                <parameter key="icon">pencil</parameter>
+                <parameter key="label">Editar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">delete</parameter>
+                <parameter key="label">Borrar</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="search" type="collection">
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
           </parameter>
           <parameter key="new" type="collection">
-            <parameter key="title">New Ingrediente</parameter>
+            <parameter key="form_options" type="collection">
+              <parameter key="validation_groups" type="collection">
+                <parameter>Default</parameter>
+                <parameter>Ingrediente</parameter>
+              </parameter>
+            </parameter>
           </parameter>
           <parameter key="edit" type="collection">
-            <parameter key="title">Edit Ingrediente</parameter>
+            <parameter key="title">Editar Ingrediente</parameter>
           </parameter>
           <parameter key="name">Ingrediente</parameter>
         </parameter>
@@ -697,17 +730,48 @@
           <parameter key="label">Platos</parameter>
           <parameter key="list" type="collection">
             <parameter key="title">Platos</parameter>
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
               <parameter>nombre</parameter>
               <parameter>recetas</parameter>
             </parameter>
+            <parameter key="actions" type="collection">
+              <parameter type="collection">
+                <parameter key="name">show</parameter>
+                <parameter key="icon">search</parameter>
+                <parameter key="label">Mostrar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">edit</parameter>
+                <parameter key="icon">pencil</parameter>
+                <parameter key="label">Editar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">delete</parameter>
+                <parameter key="label">Borrar</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="search" type="collection">
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
           </parameter>
           <parameter key="new" type="collection">
-            <parameter key="title">New Plato</parameter>
+            <parameter key="form_options" type="collection">
+              <parameter key="validation_groups" type="collection">
+                <parameter>Default</parameter>
+                <parameter>Plato</parameter>
+              </parameter>
+            </parameter>
           </parameter>
           <parameter key="edit" type="collection">
-            <parameter key="title">Edit Plato</parameter>
+            <parameter key="title">Editar Plato</parameter>
           </parameter>
           <parameter key="name">Plato</parameter>
         </parameter>
@@ -716,6 +780,10 @@
           <parameter key="label">Comentarios</parameter>
           <parameter key="list" type="collection">
             <parameter key="title">Comentario</parameter>
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
             <parameter key="fields" type="collection">
               <parameter>id</parameter>
               <parameter>usuario</parameter>
@@ -725,12 +793,39 @@
               <parameter>created</parameter>
               <parameter>updated</parameter>
             </parameter>
+            <parameter key="actions" type="collection">
+              <parameter type="collection">
+                <parameter key="name">show</parameter>
+                <parameter key="icon">search</parameter>
+                <parameter key="label">Mostrar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">edit</parameter>
+                <parameter key="icon">pencil</parameter>
+                <parameter key="label">Editar</parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="name">delete</parameter>
+                <parameter key="label">Borrar</parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="search" type="collection">
+            <parameter key="sort" type="collection">
+              <parameter>id</parameter>
+              <parameter>ASC</parameter>
+            </parameter>
           </parameter>
           <parameter key="new" type="collection">
-            <parameter key="title">New Comentario</parameter>
+            <parameter key="form_options" type="collection">
+              <parameter key="validation_groups" type="collection">
+                <parameter>Default</parameter>
+                <parameter>Comentario</parameter>
+              </parameter>
+            </parameter>
           </parameter>
           <parameter key="edit" type="collection">
-            <parameter key="title">Edit Comentario</parameter>
+            <parameter key="title">Editar Comentario</parameter>
           </parameter>
           <parameter key="name">Comentario</parameter>
         </parameter>
@@ -758,7 +853,7 @@
         <parameter key="max_results">10</parameter>
       </parameter>
     </parameter>
-    <parameter key="easyadmin.cache.dir">C:\xampp\htdocs\EasyCooking\app\cache\dev/easy_admin</parameter>
+    <parameter key="easyadmin.cache.dir">C:/xampp/htdocs/EasyCooking/app/cache/dev/easy_admin</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -1078,7 +1173,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\EasyCooking\app\cache\dev/translations</argument>
+        <argument key="cache_dir">C:/xampp/htdocs/EasyCooking/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
       <argument type="collection"/>
@@ -1595,7 +1690,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>C:\xampp\htdocs\EasyCooking\app\cache\dev</argument>
+      <argument>C:/xampp/htdocs/EasyCooking/app/cache/dev</argument>
     </service>
     <service id="templating.helper.assets" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\AssetsHelper">
       <tag name="templating.helper" alias="assets"/>
@@ -1715,7 +1810,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:C:\xampp\htdocs\EasyCooking\app\cache\dev/profiler</argument>
+          <argument>file:C:/xampp/htdocs/EasyCooking/app/cache/dev/profiler</argument>
           <argument></argument>
           <argument></argument>
           <argument>86400</argument>
@@ -2132,7 +2227,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a2e79fdbb5ba2.24848610</argument>
+            <argument>5a2ea7cbb3f629.43308508</argument>
           </service>
         </argument>
       </argument>
@@ -2415,7 +2510,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a2e79fdbb5ba2.24848610</argument>
+            <argument>5a2ea7cbb3f629.43308508</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2485,7 +2580,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\xampp\htdocs\EasyCooking\app\cache\dev/twig</argument>
+        <argument key="cache">C:/xampp/htdocs/EasyCooking/app/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2887,7 +2982,7 @@
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>C:\xampp\htdocs\EasyCooking\app\cache\dev/doctrine/orm/Proxies</argument>
+            <argument>C:/xampp/htdocs/EasyCooking/app/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -2981,7 +3076,7 @@
       <tag name="console.command" command="doctrine:fixtures:load"/>
     </service>
     <service id="easyadmin.cache.manager" class="EasyCorp\Bundle\EasyAdminBundle\Cache\CacheManager">
-      <argument>C:\xampp\htdocs\EasyCooking\app\cache\dev/easy_admin</argument>
+      <argument>C:/xampp/htdocs/EasyCooking/app/cache/dev/easy_admin</argument>
     </service>
     <service id="easyadmin.config.manager" class="EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager">
       <argument type="service" id="easyadmin.cache.manager"/>
@@ -3063,6 +3158,8 @@
                 <argument>id</argument>
                 <argument>tipo_plato</argument>
                 <argument>nombre</argument>
+                <argument>comentarios</argument>
+                <argument>ingredientes</argument>
                 <argument>detalles</argument>
                 <argument>date</argument>
                 <argument>imagen</argument>
@@ -3086,17 +3183,48 @@
             <argument key="label">Ingredientes</argument>
             <argument key="list" type="collection">
               <argument key="title">Ingredientes</argument>
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
               <argument key="fields" type="collection">
                 <argument>id</argument>
                 <argument>nombre</argument>
                 <argument>recetas</argument>
               </argument>
+              <argument key="actions" type="collection">
+                <argument type="collection">
+                  <argument key="name">show</argument>
+                  <argument key="icon">search</argument>
+                  <argument key="label">Mostrar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">edit</argument>
+                  <argument key="icon">pencil</argument>
+                  <argument key="label">Editar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">delete</argument>
+                  <argument key="label">Borrar</argument>
+                </argument>
+              </argument>
+            </argument>
+            <argument key="search" type="collection">
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
             </argument>
             <argument key="new" type="collection">
-              <argument key="title">New Ingrediente</argument>
+              <argument key="form_options" type="collection">
+                <argument key="validation_groups" type="collection">
+                  <argument>Default</argument>
+                  <argument>Ingrediente</argument>
+                </argument>
+              </argument>
             </argument>
             <argument key="edit" type="collection">
-              <argument key="title">Edit Ingrediente</argument>
+              <argument key="title">Editar Ingrediente</argument>
             </argument>
             <argument key="name">Ingrediente</argument>
           </argument>
@@ -3105,17 +3233,48 @@
             <argument key="label">Platos</argument>
             <argument key="list" type="collection">
               <argument key="title">Platos</argument>
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
               <argument key="fields" type="collection">
                 <argument>id</argument>
                 <argument>nombre</argument>
                 <argument>recetas</argument>
               </argument>
+              <argument key="actions" type="collection">
+                <argument type="collection">
+                  <argument key="name">show</argument>
+                  <argument key="icon">search</argument>
+                  <argument key="label">Mostrar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">edit</argument>
+                  <argument key="icon">pencil</argument>
+                  <argument key="label">Editar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">delete</argument>
+                  <argument key="label">Borrar</argument>
+                </argument>
+              </argument>
+            </argument>
+            <argument key="search" type="collection">
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
             </argument>
             <argument key="new" type="collection">
-              <argument key="title">New Plato</argument>
+              <argument key="form_options" type="collection">
+                <argument key="validation_groups" type="collection">
+                  <argument>Default</argument>
+                  <argument>Plato</argument>
+                </argument>
+              </argument>
             </argument>
             <argument key="edit" type="collection">
-              <argument key="title">Edit Plato</argument>
+              <argument key="title">Editar Plato</argument>
             </argument>
             <argument key="name">Plato</argument>
           </argument>
@@ -3124,6 +3283,10 @@
             <argument key="label">Comentarios</argument>
             <argument key="list" type="collection">
               <argument key="title">Comentario</argument>
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
               <argument key="fields" type="collection">
                 <argument>id</argument>
                 <argument>usuario</argument>
@@ -3133,12 +3296,39 @@
                 <argument>created</argument>
                 <argument>updated</argument>
               </argument>
+              <argument key="actions" type="collection">
+                <argument type="collection">
+                  <argument key="name">show</argument>
+                  <argument key="icon">search</argument>
+                  <argument key="label">Mostrar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">edit</argument>
+                  <argument key="icon">pencil</argument>
+                  <argument key="label">Editar</argument>
+                </argument>
+                <argument type="collection">
+                  <argument key="name">delete</argument>
+                  <argument key="label">Borrar</argument>
+                </argument>
+              </argument>
+            </argument>
+            <argument key="search" type="collection">
+              <argument key="sort" type="collection">
+                <argument>id</argument>
+                <argument>ASC</argument>
+              </argument>
             </argument>
             <argument key="new" type="collection">
-              <argument key="title">New Comentario</argument>
+              <argument key="form_options" type="collection">
+                <argument key="validation_groups" type="collection">
+                  <argument>Default</argument>
+                  <argument>Comentario</argument>
+                </argument>
+              </argument>
             </argument>
             <argument key="edit" type="collection">
-              <argument key="title">Edit Comentario</argument>
+              <argument key="title">Editar Comentario</argument>
             </argument>
             <argument key="name">Comentario</argument>
           </argument>
@@ -3566,7 +3756,7 @@
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>C:\xampp\htdocs\EasyCooking\app\cache\dev/sessions</argument>
+      <argument>C:/xampp/htdocs/EasyCooking/app/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -3620,7 +3810,7 @@
       <argument type="service" id="service_container"/>
       <argument>C:\xampp\htdocs\EasyCooking\app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\EasyCooking\app\cache\dev</argument>
+        <argument key="cache_dir">C:/xampp/htdocs/EasyCooking/app/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -3644,7 +3834,7 @@
       </argument>
       <argument type="service">
         <service class="Doctrine\Common\Cache\FilesystemCache" public="false">
-          <argument>C:\xampp\htdocs\EasyCooking\app\cache\dev/annotations</argument>
+          <argument>C:/xampp/htdocs/EasyCooking/app/cache/dev/annotations</argument>
         </service>
       </argument>
       <argument>true</argument>
