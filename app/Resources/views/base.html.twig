@@ -29,16 +29,18 @@
 
 			<!-- Menú -->
 			{% block navigation %}
-			{% if is_granted('ROLE_ADMIN') %}
-			<li><a href="{{ path('blogger_admin_logout')}}">Salir</a></li>
-			{% endif %}
 			<div id="menubar">
 				<ul id="menu">
-					<li class="selected"><div><a href="{{ path('cooker_cook_principal')}}">Inicio</a><div></li>
-					<li class="li2"><div><a href="{{ path('cooker_cook_recetas')}}">Recetas</a><div></li>
-					<li class="li2"><div><a href="{{ path('cooker_cook_platos')}}">Platos</a><div></li>
-					<li class="li2"><div><a href="{{ path('cooker_cook_ingredientes')}}">Ingredientes</a><div></li>
-					<li class="li2"><div><a href="{{ path('cooker_cook_contact')}}">Contacto</a><div></li>
+					<li class="selected"><div><a href="{{ path('cooker_cook_principal')}}">Inicio</a></div></li>
+					<li class="li2"><div><a href="{{ path('cooker_cook_recetas')}}">Recetas</a></div></li>
+					<li class="li2"><div><a href="{{ path('cooker_cook_platos')}}">Platos</a></div></li>
+					<li class="li2"><div><a href="{{ path('cooker_cook_ingredientes')}}">Ingredientes</a></div></li>
+					<li class="li2"><div><a href="{{ path('cooker_cook_contact')}}">Contacto</a></div></li>
+					{% if is_granted('ROLE_ADMIN') %}
+					<li class="li2"><div><a href="{{ path('cooker_admin_logout')}}">Salir</a></div></li>
+					{% else %} 
+					<li class="li2"><div><a href="{{ path('cooker_admin_login')}}">Entrar</a></div></li>
+					{% endif %}
 				</ul>
 			</div> 
 	

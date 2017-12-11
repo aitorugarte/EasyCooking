@@ -5,22 +5,11 @@ cooker_cook:
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
-    prefix:   /admin
+    prefix:   /controlpanel
 
 cooker_admin:
-    path: /admin
-    defaults: { _controller: CookerAdminBundle:Security:login }
-
-cooker_admin_login:
-    pattern: /login
-    defaults: { _controller: CookerAdminBundle:Security:login }
-
-cooker_admin_login_check:
-    pattern: /login_check
-
-cooker_admin_logout:
-    pattern: /logout
-    defaults: { _controller: CookerAdminBundle:Security:login }
+    resource: "@CookerAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
 
 cooker_cook_principal:
     path:  /
