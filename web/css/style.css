@@ -179,7 +179,9 @@ ul#menu {
         ul#menu li a:hover {
             color: #00C6EF;
         }
-/* Columna derecha */
+/* Fin Menú*/
+
+/* Sidebar */
 
 #redes {
     margin-top: 30px;
@@ -211,7 +213,7 @@ ul#menu {
             .sidebar li a.selected {
                 color: #444;
             }
-
+/* Fin sidebar */
 #site_content {
     width: 75%;
     overflow: hidden;
@@ -266,6 +268,7 @@ ul#menu {
     float: left;
     width: 45%;
 }
+/* Fin Ingredientes */
 
 /* Recetas */
 
@@ -332,6 +335,22 @@ ul#menu {
 }
 
 /* Fin recetas */
+
+/* Show receta */
+
+h3.titulo {
+    float: right
+}
+
+h3.aniadirCom {
+    margin-top: 40px
+}
+
+h3.relacionadas {
+    color: red;
+    margin-bottom: 0px
+}
+
 .imgGran {
     width: 300px;
     height: 200px;
@@ -339,12 +358,27 @@ ul#menu {
     display: block;
 }
 
-/* Show receta con ingredientes */
-
 .ingredientes {
     padding-left: 0px;
     list-style: none;
 }
+
+.listaRelacionadas {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.otraReceta {
+    float: left;
+    display: block;
+    text-align: center;
+    margin: 16px; 
+    margin-top: 5px;
+}
+
+/* Fin Show receta */
 
 /* Letra del subtítulo con efectos */
 
@@ -845,3 +879,4 @@ ul#menu {
         text-shadow: 0px 0px 2px #fff, 1px 1px 4px rgba(0,0,0,0.7);
     }
 }
+/* Fin subtítulo */

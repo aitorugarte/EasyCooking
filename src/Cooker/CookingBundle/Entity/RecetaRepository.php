@@ -73,7 +73,7 @@ class RecetaRepository extends EntityRepository
 	->select('p')
 	->where('p.tipo_plato = :id_plato')
 	->setParameter('id_plato', $id)
-	->setMaxResults(3);
+	->setMaxResults(4);
 
 	return $qp->getQuery()->getResult();
 	}
