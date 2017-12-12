@@ -22,32 +22,32 @@ class __TwigTemplate_8e1c2e168e86c33e653fb6fcdd6759dfef4cecd392b33167c2a387a1962
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ec6c77ca3785de575b6ae166296c118695a099055ee53ea932bff2def929174b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ec6c77ca3785de575b6ae166296c118695a099055ee53ea932bff2def929174b->enter($__internal_ec6c77ca3785de575b6ae166296c118695a099055ee53ea932bff2def929174b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:showIngr.html.twig"));
+        $__internal_955c889b7c7e7d5febc6a487aa7ea209b301ad28b97db64c0aabadca1468cfe3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_955c889b7c7e7d5febc6a487aa7ea209b301ad28b97db64c0aabadca1468cfe3->enter($__internal_955c889b7c7e7d5febc6a487aa7ea209b301ad28b97db64c0aabadca1468cfe3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:showIngr.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ec6c77ca3785de575b6ae166296c118695a099055ee53ea932bff2def929174b->leave($__internal_ec6c77ca3785de575b6ae166296c118695a099055ee53ea932bff2def929174b_prof);
+        $__internal_955c889b7c7e7d5febc6a487aa7ea209b301ad28b97db64c0aabadca1468cfe3->leave($__internal_955c889b7c7e7d5febc6a487aa7ea209b301ad28b97db64c0aabadca1468cfe3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_12b028b2c3af09b25f4165dc7bf3b67e49aab1599ddc481fb7d0e428ce7812ab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_12b028b2c3af09b25f4165dc7bf3b67e49aab1599ddc481fb7d0e428ce7812ab->enter($__internal_12b028b2c3af09b25f4165dc7bf3b67e49aab1599ddc481fb7d0e428ce7812ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9c56d71c47cf92732f5bf53011bc219b6c11a9f52373261ea1f8d0f6530c6946 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9c56d71c47cf92732f5bf53011bc219b6c11a9f52373261ea1f8d0f6530c6946->enter($__internal_9c56d71c47cf92732f5bf53011bc219b6c11a9f52373261ea1f8d0f6530c6946_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ingrediente"] ?? $this->getContext($context, "ingrediente")), "nombre", array()), "html", null, true);
         
-        $__internal_12b028b2c3af09b25f4165dc7bf3b67e49aab1599ddc481fb7d0e428ce7812ab->leave($__internal_12b028b2c3af09b25f4165dc7bf3b67e49aab1599ddc481fb7d0e428ce7812ab_prof);
+        $__internal_9c56d71c47cf92732f5bf53011bc219b6c11a9f52373261ea1f8d0f6530c6946->leave($__internal_9c56d71c47cf92732f5bf53011bc219b6c11a9f52373261ea1f8d0f6530c6946_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_bdef1d0f8427f376681e31469d361ba30e187f247b17fe42e8ac1d0adff22a0b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bdef1d0f8427f376681e31469d361ba30e187f247b17fe42e8ac1d0adff22a0b->enter($__internal_bdef1d0f8427f376681e31469d361ba30e187f247b17fe42e8ac1d0adff22a0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4dfebc8b25f4a72ae748b8ac510617946c4ee9631111d4f95bdff983f7382449 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4dfebc8b25f4a72ae748b8ac510617946c4ee9631111d4f95bdff983f7382449->enter($__internal_4dfebc8b25f4a72ae748b8ac510617946c4ee9631111d4f95bdff983f7382449_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t<h1>Recetas para el ingrediente: ";
@@ -76,7 +76,7 @@ class __TwigTemplate_8e1c2e168e86c33e653fb6fcdd6759dfef4cecd392b33167c2a387a1962
 
 ";
         
-        $__internal_bdef1d0f8427f376681e31469d361ba30e187f247b17fe42e8ac1d0adff22a0b->leave($__internal_bdef1d0f8427f376681e31469d361ba30e187f247b17fe42e8ac1d0adff22a0b_prof);
+        $__internal_4dfebc8b25f4a72ae748b8ac510617946c4ee9631111d4f95bdff983f7382449->leave($__internal_4dfebc8b25f4a72ae748b8ac510617946c4ee9631111d4f95bdff983f7382449_prof);
 
     }
 

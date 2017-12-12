@@ -15,8 +15,8 @@ class __TwigTemplate_36a261dbb00026bf4fdb300223fbbbc0eab451fd26cd7335706854306d9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bf3880c8d43b16c2bdb615ed712ed23d8dcd397403ba52e619c1b6b72740f482 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf3880c8d43b16c2bdb615ed712ed23d8dcd397403ba52e619c1b6b72740f482->enter($__internal_bf3880c8d43b16c2bdb615ed712ed23d8dcd397403ba52e619c1b6b72740f482_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerAdminBundle:Security:login.html.twig"));
+        $__internal_84a271a5f5ace6af8b9cfc206cb1814d80e177c2fcbad82ca2d01e060e98f57d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_84a271a5f5ace6af8b9cfc206cb1814d80e177c2fcbad82ca2d01e060e98f57d->enter($__internal_84a271a5f5ace6af8b9cfc206cb1814d80e177c2fcbad82ca2d01e060e98f57d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerAdminBundle:Security:login.html.twig"));
 
         // line 1
         echo "﻿";
@@ -24,38 +24,53 @@ class __TwigTemplate_36a261dbb00026bf4fdb300223fbbbc0eab451fd26cd7335706854306d9
         echo "
 <link href=\"";
         // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/admin.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" />
+<link href=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://getbootstrap.com/docs/4.0/examples/signin/signin.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 
 ";
-        // line 5
+        // line 6
         if (($context["error"] ?? $this->getContext($context, "error"))) {
-            // line 6
+            // line 7
             echo "\t<div>";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? $this->getContext($context, "error")), "message", array()), "html", null, true);
             echo "</div>
 ";
         }
-        // line 8
-        echo "
-<form action=\"";
         // line 9
+        echo "
+<div class=\"container\">
+
+      <form class=\"form-signin\" action=\"";
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_login_check");
-        echo "\" method=\"post\"  class=\"login\">
-\t<label for=\"username\">Usuario:</label>
-\t<input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 11
+        echo "\" method=\"post\" class=\"login\">
+        <h2 class=\"form-signin-heading\">Iniciar sesión</h2>
+
+        <label for=\"username\" class=\"sr-only\">Usuario</label>
+        <input type=\"text\" id=\"username\" name=\"_username\" class=\"form-control\" placeholder=\"Usuario\" value=\"";
+        // line 16
         echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
-        echo "\" />
-
-\t<label for=\"password\">Contraseña:</label>
-\t<input type=\"password\" id=\"password\" name=\"_password\" />
-
-\t<button type=\"submit\">Entrar</button>
-</form>
-";
+        echo "\" required autofocus>
         
-        $__internal_bf3880c8d43b16c2bdb615ed712ed23d8dcd397403ba52e619c1b6b72740f482->leave($__internal_bf3880c8d43b16c2bdb615ed712ed23d8dcd397403ba52e619c1b6b72740f482_prof);
+        <label for=\"password\" class=\"sr-only\">Contraseña</label>
+        <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required>
+        
+        <div class=\"checkbox\">
+          <label>
+            <input type=\"checkbox\" id=\"remember_me\" name=\"remember_me\"> Recordarme
+          </label>
+        </div>
+
+        <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Entrar</button>
+      </form>
+
+    </div> <!-- /container -->";
+        
+        $__internal_84a271a5f5ace6af8b9cfc206cb1814d80e177c2fcbad82ca2d01e060e98f57d->leave($__internal_84a271a5f5ace6af8b9cfc206cb1814d80e177c2fcbad82ca2d01e060e98f57d_prof);
 
     }
 
@@ -71,7 +86,7 @@ class __TwigTemplate_36a261dbb00026bf4fdb300223fbbbc0eab451fd26cd7335706854306d9
 
     public function getDebugInfo()
     {
-        return array (  48 => 11,  43 => 9,  40 => 8,  34 => 6,  32 => 5,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  56 => 16,  49 => 12,  44 => 9,  38 => 7,  36 => 6,  31 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -86,21 +101,33 @@ class __TwigTemplate_36a261dbb00026bf4fdb300223fbbbc0eab451fd26cd7335706854306d9
     {
         return new Twig_Source("﻿{# src/Cooker/AdminBundle/Resources/views/Security/login.html.twig #}
 
-<link href=\"{{ asset('css/admin.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
+<link href=\"{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
+<link href=\"{{ asset('https://getbootstrap.com/docs/4.0/examples/signin/signin.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
 
 {% if error %}
 \t<div>{{ error.message }}</div>
 {% endif %}
 
-<form action=\"{{ path('cooker_admin_login_check') }}\" method=\"post\"  class=\"login\">
-\t<label for=\"username\">Usuario:</label>
-\t<input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" />
+<div class=\"container\">
 
-\t<label for=\"password\">Contraseña:</label>
-\t<input type=\"password\" id=\"password\" name=\"_password\" />
+      <form class=\"form-signin\" action=\"{{ path('cooker_admin_login_check') }}\" method=\"post\" class=\"login\">
+        <h2 class=\"form-signin-heading\">Iniciar sesión</h2>
 
-\t<button type=\"submit\">Entrar</button>
-</form>
-", "CookerAdminBundle:Security:login.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\AdminBundle\\Resources\\views\\Security\\login.html.twig");
+        <label for=\"username\" class=\"sr-only\">Usuario</label>
+        <input type=\"text\" id=\"username\" name=\"_username\" class=\"form-control\" placeholder=\"Usuario\" value=\"{{ last_username }}\" required autofocus>
+        
+        <label for=\"password\" class=\"sr-only\">Contraseña</label>
+        <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required>
+        
+        <div class=\"checkbox\">
+          <label>
+            <input type=\"checkbox\" id=\"remember_me\" name=\"remember_me\"> Recordarme
+          </label>
+        </div>
+
+        <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Entrar</button>
+      </form>
+
+    </div> <!-- /container -->", "CookerAdminBundle:Security:login.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\AdminBundle\\Resources\\views\\Security\\login.html.twig");
     }
 }
