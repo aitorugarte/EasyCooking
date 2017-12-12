@@ -15,49 +15,44 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_45c5f40324dea28448edf1a5a7ecad32b10d6c9d112af9a48f93e2d7f8e10721 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_45c5f40324dea28448edf1a5a7ecad32b10d6c9d112af9a48f93e2d7f8e10721->enter($__internal_45c5f40324dea28448edf1a5a7ecad32b10d6c9d112af9a48f93e2d7f8e10721_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerAdmin/Security/login.html.twig"));
+        $__internal_e41e4b21dbbc898705b845129f870c1aea48621472799e2f8e33c3acb84dc19d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e41e4b21dbbc898705b845129f870c1aea48621472799e2f8e33c3acb84dc19d->enter($__internal_e41e4b21dbbc898705b845129f870c1aea48621472799e2f8e33c3acb84dc19d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerAdmin/Security/login.html.twig"));
 
         // line 1
         echo "﻿";
         // line 2
         echo "
-<!-- <link href=\"";
-        // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/admin.css"), "html", null, true);
-        echo "\" type=\"text/css\" rel=\"stylesheet\" /> -->
-
 <link href=\"";
-        // line 5
+        // line 3
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 <link href=\"";
-        // line 6
+        // line 4
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://getbootstrap.com/docs/4.0/examples/signin/signin.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 
 ";
-        // line 8
+        // line 6
         if (($context["error"] ?? $this->getContext($context, "error"))) {
-            // line 9
+            // line 7
             echo "\t<div>";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? $this->getContext($context, "error")), "message", array()), "html", null, true);
             echo "</div>
 ";
         }
-        // line 11
+        // line 9
         echo "
 <div class=\"container\">
 
       <form class=\"form-signin\" action=\"";
-        // line 14
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_login_check");
-        echo "\" method=\"post\"  class=\"login\">
+        echo "\" method=\"post\" class=\"login\">
         <h2 class=\"form-signin-heading\">Iniciar sesión</h2>
 
         <label for=\"username\" class=\"sr-only\">Usuario</label>
         <input type=\"text\" id=\"username\" name=\"_username\" class=\"form-control\" placeholder=\"Usuario\" value=\"";
-        // line 18
+        // line 16
         echo twig_escape_filter($this->env, ($context["last_username"] ?? $this->getContext($context, "last_username")), "html", null, true);
         echo "\" required autofocus>
         
@@ -66,7 +61,7 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
         
         <div class=\"checkbox\">
           <label>
-            <input type=\"checkbox\" value=\"remember-me\"> Recordarme
+            <input type=\"checkbox\" id=\"remember_me\" name=\"remember_me\"> Recordarme
           </label>
         </div>
 
@@ -75,7 +70,7 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
 
     </div> <!-- /container -->";
         
-        $__internal_45c5f40324dea28448edf1a5a7ecad32b10d6c9d112af9a48f93e2d7f8e10721->leave($__internal_45c5f40324dea28448edf1a5a7ecad32b10d6c9d112af9a48f93e2d7f8e10721_prof);
+        $__internal_e41e4b21dbbc898705b845129f870c1aea48621472799e2f8e33c3acb84dc19d->leave($__internal_e41e4b21dbbc898705b845129f870c1aea48621472799e2f8e33c3acb84dc19d_prof);
 
     }
 
@@ -91,7 +86,7 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
 
     public function getDebugInfo()
     {
-        return array (  61 => 18,  54 => 14,  49 => 11,  43 => 9,  41 => 8,  36 => 6,  32 => 5,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  56 => 16,  49 => 12,  44 => 9,  38 => 7,  36 => 6,  31 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -106,8 +101,6 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
     {
         return new Twig_Source("﻿{# src/Cooker/AdminBundle/Resources/views/Security/login.html.twig #}
 
-<!-- <link href=\"{{ asset('css/admin.css') }}\" type=\"text/css\" rel=\"stylesheet\" /> -->
-
 <link href=\"{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
 <link href=\"{{ asset('https://getbootstrap.com/docs/4.0/examples/signin/signin.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
 
@@ -117,7 +110,7 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
 
 <div class=\"container\">
 
-      <form class=\"form-signin\" action=\"{{ path('cooker_admin_login_check') }}\" method=\"post\"  class=\"login\">
+      <form class=\"form-signin\" action=\"{{ path('cooker_admin_login_check') }}\" method=\"post\" class=\"login\">
         <h2 class=\"form-signin-heading\">Iniciar sesión</h2>
 
         <label for=\"username\" class=\"sr-only\">Usuario</label>
@@ -128,7 +121,7 @@ class __TwigTemplate_d2dc53dee15a1c0952412a7095f72a3912fa154bea19054e0608447eb22
         
         <div class=\"checkbox\">
           <label>
-            <input type=\"checkbox\" value=\"remember-me\"> Recordarme
+            <input type=\"checkbox\" id=\"remember_me\" name=\"remember_me\"> Recordarme
           </label>
         </div>
 

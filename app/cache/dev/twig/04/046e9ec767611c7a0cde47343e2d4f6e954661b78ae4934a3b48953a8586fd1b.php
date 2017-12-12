@@ -15,8 +15,8 @@ class __TwigTemplate_0ff3e7148884db79966d1d92c0e83262eceabd20f1f0c790b94976f50b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_af880a8e0a348d5cff14904789c666093813afa48ad2422fced07668500a07bf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_af880a8e0a348d5cff14904789c666093813afa48ad2422fced07668500a07bf->enter($__internal_af880a8e0a348d5cff14904789c666093813afa48ad2422fced07668500a07bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/label_empty.html.twig"));
+        $__internal_e9249802abf7ae4a02bc1bfda9747b12f3c107b8b4825c5b68c95ad9196e1d0e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e9249802abf7ae4a02bc1bfda9747b12f3c107b8b4825c5b68c95ad9196e1d0e->enter($__internal_e9249802abf7ae4a02bc1bfda9747b12f3c107b8b4825c5b68c95ad9196e1d0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/label_empty.html.twig"));
 
         // line 1
         echo "<span class=\"label label-empty\">";
@@ -24,7 +24,7 @@ class __TwigTemplate_0ff3e7148884db79966d1d92c0e83262eceabd20f1f0c790b94976f50b6
         echo "</span>
 ";
         
-        $__internal_af880a8e0a348d5cff14904789c666093813afa48ad2422fced07668500a07bf->leave($__internal_af880a8e0a348d5cff14904789c666093813afa48ad2422fced07668500a07bf_prof);
+        $__internal_e9249802abf7ae4a02bc1bfda9747b12f3c107b8b4825c5b68c95ad9196e1d0e->leave($__internal_e9249802abf7ae4a02bc1bfda9747b12f3c107b8b4825c5b68c95ad9196e1d0e_prof);
 
     }
 
