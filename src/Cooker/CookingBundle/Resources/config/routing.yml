@@ -6,18 +6,6 @@ cooker_cook_recetas:
     path: /recetas
     defaults: { _controller: CookerCookingBundle:Cook:recetas }
 
-cooker_cook_showReceta:
-    path: /receta/{id}
-    defaults: { _controller: CookerCookingBundle:Cook:showReceta }
- 
-cooker_cook_showIngr:
-    path: /ingrediente/{id}
-    defaults: { _controller: CookerCookingBundle:Cook:showIngr }
-
-cooker_cook_showPlato:
-    path: /plato/{id}
-    defaults: { _controller: CookerCookingBundle:Cook:showPlato }
-
 cooker_cook_ingredientes:
     path: /ingredientes
     defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
@@ -29,6 +17,18 @@ cooker_cook_platos:
 cooker_cook_contact:
     path:  /contact
     defaults: { _controller: CookerCookingBundle:Cook:contact }
+
+cooker_cook_showReceta:
+    path: /receta/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:showReceta }
+ 
+cooker_cook_showIngr:
+    path: /ingrediente/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:showIngr }
+
+cooker_cook_showPlato:
+    path: /plato/{id}
+    defaults: { _controller: CookerCookingBundle:Cook:showPlato }
 
 cooker_comentario_create:
     path:  /comentario/{receta_id}

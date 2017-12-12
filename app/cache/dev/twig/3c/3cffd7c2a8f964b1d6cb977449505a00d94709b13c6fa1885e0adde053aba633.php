@@ -8,7 +8,7 @@ class __TwigTemplate_937b184a43efe8ccb3dd11f3be290970fd147ef81dcf15e3cd861664b2c
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "@CookerCooking/Cook/contact.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "@CookerCooking/Cook/contact.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,44 +17,44 @@ class __TwigTemplate_937b184a43efe8ccb3dd11f3be290970fd147ef81dcf15e3cd861664b2c
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_72baf80b80e8e6255e1085e7a912de206e0437d1a9aa358d22d8843e94eecb3c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_72baf80b80e8e6255e1085e7a912de206e0437d1a9aa358d22d8843e94eecb3c->enter($__internal_72baf80b80e8e6255e1085e7a912de206e0437d1a9aa358d22d8843e94eecb3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/contact.html.twig"));
+        $__internal_6809e2cc2e97b78b178f7ef51c36bd8cb2c51bc4e7bb1871b5618a289f5e3faf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6809e2cc2e97b78b178f7ef51c36bd8cb2c51bc4e7bb1871b5618a289f5e3faf->enter($__internal_6809e2cc2e97b78b178f7ef51c36bd8cb2c51bc4e7bb1871b5618a289f5e3faf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/contact.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_72baf80b80e8e6255e1085e7a912de206e0437d1a9aa358d22d8843e94eecb3c->leave($__internal_72baf80b80e8e6255e1085e7a912de206e0437d1a9aa358d22d8843e94eecb3c_prof);
+        $__internal_6809e2cc2e97b78b178f7ef51c36bd8cb2c51bc4e7bb1871b5618a289f5e3faf->leave($__internal_6809e2cc2e97b78b178f7ef51c36bd8cb2c51bc4e7bb1871b5618a289f5e3faf_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_327297be712c3b95cb246af1aae393c0a480d8e2e03105758030953138cfed9e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_327297be712c3b95cb246af1aae393c0a480d8e2e03105758030953138cfed9e->enter($__internal_327297be712c3b95cb246af1aae393c0a480d8e2e03105758030953138cfed9e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c5b40972c0a021d8bf750cdadf7e05c944aa182ec33012c02d2a83e644641a03 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5b40972c0a021d8bf750cdadf7e05c944aa182ec33012c02d2a83e644641a03->enter($__internal_c5b40972c0a021d8bf750cdadf7e05c944aa182ec33012c02d2a83e644641a03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Contacto";
         
-        $__internal_327297be712c3b95cb246af1aae393c0a480d8e2e03105758030953138cfed9e->leave($__internal_327297be712c3b95cb246af1aae393c0a480d8e2e03105758030953138cfed9e_prof);
+        $__internal_c5b40972c0a021d8bf750cdadf7e05c944aa182ec33012c02d2a83e644641a03->leave($__internal_c5b40972c0a021d8bf750cdadf7e05c944aa182ec33012c02d2a83e644641a03_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e527697501a0aaec902a819c07da3b0836d7d104019ae2671c5228c5ddaabd63 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e527697501a0aaec902a819c07da3b0836d7d104019ae2671c5228c5ddaabd63->enter($__internal_e527697501a0aaec902a819c07da3b0836d7d104019ae2671c5228c5ddaabd63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c84d3a0d6c4878f9c4e3ef508b63b4740699b7dd98028c8becfc2cc2f2db25c8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c84d3a0d6c4878f9c4e3ef508b63b4740699b7dd98028c8becfc2cc2f2db25c8->enter($__internal_c84d3a0d6c4878f9c4e3ef508b63b4740699b7dd98028c8becfc2cc2f2db25c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <header>
         <h1>Contacta conmigo</h1>
     </header>
 
-<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\" enctype=\"text/plain\">
   <fieldset>
     <h4>Nombre</h4>
     <input type=\"text\" name=\"nombre\">
@@ -73,7 +73,7 @@ class __TwigTemplate_937b184a43efe8ccb3dd11f3be290970fd147ef81dcf15e3cd861664b2c
 </form>
 ";
         
-        $__internal_e527697501a0aaec902a819c07da3b0836d7d104019ae2671c5228c5ddaabd63->leave($__internal_e527697501a0aaec902a819c07da3b0836d7d104019ae2671c5228c5ddaabd63_prof);
+        $__internal_c84d3a0d6c4878f9c4e3ef508b63b4740699b7dd98028c8becfc2cc2f2db25c8->leave($__internal_c84d3a0d6c4878f9c4e3ef508b63b4740699b7dd98028c8becfc2cc2f2db25c8_prof);
 
     }
 
@@ -103,7 +103,7 @@ class __TwigTemplate_937b184a43efe8ccb3dd11f3be290970fd147ef81dcf15e3cd861664b2c
     public function getSourceContext()
     {
         return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Cook/contact.html.twig #}
-{% extends 'CookerCookingBundle::layout.html.twig' %}
+{% extends 'CookerCookingBundle::sidebar.html.twig' %}
 
 {% block title %}Contacto{% endblock%}
 
@@ -112,7 +112,7 @@ class __TwigTemplate_937b184a43efe8ccb3dd11f3be290970fd147ef81dcf15e3cd861664b2c
         <h1>Contacta conmigo</h1>
     </header>
 
-<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\" enctype=\"text/plain\">
   <fieldset>
     <h4>Nombre</h4>
     <input type=\"text\" name=\"nombre\">

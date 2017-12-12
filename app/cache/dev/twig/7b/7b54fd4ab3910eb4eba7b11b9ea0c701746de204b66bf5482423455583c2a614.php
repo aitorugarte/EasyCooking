@@ -8,7 +8,7 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "CookerCookingBundle:Cook:recetas.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "CookerCookingBundle:Cook:recetas.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,37 +17,37 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1da8e680b48425c567d180615597e3eb80a3e3fffd43a0adf4ada5220919a0e9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1da8e680b48425c567d180615597e3eb80a3e3fffd43a0adf4ada5220919a0e9->enter($__internal_1da8e680b48425c567d180615597e3eb80a3e3fffd43a0adf4ada5220919a0e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
+        $__internal_5f8c29bce22c978cc9985e5fd7770a86db6ff0995df2df78507b7c80ff14c59a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5f8c29bce22c978cc9985e5fd7770a86db6ff0995df2df78507b7c80ff14c59a->enter($__internal_5f8c29bce22c978cc9985e5fd7770a86db6ff0995df2df78507b7c80ff14c59a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:recetas.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1da8e680b48425c567d180615597e3eb80a3e3fffd43a0adf4ada5220919a0e9->leave($__internal_1da8e680b48425c567d180615597e3eb80a3e3fffd43a0adf4ada5220919a0e9_prof);
+        $__internal_5f8c29bce22c978cc9985e5fd7770a86db6ff0995df2df78507b7c80ff14c59a->leave($__internal_5f8c29bce22c978cc9985e5fd7770a86db6ff0995df2df78507b7c80ff14c59a_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4c4eff9ccf02e8823f03d2508b7a10ba20c844029a0cf944215065b75e4bd9f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4c4eff9ccf02e8823f03d2508b7a10ba20c844029a0cf944215065b75e4bd9f5->enter($__internal_4c4eff9ccf02e8823f03d2508b7a10ba20c844029a0cf944215065b75e4bd9f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_77e84aaa1d02a6303ad8a3c5b3fce2198e25b56af56abea83c4f81bc7b82a598 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77e84aaa1d02a6303ad8a3c5b3fce2198e25b56af56abea83c4f81bc7b82a598->enter($__internal_77e84aaa1d02a6303ad8a3c5b3fce2198e25b56af56abea83c4f81bc7b82a598_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de Recetas";
         
-        $__internal_4c4eff9ccf02e8823f03d2508b7a10ba20c844029a0cf944215065b75e4bd9f5->leave($__internal_4c4eff9ccf02e8823f03d2508b7a10ba20c844029a0cf944215065b75e4bd9f5_prof);
+        $__internal_77e84aaa1d02a6303ad8a3c5b3fce2198e25b56af56abea83c4f81bc7b82a598->leave($__internal_77e84aaa1d02a6303ad8a3c5b3fce2198e25b56af56abea83c4f81bc7b82a598_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_5493862ec0a2625c6c706e424557961155ccd4caa623c90f4d2713cff5c8546f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5493862ec0a2625c6c706e424557961155ccd4caa623c90f4d2713cff5c8546f->enter($__internal_5493862ec0a2625c6c706e424557961155ccd4caa623c90f4d2713cff5c8546f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_862eaa3a386934e33ee21fa8c534a4cc8fdf64c165d4fa9fc2dbca35f943dc0a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_862eaa3a386934e33ee21fa8c534a4cc8fdf64c165d4fa9fc2dbca35f943dc0a->enter($__internal_862eaa3a386934e33ee21fa8c534a4cc8fdf64c165d4fa9fc2dbca35f943dc0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -61,7 +61,7 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 10
             echo "
-\t<article style=\"margin-right:20px; margin-top:20px;\">
+\t<article>
 \t <li class=\"elemento\">
 \t\t<header>
 \t\t\t<h3><a href=\"";
@@ -110,7 +110,7 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
 \t
 ";
         
-        $__internal_5493862ec0a2625c6c706e424557961155ccd4caa623c90f4d2713cff5c8546f->leave($__internal_5493862ec0a2625c6c706e424557961155ccd4caa623c90f4d2713cff5c8546f_prof);
+        $__internal_862eaa3a386934e33ee21fa8c534a4cc8fdf64c165d4fa9fc2dbca35f943dc0a->leave($__internal_862eaa3a386934e33ee21fa8c534a4cc8fdf64c165d4fa9fc2dbca35f943dc0a_prof);
 
     }
 
@@ -140,7 +140,7 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
     public function getSourceContext()
     {
         return new Twig_Source("{# src/Cooker/CookingBundle/Resources/views/Cook/recetas.html.twig #}
-{% extends 'CookerCookingBundle::layout.html.twig' %}
+{% extends 'CookerCookingBundle::sidebar.html.twig' %}
 {% block title %}Lista de Recetas{% endblock %}
 
 {% block body %}
@@ -149,7 +149,7 @@ class __TwigTemplate_53951b4c438be60568fb857e26b8ddf7c41f21a666464562953c4e3af81
  \t<section class=\"ib-container\" id=\"ib-container\">
 \t{% for receta in recetas %}
 
-\t<article style=\"margin-right:20px; margin-top:20px;\">
+\t<article>
 \t <li class=\"elemento\">
 \t\t<header>
 \t\t\t<h3><a href=\"{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}\">{{ receta.nombre }}</a></h3>

@@ -15,8 +15,8 @@ class __TwigTemplate_21209b456b43ddb1974c928543cd8c23f10566173eb5a7e76a0b9e4cfed
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2136ba8e82bc46c4a3364db36caeae326834cc537372eeb6a4162f42d1018113 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2136ba8e82bc46c4a3364db36caeae326834cc537372eeb6a4162f42d1018113->enter($__internal_2136ba8e82bc46c4a3364db36caeae326834cc537372eeb6a4162f42d1018113_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:data_collector:icon.svg.twig"));
+        $__internal_3fe304e1f358f0b6a3a44e39f663427bad08b716473528d69e4061f37de01fc7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3fe304e1f358f0b6a3a44e39f663427bad08b716473528d69e4061f37de01fc7->enter($__internal_3fe304e1f358f0b6a3a44e39f663427bad08b716473528d69e4061f37de01fc7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:data_collector:icon.svg.twig"));
 
         // line 1
         echo "<svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" height=\"";
@@ -31,7 +31,7 @@ class __TwigTemplate_21209b456b43ddb1974c928543cd8c23f10566173eb5a7e76a0b9e4cfed
 </svg>
 ";
         
-        $__internal_2136ba8e82bc46c4a3364db36caeae326834cc537372eeb6a4162f42d1018113->leave($__internal_2136ba8e82bc46c4a3364db36caeae326834cc537372eeb6a4162f42d1018113_prof);
+        $__internal_3fe304e1f358f0b6a3a44e39f663427bad08b716473528d69e4061f37de01fc7->leave($__internal_3fe304e1f358f0b6a3a44e39f663427bad08b716473528d69e4061f37de01fc7_prof);
 
     }
 

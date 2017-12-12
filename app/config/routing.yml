@@ -1,6 +1,6 @@
 cooker_cook:
     resource: "@CookerCookingBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /{_locale}
 
 cooker_admin:
     resource: "@CookerAdminBundle/Resources/config/routing.yml"
@@ -10,23 +10,3 @@ easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
     prefix:   /admin/controlpanel
-
-cooker_cook_principal:
-    path:  /
-    defaults: { _controller: CookerCookingBundle:Cook:principal }
-
-cooker_cook_recetas:
-    path:  /recetas
-    defaults: { _controller: CookerCookingBundle:Cook:recetas }
-
-cooker_cook_platos:
-    path:  /platos
-    defaults: { _controller: CookerCookingBundle:Cook:platos }
-
-cooker_cook_ingredientes:
-    path:  /ingredientes
-    defaults: { _controller: CookerCookingBundle:Cook:ingredientes }
-
-cooker_cook_contact:
-    path:  /contact
-    defaults: { _controller: CookerCookingBundle:Cook:contact }
