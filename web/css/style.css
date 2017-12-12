@@ -75,6 +75,11 @@ form {
     margin: 0;
 }
 
+a.entrar {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 
 #main, #logo, #menubar, #site_content, #footer {
     margin-left: auto;
