@@ -8,7 +8,7 @@
 	{% for plato in platos %}
 	{% set tipo = plato.nombre %}
 
-	<h1>Recetas para el tipo: {{ plato.nombre }}</h1>
+	<h2>Recetas para el tipo: {{ plato.nombre }}</h2>
 	<ul>
 	{% for receta in recetas if tipo == receta.tipo_plato.nombre %}
 

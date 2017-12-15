@@ -22,32 +22,32 @@ class __TwigTemplate_3f1e2c58ebf8cdb0fe8d884c95a63388d1fa6e31881a91512a298abf469
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a7855de01c15e75b286bb9e5355d9fa3498413c3fd262258d72c1405f8e0a7d9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a7855de01c15e75b286bb9e5355d9fa3498413c3fd262258d72c1405f8e0a7d9->enter($__internal_a7855de01c15e75b286bb9e5355d9fa3498413c3fd262258d72c1405f8e0a7d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:platos.html.twig"));
+        $__internal_c1e3a37c185d6714e411216ad6b75f74688ec48ca123509c03eaaef77c4cd0c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c1e3a37c185d6714e411216ad6b75f74688ec48ca123509c03eaaef77c4cd0c0->enter($__internal_c1e3a37c185d6714e411216ad6b75f74688ec48ca123509c03eaaef77c4cd0c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:platos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a7855de01c15e75b286bb9e5355d9fa3498413c3fd262258d72c1405f8e0a7d9->leave($__internal_a7855de01c15e75b286bb9e5355d9fa3498413c3fd262258d72c1405f8e0a7d9_prof);
+        $__internal_c1e3a37c185d6714e411216ad6b75f74688ec48ca123509c03eaaef77c4cd0c0->leave($__internal_c1e3a37c185d6714e411216ad6b75f74688ec48ca123509c03eaaef77c4cd0c0_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_c9d8fb6ec8efd59213d4db9fce13934e632156f9da42913f5518b3ce8e6d0fbc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c9d8fb6ec8efd59213d4db9fce13934e632156f9da42913f5518b3ce8e6d0fbc->enter($__internal_c9d8fb6ec8efd59213d4db9fce13934e632156f9da42913f5518b3ce8e6d0fbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8f796c8f7122518766576ec75aa4f5f1b92ed80da74d685d2b42751b231993a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8f796c8f7122518766576ec75aa4f5f1b92ed80da74d685d2b42751b231993a2->enter($__internal_8f796c8f7122518766576ec75aa4f5f1b92ed80da74d685d2b42751b231993a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Tipos";
         
-        $__internal_c9d8fb6ec8efd59213d4db9fce13934e632156f9da42913f5518b3ce8e6d0fbc->leave($__internal_c9d8fb6ec8efd59213d4db9fce13934e632156f9da42913f5518b3ce8e6d0fbc_prof);
+        $__internal_8f796c8f7122518766576ec75aa4f5f1b92ed80da74d685d2b42751b231993a2->leave($__internal_8f796c8f7122518766576ec75aa4f5f1b92ed80da74d685d2b42751b231993a2_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e44399c1a3702b809d266a57eb93ffe3020af4f1122879162ae9b2e5ecda7f06 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e44399c1a3702b809d266a57eb93ffe3020af4f1122879162ae9b2e5ecda7f06->enter($__internal_e44399c1a3702b809d266a57eb93ffe3020af4f1122879162ae9b2e5ecda7f06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c1f75a0c52a37aaf97825da195fb80a8aa853279b2a4d2a8667e51631f9f5ff6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c1f75a0c52a37aaf97825da195fb80a8aa853279b2a4d2a8667e51631f9f5ff6->enter($__internal_c1f75a0c52a37aaf97825da195fb80a8aa853279b2a4d2a8667e51631f9f5ff6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t
@@ -62,10 +62,10 @@ class __TwigTemplate_3f1e2c58ebf8cdb0fe8d884c95a63388d1fa6e31881a91512a298abf469
             $context["tipo"] = $this->getAttribute($context["plato"], "nombre", array());
             // line 10
             echo "
-\t<h1>Recetas para el tipo: ";
+\t<h2>Recetas para el tipo: ";
             // line 11
             echo twig_escape_filter($this->env, $this->getAttribute($context["plato"], "nombre", array()), "html", null, true);
-            echo "</h1>
+            echo "</h2>
 \t<ul>
 \t";
             // line 13
@@ -100,7 +100,7 @@ class __TwigTemplate_3f1e2c58ebf8cdb0fe8d884c95a63388d1fa6e31881a91512a298abf469
 
 ";
         
-        $__internal_e44399c1a3702b809d266a57eb93ffe3020af4f1122879162ae9b2e5ecda7f06->leave($__internal_e44399c1a3702b809d266a57eb93ffe3020af4f1122879162ae9b2e5ecda7f06_prof);
+        $__internal_c1f75a0c52a37aaf97825da195fb80a8aa853279b2a4d2a8667e51631f9f5ff6->leave($__internal_c1f75a0c52a37aaf97825da195fb80a8aa853279b2a4d2a8667e51631f9f5ff6_prof);
 
     }
 
@@ -139,7 +139,7 @@ class __TwigTemplate_3f1e2c58ebf8cdb0fe8d884c95a63388d1fa6e31881a91512a298abf469
 \t{% for plato in platos %}
 \t{% set tipo = plato.nombre %}
 
-\t<h1>Recetas para el tipo: {{ plato.nombre }}</h1>
+\t<h2>Recetas para el tipo: {{ plato.nombre }}</h2>
 \t<ul>
 \t{% for receta in recetas if tipo == receta.tipo_plato.nombre %}
 

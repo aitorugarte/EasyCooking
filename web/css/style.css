@@ -291,6 +291,12 @@ ul#menu {
     text-align: center;
 }
 
+article {
+    border: 1px solid black;
+    float: left;
+    height: 281px;
+    text-align: center;
+}
 .ib-container {
     margin-left: 5px;
 }
