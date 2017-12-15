@@ -1,14 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\config",
+    "\\app\\Resources",
     "\\app\\Resources\\views",
     "\\src",
     "\\src\\Cooker",
     "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Controller"
+    "\\src\\Cooker\\CookingBundle\\Resources",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook",
+    "\\web",
+    "\\web\\css"
   ],
-  "SelectedNode": "\\app\\config\\routing.yml",
+  "SelectedNode": "\\web\\css\\style.css",
   "PreviewInSolutionExplorer": false
 }
