@@ -14,9 +14,9 @@
 	<div id="main">
 
 	{% if is_granted('ROLE_ADMIN') %}
-			<a href="{{ path('cooker_admin_logout')}}" class="entrar">Salir</a>
+			<a href="{{ path('cooker_admin_logout')}}" class="entrar">{% trans %}Salir{% endtrans %}</a>
 		{% else %} 
-			<a href="{{ path('cooker_admin_login')}}" class="entrar">Iniciar sesi&oacuten</a>
+			<a href="{{ path('cooker_admin_login')}}" class="entrar">{% trans %}Iniciar sesi&oacuten{% endtrans %}</a>
 		{% endif %}
 
 		<div id="header">
@@ -26,7 +26,7 @@
 					<h1><a href="{{ path('cooker_cook_principal')}}">Easy<span class="logo_colour">_cooking</span></a></h1>
 					 <div id="letter-container" class="letter-container">
 					<h2>
-					<a href="#">"El amor puede esperar, el hambre no" Monkey D. Luffy</a>
+					<a href="#">{% trans %}"El amor puede esperar, el hambre no" Monkey D. Luffy{% endtrans %}</a>
 					</h2>
 					</div>
 				</div>
@@ -38,10 +38,10 @@
 			<div id="menubar">
 				<ul id="menu">
 					<li><div><a href="{{ path('cooker_cook_principal')}}">{% trans %}Inicio{% endtrans %}</a></div></li>
-					<li><div><a href="{{ path('cooker_cook_recetas')}}">Recetas</a></div></li>
-					<li><div><a href="{{ path('cooker_cook_platos')}}">Platos</a></div></li>
-					<li><div><a href="{{ path('cooker_cook_ingredientes')}}">Ingredientes</a></div></li>
-					<li><div><a href="{{ path('cooker_cook_contact')}}">Contacto</a></div></li>
+					<li><div><a href="{{ path('cooker_cook_recetas')}}">{% trans %}Recetas{% endtrans %}</a></div></li>
+					<li><div><a href="{{ path('cooker_cook_platos')}}">{% trans %}Platos{% endtrans %}</a></div></li>
+					<li><div><a href="{{ path('cooker_cook_ingredientes')}}">{% trans %}Ingredientes{% endtrans %}</a></div></li>
+					<li><div><a href="{{ path('cooker_cook_contact')}}">{% trans %}Contacto{% endtrans %}</a></div></li>
 				</ul>
 			</div> 
 	
@@ -65,7 +65,7 @@
 		<!-- Pie de página -->
 		<div id="footer">
 			{% block footer %}
-			Cocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web
+			{% trans %}Cocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web{% endtrans %}
 			{% endblock %}
 		</div>
 

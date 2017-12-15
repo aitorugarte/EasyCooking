@@ -21,28 +21,37 @@ class __TwigTemplate_15bfd298ae9b5284d349120deee51724b2ba021fdd0eabef6476e8bd7d9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7aadb31e162a14db746a0841acd75cf2bab56f4a09f5a1df7fc56ebed43aa8d7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7aadb31e162a14db746a0841acd75cf2bab56f4a09f5a1df7fc56ebed43aa8d7->enter($__internal_7aadb31e162a14db746a0841acd75cf2bab56f4a09f5a1df7fc56ebed43aa8d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle::sidebar.html.twig"));
+        $__internal_3faace1a19e0069604cf1a99e25248d0dcdb5b3412a29606a631297b18315ce7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3faace1a19e0069604cf1a99e25248d0dcdb5b3412a29606a631297b18315ce7->enter($__internal_3faace1a19e0069604cf1a99e25248d0dcdb5b3412a29606a631297b18315ce7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle::sidebar.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7aadb31e162a14db746a0841acd75cf2bab56f4a09f5a1df7fc56ebed43aa8d7->leave($__internal_7aadb31e162a14db746a0841acd75cf2bab56f4a09f5a1df7fc56ebed43aa8d7_prof);
+        $__internal_3faace1a19e0069604cf1a99e25248d0dcdb5b3412a29606a631297b18315ce7->leave($__internal_3faace1a19e0069604cf1a99e25248d0dcdb5b3412a29606a631297b18315ce7_prof);
 
     }
 
     // line 4
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_d3f497d3a003a58e402fb55f3448c922ffb1636559b447ebc9e30bd257b72020 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d3f497d3a003a58e402fb55f3448c922ffb1636559b447ebc9e30bd257b72020->enter($__internal_d3f497d3a003a58e402fb55f3448c922ffb1636559b447ebc9e30bd257b72020_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_725428d4a3423439f84a53bfacf368f7308858391f6f5287867a183e0253fb46 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_725428d4a3423439f84a53bfacf368f7308858391f6f5287867a183e0253fb46->enter($__internal_725428d4a3423439f84a53bfacf368f7308858391f6f5287867a183e0253fb46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 5
         echo "
-    B&uacutesqueda avanzada:
-\t<form class=\"search\">
+   ";
+        // line 6
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("B&uacutesqueda avanzada:", array(), "messages");
+        // line 7
+        echo "\t<form class=\"search\">
 
-\t<input type=\"search\" name=\"Search\" id=\"search\" placeholder=\"Introduzca texto\">
-\t<input type=\"button\" value=\"Buscar\">
+\t<input type=\"search\" name=\"Search\" id=\"search\" placeholder=\"";
+        // line 9
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Introduzca texto", array(), "messages");
+        echo "\">
+\t<input type=\"button\" value=\"";
+        // line 10
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Buscar", array(), "messages");
+        echo "\">
 
 \t</form>
 
@@ -54,7 +63,7 @@ class __TwigTemplate_15bfd298ae9b5284d349120deee51724b2ba021fdd0eabef6476e8bd7d9
 
 ";
         
-        $__internal_d3f497d3a003a58e402fb55f3448c922ffb1636559b447ebc9e30bd257b72020->leave($__internal_d3f497d3a003a58e402fb55f3448c922ffb1636559b447ebc9e30bd257b72020_prof);
+        $__internal_725428d4a3423439f84a53bfacf368f7308858391f6f5287867a183e0253fb46->leave($__internal_725428d4a3423439f84a53bfacf368f7308858391f6f5287867a183e0253fb46_prof);
 
     }
 
@@ -70,7 +79,7 @@ class __TwigTemplate_15bfd298ae9b5284d349120deee51724b2ba021fdd0eabef6476e8bd7d9
 
     public function getDebugInfo()
     {
-        return array (  40 => 5,  34 => 4,  11 => 2,);
+        return array (  53 => 10,  49 => 9,  45 => 7,  43 => 6,  40 => 5,  34 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -88,11 +97,11 @@ class __TwigTemplate_15bfd298ae9b5284d349120deee51724b2ba021fdd0eabef6476e8bd7d9
 
 {% block sidebar %}
 
-    B&uacutesqueda avanzada:
+   {% trans %} B&uacutesqueda avanzada:{% endtrans %}
 \t<form class=\"search\">
 
-\t<input type=\"search\" name=\"Search\" id=\"search\" placeholder=\"Introduzca texto\">
-\t<input type=\"button\" value=\"Buscar\">
+\t<input type=\"search\" name=\"Search\" id=\"search\" placeholder=\"{% trans %}Introduzca texto{% endtrans %}\">
+\t<input type=\"button\" value=\"{% trans %}Buscar{% endtrans %}\">
 
 \t</form>
 

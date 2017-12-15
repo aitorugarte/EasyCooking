@@ -402,10 +402,7 @@ h3.relacionadas {
             border-bottom-width: 0px;
             display: block;
             -webkit-mask: url(../css/images/mask.png) repeat;
-            -o-mask: url(../css/images/mask.png) repeat;
-            -moz-mask: url(../css/images/mask.png) repeat;
-            -ms-mask: url(../css/images/mask.png) repeat;
-            mask: url(../css/images/mask.png) repeat;
+          
         }
 
             .letter-container h2 a span {
@@ -825,63 +822,5 @@ h3.relacionadas {
     }
 }
 
-@-moz-keyframes sharpen {
-    0% {
-        opacity: 0;
-        text-shadow: 0px 0px 100px #fff;
-        color: transparent;
-    }
 
-    90% {
-        opacity: 0.9;
-        text-shadow: 0px 0px 10px #fff;
-        color: transparent;
-    }
-
-    100% {
-        color: #fff;
-        opacity: 1;
-        text-shadow: 0px 0px 2px #fff, 1px 1px 4px rgba(0,0,0,0.7);
-    }
-}
-
-@-webkit-keyframes sharpen {
-    0% {
-        opacity: 0;
-        text-shadow: 0px 0px 100px #fff;
-        color: transparent;
-    }
-
-    90% {
-        opacity: 0.9;
-        text-shadow: 0px 0px 10px #fff;
-        color: transparent;
-    }
-
-    100% {
-        color: #fff;
-        opacity: 1;
-        text-shadow: 0px 0px 2px #fff, 1px 1px 4px rgba(0,0,0,0.7);
-    }
-}
-
-@-ms-keyframes sharpen {
-    0% {
-        opacity: 0;
-        text-shadow: 0px 0px 100px #fff;
-        color: transparent;
-    }
-
-    90% {
-        opacity: 0.9;
-        text-shadow: 0px 0px 10px #fff;
-        color: transparent;
-    }
-
-    100% {
-        color: #fff;
-        opacity: 1;
-        text-shadow: 0px 0px 2px #fff, 1px 1px 4px rgba(0,0,0,0.7);
-    }
-}
 /* Fin subtítulo */
