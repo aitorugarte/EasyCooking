@@ -3,7 +3,7 @@
 {% block title %}{{ ingrediente.nombre }}{% endblock %}
 
 {% block body %}
-	<h1>Recetas para el ingrediente: {{ ingrediente.nombre }}</h1>
+	<h1>{% trans %}Recetas para el ingrediente:{% endtrans %} {{ ingrediente.nombre }}</h1>
 	
 	<ul>
 	{% for receta in recetas %}

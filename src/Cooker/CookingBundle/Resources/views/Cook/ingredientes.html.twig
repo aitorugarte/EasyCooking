@@ -1,10 +1,10 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/ingredientes.html.twig #}
 {% extends 'CookerCookingBundle::sidebar.html.twig' %}
-{% block title %}Lista de Ingredientes{% endblock %}
+{% block title %}{% trans %}Lista de Ingredientes{% endtrans %}{% endblock %}
 
 {% block body %}
 
-<h2>&iquest;Busca alg&uacute;n ingrediente en particular?</h2>
+<h2>{% trans %}&iquest;Busca alg&uacute;n ingrediente en particular?{% endtrans %}</h2>
 <br>
 <ul class="lista2">
 	{% for ingrediente in ingredientes %}

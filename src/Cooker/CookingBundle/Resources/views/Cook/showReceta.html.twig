@@ -1,6 +1,6 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/showReceta.html.twig #}
 {% extends 'CookerCookingBundle::sidebar.html.twig' %}
-{% block title %}Detalles de la receta{% endblock %}
+{% block title %}{% trans %}Detalles de la receta{% endtrans %}{% endblock %}
 
 {% block body %}
 
@@ -13,13 +13,13 @@
 	</div>
 	<img class="imgGran" src="{{receta.imagen}}" alt="{{receta.nombre}}" />
 
-	<h2>Ingredientes</h2>
+	<h2>{% trans %}Ingredientes{% endtrans %}</h2>
 	<ul class="ingredientes">
 	{% for ingrediente in ingredientes %}
 	<li><a href="{{ path('cooker_cook_showIngr', { 'id': ingrediente.id }) }}">{{ ingrediente.nombre }}</a></li>
 	 {% endfor %}
 
-	<h2>Preparación</h2>
+	<h2>{% trans %}Preparación{% endtrans %}</h2>
 	<div class="body">
 		{{ receta.detalles }}
 	</div>
@@ -27,13 +27,13 @@
 	<br><br><br>
 
 	<section class="previous-comments">
-		<h3>Comentarios</h3>
+		<h3>{% trans %}Comentarios{% endtrans %}</h3>
 		{% include 'CookerCookingBundle:Comment:list.html.twig' with { 'comentarios': comentarios } %}
 	</section>
 
 	<section class="coments" id="coments">
 	
-	<h3 class="aniadirCom">Añadir comentario</h3>
+	<h3 class="aniadirCom">{% trans %}Añadir comentario{% endtrans %}</h3>
 		{{ render(controller( 'CookerCookingBundle:Comentario:new', { 'receta_id': receta.id } )) }}
 	</section>
 	
@@ -43,7 +43,7 @@
 	<link href="{{ asset('css/comentarios.css') }}" type="text/css" rel="stylesheet" />
 	{% endblock %}
 
-	<h3 class="relacionadas">Recetas relacionadas</h3>
+	<h3 class="relacionadas">{% trans %}Recetas relacionadas{% endtrans %}</h3>
 	
 	<ul class="listaRelacionadas">
 	{% set break = 0 %}

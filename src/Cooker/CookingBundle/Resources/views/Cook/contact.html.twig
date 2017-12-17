@@ -1,27 +1,27 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/contact.html.twig #}
 {% extends 'CookerCookingBundle::sidebar.html.twig' %}
 
-{% block title %}Contacto{% endblock%}
+{% block title %}{% trans %}Contacto{% endtrans %}{% endblock%}
 
 {% block body %}
     <header>
-        <h1>Contacta conmigo</h1>
+        <h1>{% trans %}Contacta conmigo{% endtrans %}</h1>
     </header>
 
 <form action="mailto:aitorugarte@opendeusto.es" method="post" enctype="text/plain">
   <fieldset>
-    <h4>Nombre</h4>
+    <h4>{% trans %}Nombre{% endtrans %}</h4>
     <input type="text" name="nombre">
     
-   <h4>Correo</h4>
+   <h4>{% trans %}Correo{% endtrans %}</h4>
     <input type="text" name="correo">
   
-    <h4>Mensaje</h4>
+    <h4>{% trans %}Mensaje{% endtrans %}</h4>
     <input type="text" name="mensaje" size="50" style="height:50px">
   </fieldset>
 
      <div class="button">
-        <button type="submit" value="Send">Enviar</button>
+        <button type="submit" value="Send">{% trans %}Enviar{% endtrans %}</button>
     </div>
    
 </form>
