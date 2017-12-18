@@ -2531,7 +2531,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5a3672e5bc5b43.99912393</argument>
+            <argument>5a3807bbf3ada0.63143264</argument>
           </service>
         </argument>
       </argument>
@@ -2613,7 +2613,7 @@
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <call method="registerListener">
         <argument>secured_area</argument>
-        <argument>/admin/logout</argument>
+        <argument>/es/admin/logout</argument>
         <argument>logout</argument>
         <argument>_csrf_token</argument>
         <argument>null</argument>
@@ -2684,7 +2684,7 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin/login</argument>
+                      <argument>^/es/admin/login</argument>
                     </service>
                   </argument>
                   <argument type="collection">
@@ -2695,7 +2695,7 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin</argument>
+                      <argument>^/es/admin</argument>
                     </service>
                   </argument>
                   <argument type="collection">
@@ -2742,13 +2742,13 @@
                     <argument type="service" id="router" on-invalid="null"/>
                   </service>
                 </argument>
-                <argument>/</argument>
+                <argument>/es/</argument>
               </service>
             </argument>
             <argument type="collection">
               <argument key="csrf_parameter">_csrf_token</argument>
               <argument key="csrf_token_id">logout</argument>
-              <argument key="logout_path">/admin/logout</argument>
+              <argument key="logout_path">/es/admin/logout</argument>
             </argument>
             <call method="addHandler">
               <argument type="service">
@@ -2765,7 +2765,7 @@
                   <argument>secured_area</argument>
                   <argument type="collection">
                     <argument key="lifetime">3156000</argument>
-                    <argument key="path">/admin/login</argument>
+                    <argument key="path">/es/admin/login</argument>
                     <argument key="domain">null</argument>
                     <argument key="name">REMEMBERME</argument>
                     <argument key="secure">false</argument>
@@ -2807,8 +2807,8 @@
                 <argument type="collection"/>
                 <call method="setOptions">
                   <argument type="collection">
-                    <argument key="login_path">/admin/login</argument>
-                    <argument key="default_target_path">/</argument>
+                    <argument key="login_path">/es/admin/login</argument>
+                    <argument key="default_target_path">/es/</argument>
                     <argument key="always_use_default_target_path">true</argument>
                     <argument key="target_path_parameter">_target_path</argument>
                     <argument key="use_referer">false</argument>
@@ -2832,7 +2832,7 @@
                 <argument type="service" id="monolog.logger.security" on-invalid="null"/>
                 <call method="setOptions">
                   <argument type="collection">
-                    <argument key="login_path">/admin/login</argument>
+                    <argument key="login_path">/es/admin/login</argument>
                     <argument key="failure_path">null</argument>
                     <argument key="failure_forward">false</argument>
                     <argument key="failure_path_parameter">_failure_path</argument>
@@ -2841,7 +2841,7 @@
               </service>
             </argument>
             <argument type="collection">
-              <argument key="check_path">/admin/login_check</argument>
+              <argument key="check_path">/es/admin/login_check</argument>
               <argument key="use_forward">false</argument>
               <argument key="require_previous_session">true</argument>
               <argument key="username_parameter">_username</argument>
@@ -2863,7 +2863,7 @@
                   <argument>secured_area</argument>
                   <argument type="collection">
                     <argument key="lifetime">3156000</argument>
-                    <argument key="path">/admin/login</argument>
+                    <argument key="path">/es/admin/login</argument>
                     <argument key="domain">null</argument>
                     <argument key="name">REMEMBERME</argument>
                     <argument key="secure">false</argument>
@@ -2889,7 +2889,7 @@
                 <argument>secured_area</argument>
                 <argument type="collection">
                   <argument key="lifetime">3156000</argument>
-                  <argument key="path">/admin/login</argument>
+                  <argument key="path">/es/admin/login</argument>
                   <argument key="domain">null</argument>
                   <argument key="name">REMEMBERME</argument>
                   <argument key="secure">false</argument>
@@ -2914,7 +2914,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5a3672e5bc5b43.99912393</argument>
+            <argument>5a3807bbf3ada0.63143264</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2929,7 +2929,7 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin/login</argument>
+                      <argument>^/es/admin/login</argument>
                     </service>
                   </argument>
                   <argument type="collection">
@@ -2940,7 +2940,7 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin</argument>
+                      <argument>^/es/admin</argument>
                     </service>
                   </argument>
                   <argument type="collection">
@@ -2974,7 +2974,7 @@
                   <argument type="service" id="router" on-invalid="null"/>
                 </service>
               </argument>
-              <argument>/admin/login</argument>
+              <argument>/es/admin/login</argument>
               <argument>false</argument>
             </service>
           </argument>

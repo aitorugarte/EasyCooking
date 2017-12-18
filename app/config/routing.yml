@@ -4,9 +4,9 @@ cooker_cook:
 
 cooker_admin:
     resource: "@CookerAdminBundle/Resources/config/routing.yml"
-    prefix:   /admin
+    prefix:   /{_locale}/admin
 
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
-    prefix:   /admin/controlpanel
+    prefix:   /{_locale}/admin/controlpanel

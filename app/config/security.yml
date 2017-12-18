@@ -21,19 +21,19 @@ security:
             pattern: ^/
             anonymous: ~
             form_login:
-                login_path: /admin/login
-                check_path: /admin/login_check
-                default_target_path: /
+                login_path: /%locale%/admin/login
+                check_path: /%locale%/admin/login_check
+                default_target_path: /%locale%/
                 always_use_default_target_path: true
             remember_me:
                 key: "%secret%"
                 lifetime: 3156000
-                path: /admin/login
+                path: /%locale%/admin/login
                 domain: ~
             logout:
-                path: /admin/logout
-                target: /
+                path: /%locale%/admin/logout
+                target: /%locale%/
 
     access_control:
-        - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/%locale%/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/%locale%/admin, roles: ROLE_ADMIN }

@@ -155,49 +155,37 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_cooker_comentario_create:
 
-        if (0 === strpos($pathinfo, '/admin')) {
-            if (0 === strpos($pathinfo, '/admin/log')) {
-                if (0 === strpos($pathinfo, '/admin/login')) {
-                    // cooker_admin_login
-                    if ('/admin/login' === $pathinfo) {
-                        return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
-                    }
+        // cooker_admin_login
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/login$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_login')), array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',));
+        }
 
-                    // cooker_admin_login_check
-                    if ('/admin/login_check' === $pathinfo) {
-                        return array('_route' => 'cooker_admin_login_check');
-                    }
+        // cooker_admin_login_check
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/login_check$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_login_check')), array ());
+        }
 
-                }
+        // cooker_admin_logout
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/logout$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_logout')), array ());
+        }
 
-                // cooker_admin_logout
-                if ('/admin/logout' === $pathinfo) {
-                    return array('_route' => 'cooker_admin_logout');
-                }
-
+        // easyadmin
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/controlpanel/?$#s', $pathinfo, $matches)) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'easyadmin');
             }
 
-            if (0 === strpos($pathinfo, '/admin/controlpanel')) {
-                // easyadmin
-                if ('/admin/controlpanel' === rtrim($pathinfo, '/')) {
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'easyadmin');
-                    }
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'easyadmin')), array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',));
+        }
 
-                    return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
-                }
-
-                // admin
-                if ('/admin/controlpanel' === rtrim($pathinfo, '/')) {
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'admin');
-                    }
-
-                    return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
-                }
-
+        // admin
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/controlpanel/?$#s', $pathinfo, $matches)) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'admin');
             }
 
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin')), array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
