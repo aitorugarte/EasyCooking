@@ -12,10 +12,12 @@
 
 <body>
 	<div id="main">
+
 	<div>
-	<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'}))}}" class="entrar" style="float:left; margin-top:0px">ES</a>
-	<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'}))}}" class="entrar" style="float:left; margin-top:0px">EN</a>
+	<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'}))}}" class="idioma">ES</a>
+	<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'}))}}" class="idioma">EN</a>
 	</div>
+
 	{% if is_granted('ROLE_ADMIN') %}
 			<a href="{{ path('cooker_admin_logout')}}" class="entrar">{% trans %}Salir{% endtrans %}</a>
 		{% else %} 

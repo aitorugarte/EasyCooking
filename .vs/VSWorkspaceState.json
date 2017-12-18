@@ -2,15 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Resources",
-    "\\app\\Resources\\views",
     "\\src",
     "\\src\\Cooker",
-    "\\src\\Cooker\\CookingBundle",
-    "\\src\\Cooker\\CookingBundle\\Resources",
-    "\\src\\Cooker\\CookingBundle\\Resources\\translations",
-    "\\src\\Cooker\\CookingBundle\\Resources\\views"
+    "\\src\\Cooker\\AdminBundle",
+    "\\src\\Cooker\\AdminBundle\\Resources",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security",
+    "\\src\\Cooker\\CookingBundle"
   ],
-  "SelectedNode": "\\app\\Resources\\views\\base.html.twig",
+  "SelectedNode": "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security\\login.html.twig",
   "PreviewInSolutionExplorer": false
 }

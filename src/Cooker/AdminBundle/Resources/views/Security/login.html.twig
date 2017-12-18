@@ -1,7 +1,16 @@
-﻿{# src/Cooker/AdminBundle/Resources/views/Security/login.html.twig #}
+﻿<!DOCTYPE HTML>
+<html>
 
-<link href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
-<link href="{{ asset('https://getbootstrap.com/docs/4.0/examples/signin/signin.css') }}" type="text/css" rel="stylesheet" />
+<head>
+	<title>Iniciar sesión</title>
+	<meta name="description" content="website description" />
+	<meta name="keywords" content="website keywords, website keywords" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ asset('https://getbootstrap.com/docs/4.0/examples/signin/signin.css') }}" type="text/css" rel="stylesheet" />
+
+</head>
+
 
 {% if error %}
 	<div>{{ error.message }}</div>
@@ -9,7 +18,7 @@
 
 <div class="container">
 
-      <form class="form-signin" action="{{ path('cooker_admin_login_check') }}" method="post" class="login">
+      <form class="form-signin" action="{{ path('cooker_admin_login_check') }}" method="post">
         <h2 class="form-signin-heading">Iniciar sesión</h2>
 
         <label for="username" class="sr-only">Usuario</label>
@@ -27,4 +36,6 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       </form>
 
-    </div> <!-- /container -->
+    </div> 
+
+</html>

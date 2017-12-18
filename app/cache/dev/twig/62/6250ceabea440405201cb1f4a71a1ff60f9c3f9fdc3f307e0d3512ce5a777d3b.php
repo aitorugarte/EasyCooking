@@ -21,8 +21,8 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8faadce6c7d338e726c072a60725641b06b39eac96d6cf8f65ad8f9edd5ec39 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c8faadce6c7d338e726c072a60725641b06b39eac96d6cf8f65ad8f9edd5ec39->enter($__internal_c8faadce6c7d338e726c072a60725641b06b39eac96d6cf8f65ad8f9edd5ec39_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_28bc9503c718667553cd47daa0902a23730960fd2548d474d208afb902337383 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_28bc9503c718667553cd47daa0902a23730960fd2548d474d208afb902337383->enter($__internal_28bc9503c718667553cd47daa0902a23730960fd2548d474d208afb902337383_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE HTML>
@@ -45,20 +45,22 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 
 <body>
 \t<div id=\"main\">
+
 \t<div>
 \t<a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "es"))), "html", null, true);
-        echo "\" class=\"entrar\" style=\"float:left; margin-top:0px\">ES</a>
-\t<a href=\"";
         // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "es"))), "html", null, true);
+        echo "\" class=\"idioma\">ES</a>
+\t<a href=\"";
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "en"))), "html", null, true);
-        echo "\" class=\"entrar\" style=\"float:left; margin-top:0px\">EN</a>
+        echo "\" class=\"idioma\">EN</a>
 \t</div>
+
 \t";
-        // line 19
+        // line 21
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 20
+            // line 22
             echo "\t\t\t<a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_logout");
             echo "\" class=\"entrar\">";
@@ -66,30 +68,30 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
             echo "</a>
 \t\t";
         } else {
-            // line 21
+            // line 23
             echo " 
 \t\t\t<a href=\"";
-            // line 22
+            // line 24
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_login");
             echo "\" class=\"entrar\">";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Iniciar sesi&oacute;n", array(), "messages");
             echo "</a>
 \t\t";
         }
-        // line 24
+        // line 26
         echo "
 \t\t<div id=\"header\">
 \t\t\t<div id=\"logo\">
 
 \t\t\t\t<div id=\"logo_text\">
 \t\t\t\t\t<h1><a href=\"";
-        // line 29
+        // line 31
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
         echo "\">Easy<span class=\"logo_colour\">_cooking</span></a></h1>
 \t\t\t\t\t <div id=\"letter-container\" class=\"letter-container\">
 \t\t\t\t\t<h2>
 \t\t\t\t\t<a href=\"#\">";
-        // line 32
+        // line 34
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("\"El amor puede esperar, el hambre no\" Monkey D. Luffy", array(), "messages");
         echo "</a>
 \t\t\t\t\t</h2>
@@ -100,27 +102,27 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 \t\t\t
 \t\t\t<!-- Menú -->
 \t\t\t";
-        // line 40
+        // line 42
         $this->displayBlock('navigation', $context, $blocks);
-        // line 52
+        // line 54
         echo "\t\t</div>
 
 \t\t<div id=\"site_content\">
 \t\t\t<div class=\"sidebar\">
 \t\t\t\t<!-- Contenido lateral derecho -->
 \t\t\t\t";
-        // line 57
+        // line 59
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 58
+        // line 60
         echo "\t\t\t</div>
 
 \t\t\t<div id=\"content\">
 \t\t\t\t<!-- Contenido principal -->
 \t\t\t\t<section class=\"main-col\">
 \t\t\t\t\t";
-        // line 63
+        // line 65
         $this->displayBlock('body', $context, $blocks);
-        // line 64
+        // line 66
         echo "\t\t\t\t</section>
 \t\t\t</div>
 \t\t</div>
@@ -128,72 +130,72 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 \t\t<!-- Pie de página -->
 \t\t<div id=\"footer\">
 \t\t\t";
-        // line 70
+        // line 72
         $this->displayBlock('footer', $context, $blocks);
-        // line 73
+        // line 75
         echo "\t\t</div>
 
 \t</div>
 
 \t";
-        // line 77
+        // line 79
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 122
+        // line 124
         echo "</body>
 </html>
 ";
         
-        $__internal_c8faadce6c7d338e726c072a60725641b06b39eac96d6cf8f65ad8f9edd5ec39->leave($__internal_c8faadce6c7d338e726c072a60725641b06b39eac96d6cf8f65ad8f9edd5ec39_prof);
+        $__internal_28bc9503c718667553cd47daa0902a23730960fd2548d474d208afb902337383->leave($__internal_28bc9503c718667553cd47daa0902a23730960fd2548d474d208afb902337383_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_467878342b8924339a2d444b8896224544227a63fd8620fae28d61cce65f628f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_467878342b8924339a2d444b8896224544227a63fd8620fae28d61cce65f628f->enter($__internal_467878342b8924339a2d444b8896224544227a63fd8620fae28d61cce65f628f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_761760f661e2c22d66035aee92de891e7cc041e5441108d3a455df0b96028c4c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_761760f661e2c22d66035aee92de891e7cc041e5441108d3a455df0b96028c4c->enter($__internal_761760f661e2c22d66035aee92de891e7cc041e5441108d3a455df0b96028c4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "symblog";
         
-        $__internal_467878342b8924339a2d444b8896224544227a63fd8620fae28d61cce65f628f->leave($__internal_467878342b8924339a2d444b8896224544227a63fd8620fae28d61cce65f628f_prof);
+        $__internal_761760f661e2c22d66035aee92de891e7cc041e5441108d3a455df0b96028c4c->leave($__internal_761760f661e2c22d66035aee92de891e7cc041e5441108d3a455df0b96028c4c_prof);
 
     }
 
-    // line 40
+    // line 42
     public function block_navigation($context, array $blocks = array())
     {
-        $__internal_9a6a80c520dc3e91d2c0787bfec84a44b541d1438c55d270b9df16f77908f274 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9a6a80c520dc3e91d2c0787bfec84a44b541d1438c55d270b9df16f77908f274->enter($__internal_9a6a80c520dc3e91d2c0787bfec84a44b541d1438c55d270b9df16f77908f274_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navigation"));
+        $__internal_d8570f4ea7c1af86a97e55cc44ad1cb0d368002a46ddee807ff89e82142eeff9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d8570f4ea7c1af86a97e55cc44ad1cb0d368002a46ddee807ff89e82142eeff9->enter($__internal_d8570f4ea7c1af86a97e55cc44ad1cb0d368002a46ddee807ff89e82142eeff9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navigation"));
 
-        // line 41
+        // line 43
         echo "\t\t\t<div id=\"menubar\">
 \t\t\t\t<ul id=\"menu\">
 \t\t\t\t\t<li><div><a href=\"";
-        // line 43
+        // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Inicio", array(), "messages");
         echo "</a></div></li>
 \t\t\t\t\t<li><div><a href=\"";
-        // line 44
+        // line 46
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_recetas");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Recetas", array(), "messages");
         echo "</a></div></li>
 \t\t\t\t\t<li><div><a href=\"";
-        // line 45
+        // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_platos");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Platos", array(), "messages");
         echo "</a></div></li>
 \t\t\t\t\t<li><div><a href=\"";
-        // line 46
+        // line 48
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_ingredientes");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Ingredientes", array(), "messages");
         echo "</a></div></li>
 \t\t\t\t\t<li><div><a href=\"";
-        // line 47
+        // line 49
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_contact");
         echo "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Contacto", array(), "messages");
@@ -203,62 +205,62 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 \t
 \t\t\t";
         
-        $__internal_9a6a80c520dc3e91d2c0787bfec84a44b541d1438c55d270b9df16f77908f274->leave($__internal_9a6a80c520dc3e91d2c0787bfec84a44b541d1438c55d270b9df16f77908f274_prof);
+        $__internal_d8570f4ea7c1af86a97e55cc44ad1cb0d368002a46ddee807ff89e82142eeff9->leave($__internal_d8570f4ea7c1af86a97e55cc44ad1cb0d368002a46ddee807ff89e82142eeff9_prof);
 
     }
 
-    // line 57
+    // line 59
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_abada2632e52c15c6ea480d0158c3641cb2ffdbbe5debd774e2dce48b65982cb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_abada2632e52c15c6ea480d0158c3641cb2ffdbbe5debd774e2dce48b65982cb->enter($__internal_abada2632e52c15c6ea480d0158c3641cb2ffdbbe5debd774e2dce48b65982cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_2976053e35455c21e18dcbbabb5293ca59d76d5a1ef89108ee2a2ff8de61fe70 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2976053e35455c21e18dcbbabb5293ca59d76d5a1ef89108ee2a2ff8de61fe70->enter($__internal_2976053e35455c21e18dcbbabb5293ca59d76d5a1ef89108ee2a2ff8de61fe70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         
-        $__internal_abada2632e52c15c6ea480d0158c3641cb2ffdbbe5debd774e2dce48b65982cb->leave($__internal_abada2632e52c15c6ea480d0158c3641cb2ffdbbe5debd774e2dce48b65982cb_prof);
+        $__internal_2976053e35455c21e18dcbbabb5293ca59d76d5a1ef89108ee2a2ff8de61fe70->leave($__internal_2976053e35455c21e18dcbbabb5293ca59d76d5a1ef89108ee2a2ff8de61fe70_prof);
 
     }
 
-    // line 63
+    // line 65
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c322a834a9a917fa79783dab78741e73ddf35a3885c862934bb6019c9a38522e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c322a834a9a917fa79783dab78741e73ddf35a3885c862934bb6019c9a38522e->enter($__internal_c322a834a9a917fa79783dab78741e73ddf35a3885c862934bb6019c9a38522e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1e64bb428c4f6473423735845801f2142e35a4aea85892fd0f2149a9e45e8ac7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1e64bb428c4f6473423735845801f2142e35a4aea85892fd0f2149a9e45e8ac7->enter($__internal_1e64bb428c4f6473423735845801f2142e35a4aea85892fd0f2149a9e45e8ac7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_c322a834a9a917fa79783dab78741e73ddf35a3885c862934bb6019c9a38522e->leave($__internal_c322a834a9a917fa79783dab78741e73ddf35a3885c862934bb6019c9a38522e_prof);
+        $__internal_1e64bb428c4f6473423735845801f2142e35a4aea85892fd0f2149a9e45e8ac7->leave($__internal_1e64bb428c4f6473423735845801f2142e35a4aea85892fd0f2149a9e45e8ac7_prof);
 
     }
 
-    // line 70
+    // line 72
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_b17abf0a1578198ab18b35bf274c921697ea4f70d8638ce8aef470d2ef235921 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b17abf0a1578198ab18b35bf274c921697ea4f70d8638ce8aef470d2ef235921->enter($__internal_b17abf0a1578198ab18b35bf274c921697ea4f70d8638ce8aef470d2ef235921_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_985579991178d0e7886ec8ea287db7ba4e528d1b1fa0e59fd4f051a35a6bd5db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_985579991178d0e7886ec8ea287db7ba4e528d1b1fa0e59fd4f051a35a6bd5db->enter($__internal_985579991178d0e7886ec8ea287db7ba4e528d1b1fa0e59fd4f051a35a6bd5db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 71
+        // line 73
         echo "\t\t\t";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Cocina f&aacute;cil - Creado como proyecto para Ingenier&iacute;a Web", array(), "messages");
-        // line 72
+        // line 74
         echo "\t\t\t";
         
-        $__internal_b17abf0a1578198ab18b35bf274c921697ea4f70d8638ce8aef470d2ef235921->leave($__internal_b17abf0a1578198ab18b35bf274c921697ea4f70d8638ce8aef470d2ef235921_prof);
+        $__internal_985579991178d0e7886ec8ea287db7ba4e528d1b1fa0e59fd4f051a35a6bd5db->leave($__internal_985579991178d0e7886ec8ea287db7ba4e528d1b1fa0e59fd4f051a35a6bd5db_prof);
 
     }
 
-    // line 77
+    // line 79
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_354a9b92ae17a899cd3b02761c570543c178df9bee9a4e2f6880093881fdd8dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_354a9b92ae17a899cd3b02761c570543c178df9bee9a4e2f6880093881fdd8dc->enter($__internal_354a9b92ae17a899cd3b02761c570543c178df9bee9a4e2f6880093881fdd8dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_bdc1253cde9c92f9c388aa23124f4044420977b598c46ae5ae100b2512a3ad0b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bdc1253cde9c92f9c388aa23124f4044420977b598c46ae5ae100b2512a3ad0b->enter($__internal_bdc1253cde9c92f9c388aa23124f4044420977b598c46ae5ae100b2512a3ad0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 80
         echo "\t <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 81
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.lettering.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script>
@@ -268,7 +270,7 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 \t\t\t</script>
 
 \t <script src=\"";
-        // line 88
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/modernizr.custom.34978.js"), "html", null, true);
         echo "\"></script>
 \t <script>
@@ -305,7 +307,7 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 \t\t</script>
 \t";
         
-        $__internal_354a9b92ae17a899cd3b02761c570543c178df9bee9a4e2f6880093881fdd8dc->leave($__internal_354a9b92ae17a899cd3b02761c570543c178df9bee9a4e2f6880093881fdd8dc_prof);
+        $__internal_bdc1253cde9c92f9c388aa23124f4044420977b598c46ae5ae100b2512a3ad0b->leave($__internal_bdc1253cde9c92f9c388aa23124f4044420977b598c46ae5ae100b2512a3ad0b_prof);
 
     }
 
@@ -321,7 +323,7 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 
     public function getDebugInfo()
     {
-        return array (  272 => 88,  262 => 81,  255 => 78,  249 => 77,  242 => 72,  239 => 71,  233 => 70,  222 => 63,  211 => 57,  197 => 47,  191 => 46,  185 => 45,  179 => 44,  173 => 43,  169 => 41,  163 => 40,  151 => 5,  142 => 122,  140 => 77,  134 => 73,  132 => 70,  124 => 64,  122 => 63,  115 => 58,  113 => 57,  106 => 52,  104 => 40,  93 => 32,  87 => 29,  80 => 24,  73 => 22,  70 => 21,  62 => 20,  60 => 19,  55 => 17,  51 => 16,  41 => 9,  34 => 5,  28 => 1,);
+        return array (  274 => 90,  264 => 83,  257 => 80,  251 => 79,  244 => 74,  241 => 73,  235 => 72,  224 => 65,  213 => 59,  199 => 49,  193 => 48,  187 => 47,  181 => 46,  175 => 45,  171 => 43,  165 => 42,  153 => 5,  144 => 124,  142 => 79,  136 => 75,  134 => 72,  126 => 66,  124 => 65,  117 => 60,  115 => 59,  108 => 54,  106 => 42,  95 => 34,  89 => 31,  82 => 26,  75 => 24,  72 => 23,  64 => 22,  62 => 21,  56 => 18,  52 => 17,  41 => 9,  34 => 5,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -348,10 +350,12 @@ class __TwigTemplate_2027328b574ca90780d296d6d85acd31bf5a20bee95502b3427355ce279
 
 <body>
 \t<div id=\"main\">
+
 \t<div>
-\t<a href=\"{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'}))}}\" class=\"entrar\" style=\"float:left; margin-top:0px\">ES</a>
-\t<a href=\"{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'}))}}\" class=\"entrar\" style=\"float:left; margin-top:0px\">EN</a>
+\t<a href=\"{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'}))}}\" class=\"idioma\">ES</a>
+\t<a href=\"{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'}))}}\" class=\"idioma\">EN</a>
 \t</div>
+
 \t{% if is_granted('ROLE_ADMIN') %}
 \t\t\t<a href=\"{{ path('cooker_admin_logout')}}\" class=\"entrar\">{% trans %}Salir{% endtrans %}</a>
 \t\t{% else %} 
