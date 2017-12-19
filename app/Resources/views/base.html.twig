@@ -18,7 +18,7 @@
 	<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'}))}}" class="idioma">EN</a>
 	</div>
 
-	{% if is_granted('ROLE_ADMIN') %}
+	{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_USER') %}
 			<a href="{{ path('cooker_admin_logout')}}" class="entrar">{% trans %}Salir{% endtrans %}</a>
 		{% else %} 
 			<a href="{{ path('cooker_admin_login')}}" class="entrar">{% trans %}Iniciar sesi&oacute;n{% endtrans %}</a>

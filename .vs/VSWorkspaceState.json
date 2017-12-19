@@ -1,15 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\app",
-    "\\src",
-    "\\src\\Cooker",
-    "\\src\\Cooker\\AdminBundle",
-    "\\src\\Cooker\\AdminBundle\\Resources",
-    "\\src\\Cooker\\AdminBundle\\Resources\\views",
-    "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security",
-    "\\src\\Cooker\\CookingBundle"
+    ""
   ],
-  "SelectedNode": "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security\\login.html.twig",
   "PreviewInSolutionExplorer": false
 }

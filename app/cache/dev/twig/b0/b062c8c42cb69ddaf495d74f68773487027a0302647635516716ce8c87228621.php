@@ -22,32 +22,32 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_137f4b96acac7249abbb2ccaa0ccbdcdda6b78d8660007fa24d1d5036f3f52b7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_137f4b96acac7249abbb2ccaa0ccbdcdda6b78d8660007fa24d1d5036f3f52b7->enter($__internal_137f4b96acac7249abbb2ccaa0ccbdcdda6b78d8660007fa24d1d5036f3f52b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/showPlato.html.twig"));
+        $__internal_95be13fce2b245d5e9147ac90da809b815bfdef26b88f378c6df15617676a4d1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_95be13fce2b245d5e9147ac90da809b815bfdef26b88f378c6df15617676a4d1->enter($__internal_95be13fce2b245d5e9147ac90da809b815bfdef26b88f378c6df15617676a4d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/showPlato.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_137f4b96acac7249abbb2ccaa0ccbdcdda6b78d8660007fa24d1d5036f3f52b7->leave($__internal_137f4b96acac7249abbb2ccaa0ccbdcdda6b78d8660007fa24d1d5036f3f52b7_prof);
+        $__internal_95be13fce2b245d5e9147ac90da809b815bfdef26b88f378c6df15617676a4d1->leave($__internal_95be13fce2b245d5e9147ac90da809b815bfdef26b88f378c6df15617676a4d1_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_6e97c8bcbe730dbed2f35ad7e45e704b0d6dea660a85ebdd6e2b13b01faae4e3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6e97c8bcbe730dbed2f35ad7e45e704b0d6dea660a85ebdd6e2b13b01faae4e3->enter($__internal_6e97c8bcbe730dbed2f35ad7e45e704b0d6dea660a85ebdd6e2b13b01faae4e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_000b577e8a8951fb3d571d3c8733e350301c1185217e1c0b168c89bf0ca04ad0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_000b577e8a8951fb3d571d3c8733e350301c1185217e1c0b168c89bf0ca04ad0->enter($__internal_000b577e8a8951fb3d571d3c8733e350301c1185217e1c0b168c89bf0ca04ad0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->getAttribute(($context["plato"] ?? $this->getContext($context, "plato")), "nombre", array()), "html", null, true);
         
-        $__internal_6e97c8bcbe730dbed2f35ad7e45e704b0d6dea660a85ebdd6e2b13b01faae4e3->leave($__internal_6e97c8bcbe730dbed2f35ad7e45e704b0d6dea660a85ebdd6e2b13b01faae4e3_prof);
+        $__internal_000b577e8a8951fb3d571d3c8733e350301c1185217e1c0b168c89bf0ca04ad0->leave($__internal_000b577e8a8951fb3d571d3c8733e350301c1185217e1c0b168c89bf0ca04ad0_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d0ddc904b656c248f686d47fcd18ed16117b4bd44ddf9c4d35652304f0a1d792 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d0ddc904b656c248f686d47fcd18ed16117b4bd44ddf9c4d35652304f0a1d792->enter($__internal_d0ddc904b656c248f686d47fcd18ed16117b4bd44ddf9c4d35652304f0a1d792_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1fee6b9bd5dd38ff9d006dec9683b491c7b32dfb081121ba623f77d5b9734fd7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1fee6b9bd5dd38ff9d006dec9683b491c7b32dfb081121ba623f77d5b9734fd7->enter($__internal_1fee6b9bd5dd38ff9d006dec9683b491c7b32dfb081121ba623f77d5b9734fd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
@@ -56,16 +56,16 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
         echo twig_escape_filter($this->env, $this->getAttribute(($context["plato"] ?? $this->getContext($context, "plato")), "nombre", array()), "html", null, true);
         echo "</h1>
 
-<ul class=\"lista\">
- \t<section class=\"ib-container\" id=\"ib-container\">
+ \t<div class=\"ib-container\" id=\"ib-container\">
+
 \t";
         // line 11
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["recetas"] ?? $this->getContext($context, "recetas")));
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 12
-            echo "\t<article>
-\t <li class=\"elemento\">
+            echo "
+\t<article>
 \t\t<header>
 \t\t\t<h3><a href=\"";
             // line 15
@@ -93,7 +93,7 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
 \t\t<footer class=\"meta\">
 \t\t\t<p>Comentarios: -</p>
 \t\t</footer>
-\t</li>
+
 \t</article>
 \t";
         }
@@ -101,12 +101,12 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 28
-        echo "\t</section>
-</ul>
+        echo "
+\t</div>
 
 ";
         
-        $__internal_d0ddc904b656c248f686d47fcd18ed16117b4bd44ddf9c4d35652304f0a1d792->leave($__internal_d0ddc904b656c248f686d47fcd18ed16117b4bd44ddf9c4d35652304f0a1d792_prof);
+        $__internal_1fee6b9bd5dd38ff9d006dec9683b491c7b32dfb081121ba623f77d5b9734fd7->leave($__internal_1fee6b9bd5dd38ff9d006dec9683b491c7b32dfb081121ba623f77d5b9734fd7_prof);
 
     }
 
@@ -143,11 +143,11 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
 
 <h1>Recetas para el plato: {{ plato.nombre }}</h1>
 
-<ul class=\"lista\">
- \t<section class=\"ib-container\" id=\"ib-container\">
+ \t<div class=\"ib-container\" id=\"ib-container\">
+
 \t{% for receta in recetas %}
+
 \t<article>
-\t <li class=\"elemento\">
 \t\t<header>
 \t\t\t<h3><a href=\"{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}\">{{ receta.nombre }}</a></h3>
 \t\t</header>
@@ -159,11 +159,11 @@ class __TwigTemplate_44213c771b5a0022aed50bc8a492394b2ef8df4684d3dba25e6d43fc732
 \t\t<footer class=\"meta\">
 \t\t\t<p>Comentarios: -</p>
 \t\t</footer>
-\t</li>
+
 \t</article>
 \t{% endfor %}
-\t</section>
-</ul>
+
+\t</div>
 
 {% endblock %}
 ", "@CookerCooking/Cook/showPlato.html.twig", "C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook\\showPlato.html.twig");
