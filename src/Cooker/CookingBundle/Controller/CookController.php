@@ -13,10 +13,9 @@ class CookController extends Controller
 	
 	public function principalAction()
 	{
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getLatestRecetas();
-		$platos = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->getPlatos();
+		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->recetasDeCada();
 
-		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas, 'platos' => $platos));
+		return $this->render('CookerCookingBundle:Cook:principal.html.twig', array('recetas' => $recetas));
 	}
 
 	public function recetasAction()
@@ -36,6 +35,7 @@ class CookController extends Controller
 	public function platosAction(){
 	
 		$platos = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->getPlatos();
+
 		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasOrdenadas();
 
 		return $this->render('CookerCookingBundle:Cook:platos.html.twig', array('platos' => $platos, 'recetas' => $recetas));
@@ -49,9 +49,9 @@ class CookController extends Controller
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
 		}
 
-		$ingredientes = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->getIngredientesBy($id);
+		$ingredientes = $receta->getIngredientes();
 
-		$comentarios = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Comentario')->getComentariosForReceta($receta->getId());
+		$comentarios = $receta->getComentarios();
 
 		$otrasrecetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->recetasRelacionadas($receta->getTipo_plato());
 
@@ -60,8 +60,9 @@ class CookController extends Controller
 
 	public function showIngrAction($id)
 	{
-		$receta = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasBy($id);
 	    $ingrediente = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Ingrediente')->find($id);
+
+		$receta = $ingrediente->getRecetas();
 
 		if (!$receta) {
 			throw $this->createNotFoundException('No se ha encontrado la receta.');
@@ -73,7 +74,8 @@ class CookController extends Controller
 	public function showPlatoAction($id)
 	{
 		$plato = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Plato')->find($id);
-		$recetas = $this->get('doctrine')->getManager()->getRepository('CookerCookingBundle:Receta')->getRecetasPlato($id);
+
+		$recetas = $plato->getRecetas();
 
 		if (!$plato) {
 			throw $this->createNotFoundException('No se ha encontrado el plato.');

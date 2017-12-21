@@ -1,10 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\Cooker\\AdminBundle\\Resources\\views",
-    "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security",
-    "\\src\\Cooker\\CookingBundle\\Resources"
+    "\\src",
+    "\\src\\Cooker",
+    "\\src\\Cooker\\CookingBundle",
+    "\\src\\Cooker\\CookingBundle\\Entity",
+    "\\src\\Cooker\\CookingBundle\\Resources",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views",
+    "\\src\\Cooker\\CookingBundle\\Resources\\views\\Cook"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\Cooker\\CookingBundle\\Entity",
   "PreviewInSolutionExplorer": false
 }

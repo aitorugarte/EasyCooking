@@ -78,4 +78,16 @@ class RecetaRepository extends EntityRepository
 	return $qp->getQuery()->getResult();
 	}
 
+	public function recetasDeCada()
+	{
+	$qp = $this->createQueryBuilder('p')
+	->select('p')
+	->where('p.tipo_plato = 1 and p.id < 3')
+	->orWhere('p.tipo_plato = 2 and p.id > 3 and p.id < 7')
+	->orWhere('p.tipo_plato = 3 and p.id > 12 and p.id < 15');
+
+
+	return $qp->getQuery()->getResult();
+	}
+
 }

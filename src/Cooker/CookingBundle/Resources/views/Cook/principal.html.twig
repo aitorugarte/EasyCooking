@@ -4,10 +4,7 @@
 
 {% block body %}
 
- {% for plato in platos %}
-   {% set break = 0 %}
-   {% for receta in recetas if break < 2 %}
-   {% if receta.tipo_plato.id == plato.id %}
+   {% for receta in recetas %}
 
 	<div class="date" style="text-align:right"><time datetime="{{ receta.date|date('c') }}">{{ receta.date|date('l j F Y') }}</time></div>
 	<header>
@@ -23,8 +20,5 @@
 		<p>{% trans %}Comentarios: -{% endtrans %}</p>
 	</footer>
 
-{% set break = break + 1 %}
-{% endif %}
-{% endfor %}
 {% endfor %}
 {% endblock %}
