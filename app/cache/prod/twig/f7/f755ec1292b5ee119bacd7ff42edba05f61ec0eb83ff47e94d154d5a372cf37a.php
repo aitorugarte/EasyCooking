@@ -16,41 +16,66 @@ class __TwigTemplate_a6a52782ede1fd5f4667d8dcc98880975fe61bcb5d0cafa96118e8376fd
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "﻿";
-        // line 2
-        echo "
-<link href=\"";
-        // line 3
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/admin.css"), "html", null, true);
+        echo "﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+\t<title>Iniciar sesión</title>
+\t<meta name=\"description\" content=\"website description\" />
+\t<meta name=\"keywords\" content=\"website keywords, website keywords\" />
+\t<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
+\t<link href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" />
+\t<link href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://getbootstrap.com/docs/4.0/examples/signin/signin.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
 
+</head>
+
+
 ";
-        // line 5
+        // line 15
         if (($context["error"] ?? null)) {
-            // line 6
+            // line 16
             echo "\t<div>";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["error"] ?? null), "message", array()), "html", null, true);
             echo "</div>
 ";
         }
-        // line 8
+        // line 18
         echo "
-<form action=\"";
-        // line 9
+<div class=\"container\">
+
+      <form class=\"form-signin\" action=\"";
+        // line 21
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_login_check");
-        echo "\" method=\"post\"  class=\"login\">
-\t<label for=\"username\">Usuario:</label>
-\t<input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 11
+        echo "\" method=\"post\">
+        <h2 class=\"form-signin-heading\">Iniciar sesión</h2>
+
+        <label for=\"username\" class=\"sr-only\">Usuario</label>
+        <input type=\"text\" id=\"username\" name=\"_username\" class=\"form-control\" placeholder=\"Usuario\" value=\"";
+        // line 25
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
-        echo "\" />
+        echo "\" required autofocus>
+        
+        <label for=\"password\" class=\"sr-only\">Contraseña</label>
+        <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Contraseña\" required>
+        
+        <div class=\"checkbox\">
+          <label>
+            <input type=\"checkbox\" id=\"remember_me\" name=\"remember_me\"> Recordarme
+          </label>
+        </div>
 
-\t<label for=\"password\">Contraseña:</label>
-\t<input type=\"password\" id=\"password\" name=\"_password\" />
+        <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Entrar</button>
+      </form>
 
-\t<button type=\"submit\">Entrar</button>
-</form>
-";
+    </div> 
+
+</html>";
     }
 
     public function getTemplateName()
@@ -65,7 +90,7 @@ class __TwigTemplate_a6a52782ede1fd5f4667d8dcc98880975fe61bcb5d0cafa96118e8376fd
 
     public function getDebugInfo()
     {
-        return array (  45 => 11,  40 => 9,  37 => 8,  31 => 6,  29 => 5,  24 => 3,  21 => 2,  19 => 1,);
+        return array (  61 => 25,  54 => 21,  49 => 18,  43 => 16,  41 => 15,  33 => 10,  29 => 9,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

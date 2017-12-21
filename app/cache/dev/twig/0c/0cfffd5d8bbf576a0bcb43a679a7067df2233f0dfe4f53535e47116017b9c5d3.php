@@ -22,32 +22,32 @@ class __TwigTemplate_8e1c2e168e86c33e653fb6fcdd6759dfef4cecd392b33167c2a387a1962
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b96ef1a8257d35d6b9bff506ef26e9b3a0565123e4d35f4009e0589d9cdccfc4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b96ef1a8257d35d6b9bff506ef26e9b3a0565123e4d35f4009e0589d9cdccfc4->enter($__internal_b96ef1a8257d35d6b9bff506ef26e9b3a0565123e4d35f4009e0589d9cdccfc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:showIngr.html.twig"));
+        $__internal_52bb0e09a8c337bec21f4dc87c8e864a12e7eb6b30c4e7d30488f8da92f6f4cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_52bb0e09a8c337bec21f4dc87c8e864a12e7eb6b30c4e7d30488f8da92f6f4cc->enter($__internal_52bb0e09a8c337bec21f4dc87c8e864a12e7eb6b30c4e7d30488f8da92f6f4cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:showIngr.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b96ef1a8257d35d6b9bff506ef26e9b3a0565123e4d35f4009e0589d9cdccfc4->leave($__internal_b96ef1a8257d35d6b9bff506ef26e9b3a0565123e4d35f4009e0589d9cdccfc4_prof);
+        $__internal_52bb0e09a8c337bec21f4dc87c8e864a12e7eb6b30c4e7d30488f8da92f6f4cc->leave($__internal_52bb0e09a8c337bec21f4dc87c8e864a12e7eb6b30c4e7d30488f8da92f6f4cc_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_7a15e32c0e95ee8c9f2494a88acfe2400a791d44475b22708ed250dce1fcc4cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7a15e32c0e95ee8c9f2494a88acfe2400a791d44475b22708ed250dce1fcc4cf->enter($__internal_7a15e32c0e95ee8c9f2494a88acfe2400a791d44475b22708ed250dce1fcc4cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3bb05d1045e9cf83ee9116f25011e1c14369f5565c694a3f1e89dfbc69a2b375 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3bb05d1045e9cf83ee9116f25011e1c14369f5565c694a3f1e89dfbc69a2b375->enter($__internal_3bb05d1045e9cf83ee9116f25011e1c14369f5565c694a3f1e89dfbc69a2b375_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ingrediente"] ?? $this->getContext($context, "ingrediente")), "nombre", array()), "html", null, true);
         
-        $__internal_7a15e32c0e95ee8c9f2494a88acfe2400a791d44475b22708ed250dce1fcc4cf->leave($__internal_7a15e32c0e95ee8c9f2494a88acfe2400a791d44475b22708ed250dce1fcc4cf_prof);
+        $__internal_3bb05d1045e9cf83ee9116f25011e1c14369f5565c694a3f1e89dfbc69a2b375->leave($__internal_3bb05d1045e9cf83ee9116f25011e1c14369f5565c694a3f1e89dfbc69a2b375_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b913d41e5cb14848c0be4561b6f3917825ed079d6fd68eae8eb764f6a9e14a35 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b913d41e5cb14848c0be4561b6f3917825ed079d6fd68eae8eb764f6a9e14a35->enter($__internal_b913d41e5cb14848c0be4561b6f3917825ed079d6fd68eae8eb764f6a9e14a35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_044f51663583c4da48c6c174b9297aea4a21242c7ee637f2ef6cbfdc0a827a9e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_044f51663583c4da48c6c174b9297aea4a21242c7ee637f2ef6cbfdc0a827a9e->enter($__internal_044f51663583c4da48c6c174b9297aea4a21242c7ee637f2ef6cbfdc0a827a9e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t<h1>";
@@ -78,7 +78,7 @@ class __TwigTemplate_8e1c2e168e86c33e653fb6fcdd6759dfef4cecd392b33167c2a387a1962
 
 ";
         
-        $__internal_b913d41e5cb14848c0be4561b6f3917825ed079d6fd68eae8eb764f6a9e14a35->leave($__internal_b913d41e5cb14848c0be4561b6f3917825ed079d6fd68eae8eb764f6a9e14a35_prof);
+        $__internal_044f51663583c4da48c6c174b9297aea4a21242c7ee637f2ef6cbfdc0a827a9e->leave($__internal_044f51663583c4da48c6c174b9297aea4a21242c7ee637f2ef6cbfdc0a827a9e_prof);
 
     }
 

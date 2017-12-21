@@ -8,7 +8,7 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "@CookerCooking/Cook/principal.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "@CookerCooking/Cook/principal.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,7 +17,7 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -28,7 +28,7 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "P&aacutegina de bienvenida";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("P&aacute;gina de bienvenida", array(), "messages");
     }
 
     // line 5
@@ -55,16 +55,15 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
                     if (($this->getAttribute($this->getAttribute($context["receta"], "tipo_plato", array()), "id", array()) == $this->getAttribute($context["plato"], "id", array()))) {
                         // line 11
                         echo "
-<article class=\"receta\">
 \t<div class=\"date\" style=\"text-align:right\"><time datetime=\"";
-                        // line 13
+                        // line 12
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "c"), "html", null, true);
                         echo "\">";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "date", array()), "l j F Y"), "html", null, true);
                         echo "</time></div>
 \t<header>
 \t\t<h2><a href=\"";
-                        // line 15
+                        // line 14
                         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                         echo "\">";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
@@ -73,11 +72,11 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
 
 \t<div class=\"snippet\">
 \t\t<p>";
-                        // line 19
+                        // line 18
                         echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "detalles", array(0 => 200), "method"), "html", null, true);
                         echo "</p>
 \t\t<p class=\"continue\"><a href=\"";
-                        // line 20
+                        // line 19
                         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                         echo "\">Seguir leyendo...</a></p>
 \t</div>
@@ -85,10 +84,9 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
 \t<footer class=\"meta\">
 \t\t<p>Comentarios: -</p>
 \t</footer>
-</article>
 
 ";
-                        // line 28
+                        // line 26
                         $context["break"] = (($context["break"] ?? null) + 1);
                     }
                 }
@@ -114,7 +112,7 @@ class __TwigTemplate_df8983d9ef9a1a8c92bf5f1db29576c572e2d6eeb4130d9579731099167
 
     public function getDebugInfo()
     {
-        return array (  92 => 28,  81 => 20,  77 => 19,  68 => 15,  61 => 13,  57 => 11,  54 => 10,  48 => 9,  45 => 8,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  90 => 26,  80 => 19,  76 => 18,  67 => 14,  60 => 12,  57 => 11,  54 => 10,  48 => 9,  45 => 8,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

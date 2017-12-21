@@ -19,21 +19,21 @@
 <div class="container">
 
       <form class="form-signin" action="{{ path('cooker_admin_login_check') }}" method="post">
-        <h2 class="form-signin-heading">Iniciar sesión</h2>
+        <h2 class="form-signin-heading">{% trans %}Iniciar sesion{% endtrans %}</h2>
 
-        <label for="username" class="sr-only">Usuario</label>
+        <label for="username" class="sr-only">{% trans %}Usuario{% endtrans %}</label>
         <input type="text" id="username" name="_username" class="form-control" placeholder="Usuario" value="{{ last_username }}" required autofocus>
         
-        <label for="password" class="sr-only">Contraseña</label>
+        <label for="password" class="sr-only">{% trans %}Contraseña{% endtrans %}</label>
         <input type="password" id="password" name="_password" class="form-control" placeholder="Contraseña" required>
         
         <div class="checkbox">
           <label>
-            <input type="checkbox" id="remember_me" name="remember_me"> Recordarme
+            <input type="checkbox" id="remember_me" name="remember_me">{% trans %}Recordarme{% endtrans %}
           </label>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans %}Entrar{% endtrans %}</button>
       </form>
 
     </div> 

@@ -42,47 +42,84 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
 
 <body>
 \t<div id=\"main\">
-\t\t<div id=\"header\">
 
+\t<div>
+\t<a href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath($this->getAttribute($this->getAttribute(($context["app"] ?? null), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute(($context["app"] ?? null), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "es"))), "html", null, true);
+        echo "\" class=\"idioma\">ES</a>
+\t<a href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath($this->getAttribute($this->getAttribute(($context["app"] ?? null), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute(($context["app"] ?? null), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "en"))), "html", null, true);
+        echo "\" class=\"idioma\">EN</a>
+\t</div>
+
+\t";
+        // line 21
+        if ((($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN") || $this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_SUPER_ADMIN")) || $this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER"))) {
+            // line 22
+            echo "\t\t\t<a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_logout");
+            echo "\" class=\"entrar\">";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Salir", array(), "messages");
+            echo "</a>
+\t\t";
+        } else {
+            // line 23
+            echo " 
+\t\t\t<a href=\"";
+            // line 24
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_admin_login");
+            echo "\" class=\"entrar\">";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Iniciar sesion", array(), "messages");
+            echo "</a>
+\t\t";
+        }
+        // line 26
+        echo "
+\t\t<div id=\"header\">
 \t\t\t<div id=\"logo\">
 
 \t\t\t\t<div id=\"logo_text\">
 \t\t\t\t\t<h1><a href=\"";
-        // line 20
+        // line 31
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
         echo "\">Easy<span class=\"logo_colour\">_cooking</span></a></h1>
 \t\t\t\t\t <div id=\"letter-container\" class=\"letter-container\">
 \t\t\t\t\t<h2>
-\t\t\t\t\t<a href=\"#\">\"El amor puede esperar, el hambre no\" Monkey D. Luffy</a>
+\t\t\t\t\t<a href=\"#\">";
+        // line 34
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("\"El amor puede esperar, el hambre no\" Monkey D. Luffy", array(), "messages");
+        echo "</a>
 \t\t\t\t\t</h2>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
 \t\t\t</div>
-
+\t\t\t
 \t\t\t<!-- Menú -->
 \t\t\t";
-        // line 31
+        // line 42
         $this->displayBlock('navigation', $context, $blocks);
-        // line 46
+        // line 54
         echo "\t\t</div>
 
 \t\t<div id=\"site_content\">
 \t\t\t<div class=\"sidebar\">
 \t\t\t\t<!-- Contenido lateral derecho -->
 \t\t\t\t";
-        // line 51
+        // line 59
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 52
+        // line 60
         echo "\t\t\t</div>
 
 \t\t\t<div id=\"content\">
 \t\t\t\t<!-- Contenido principal -->
 \t\t\t\t<section class=\"main-col\">
 \t\t\t\t\t";
-        // line 57
+        // line 65
         $this->displayBlock('body', $context, $blocks);
-        // line 58
+        // line 66
         echo "\t\t\t\t</section>
 \t\t\t</div>
 \t\t</div>
@@ -90,17 +127,17 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
 \t\t<!-- Pie de página -->
 \t\t<div id=\"footer\">
 \t\t\t";
-        // line 64
+        // line 72
         $this->displayBlock('footer', $context, $blocks);
-        // line 67
+        // line 75
         echo "\t\t</div>
 
 \t</div>
 
 \t";
-        // line 71
+        // line 79
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 115
+        // line 124
         echo "</body>
 </html>
 ";
@@ -112,89 +149,92 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
         echo "symblog";
     }
 
-    // line 31
+    // line 42
     public function block_navigation($context, array $blocks = array())
     {
-        // line 32
-        echo "\t\t\t";
-        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 33
-            echo "\t\t\t<li><a href=\"";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blogger_admin_logout");
-            echo "\">Salir</a></li>
-\t\t\t";
-        }
-        // line 35
+        // line 43
         echo "\t\t\t<div id=\"menubar\">
 \t\t\t\t<ul id=\"menu\">
-\t\t\t\t\t<li class=\"selected\"><div><a href=\"";
-        // line 37
+\t\t\t\t\t<li><div><a href=\"";
+        // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_principal");
-        echo "\">Inicio</a><div></li>
-\t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 38
+        echo "\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Inicio", array(), "messages");
+        echo "</a></div></li>
+\t\t\t\t\t<li><div><a href=\"";
+        // line 46
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_recetas");
-        echo "\">Recetas</a><div></li>
-\t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 39
+        echo "\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Recetas", array(), "messages");
+        echo "</a></div></li>
+\t\t\t\t\t<li><div><a href=\"";
+        // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_platos");
-        echo "\">Platos</a><div></li>
-\t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 40
+        echo "\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Platos", array(), "messages");
+        echo "</a></div></li>
+\t\t\t\t\t<li><div><a href=\"";
+        // line 48
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_ingredientes");
-        echo "\">Ingredientes</a><div></li>
-\t\t\t\t\t<li class=\"li2\"><div><a href=\"";
-        // line 41
+        echo "\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Ingredientes", array(), "messages");
+        echo "</a></div></li>
+\t\t\t\t\t<li><div><a href=\"";
+        // line 49
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_contact");
-        echo "\">Contacto</a><div></li>
+        echo "\">";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Contacto", array(), "messages");
+        echo "</a></div></li>
 \t\t\t\t</ul>
 \t\t\t</div> 
 \t
 \t\t\t";
     }
 
-    // line 51
+    // line 59
     public function block_sidebar($context, array $blocks = array())
     {
     }
 
-    // line 57
+    // line 65
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 64
+    // line 72
     public function block_footer($context, array $blocks = array())
     {
-        // line 65
-        echo "\t\t\tCocina f&aacutecil - Creado como proyecto para Ingenier&iacutea Web
-\t\t\t";
+        // line 73
+        echo "\t\t\t";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Cocina facil - Creado como proyecto para Ingenieria Web", array(), "messages");
+        // line 74
+        echo "\t\t\t";
     }
 
-    // line 71
+    // line 79
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 72
-        echo "\t<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>
+        // line 80
+        echo "\t <script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
+        echo "\"></script>
+
+\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>
 \t\t\t<script src=\"";
-        // line 73
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.lettering.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-\t\t\t<script type=\"text/javascript\">
+        echo "\"></script>
+\t\t\t<script>
 \t\t\t\t\$(function() {
 \t\t\t\t\t\$(\"#letter-container h2 a\").lettering();
 \t\t\t\t});
-\t\t\t</script
+\t\t\t</script>
 
 \t <script src=\"";
-        // line 80
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-\t <script src=\"";
-        // line 81
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/modernizr.custom.34978.js"), "html", null, true);
-        echo "\" type=\"text/javascript\"></script>
-\t <script type=\"text/javascript\">
+        echo "\"></script>
+\t <script>
 \t\t\t\$(function() {
 \t\t\t\t
 \t\t\t\tvar \$container\t= \$('#ib-container'),
@@ -241,7 +281,7 @@ class __TwigTemplate_da5cf96e7b8ed3ebab09c2881cdfebfb6ae539049ed3fb918e65057bd02
 
     public function getDebugInfo()
     {
-        return array (  195 => 81,  191 => 80,  181 => 73,  178 => 72,  175 => 71,  170 => 65,  167 => 64,  162 => 57,  157 => 51,  148 => 41,  144 => 40,  140 => 39,  136 => 38,  132 => 37,  128 => 35,  122 => 33,  119 => 32,  116 => 31,  110 => 5,  104 => 115,  102 => 71,  96 => 67,  94 => 64,  86 => 58,  84 => 57,  77 => 52,  75 => 51,  68 => 46,  66 => 31,  52 => 20,  38 => 9,  31 => 5,  25 => 1,);
+        return array (  235 => 90,  225 => 83,  218 => 80,  215 => 79,  211 => 74,  208 => 73,  205 => 72,  200 => 65,  195 => 59,  184 => 49,  178 => 48,  172 => 47,  166 => 46,  160 => 45,  156 => 43,  153 => 42,  147 => 5,  141 => 124,  139 => 79,  133 => 75,  131 => 72,  123 => 66,  121 => 65,  114 => 60,  112 => 59,  105 => 54,  103 => 42,  92 => 34,  86 => 31,  79 => 26,  72 => 24,  69 => 23,  61 => 22,  59 => 21,  53 => 18,  49 => 17,  38 => 9,  31 => 5,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

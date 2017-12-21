@@ -8,7 +8,7 @@ class __TwigTemplate_752fb77ccee3051cd18cabd62348b75b7a978a0b842110b1b3dfcad6f8a
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "@CookerCooking/Cook/showIngr.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "@CookerCooking/Cook/showIngr.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,7 +17,7 @@ class __TwigTemplate_752fb77ccee3051cd18cabd62348b75b7a978a0b842110b1b3dfcad6f8a
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -35,7 +35,9 @@ class __TwigTemplate_752fb77ccee3051cd18cabd62348b75b7a978a0b842110b1b3dfcad6f8a
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "\t<h1>Recetas para el ingrediente: ";
+        echo "\t<h1>";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Recetas para el ingrediente:", array(), "messages");
+        echo " ";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ingrediente"] ?? null), "nombre", array()), "html", null, true);
         echo "</h1>
 \t
@@ -74,7 +76,7 @@ class __TwigTemplate_752fb77ccee3051cd18cabd62348b75b7a978a0b842110b1b3dfcad6f8a
 
     public function getDebugInfo()
     {
-        return array (  60 => 12,  49 => 10,  45 => 9,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  62 => 12,  51 => 10,  47 => 9,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

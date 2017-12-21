@@ -22,38 +22,38 @@ class __TwigTemplate_94190beb97b54eb0e3070255f93f62588033e268b992b3b0840362d6f68
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1308935639ae5155f3deb7f278a3feb40aecda857eaf0517a04238054e75c902 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1308935639ae5155f3deb7f278a3feb40aecda857eaf0517a04238054e75c902->enter($__internal_1308935639ae5155f3deb7f278a3feb40aecda857eaf0517a04238054e75c902_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:ingredientes.html.twig"));
+        $__internal_032399aa0af05c889b0545c3a0d681bddbc1dd67b448ab0f0c46248ba29468fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_032399aa0af05c889b0545c3a0d681bddbc1dd67b448ab0f0c46248ba29468fd->enter($__internal_032399aa0af05c889b0545c3a0d681bddbc1dd67b448ab0f0c46248ba29468fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CookerCookingBundle:Cook:ingredientes.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1308935639ae5155f3deb7f278a3feb40aecda857eaf0517a04238054e75c902->leave($__internal_1308935639ae5155f3deb7f278a3feb40aecda857eaf0517a04238054e75c902_prof);
+        $__internal_032399aa0af05c889b0545c3a0d681bddbc1dd67b448ab0f0c46248ba29468fd->leave($__internal_032399aa0af05c889b0545c3a0d681bddbc1dd67b448ab0f0c46248ba29468fd_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_60cffc89d0f212a4d2c3c09e375b0d1e6de74415485122a3c1010eb8d9c38d09 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_60cffc89d0f212a4d2c3c09e375b0d1e6de74415485122a3c1010eb8d9c38d09->enter($__internal_60cffc89d0f212a4d2c3c09e375b0d1e6de74415485122a3c1010eb8d9c38d09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2f1899916a9fd7ff111c9f5427b4ce3d966140a1676295a91207c22f47eaeb04 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f1899916a9fd7ff111c9f5427b4ce3d966140a1676295a91207c22f47eaeb04->enter($__internal_2f1899916a9fd7ff111c9f5427b4ce3d966140a1676295a91207c22f47eaeb04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Lista de Ingredientes", array(), "messages");
         
-        $__internal_60cffc89d0f212a4d2c3c09e375b0d1e6de74415485122a3c1010eb8d9c38d09->leave($__internal_60cffc89d0f212a4d2c3c09e375b0d1e6de74415485122a3c1010eb8d9c38d09_prof);
+        $__internal_2f1899916a9fd7ff111c9f5427b4ce3d966140a1676295a91207c22f47eaeb04->leave($__internal_2f1899916a9fd7ff111c9f5427b4ce3d966140a1676295a91207c22f47eaeb04_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_be98dc8e2b6f9a3fca575846b06b37f0e2be26bcdc18fad9c43d08dee6bb4cdf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_be98dc8e2b6f9a3fca575846b06b37f0e2be26bcdc18fad9c43d08dee6bb4cdf->enter($__internal_be98dc8e2b6f9a3fca575846b06b37f0e2be26bcdc18fad9c43d08dee6bb4cdf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2f5116de2ea11398ded4830b36f19cf9c972964738b5464f9f336fc8de4633df = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f5116de2ea11398ded4830b36f19cf9c972964738b5464f9f336fc8de4633df->enter($__internal_2f5116de2ea11398ded4830b36f19cf9c972964738b5464f9f336fc8de4633df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "
 <h2>";
         // line 7
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("&iquest;Busca alg&uacute;n ingrediente en particular?", array(), "messages");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Busca algun ingrediente en particular?", array(), "messages");
         echo "</h2>
 <br>
 <ul class=\"lista2\">
@@ -80,7 +80,7 @@ class __TwigTemplate_94190beb97b54eb0e3070255f93f62588033e268b992b3b0840362d6f68
         echo "</ul>
 \t";
         
-        $__internal_be98dc8e2b6f9a3fca575846b06b37f0e2be26bcdc18fad9c43d08dee6bb4cdf->leave($__internal_be98dc8e2b6f9a3fca575846b06b37f0e2be26bcdc18fad9c43d08dee6bb4cdf_prof);
+        $__internal_2f5116de2ea11398ded4830b36f19cf9c972964738b5464f9f336fc8de4633df->leave($__internal_2f5116de2ea11398ded4830b36f19cf9c972964738b5464f9f336fc8de4633df_prof);
 
     }
 
@@ -115,7 +115,7 @@ class __TwigTemplate_94190beb97b54eb0e3070255f93f62588033e268b992b3b0840362d6f68
 
 {% block body %}
 
-<h2>{% trans %}&iquest;Busca alg&uacute;n ingrediente en particular?{% endtrans %}</h2>
+<h2>{% trans %}Busca algun ingrediente en particular?{% endtrans %}</h2>
 <br>
 <ul class=\"lista2\">
 \t{% for ingrediente in ingredientes %}

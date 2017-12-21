@@ -15,8 +15,8 @@ class __TwigTemplate_7fdeb2d2b5c948ff5a388e559263089d8f406060a393f65ee769ed93e2a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_723830aefedb4c0073a68145c5f2878a3c345e71016667d17bf31b33a9478844 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_723830aefedb4c0073a68145c5f2878a3c345e71016667d17bf31b33a9478844->enter($__internal_723830aefedb4c0073a68145c5f2878a3c345e71016667d17bf31b33a9478844_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/flash_messages.html.twig"));
+        $__internal_93f3c288054d3e3486e0646d0ff37eb273baf7249e83c7f495bfccbdddbc9c59 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_93f3c288054d3e3486e0646d0ff37eb273baf7249e83c7f495bfccbdddbc9c59->enter($__internal_93f3c288054d3e3486e0646d0ff37eb273baf7249e83c7f495bfccbdddbc9c59_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/flash_messages.html.twig"));
 
         // line 1
         if (( !(null === $this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array())) && $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", array()), "started", array()))) {
@@ -57,7 +57,7 @@ class __TwigTemplate_7fdeb2d2b5c948ff5a388e559263089d8f406060a393f65ee769ed93e2a
 ";
         }
         
-        $__internal_723830aefedb4c0073a68145c5f2878a3c345e71016667d17bf31b33a9478844->leave($__internal_723830aefedb4c0073a68145c5f2878a3c345e71016667d17bf31b33a9478844_prof);
+        $__internal_93f3c288054d3e3486e0646d0ff37eb273baf7249e83c7f495bfccbdddbc9c59->leave($__internal_93f3c288054d3e3486e0646d0ff37eb273baf7249e83c7f495bfccbdddbc9c59_prof);
 
     }
 

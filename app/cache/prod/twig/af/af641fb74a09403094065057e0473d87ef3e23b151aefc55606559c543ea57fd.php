@@ -8,7 +8,7 @@ class __TwigTemplate_e25a935b1ec89ca77754707b09fe504a4b2e1350ec0af369fa51d1893a2
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "@CookerCooking/Cook/contact.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "@CookerCooking/Cook/contact.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,7 +17,7 @@ class __TwigTemplate_e25a935b1ec89ca77754707b09fe504a4b2e1350ec0af369fa51d1893a2
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -28,7 +28,7 @@ class __TwigTemplate_e25a935b1ec89ca77754707b09fe504a4b2e1350ec0af369fa51d1893a2
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        echo "Contacto";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Contacto", array(), "messages");
     }
 
     // line 6
@@ -36,23 +36,38 @@ class __TwigTemplate_e25a935b1ec89ca77754707b09fe504a4b2e1350ec0af369fa51d1893a2
     {
         // line 7
         echo "    <header>
-        <h1>Contacta conmigo</h1>
+        <h1>";
+        // line 8
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Contacta conmigo", array(), "messages");
+        echo "</h1>
     </header>
 
-<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\">
+<form action=\"mailto:aitorugarte@opendeusto.es\" method=\"post\" enctype=\"text/plain\">
   <fieldset>
-    <h4>Nombre</h4>
+    <h4>";
+        // line 13
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Nombre", array(), "messages");
+        echo "</h4>
     <input type=\"text\" name=\"nombre\">
     
-   <h4>Correo</h4>
+   <h4>";
+        // line 16
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Correo", array(), "messages");
+        echo "</h4>
     <input type=\"text\" name=\"correo\">
   
-    <h4>Mensaje</h4>
+    <h4>";
+        // line 19
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Mensaje", array(), "messages");
+        echo "</h4>
     <input type=\"text\" name=\"mensaje\" size=\"50\" style=\"height:50px\">
   </fieldset>
 
      <div class=\"button\">
-        <button type=\"submit\" value=\"Send\">Enviar</button>
+        <button type=\"submit\" value=\"Send\">";
+        // line 24
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Enviar", array(), "messages");
+        echo "</button>
     </div>
    
 </form>
@@ -71,7 +86,7 @@ class __TwigTemplate_e25a935b1ec89ca77754707b09fe504a4b2e1350ec0af369fa51d1893a2
 
     public function getDebugInfo()
     {
-        return array (  38 => 7,  35 => 6,  29 => 4,  11 => 2,);
+        return array (  69 => 24,  61 => 19,  55 => 16,  49 => 13,  41 => 8,  38 => 7,  35 => 6,  29 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

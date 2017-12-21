@@ -22,23 +22,52 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $context = $this->context;
         $request = $this->request;
 
+        // cooker_cook_principal
+        if (preg_match('#^/(?P<_locale>[^/]++)/?$#s', $pathinfo, $matches)) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'cooker_cook_principal');
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_principal')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::principalAction',));
+        }
+
+        // cooker_cook_recetas
+        if (preg_match('#^/(?P<_locale>[^/]++)/recetas$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_recetas')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::recetasAction',));
+        }
+
+        // cooker_cook_ingredientes
+        if (preg_match('#^/(?P<_locale>[^/]++)/ingredientes$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_ingredientes')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::ingredientesAction',));
+        }
+
+        // cooker_cook_platos
+        if (preg_match('#^/(?P<_locale>[^/]++)/platos$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_platos')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::platosAction',));
+        }
+
+        // cooker_cook_contact
+        if (preg_match('#^/(?P<_locale>[^/]++)/contact$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_contact')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::contactAction',));
+        }
+
         // cooker_cook_showReceta
-        if (0 === strpos($pathinfo, '/receta') && preg_match('#^/receta/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/receta/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showReceta')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showRecetaAction',));
         }
 
         // cooker_cook_showIngr
-        if (0 === strpos($pathinfo, '/ingrediente') && preg_match('#^/ingrediente/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/ingrediente/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showIngr')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showIngrAction',));
         }
 
         // cooker_cook_showPlato
-        if (0 === strpos($pathinfo, '/plato') && preg_match('#^/plato/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/plato/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_cook_showPlato')), array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::showPlatoAction',));
         }
 
         // cooker_comentario_create
-        if (0 === strpos($pathinfo, '/comentario') && preg_match('#^/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/comentario/(?P<receta_id>[^/]++)$#s', $pathinfo, $matches)) {
             if ($this->context->getMethod() != 'POST') {
                 $allow[] = 'POST';
                 goto not_cooker_comentario_create;
@@ -48,80 +77,37 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
         not_cooker_comentario_create:
 
-        if (0 === strpos($pathinfo, '/admin')) {
-            // easyadmin
-            if ('/admin' === rtrim($pathinfo, '/')) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'easyadmin');
-                }
-
-                return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
-            }
-
-            // admin
-            if ('/admin' === rtrim($pathinfo, '/')) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'admin');
-                }
-
-                return array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
-            }
-
-            // cooker_admin
-            if ('/admin' === $pathinfo) {
-                return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin',);
-            }
-
+        // cooker_admin_login
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/login$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_login')), array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',));
         }
 
-        if (0 === strpos($pathinfo, '/log')) {
-            if (0 === strpos($pathinfo, '/login')) {
-                // cooker_admin_login
-                if ('/login' === $pathinfo) {
-                    return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_login',);
-                }
-
-                // cooker_admin_login_check
-                if ('/login_check' === $pathinfo) {
-                    return array('_route' => 'cooker_admin_login_check');
-                }
-
-            }
-
-            // cooker_admin_logout
-            if ('/logout' === $pathinfo) {
-                return array (  '_controller' => 'Cooker\\AdminBundle\\Controller\\SecurityController::loginAction',  '_route' => 'cooker_admin_logout',);
-            }
-
+        // cooker_admin_login_check
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/login_check$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_login_check')), array ());
         }
 
-        // cooker_cook_principal
-        if ('' === rtrim($pathinfo, '/')) {
+        // cooker_admin_logout
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/logout$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'cooker_admin_logout')), array ());
+        }
+
+        // easyadmin
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/controlpanel/?$#s', $pathinfo, $matches)) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'cooker_cook_principal');
+                return $this->redirect($pathinfo.'/', 'easyadmin');
             }
 
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::principalAction',  '_route' => 'cooker_cook_principal',);
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'easyadmin')), array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',));
         }
 
-        // cooker_cook_recetas
-        if ('/recetas' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::recetasAction',  '_route' => 'cooker_cook_recetas',);
-        }
+        // admin
+        if (preg_match('#^/(?P<_locale>[^/]++)/admin/controlpanel/?$#s', $pathinfo, $matches)) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'admin');
+            }
 
-        // cooker_cook_platos
-        if ('/platos' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::platosAction',  '_route' => 'cooker_cook_platos',);
-        }
-
-        // cooker_cook_ingredientes
-        if ('/ingredientes' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::ingredientesAction',  '_route' => 'cooker_cook_ingredientes',);
-        }
-
-        // cooker_cook_contact
-        if ('/contact' === $pathinfo) {
-            return array (  '_controller' => 'Cooker\\CookingBundle\\Controller\\CookController::contactAction',  '_route' => 'cooker_cook_contact',);
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin')), array (  '_controller' => 'EasyCorp\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

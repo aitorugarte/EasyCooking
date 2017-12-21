@@ -21,7 +21,7 @@
 	{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SUPER_ADMIN') or is_granted('ROLE_USER') %}
 			<a href="{{ path('cooker_admin_logout')}}" class="entrar">{% trans %}Salir{% endtrans %}</a>
 		{% else %} 
-			<a href="{{ path('cooker_admin_login')}}" class="entrar">{% trans %}Iniciar sesi&oacute;n{% endtrans %}</a>
+			<a href="{{ path('cooker_admin_login')}}" class="entrar">{% trans %}Iniciar sesion{% endtrans %}</a>
 		{% endif %}
 
 		<div id="header">
@@ -70,7 +70,7 @@
 		<!-- Pie de página -->
 		<div id="footer">
 			{% block footer %}
-			{% trans %}Cocina f&aacute;cil - Creado como proyecto para Ingenier&iacute;a Web{% endtrans %}
+			{% trans %}Cocina facil - Creado como proyecto para Ingenieria Web{% endtrans %}
 			{% endblock %}
 		</div>
 

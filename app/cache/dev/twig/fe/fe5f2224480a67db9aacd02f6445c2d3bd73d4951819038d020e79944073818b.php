@@ -22,32 +22,32 @@ class __TwigTemplate_f7ed22b7d74f6875df22e6a58abe561136f6d8376a135b0704c35f9ccc8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5052df64749b0850f5400165438c81e07534525367acc617a21495132f7fef95 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5052df64749b0850f5400165438c81e07534525367acc617a21495132f7fef95->enter($__internal_5052df64749b0850f5400165438c81e07534525367acc617a21495132f7fef95_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/showIngr.html.twig"));
+        $__internal_021037cfacebea877728f4abcac189c9d70c2c87b88f7cb4f7b54b7def598072 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_021037cfacebea877728f4abcac189c9d70c2c87b88f7cb4f7b54b7def598072->enter($__internal_021037cfacebea877728f4abcac189c9d70c2c87b88f7cb4f7b54b7def598072_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@CookerCooking/Cook/showIngr.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5052df64749b0850f5400165438c81e07534525367acc617a21495132f7fef95->leave($__internal_5052df64749b0850f5400165438c81e07534525367acc617a21495132f7fef95_prof);
+        $__internal_021037cfacebea877728f4abcac189c9d70c2c87b88f7cb4f7b54b7def598072->leave($__internal_021037cfacebea877728f4abcac189c9d70c2c87b88f7cb4f7b54b7def598072_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_bdb53a075cd09b4164f4856b962c317eefafb3fed0393fad9570d3c828c566f2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bdb53a075cd09b4164f4856b962c317eefafb3fed0393fad9570d3c828c566f2->enter($__internal_bdb53a075cd09b4164f4856b962c317eefafb3fed0393fad9570d3c828c566f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2af1059c01bd9b858252601f7fcd0d820a4c334a95f176e4a5a498f2728bcd8b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2af1059c01bd9b858252601f7fcd0d820a4c334a95f176e4a5a498f2728bcd8b->enter($__internal_2af1059c01bd9b858252601f7fcd0d820a4c334a95f176e4a5a498f2728bcd8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ingrediente"] ?? $this->getContext($context, "ingrediente")), "nombre", array()), "html", null, true);
         
-        $__internal_bdb53a075cd09b4164f4856b962c317eefafb3fed0393fad9570d3c828c566f2->leave($__internal_bdb53a075cd09b4164f4856b962c317eefafb3fed0393fad9570d3c828c566f2_prof);
+        $__internal_2af1059c01bd9b858252601f7fcd0d820a4c334a95f176e4a5a498f2728bcd8b->leave($__internal_2af1059c01bd9b858252601f7fcd0d820a4c334a95f176e4a5a498f2728bcd8b_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4701ab5de9ba9076fd720bb45facd6dd8fc3e6a870331c6773c69676513254f9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4701ab5de9ba9076fd720bb45facd6dd8fc3e6a870331c6773c69676513254f9->enter($__internal_4701ab5de9ba9076fd720bb45facd6dd8fc3e6a870331c6773c69676513254f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_525d0b87fd28f9c804e22dbe1389294398d87571ebe5cf6f7bf2e14fb24d14a8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_525d0b87fd28f9c804e22dbe1389294398d87571ebe5cf6f7bf2e14fb24d14a8->enter($__internal_525d0b87fd28f9c804e22dbe1389294398d87571ebe5cf6f7bf2e14fb24d14a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t<h1>";
@@ -78,7 +78,7 @@ class __TwigTemplate_f7ed22b7d74f6875df22e6a58abe561136f6d8376a135b0704c35f9ccc8
 
 ";
         
-        $__internal_4701ab5de9ba9076fd720bb45facd6dd8fc3e6a870331c6773c69676513254f9->leave($__internal_4701ab5de9ba9076fd720bb45facd6dd8fc3e6a870331c6773c69676513254f9_prof);
+        $__internal_525d0b87fd28f9c804e22dbe1389294398d87571ebe5cf6f7bf2e14fb24d14a8->leave($__internal_525d0b87fd28f9c804e22dbe1389294398d87571ebe5cf6f7bf2e14fb24d14a8_prof);
 
     }
 

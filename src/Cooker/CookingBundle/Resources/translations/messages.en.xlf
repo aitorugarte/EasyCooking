@@ -3,7 +3,7 @@
   <file source-language="en" datatype="plaintext" original="file.ext">
 
   <body>
-    <!-- base.html.twig -->
+
    <trans-unit id="1">
      <source>Inicio</source>
      <target>Home</target>
@@ -35,7 +35,7 @@
     </trans-unit>
 
     <trans-unit id="7">
-      <source>Iniciar sesión</source>
+      <source>Iniciar sesion</source>
       <target>Log in</target>
     </trans-unit>
     
@@ -45,7 +45,7 @@
     </trans-unit>
 
     <trans-unit id="9">
-      <source>Búsqueda avanzada:</source>
+      <source>Busqueda avanzada:</source>
       <target>Advanced search:</target>
     </trans-unit>
 
@@ -60,16 +60,10 @@
     </trans-unit>
 
     <trans-unit id="12">
-      <source>Cocina fácil - Creado como proyecto para Ingeniería Web</source>
+      <source>Cocina facil - Creado como proyecto para Ingenieria Web</source>
       <target>Easy Cooking - Created as a project for Web Engineering</target>
     </trans-unit>
-    <!-- princpal.html.twig -->
-    <trans-unit id="19">
-      <source>Página de bienvenida</source>
-      <target>Welcome page</target>
-    </trans-unit>
-    
-  <!-- contact.html.twig -->
+
     <trans-unit id="13">
       <source>Contacta conmigo</source>
       <target>Contact with me</target>
@@ -94,18 +88,17 @@
       <source>Enviar</source>
       <target>Send</target>
     </trans-unit>
-    <!-- ingredienes.html.twig -->
+
     <trans-unit id="18">
-      <source>¿Busca algún ingrediente en particular?</source>
+      <source>Busca algun ingrediente en particular?</source>
       <target>Are you looking for any particular ingredient?</target>
     </trans-unit>
 
-    <trans-unit id="27">
-      <source>Lista de Ingredientes</source>
-      <target>Lits of Ingredients</target>
+    <trans-unit id="19">
+      <source>Pagina de bienvenida</source>
+      <target>Welcome page</target>
     </trans-unit>
-    
-    <!-- showReceta.html.twig -->
+
     <trans-unit id="20">
       <source>Detalles de la receta</source>
       <target>Details of the recipe</target>
@@ -130,16 +123,119 @@
       <source>Recetas relacionadas</source>
       <target>Related recipes</target>
     </trans-unit>
-    <!-- showIngr.html.twig-->
+
     <trans-unit id="25">
       <source>Recetas para el ingrediente:</source>
       <target>Recipes for the ingredient:</target>
     </trans-unit>
-    <!-- recetas.html.twig -->
+
     <trans-unit id="26">
       <source>Lista de Recetas</source>
       <target>Lits of Recipes</target>
     </trans-unit>
+
+    <trans-unit id="27">
+      <source>Lista de Ingredientes</source>
+      <target>Lits of Ingredients</target>
+    </trans-unit>
+
+    <trans-unit id="28">
+      <source>Tipos</source>
+      <target>Types</target>
+    </trans-unit>
+
+    <trans-unit id="29">
+      <source>Usuario</source>
+      <target>User</target>
+    </trans-unit>
+    
+    <trans-unit id="30">
+      <source>Contraseña</source>
+      <target>Password</target>
+    </trans-unit>
+
+    <trans-unit id="31">
+      <source>Entrar</source>
+      <target>Go</target>
+    </trans-unit>
+
+    <trans-unit id="32">
+      <source>Recordarme</source>
+      <target>Remember me</target>
+    </trans-unit>
+
+    <trans-unit id="33">
+      <source>Tortilla de Patata</source>
+      <target>Omelette</target>
+    </trans-unit>
+
+    <trans-unit id="34">
+      <source>Espaguetis al ajillo</source>
+      <target>Spaghetti with garlic</target>
+    </trans-unit>
+
+    <trans-unit id="35">
+      <source>Empanadillas</source>
+      <target>Pasties</target>
+    </trans-unit>
+
+    <trans-unit id="36">
+      <source>Merluza en salsa</source>
+      <target>Hake in sauce</target>
+    </trans-unit>
+
+    <trans-unit id="37">
+      <source>Flan de huevo</source>
+      <target>Egg flan</target>
+    </trans-unit>
+
+    <trans-unit id="38">
+      <source>Natillas</source>
+      <target>Custard</target>
+    </trans-unit>
+
+    <trans-unit id="39">
+      <source>Seguir leyendo...</source>
+      <target>Keep reading...</target>
+    </trans-unit>
+
+    <trans-unit id="40">
+      <source>Comentarios: -</source>
+      <target>Comments: -</target>
+    </trans-unit>
+
+    <trans-unit id="41">
+      <source>Tortila de patata española casera con cebolla al punto de sal</source>
+      <target>Homemade Spanish potato omelet with onion at the point of salt</target>
+    </trans-unit>
+
+    <trans-unit id="42">
+      <source>Espaguetis al ajillo al mas puro estilo tradicional Italiano</source>
+      <target>Spaghetti al ajillo in the purest traditional Italian style</target>
+    </trans-unit>
+
+    <trans-unit id="43">
+      <source>Empanadillas rellenas con tomate y atun como acompañante de cualquier comida</source>
+      <target>Pasties stuffed with tomato and tuna as a companion to any meal</target>
+    </trans-unit>
+
+    <trans-unit id="44">
+      <source>Una porcion de merluza acompañada de una salsa verde</source>
+      <target>A portion of hake accompanied by a green sauce</target>
+    </trans-unit>
+
+    <trans-unit id="45">
+      <source>Flan de huevo con caramelo elaborado poco a poco, muy apetecible por los peques de la casa</source>
+      <target>Egg flan with caramel elaborated little by little, very appetizing by the kids of the house</target>
+    </trans-unit>
+
+    <trans-unit id="46">
+      <source>Se trata de una crema elaborada con leche, yemas de huevo y azúcar</source>
+      <target>It is a cream made with milk, egg yolks and sugar</target>
+    </trans-unit>
+    
+    
+    
     
   </body>
   </file>

@@ -91,7 +91,7 @@
   'CookerCookingBundle:Cook:showPlato.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/showPlato.html.twig',
   'CookerCookingBundle:Cook:showReceta.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Cook/showReceta.html.twig',
   'CookerCookingBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/Default/index.html.twig',
-  'CookerCookingBundle::layout.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/layout.html.twig',
+  'CookerCookingBundle::sidebar.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\CookingBundle/Resources/views/sidebar.html.twig',
   'CookerAdminBundle:Security:login.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\src\\Cooker\\AdminBundle/Resources/views/Security/login.html.twig',
   'EasyAdminBundle:css:easyadmin.css.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\vendor\\javiereguiluz\\easyadmin-bundle\\src/Resources/views/css/easyadmin.css.twig',
   'EasyAdminBundle:data_collector:easyadmin.html.twig' => 'C:\\xampp\\htdocs\\EasyCooking\\vendor\\javiereguiluz\\easyadmin-bundle\\src/Resources/views/data_collector/easyadmin.html.twig',

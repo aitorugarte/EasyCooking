@@ -8,7 +8,7 @@ class __TwigTemplate_004005c695b8794f53161692442c1a67444d72cdfa56126d9de9832cf8b
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "CookerCookingBundle:Cook:platos.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "CookerCookingBundle:Cook:platos.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,7 +17,7 @@ class __TwigTemplate_004005c695b8794f53161692442c1a67444d72cdfa56126d9de9832cf8b
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -47,10 +47,10 @@ class __TwigTemplate_004005c695b8794f53161692442c1a67444d72cdfa56126d9de9832cf8b
             $context["tipo"] = $this->getAttribute($context["plato"], "nombre", array());
             // line 10
             echo "
-\t<h1>Recetas para el tipo: ";
+\t<h2>Recetas para el tipo: ";
             // line 11
             echo twig_escape_filter($this->env, $this->getAttribute($context["plato"], "nombre", array()), "html", null, true);
-            echo "</h1>
+            echo "</h2>
 \t<ul>
 \t";
             // line 13

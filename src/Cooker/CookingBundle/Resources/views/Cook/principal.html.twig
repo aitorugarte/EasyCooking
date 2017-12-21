@@ -1,6 +1,6 @@
 {# src/Cooker/CookingBundle/Resources/views/Cook/principal.html.twig #}
 {% extends 'CookerCookingBundle::sidebar.html.twig' %}
-{% block title %}{% trans %}P&aacute;gina de bienvenida{% endtrans %}{% endblock %}
+{% block title %}{% trans %}Pagina de bienvenida{% endtrans %}{% endblock %}
 
 {% block body %}
 
@@ -11,16 +11,16 @@
 
 	<div class="date" style="text-align:right"><time datetime="{{ receta.date|date('c') }}">{{ receta.date|date('l j F Y') }}</time></div>
 	<header>
-		<h2><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre }}</a></h2>
+		<h2><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{{ receta.nombre|trans }}</a></h2>
 	</header>
 
 	<div class="snippet">
-		<p>{{ receta.detalles(200) }}</p>
-		<p class="continue"><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">Seguir leyendo...</a></p>
+		<p>{{ receta.detalles(200)|trans }}</p>
+		<p class="continue"><a href="{{ path('cooker_cook_showReceta', { 'id': receta.id }) }}">{% trans %}Seguir leyendo...{% endtrans %}</a></p>
 	</div>
 
 	<footer class="meta">
-		<p>Comentarios: -</p>
+		<p>{% trans %}Comentarios: -{% endtrans %}</p>
 	</footer>
 
 {% set break = break + 1 %}

@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views",
+    "\\src\\Cooker\\AdminBundle\\Resources\\views\\Security",
+    "\\src\\Cooker\\CookingBundle\\Resources"
   ],
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

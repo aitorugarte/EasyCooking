@@ -8,7 +8,7 @@ class __TwigTemplate_3c71e9ebd1e521422642e30355316cd6f8be24d8d01483b4657f847109a
         parent::__construct($env);
 
         // line 2
-        $this->parent = $this->loadTemplate("CookerCookingBundle::layout.html.twig", "CookerCookingBundle:Cook:ingredientes.html.twig", 2);
+        $this->parent = $this->loadTemplate("CookerCookingBundle::sidebar.html.twig", "CookerCookingBundle:Cook:ingredientes.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
@@ -17,7 +17,7 @@ class __TwigTemplate_3c71e9ebd1e521422642e30355316cd6f8be24d8d01483b4657f847109a
 
     protected function doGetParent(array $context)
     {
-        return "CookerCookingBundle::layout.html.twig";
+        return "CookerCookingBundle::sidebar.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -28,23 +28,29 @@ class __TwigTemplate_3c71e9ebd1e521422642e30355316cd6f8be24d8d01483b4657f847109a
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Lista de Ingredientes";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Lista de Ingredientes", array(), "messages");
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
         // line 6
-        echo "<ul class=\"lista2\">
-\t";
+        echo "
+<h2>";
         // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("&iquest;Busca alg&uacute;n ingrediente en particular?", array(), "messages");
+        echo "</h2>
+<br>
+<ul class=\"lista2\">
+\t";
+        // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["ingredientes"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["ingrediente"]) {
-            // line 8
+            // line 11
             echo "\t<li class=\"elemento2\">
 \t\t<h4><a href=\"";
-            // line 9
+            // line 12
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cooker_cook_showIngr", array("id" => $this->getAttribute($context["ingrediente"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "nombre", array()), "html", null, true);
@@ -55,8 +61,9 @@ class __TwigTemplate_3c71e9ebd1e521422642e30355316cd6f8be24d8d01483b4657f847109a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ingrediente'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 12
-        echo "\t";
+        // line 15
+        echo "</ul>
+\t";
     }
 
     public function getTemplateName()
@@ -71,7 +78,7 @@ class __TwigTemplate_3c71e9ebd1e521422642e30355316cd6f8be24d8d01483b4657f847109a
 
     public function getDebugInfo()
     {
-        return array (  59 => 12,  48 => 9,  45 => 8,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
+        return array (  65 => 15,  54 => 12,  51 => 11,  47 => 10,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

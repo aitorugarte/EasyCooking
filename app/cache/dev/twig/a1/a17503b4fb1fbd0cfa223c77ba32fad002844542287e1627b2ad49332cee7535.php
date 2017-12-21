@@ -15,8 +15,8 @@ class __TwigTemplate_f05bc07127b6059a42af4faeb821e42ce47e5c5b8c3b2786270dce17e86
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ed9532ad326c9d220f08abf7b5a848c3b3330e42495c2999d53c79d7a4bf8b20 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ed9532ad326c9d220f08abf7b5a848c3b3330e42495c2999d53c79d7a4bf8b20->enter($__internal_ed9532ad326c9d220f08abf7b5a848c3b3330e42495c2999d53c79d7a4bf8b20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
+        $__internal_9b9ad1050e1790768c06dc4542f685f697f61ef78c92c0b33f3b466f1d18f7ba = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9b9ad1050e1790768c06dc4542f685f697f61ef78c92c0b33f3b466f1d18f7ba->enter($__internal_9b9ad1050e1790768c06dc4542f685f697f61ef78c92c0b33f3b466f1d18f7ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
@@ -1084,7 +1084,7 @@ table.logs .sf-call-stack abbr {
 }
 ";
         
-        $__internal_ed9532ad326c9d220f08abf7b5a848c3b3330e42495c2999d53c79d7a4bf8b20->leave($__internal_ed9532ad326c9d220f08abf7b5a848c3b3330e42495c2999d53c79d7a4bf8b20_prof);
+        $__internal_9b9ad1050e1790768c06dc4542f685f697f61ef78c92c0b33f3b466f1d18f7ba->leave($__internal_9b9ad1050e1790768c06dc4542f685f697f61ef78c92c0b33f3b466f1d18f7ba_prof);
 
     }
 
